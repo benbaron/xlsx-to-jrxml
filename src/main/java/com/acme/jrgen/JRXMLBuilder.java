@@ -19,7 +19,7 @@ public class JRXMLBuilder
                                     int topMargin,
                                     int bottomMargin)
     {
-        StringBuilder sb = new StringBuilder(64_000);
+        StringBuilder sb = new StringBuilder(128_000);
 
         double availableWidth = pageWidth - (leftMargin + rightMargin);
         double availableHeight = pageHeight - (topMargin + bottomMargin);
@@ -125,11 +125,11 @@ public class JRXMLBuilder
             {
                 sb.append(FragmentLibrary.staticText(x, y, w, h, ci.value(), font, ci.alignment()));
             }
-            else if (ci.isDynamic() && ci.fieldName() != null)
+
+            for (CellItem ci : m.items())
             {
                 sb.append(FragmentLibrary.textField(x, y, w, h, ci.fieldName(), font, ci.fieldSpec().alignment(), ci.fieldSpec().pattern()));
             }
-        }
 
         sb.append("    </band>\n");
         return sb.toString();

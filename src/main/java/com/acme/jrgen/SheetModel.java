@@ -1,6 +1,7 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Sheet model: width/height plus ordered bands containing cell items.

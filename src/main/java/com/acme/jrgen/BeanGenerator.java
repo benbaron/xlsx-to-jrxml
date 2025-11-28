@@ -1,4 +1,4 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -6,18 +6,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Generates a Java Bean source for a sheet, using only dynamic fields.
+ * Generates Java Beans for dynamic fields.
  */
 public class BeanGenerator
 {
-    /**
-     * Generate a bean source file for the given sheet.
-     *
-     * @param model        sheet model
-     * @param beanPackage  package name for the bean (e.g. nonprofitbookkeeping.reports.datasource)
-     * @param beanSuffix   suffix for the simple class name (e.g. "Bean" or "RowBean")
-     * @return Java source text
-     */
     public static String generateBean(SheetModel model,
                                       String beanPackage,
                                       String beanSuffix)
@@ -53,8 +45,7 @@ public class BeanGenerator
         sb.append("public class ").append(cls).append("\n");
         sb.append("{\n\n");
 
-        // fields
-        for (String n : names)
+        for (FieldInfo f : fields.values())
         {
             sb.append("    private ")
               .append(typeLookup.getOrDefault(n, "java.lang.String"))
@@ -62,34 +53,41 @@ public class BeanGenerator
               .append(n)
               .append(";\n");
         }
+        sb.append('\n');
 
-        sb.append("\n");
-
-        // getters/setters
-        for (String n : names)
+        for (FieldInfo f : fields.values())
         {
             String cap = capitalize(n);
 
             String type = typeLookup.getOrDefault(n, "java.lang.String");
             sb.append("    public ").append(type).append(" get").append(cap).append("()\n");
             sb.append("    {\n");
-            sb.append("        return ").append(n).append(";\n");
+            sb.append("        return ").append(f.name()).append(";\n");
             sb.append("    }\n\n");
 
             sb.append("    public void set").append(cap).append("(").append(type).append(" v)\n");
             sb.append("    {\n");
-            sb.append("        this.").append(n).append(" = v;\n");
+            sb.append("        this.").append(f.name()).append(" = ")
+                .append(f.name()).append(";\n");
             sb.append("    }\n\n");
         }
 
-        // default ctor
         sb.append("    public ").append(cls).append("()\n");
         sb.append("    {\n");
         sb.append("    }\n\n");
-
         sb.append("}\n");
 
         return sb.toString();
+    }
+
+    private static String simpleType(String fqcn)
+    {
+        if (fqcn == null || fqcn.isBlank())
+        {
+            return "String";
+        }
+        int idx = fqcn.lastIndexOf('.');
+        return (idx >= 0) ? fqcn.substring(idx + 1) : fqcn;
     }
 
     private static String capitalize(String s)

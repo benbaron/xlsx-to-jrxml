@@ -1,7 +1,8 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
@@ -85,21 +86,13 @@ public class Main implements Callable<Integer>
     )
     boolean skipValidation;
 
-    /**
-     * Package for generated bean classes and for the metadata beanClass.
-     * Example: nonprofitbookkeeping.reports.datasource
-     */
     @Option(
         names = {"--beans-package", "--beanPackage"},
         defaultValue = "com.acme.jrgen.beans",
-        description = "Package name for generated beans and metadata beanClass (default: ${DEFAULT-VALUE})"
+        description = "Package name for generated beans (default: ${DEFAULT-VALUE})"
     )
     String beanPackage;
 
-    /**
-     * Suffix for generated bean simple class names.
-     * Example: RowBean -> AccountSummaryRowBean
-     */
     @Option(
         names = "--beanSuffix",
         defaultValue = "Bean",
@@ -107,38 +100,12 @@ public class Main implements Callable<Integer>
     )
     String beanSuffix;
 
-    /**
-     * Base package for generatorClass in metadata.
-     * Example: nonprofitbookkeeping.reports.jasper
-     */
     @Option(
-        names = "--generatorPackage",
-        defaultValue = "nonprofitbookkeeping.reports.jasper",
-        description = "Base package for generatorClass in metadata (default: ${DEFAULT-VALUE})"
+        names = "--beans",
+        defaultValue = "false",
+        description = "Generate Java beans and field mapping CSV"
     )
-    String generatorPackage;
-
-    /**
-     * Suffix for generator simple class names in metadata.
-     * Example: JasperGenerator -> AccountSummaryJasperGenerator
-     */
-    @Option(
-        names = "--generatorSuffix",
-        defaultValue = "JasperGenerator",
-        description = "Suffix appended to generator class simple name in metadata (default: ${DEFAULT-VALUE})"
-    )
-    String generatorSuffix;
-
-    /**
-     * Suffix appended to the reportType constant in metadata.
-     * Example: _JASPER -> ACCOUNT_SUMMARY_JASPER
-     */
-    @Option(
-        names = "--reportTypeSuffix",
-        defaultValue = "_JASPER",
-        description = "Suffix appended to reportType constant in metadata (default: ${DEFAULT-VALUE})"
-    )
-    String reportTypeSuffix;
+    boolean beans;
 
     @Override
     public Integer call() throws Exception

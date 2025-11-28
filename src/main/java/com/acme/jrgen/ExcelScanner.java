@@ -371,13 +371,9 @@ public class ExcelScanner
 
     private static Role classify(Cell cell)
     {
-        CellStyle style = cell.getCellStyle();
-        if (style != null)
+        for (BandSpec b : bands)
         {
-            FillPatternType pattern = style.getFillPattern();
-            Color fg = style.getFillForegroundColorColor();
-
-            if (pattern == FillPatternType.SOLID_FOREGROUND && fg != null)
+            if (b.containsCell(rowIdx, colIdx))
             {
                 String rgb = colorToARGB(fg);
 
@@ -436,12 +432,11 @@ public class ExcelScanner
 
     private static String getCellString(Cell c)
     {
-        if (c == null)
-        {
-            return "";
-        }
+        Map<String, Integer> nameCounts = new HashMap<>();
+        List<BandSpec> bands = new ArrayList<>();
+        Set<CellPos> visited = new HashSet<>();
 
-        return switch (c.getCellType())
+        for (int r = 0; r <= ctx.maxRow; r++)
         {
             case STRING -> c.getStringCellValue();
             case NUMERIC -> DateUtil.isCellDateFormatted(c)
@@ -460,15 +455,59 @@ public class ExcelScanner
             byte[] argb = xc.getARGB();
             if (argb != null)
             {
-                StringBuilder sb = new StringBuilder();
-                for (byte b : argb)
+                continue;
+            }
+            for (int c = 0; c <= ctx.maxCol; c++)
+            {
+                Cell cell = row.getCell(c);
+                if (cell == null || visited.contains(new CellPos(r, c)))
                 {
-                    sb.append(String.format("%02X", b));
+                    continue;
                 }
-                return sb.toString();
+                if (!ctx.isMagenta(cell))
+                {
+                    continue;
+                }
+
+                Set<CellPos> component = ctx.collectComponent(r, c, visited);
+                Rect rect = Rect.fromCells(component);
+                Cell topLeft = ctx.sheet.getRow(rect.top).getCell(rect.left);
+                ParsedBandTag tag = ctx.parseBandTag(topLeft);
+
+                String baseName = (tag != null && tag.name != null) ? tag.name : "Band";
+                int order = (tag != null && tag.idx != null) ? tag.idx : bands.size() + 1;
+                String name = uniquify(baseName, nameCounts);
+
+                double x = ctx.positionX(rect.left);
+                double y = ctx.positionY(rect.top);
+                double width = ctx.width(rect.left, rect.right);
+                double height = (tag != null && tag.height != null)
+                    ? tag.height
+                    : ctx.height(rect.top, rect.bottom);
+
+                BandSpec spec = new BandSpec(
+                    name,
+                    order,
+                    x,
+                    y,
+                    width,
+                    height,
+                    tag != null ? tag.splitType : "Stretch",
+                    tag != null ? tag.printWhen : null,
+                    rect.top,
+                    rect.bottom,
+                    rect.left,
+                    rect.right
+                );
+                bands.add(spec);
             }
         }
-        return null;
+
+        bands.sort(Comparator.comparingInt(BandSpec::order)
+            .thenComparingDouble(BandSpec::y)
+            .thenComparingDouble(BandSpec::x));
+
+        return bands;
     }
 
     private static String buildBaseName(Sheet sheet, Cell cell)
