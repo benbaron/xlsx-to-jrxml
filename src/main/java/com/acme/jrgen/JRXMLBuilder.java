@@ -54,18 +54,25 @@ public class JRXMLBuilder
 
         sb.append("\n");
 
-        // --- Title section: put everything in the title for now -----------
-        // (Single-page forms are fine with this. If you later want a big
-        //  detail band instead, we can move the elements there.)
+        // --- Layout -------------------------------------------------------
+        // We previously stuffed all elements into the <title> section. That
+        // caused generated content to show up in the report title rather than
+        // the detail band. Compute the height based on the items, keep a tiny
+        // placeholder title, and render elements inside the detail band.
         int maxBottom = m.items().stream()
             .mapToInt(ci -> ci.y() + ci.height())
             .max()
             .orElse(0);
 
-        int titleHeight = maxBottom + 10;  // small padding
+        int detailHeight = maxBottom + 10;  // small padding
 
-        sb.append("  <title height=\"")
-          .append(titleHeight)
+        sb.append("  <title height=\"10\">\n");
+        sb.append("  </title>\n\n");
+
+        // --- Detail band: render all elements here -----------------------
+        sb.append("  <detail>\n");
+        sb.append("    <band height=\"")
+          .append(detailHeight)
           .append("\">\n");
 
         for (CellItem ci : m.items())
@@ -96,13 +103,7 @@ public class JRXMLBuilder
             }
         }
 
-        sb.append("  </title>\n\n");
-
-        // --- Minimal detail band (empty, but structurally valid) ----------
-        // Your examples always have <detail><band ...> even if it does
-        // nothing. We'll keep a tiny band here.
-        sb.append("  <detail>\n");
-        sb.append("    <band height=\"10\"/>\n");
+        sb.append("    </band>\n");
         sb.append("  </detail>\n");
 
         // Close report
