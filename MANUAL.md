@@ -58,6 +58,17 @@ Follow these conventions so the converter can infer layout and data bindings:
 - **Sizing and fonts**: Column widths and row heights come from Excel and are scaled to fill a Letter portrait page; font sizes scale with Y and clamp between 6–22 pt.
 - **Patterns**: Excel number/date formats influence JR patterns automatically (e.g., accounting → `$ #,##0.00`, dates → `MMM d, yyyy`).
 
+### Cell formatting examples
+These patterns demonstrate how common Excel formats translate into JRXML output. Use blue cells (or formulas) to mark the dynamic value and keep any inline `[[field ...]]` tag in the same cell.
+
+- **Currency with grouping**: Format the cell as `Accounting` or custom `$ #,##0.00`. The JRXML field will carry `type="java.math.BigDecimal"` with `pattern="$ #,##0.00"` and right alignment inherited from the cell.
+- **Percentages**: Format as `0.0%` (or `0%`). The converter emits a numeric field with `pattern="0.0%"` so rendered values show the percent symbol and decimal precision.
+- **Dates**: Use a date format such as `mmm d, yyyy` or `yyyy-MM-dd`. The JRXML field uses `java.util.Date` with the matching pattern (e.g., `pattern="MMM d, yyyy"`).
+- **Plain numbers**: Apply a custom format like `#,##0` or `#,##0.00###` to control grouping and decimal places. The same pattern flows through to the JRXML field definition.
+- **Text with left/center/right alignment**: Set the horizontal alignment on the cell. Static text inherits that alignment; dynamic fields default based on type but you can override with `[[field name=Total align=center]]`.
+- **Zero-padding codes**: Custom format `0000` (for IDs) keeps leading zeros in the JRXML by copying the pattern.
+- **Explicit overrides**: When Excel formatting is insufficient, supply an inline tag such as `[[field name=Status type=java.lang.String pattern=@]]` to freeze the type and pattern regardless of cell format.
+
 ## Typical workflow
 1. Author the workbook following the rules above (magenta bands, blue dynamic cells, optional inline tags).
 2. Build the project with `mvn -q package`.
