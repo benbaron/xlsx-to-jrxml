@@ -1,13 +1,14 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
 /**
- * Encapsulates JRXML fragments in your *semantic* format:
- *
- * - Root: <jasperReport ...>
- * - Design elements: <element kind="...">
+ * Encapsulates JRXML fragments using real Jasper elements.
  */
-public class FragmentLibrary
+public final class FragmentLibrary
 {
+    private FragmentLibrary()
+    {
+    }
+
     public static String header(String reportName,
                                 int pageWidth,
                                 int pageHeight,
@@ -17,21 +18,14 @@ public class FragmentLibrary
                                 int bottom)
     {
         int columnWidth = pageWidth - (left + right);
-
-        // Match your examples:
-        // <jasperReport name="..." language="java" pageWidth="..." ...>
-        String template = """
-            <?xml version="1.0" encoding="UTF-8"?>
-            <jasperReport name="%s" language="java"
-                          pageWidth="%d" pageHeight="%d"
-                          columnWidth="%d"
-                          leftMargin="%d" rightMargin="%d"
-                          topMargin="%d" bottomMargin="%d"
-                          uuid="00000000-0000-0000-0000-000000000000">
-            """;
-
-        return String.format(
-            template,
+        return String.format("""
+            <?xml version=\"1.0\" encoding=\"UTF-8\"?>
+            <jasperReport name=\"%s\" language=\"java\"
+                          pageWidth=\"%d\" pageHeight=\"%d\"
+                          columnWidth=\"%d\"
+                          leftMargin=\"%d\" rightMargin=\"%d\"
+                          topMargin=\"%d\" bottomMargin=\"%d\"
+                          uuid=\"00000000-0000-0000-0000-000000000000\">\n""",
             escape(reportName),
             pageWidth,
             pageHeight,
@@ -43,56 +37,84 @@ public class FragmentLibrary
         );
     }
 
+    public static String styles()
+    {
+        return """
+              <style name=\"base\" fontName=\"SansSerif\" fontSize=\"10\"/>
+              <style name=\"label\" isBold=\"true\"/>
+              <style name=\"value\"/>
+            """;
+    }
+
+    public static String parameters()
+    {
+        return """
+              <parameter name=\"reportTitle\" class=\"java.lang.String\"/>
+              <parameter name=\"organizationName\" class=\"java.lang.String\"/>
+            """;
+    }
+
     public static String footer()
     {
         return "</jasperReport>\n";
     }
 
-    /**
-     * Semantic "staticText" element:
-     *
-     * <element kind="staticText" x="..." y="..." width="..." height="...">
-     *   <text><![CDATA[...]]></text>
-     * </element>
-     */
     public static String staticText(int x,
                                     int y,
                                     int w,
                                     int h,
-                                    String text)
+                                    String text,
+                                    double fontSize,
+                                    boolean bold)
     {
         String template = """
-                  <element kind="staticText" x="%d" y="%d" width="%d" height="%d">
+                  <staticText>
+                    <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" style=\"label\"/>
+                    <textElement>
+                      <font size=\"%.1f\"%s/>
+                    </textElement>
                     <text><![CDATA[%s]]></text>
-                  </element>
-            """;
+                  </staticText>\n""";
 
-        return String.format(template, x, y, w, h, cdata(text));
+        String boldAttr = bold ? " isBold=\"true\"" : "";
+        return String.format(template, x, y, w, h, fontSize, boldAttr, cdata(text));
     }
 
-    /**
-     * Semantic "textField" element:
-     *
-     * <element kind="textField" x="..." y="..." width="..." height="...">
-     *   <expression><![CDATA[$F{fieldName}]]></expression>
-     * </element>
-     */
     public static String textField(int x,
                                    int y,
                                    int w,
                                    int h,
-                                   String fieldName)
+                                   String fieldName,
+                                   String alignment,
+                                   String pattern,
+                                   double fontSize,
+                                   boolean bold)
     {
+        String patternAttr = (pattern == null) ? "" : " pattern=\"" + escape(pattern) + "\"";
+        String alignAttr = alignment == null ? "" : String.format("<textAlignment>%s</textAlignment>\n", alignment);
         String template = """
-                  <element kind="textField" x="%d" y="%d" width="%d" height="%d">
-                    <expression><![CDATA[$F{%s}]]></expression>
-                  </element>
-            """;
+                  <textField%s>
+                    <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" style=\"value\"/>
+                    <textElement>
+                      %s      <font size=\"%.1f\"%s/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{%s}]]></textFieldExpression>
+                  </textField>\n""";
 
-        return String.format(template, x, y, w, h, escape(fieldName));
+        String boldAttr = bold ? " isBold=\"true\"" : "";
+        return String.format(
+            template,
+            patternAttr,
+            x,
+            y,
+            w,
+            h,
+            alignAttr,
+            fontSize,
+            boldAttr,
+            escape(fieldName)
+        );
     }
-
-    // --- helpers ---------------------------------------------------------
 
     static String escape(String s)
     {

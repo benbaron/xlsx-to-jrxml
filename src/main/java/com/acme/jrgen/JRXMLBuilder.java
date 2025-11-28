@@ -1,17 +1,9 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
-import java.util.LinkedHashSet;
-import java.util.Objects;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.Comparator;
 
 /**
- * Build JRXML text from a SheetModel using your semantic format:
- *
- * - <jasperReport ...>
- * - <field .../>
- * - <title height="..."> <element .../> ... </title>
- * - <detail> <band height="..."> <element .../> ... </band> </detail>
+ * Build JRXML text from a SheetModel using the authoring rules.
  */
 public class JRXMLBuilder
 {
@@ -23,9 +15,8 @@ public class JRXMLBuilder
                                     int topMargin,
                                     int bottomMargin)
     {
-        StringBuilder sb = new StringBuilder(64_000);
+        StringBuilder sb = new StringBuilder(128_000);
 
-        // <jasperReport ...>
         sb.append(
             FragmentLibrary.header(
                 m.sheetName(),
@@ -38,92 +29,127 @@ public class JRXMLBuilder
             )
         );
 
-        // --- Fields: one per dynamic cell (String for now) ----------------
-        Set<String> dynamicFields = m.items().stream()
-            .filter(CellItem::isDynamic)
-            .map(CellItem::fieldName)
-            .filter(Objects::nonNull)
-            .collect(Collectors.toCollection(LinkedHashSet::new));
+        sb.append(FragmentLibrary.styles());
+        sb.append('\n');
+        sb.append(FragmentLibrary.parameters());
+        sb.append('\n');
 
-        for (String f : dynamicFields)
+        // Fields
+        for (FieldInfo info : m.fields().values())
         {
-            sb.append("  <field name=\"")
-              .append(escape(f))
-              .append("\" class=\"java.lang.String\"/>\n");
+            sb.append("      <field name=\"")
+                .append(FragmentLibrary.escape(info.name()))
+                .append("\" class=\"")
+                .append(info.javaType())
+                .append("\"/>")
+                .append('\n');
         }
 
-        sb.append("\n");
+        sb.append('\n');
 
-        // --- Layout -------------------------------------------------------
-        // We previously stuffed all elements into the <title> section. That
-        // caused generated content to show up in the report title rather than
-        // the detail band. Compute the height based on the items, keep a tiny
-        // placeholder title, and render elements inside the detail band.
-        int maxBottom = m.items().stream()
-            .mapToInt(ci -> ci.y() + ci.height())
-            .max()
-            .orElse(0);
+        // Title band
+        sb.append("      <title>\n");
+        sb.append("        <band height=\"").append((int) m.titleHeight()).append("\">\n");
+        sb.append(FragmentLibrary.textField(
+            0,
+            0,
+            pageWidth - leftMargin - rightMargin,
+            20,
+            "reportTitle",
+            "Left",
+            null,
+            14,
+            true
+        ));
+        sb.append(FragmentLibrary.textField(
+            0,
+            20,
+            pageWidth - leftMargin - rightMargin,
+            18,
+            "organizationName",
+            "Left",
+            null,
+            12,
+            false
+        ));
+        sb.append(FragmentLibrary.staticText(
+            0,
+            38,
+            pageWidth - leftMargin - rightMargin,
+            18,
+            m.sheetName(),
+            11,
+            false
+        ));
+        sb.append("        </band>\n");
+        sb.append("      </title>\n\n");
 
-        int detailHeight = maxBottom + 10;  // small padding
+        // Detail bands
+        sb.append("      <detail>\n");
+        var sortedBands = m.bands().stream()
+            .sorted(Comparator.comparingInt(BandSpec::order))
+            .toList();
 
-        sb.append("  <title height=\"10\">\n");
-        sb.append("  </title>\n\n");
-
-        // --- Detail band: render all elements here -----------------------
-        sb.append("  <detail>\n");
-        sb.append("    <band height=\"")
-          .append(detailHeight)
-          .append("\">\n");
-
-        for (CellItem ci : m.items())
+        for (BandSpec band : sortedBands)
         {
-            if (ci.isStatic())
+            sb.append("        <band height=\"")
+                .append((int) Math.round(band.height()))
+                .append("\" splitType=\"")
+                .append(band.splitType() == null ? "Stretch" : band.splitType())
+                .append("\">");
+            sb.append('\n');
+
+            if (band.printWhenExpression() != null)
             {
-                sb.append(
-                    FragmentLibrary.staticText(
-                        ci.x(),
-                        ci.y(),
-                        ci.width(),
-                        ci.height(),
-                        ci.value()
-                    )
-                );
+                sb.append("          <printWhenExpression><![CDATA[")
+                    .append(band.printWhenExpression())
+                    .append("]]></printWhenExpression>\n");
             }
-            else if (ci.isDynamic() && ci.fieldName() != null)
+
+            for (CellItem ci : m.items())
             {
-                sb.append(
-                    FragmentLibrary.textField(
-                        ci.x(),
-                        ci.y(),
-                        ci.width(),
-                        ci.height(),
-                        ci.fieldName()
-                    )
-                );
+                if (ci.band() != band)
+                {
+                    continue;
+                }
+
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            (int) Math.round(ci.x()),
+                            (int) Math.round(ci.y()),
+                            (int) Math.round(ci.width()),
+                            (int) Math.round(ci.height()),
+                            ci.value(),
+                            ci.fontSize(),
+                            ci.bold()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            (int) Math.round(ci.x()),
+                            (int) Math.round(ci.y()),
+                            (int) Math.round(ci.width()),
+                            (int) Math.round(ci.height()),
+                            ci.fieldName(),
+                            ci.alignment(),
+                            ci.pattern(),
+                            ci.fontSize(),
+                            ci.bold()
+                        )
+                    );
+                }
             }
+
+            sb.append("        </band>\n");
         }
 
-        sb.append("    </band>\n");
-        sb.append("  </detail>\n");
-
-        // Close report
+        sb.append("      </detail>\n");
         sb.append(FragmentLibrary.footer());
-
         return sb.toString();
-    }
-
-    private static String escape(String s)
-    {
-        if (s == null)
-        {
-            return "";
-        }
-
-        return s
-            .replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-            .replace("\"", "&quot;")
-            .replace("'", "&apos;");
     }
 }

@@ -1,10 +1,17 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
 import java.util.List;
+import java.util.Map;
 
 /**
- * Simple per-sheet model: sheet name + list of cell items.
+ * Sheet-level model containing cells, bands, and field metadata.
  */
-public record SheetModel(String sheetName, List<CellItem> items)
+public record SheetModel(
+    String sheetName,
+    List<CellItem> items,
+    List<BandSpec> bands,
+    Map<String, FieldInfo> fields,
+    double titleHeight
+)
 {
 }

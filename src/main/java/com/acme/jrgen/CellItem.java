@@ -6,13 +6,20 @@
 public record CellItem(
     int col,
     int row,
-    int x,
-    int y,
-    int width,
-    int height,
+    double x,
+    double y,
+    double width,
+    double height,
     String value,
     Role role,
-    String fieldName
+    String fieldName,
+    String javaType,
+    String pattern,
+    String alignment,
+    double fontSize,
+    boolean bold,
+    String excelFormat,
+    BandSpec band
 )
 {
     public enum Role
