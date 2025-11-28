@@ -1,14 +1,17 @@
 package com.acme.jrgen;
 
-import picocli.CommandLine;
-import picocli.CommandLine.Command;
-import picocli.CommandLine.Option;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
+
+import com.acme.jrgen.CellItem;
+import com.acme.jrgen.Band;
+
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
 
 /**
  * CLI entry point for Excel -> JRXML + Bean generation.
@@ -42,16 +45,23 @@ public class Main implements Callable<Integer>
     Path outDir;
 
     @Option(
+        names = "--beans",
+        defaultValue = "false",
+        description = "Generate Java beans and field mapping CSV"
+    )
+    boolean beans;
+
+    @Option(
         names = "--pageWidth",
         defaultValue = "612",
-        description = "JR pageWidth (default 612 - Letter portrait)"
+        description = "JR pageWidth (default Letter 612)"
     )
     int pageWidth;
 
     @Option(
         names = "--pageHeight",
         defaultValue = "792",
-        description = "JR pageHeight (default 792 - Letter portrait)"
+        description = "JR pageHeight (default Letter 792)"
     )
     int pageHeight;
 
@@ -77,7 +87,7 @@ public class Main implements Callable<Integer>
     boolean skipValidation;
 
     @Option(
-        names = "--beanPackage",
+        names = {"--beans-package", "--beanPackage"},
         defaultValue = "com.acme.jrgen.beans",
         description = "Package name for generated beans (default: ${DEFAULT-VALUE})"
     )
@@ -102,19 +112,14 @@ public class Main implements Callable<Integer>
     {
         Files.createDirectories(outDir);
 
-        ExcelScanner scanner = new ExcelScanner(
-            excelPath,
-            pageWidth,
-            pageHeight,
-            margins.get(0),
-            margins.get(1),
-            margins.get(2),
-            margins.get(3)
-        );
+        ExcelScanner scanner = new ExcelScanner(excelPath);
         var models = scanner.scan(sheets);
 
-        List<String> mappingRows = new ArrayList<>();
-        mappingRows.add("sheet,cell,field_name,java_type,excel_number_format");
+        StringBuilder mappingCsv = new StringBuilder();
+        if (beans)
+        {
+            mappingCsv.append("sheet,cell,field_name,java_type,excel_number_format\n");
+        }
 
         for (SheetModel model : models)
         {
@@ -134,17 +139,33 @@ public class Main implements Callable<Integer>
             Path jrxmlOut = outDir.resolve(baseName + ".jrxml");
             Files.writeString(jrxmlOut, jrxml);
 
+            Path javaOut = null;
+            Path metaOut = null;
+
             if (beans)
             {
+                // Generate Java Bean source
                 String beanSrc = BeanGenerator.generateBean(
                     model,
                     beanPackage,
                     beanSuffix
                 );
-                Path javaOut = outDir.resolve(baseName + beanSuffix + ".java");
+                javaOut = outDir.resolve(baseName + beanSuffix + ".java");
                 Files.writeString(javaOut, beanSrc);
 
-                mappingRows.addAll(FieldMappingGenerator.generateMappings(model));
+                // Metadata .properties file
+                String metaText = MetadataGenerator.generateMetadata(
+                    model,
+                    beanPackage,
+                    beanSuffix,
+                    generatorPackage,
+                    generatorSuffix,
+                    reportTypeSuffix
+                );
+                metaOut = outDir.resolve(baseName + ".properties");
+                Files.writeString(metaOut, metaText);
+
+                appendMapping(model, mappingCsv);
             }
 
             // Optional validation
@@ -165,19 +186,66 @@ public class Main implements Callable<Integer>
                 }
             }
 
-            System.out.println("Wrote: " + jrxmlOut.getFileName());
+            if (beans)
+            {
+                System.out.println(
+                    "Wrote: " + jrxmlOut.getFileName()
+                    + ", " + javaOut.getFileName()
+                    + ", " + metaOut.getFileName()
+                );
+            }
+            else
+            {
+                System.out.println("Wrote: " + jrxmlOut.getFileName());
+            }
         }
 
         if (beans)
         {
             Path metaDir = outDir.resolve("meta");
             Files.createDirectories(metaDir);
-            Path mappingCsv = metaDir.resolve("field_mapping.csv");
-            Files.write(mappingCsv, mappingRows);
-            System.out.println("Wrote: " + mappingCsv.getFileName());
+            Path mappingOut = metaDir.resolve("field_mapping.csv");
+            Files.writeString(mappingOut, mappingCsv.toString());
         }
 
         return 0;
+    }
+
+    private void appendMapping(SheetModel model, StringBuilder mappingCsv)
+    {
+        for (Band band : model.bands())
+        {
+            for (CellItem ci : band.items())
+            {
+                if (ci.fieldSpec() == null)
+                {
+                    continue;
+                }
+
+                mappingCsv.append(model.sheetName()).append(',')
+                    .append(toCellRef(ci.row(), ci.col())).append(',')
+                    .append(ci.fieldName()).append(',')
+                    .append(ci.fieldSpec().type()).append(',')
+                    .append(ci.fieldSpec().originalFormat() == null ? "" : ci.fieldSpec().originalFormat())
+                    .append('\n');
+            }
+        }
+    }
+
+    private static String toCellRef(int row, int col)
+    {
+        StringBuilder sb = new StringBuilder();
+        int c = col;
+        do
+        {
+            int rem = c % 26;
+            sb.insert(0, (char) ('A' + rem));
+            c = (c / 26) - 1;
+        }
+        while (c >= 0);
+
+        sb.append(row + 1);
+        return sb.toString();
     }
 
     public static void main(String[] args)

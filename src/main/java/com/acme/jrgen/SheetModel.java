@@ -4,14 +4,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Sheet-level model containing cells, bands, and field metadata.
+ * Sheet model: width/height plus ordered bands containing cell items.
  */
-public record SheetModel(
-    String sheetName,
-    List<CellItem> items,
-    List<BandSpec> bands,
-    Map<String, FieldInfo> fields,
-    double titleHeight
-)
+public record SheetModel(String sheetName,
+                         double totalWidth,
+                         double totalHeight,
+                         List<Band> bands)
 {
 }

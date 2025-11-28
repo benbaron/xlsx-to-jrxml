@@ -3,6 +3,7 @@ package com.acme.jrgen;
 import com.acme.jrgen.CellItem.Role;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.SheetUtil;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -14,40 +15,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Scans Excel sheets and produces SheetModel objects according to the
- * authoring rules described in the specification.
+ * Scans Excel sheets and produces SheetModel objects using the richer authoring rules.
  */
 public class ExcelScanner
 {
-    private static final double MIN_FONT = 6.0;
-    private static final double MAX_FONT = 22.0;
-    private static final int DEFAULT_TITLE_HEIGHT = 60;
-
-    private static final Pattern TAG_PATTERN = Pattern.compile("\\[\\[([^]]+)]]");
+    private static final Pattern TAG_PATTERN = Pattern.compile("\\[\\[(field|band)\\s+([^]]+)\\]\\]");
 
     private final Path excelPath;
-    private final int pageWidth;
-    private final int pageHeight;
-    private final int leftMargin;
-    private final int rightMargin;
-    private final int topMargin;
-    private final int bottomMargin;
 
-    public ExcelScanner(Path excelPath,
-                        int pageWidth,
-                        int pageHeight,
-                        int leftMargin,
-                        int rightMargin,
-                        int topMargin,
-                        int bottomMargin)
+    public ExcelScanner(Path excelPath)
     {
         this.excelPath = excelPath;
-        this.pageWidth = pageWidth;
-        this.pageHeight = pageHeight;
-        this.leftMargin = leftMargin;
-        this.rightMargin = rightMargin;
-        this.topMargin = topMargin;
-        this.bottomMargin = bottomMargin;
     }
 
     public List<SheetModel> scan(List<String> restrictToSheets) throws Exception
@@ -72,139 +50,387 @@ public class ExcelScanner
                     }
                 }
 
-                SheetContext ctx = new SheetContext(sheet);
-
-                List<BandSpec> bands = detectBands(ctx);
-                if (bands.isEmpty())
-                {
-                    BandSpec defaultBand = new BandSpec(
-                        "Detail",
-                        1,
-                        0,
-                        0,
-                        ctx.totalWidthScaled,
-                        ctx.totalHeightScaled,
-                        "Stretch",
-                        null,
-                        0,
-                        ctx.maxRow,
-                        0,
-                        ctx.maxCol
-                    );
-                    bands = List.of(defaultBand);
-                }
-
-                List<CellItem> items = new ArrayList<>();
-                Map<String, Integer> nameCounts = new HashMap<>();
-                Map<String, FieldInfo> fields = new LinkedHashMap<>();
-
-                for (Row row : sheet)
-                {
-                    for (Cell cell : row)
-                    {
-                        if (ctx.isMergedAndNotTopLeft(cell))
-                        {
-                            continue;
-                        }
-
-                        ParsedFieldTag tag = ctx.parseFieldTag(cell);
-                        Role role = ctx.classify(cell, tag);
-                        if (role == null)
-                        {
-                            continue;
-                        }
-
-                        int colIdx = cell.getColumnIndex();
-                        int rowIdx = cell.getRowIndex();
-                        double x = ctx.positionX(colIdx);
-                        double y = ctx.positionY(rowIdx);
-
-                        double width = ctx.width(colIdx, cell);
-                        double height = ctx.height(rowIdx, cell);
-
-                        BandSpec band = findBandForCell(bands, rowIdx, colIdx);
-                        double relX = x - band.x();
-                        double relY = y - band.y();
-
-                        String value = ctx.getCellDisplayText(cell);
-                        String fieldName = null;
-                        String javaType = null;
-                        String pattern = null;
-                        String alignment = null;
-
-                        if (role == Role.DYNAMIC)
-                        {
-                            String baseName = (tag != null && tag.name != null)
-                                ? tag.name
-                                : buildBaseName(sheet, cell);
-                            fieldName = uniquify(baseName, nameCounts);
-
-                            javaType = (tag != null && tag.type != null)
-                                ? tag.type
-                                : ctx.inferType(cell);
-                            pattern = (tag != null && tag.pattern != null)
-                                ? tag.pattern
-                                : ctx.inferPattern(cell, javaType);
-                            alignment = (tag != null && tag.alignment != null)
-                                ? tag.alignment
-                                : ctx.inferAlignment(cell);
-
-                            fields.put(fieldName, new FieldInfo(
-                                fieldName,
-                                javaType,
-                                pattern,
-                                alignment,
-                                ctx.excelFormat(cell)
-                            ));
-                        }
-                        else
-                        {
-                            value = ctx.stripTag(value);
-                        }
-
-                        CellItem item = new CellItem(
-                            colIdx,
-                            rowIdx,
-                            relX,
-                            relY,
-                            width,
-                            height,
-                            value,
-                            role,
-                            fieldName,
-                            javaType,
-                            pattern,
-                            alignment,
-                            ctx.fontSize(cell),
-                            ctx.isBold(cell),
-                            ctx.excelFormat(cell),
-                            band
-                        );
-                        items.add(item);
-                    }
-                }
-
-                int titleHeight = DEFAULT_TITLE_HEIGHT;
-                result.add(new SheetModel(name, items, bands, fields, titleHeight));
+                SheetModel model = scanSheet(sheet);
+                result.add(model);
             }
 
             return result;
         }
     }
 
-    private static BandSpec findBandForCell(List<BandSpec> bands, int rowIdx, int colIdx)
+    private SheetModel scanSheet(Sheet sheet)
+    {
+        Map<String, Integer> nameCounts = new HashMap<>();
+        Map<String, CellRangeAddress> mergedTopLeft = new HashMap<>();
+        Map<String, CellRangeAddress> mergedLookup = new HashMap<>();
+
+        for (CellRangeAddress cra : sheet.getMergedRegions())
+        {
+            mergedLookup.put(cra.getFirstRow() + ":" + cra.getFirstColumn(), cra);
+            for (int r = cra.getFirstRow(); r <= cra.getLastRow(); r++)
+            {
+                for (int c = cra.getFirstColumn(); c <= cra.getLastColumn(); c++)
+                {
+                    mergedTopLeft.put(r + ":" + c, cra);
+                }
+            }
+        }
+
+        int maxCol = 0;
+        for (Row r : sheet)
+        {
+            if (r.getLastCellNum() > maxCol)
+            {
+                maxCol = r.getLastCellNum();
+            }
+        }
+
+        double[] colWidths = new double[maxCol + 1];
+        for (int c = 0; c <= maxCol; c++)
+        {
+            colWidths[c] = pxToPoints(SheetUtil.getColumnWidth(sheet, c, false));
+        }
+
+        List<Double> rowHeights = new ArrayList<>();
+        int lastRow = sheet.getLastRowNum();
+        for (int r = 0; r <= lastRow; r++)
+        {
+            Row row = sheet.getRow(r);
+            double h = (row == null) ? sheet.getDefaultRowHeightInPoints() : row.getHeightInPoints();
+            rowHeights.add(h);
+        }
+
+        double totalWidth = Arrays.stream(colWidths).sum();
+        double totalHeight = rowHeights.stream().mapToDouble(Double::doubleValue).sum();
+
+        List<Band> bands = buildBands(sheet, colWidths, rowHeights);
+
+        for (Band b : bands)
+        {
+            List<CellItem> bandItems = new ArrayList<>();
+            for (Row row : sheet)
+            {
+                for (Cell cell : row)
+                {
+                    int colIdx = cell.getColumnIndex();
+                    int rowIdx = cell.getRowIndex();
+
+                    if (isMergedButNotTopLeft(mergedLookup, mergedTopLeft, rowIdx, colIdx))
+                    {
+                        continue;
+                    }
+
+                    if (!isInsideBand(b, rowIdx, colIdx))
+                    {
+                        continue;
+                    }
+
+                    Role role = classify(cell);
+                    String value = getCellString(cell);
+
+                    Optional<Map<String, String>> tag = readTag(cell, "field");
+                    boolean forceDynamic = tag.map(m -> "1".equals(m.get("force"))).orElse(false);
+
+                    if (!forceDynamic && role == null)
+                    {
+                        continue;
+                    }
+
+                    if (isMagenta(cell))
+                    {
+                        continue;
+                    }
+
+                    boolean render = true;
+                    if (tag.isPresent())
+                    {
+                        render = false; // hide inline tag text
+                    }
+
+                    FieldSpec fieldSpec = null;
+                    Role effectiveRole = role;
+
+                    if (forceDynamic || tag.isPresent() || cell.getCellType() == CellType.FORMULA)
+                    {
+                        effectiveRole = Role.DYNAMIC;
+                    }
+
+                    if (effectiveRole == Role.DYNAMIC)
+                    {
+                        String baseName = tag.map(m -> m.get("name")).orElse(buildBaseName(sheet, cell));
+                        String fieldName = uniquify(baseName, nameCounts);
+                        String type = tag.map(m -> m.get("type")).orElse(inferType(cell));
+                        String pattern = tag.map(m -> m.get("pattern")).orElse(inferPattern(cell));
+                        String align = tag.map(m -> m.get("align")).orElse(defaultAlignment(type));
+                        String originalFormat = cell.getCellStyle() == null ? null : cell.getCellStyle().getDataFormatString();
+
+                        if (tag.isPresent() && tag.get().containsKey("name"))
+                        {
+                            fieldName = tag.get().get("name");
+                        }
+                        fieldSpec = new FieldSpec(fieldName, type, pattern, align, forceDynamic, originalFormat);
+                    }
+
+                    double rawX = sum(colWidths, 0, colIdx);
+                    double rawY = sum(rowHeights, 0, rowIdx);
+                    double rawW = mergedWidth(colWidths, mergedLookup, rowIdx, colIdx);
+                    double rawH = mergedHeight(rowHeights, mergedLookup, rowIdx, colIdx);
+
+                    double fontSize = readFontSize(cell);
+                    String alignment = (fieldSpec != null && fieldSpec.alignment() != null)
+                        ? fieldSpec.alignment()
+                        : readAlignment(cell);
+
+                    bandItems.add(new CellItem(
+                        colIdx,
+                        rowIdx,
+                        rawX - b.originX(),
+                        rawY - b.originY(),
+                        rawW,
+                        rawH,
+                        cleanValue(value, tag),
+                        effectiveRole,
+                        fieldSpec,
+                        fontSize,
+                        alignment,
+                        render
+                    ));
+                }
+            }
+            bandItems.sort(Comparator.comparingInt(CellItem::row).thenComparingInt(CellItem::col));
+            bands.set(bands.indexOf(b), new Band(
+                b.name(),
+                b.idx(),
+                b.startRow(),
+                b.endRow(),
+                b.startCol(),
+                b.endCol(),
+                b.originX(),
+                b.originY(),
+                b.width(),
+                b.height(),
+                b.explicitHeight(),
+                b.splitType(),
+                b.printWhenExpression(),
+                bandItems
+            ));
+        }
+
+        bands.sort(Comparator
+            .comparing((Band b) -> b.idx() == null ? Integer.MAX_VALUE : b.idx())
+            .thenComparingDouble(Band::originY)
+            .thenComparingDouble(Band::originX));
+
+        return new SheetModel(sheet.getSheetName(), totalWidth, totalHeight, bands);
+    }
+
+    private static List<Band> buildBands(Sheet sheet, double[] colWidths, List<Double> rowHeights)
+    {
+        List<Band> bands = new ArrayList<>();
+        boolean hasMagenta = false;
+        Set<String> visited = new HashSet<>();
+
+        for (Row row : sheet)
+        {
+            for (Cell cell : row)
+            {
+                int r = cell.getRowIndex();
+                int c = cell.getColumnIndex();
+                String key = r + ":" + c;
+                if (visited.contains(key))
+                {
+                    continue;
+                }
+
+                if (isMagenta(cell))
+                {
+                    hasMagenta = true;
+                    Band rect = captureRectangle(sheet, r, c, visited, colWidths, rowHeights);
+                    bands.add(rect);
+                }
+            }
+        }
+
+        if (!hasMagenta)
+        {
+            double height = rowHeights.stream().mapToDouble(Double::doubleValue).sum();
+            double width = Arrays.stream(colWidths).sum();
+            bands.add(new Band("detail", null, 0, rowHeights.size() - 1, 0, colWidths.length - 1, 0, 0, width, height, null, "Stretch", null, new ArrayList<>()));
+        }
+
+        return bands;
+    }
+
+    private static Band captureRectangle(Sheet sheet,
+                                         int startRow,
+                                         int startCol,
+                                         Set<String> visited,
+                                         double[] colWidths,
+                                         List<Double> rowHeights)
+    {
+        int endCol = startCol;
+        int endRow = startRow;
+
+        while (isMagenta(sheet, startRow, endCol + 1))
+        {
+            endCol++;
+        }
+
+        while (isMagenta(sheet, endRow + 1, startCol))
+        {
+            endRow++;
+        }
+
+        for (int r = startRow; r <= endRow; r++)
+        {
+            for (int c = startCol; c <= endCol; c++)
+            {
+                if (!isMagenta(sheet, r, c))
+                {
+                    continue;
+                }
+                visited.add(r + ":" + c);
+            }
+        }
+
+        Cell topLeft = sheet.getRow(startRow).getCell(startCol);
+        Optional<Map<String, String>> tag = readTag(topLeft, "band");
+        String name = tag.map(m -> m.getOrDefault("name", "detail" + startRow)).orElse("detail" + startRow);
+        Integer idx = tag.map(m -> m.get("idx")).map(Integer::valueOf).orElse(null);
+        Double explicitHeight = tag.map(m -> m.get("height")).map(Double::valueOf).orElse(null);
+        String splitType = tag.map(m -> m.get("split")).orElse("Stretch");
+        String printWhen = tag.map(m -> m.get("printWhen")).orElse(null);
+
+        double originX = sum(colWidths, 0, startCol);
+        double originY = sum(rowHeights, 0, startRow);
+        double width = sum(colWidths, startCol, endCol + 1);
+        double height = sum(rowHeights, startRow, endRow + 1);
+
+        return new Band(name, idx, startRow, endRow, startCol, endCol, originX, originY, width, height, explicitHeight, splitType, printWhen, new ArrayList<>());
+    }
+
+    private static boolean isMagenta(Cell cell)
+    {
+        return isMagenta(cell.getSheet(), cell.getRowIndex(), cell.getColumnIndex());
+    }
+
+    private static boolean isMagenta(Sheet sheet, int row, int col)
+    {
+        Row r = sheet.getRow(row);
+        if (r == null)
+        {
+            return false;
+        }
+        Cell c = r.getCell(col);
+        if (c == null)
+        {
+            return false;
+        }
+
+        CellStyle style = c.getCellStyle();
+        if (style == null)
+        {
+            return false;
+        }
+
+        if (style.getFillPattern() != FillPatternType.SOLID_FOREGROUND)
+        {
+            return false;
+        }
+
+        Color fg = style.getFillForegroundColorColor();
+        if (fg instanceof XSSFColor xc)
+        {
+            byte[] rgb = xc.getRGB();
+            if (rgb != null)
+            {
+                return (rgb[0] & 0xFF) == 0xFF && (rgb[1] & 0xFF) == 0x00 && (rgb[2] & 0xFF) == 0xFF;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isInsideBand(Band band, int row, int col)
+    {
+        return row >= band.startRow() && row <= band.endRow()
+            && col >= band.startCol() && col <= band.endCol();
+    }
+
+    private static boolean isMergedButNotTopLeft(Map<String, CellRangeAddress> mergedLookup,
+                                                 Map<String, CellRangeAddress> mergedTopLeft,
+                                                 int row,
+                                                 int col)
+    {
+        CellRangeAddress cra = mergedTopLeft.get(row + ":" + col);
+        if (cra == null)
+        {
+            return false;
+        }
+        return !(cra.getFirstRow() == row && cra.getFirstColumn() == col);
+    }
+
+    private static Role classify(Cell cell)
     {
         for (BandSpec b : bands)
         {
             if (b.containsCell(rowIdx, colIdx))
             {
-                return b;
+                String rgb = colorToARGB(fg);
+
+                if (isBlue(style, fg))
+                {
+                    return Role.DYNAMIC;
+                }
+
+                if ("FFFFFFFF".equalsIgnoreCase(rgb))
+                {
+                    String v = getCellString(cell);
+                    return (v == null || v.isBlank()) ? null : Role.STATIC;
+                }
             }
         }
-        return bands.get(0);
+
+        if (cell.getCellType() == CellType.FORMULA)
+        {
+            return Role.DYNAMIC;
+        }
+
+        String v = getCellString(cell);
+        if (v == null || v.isBlank())
+        {
+            return null;
+        }
+
+        return Role.STATIC;
     }
 
-    private List<BandSpec> detectBands(SheetContext ctx)
+    private static boolean isBlue(CellStyle style, Color fg)
+    {
+        if (style.getFillPattern() != FillPatternType.SOLID_FOREGROUND)
+        {
+            return false;
+        }
+
+        if (style.getFillForegroundColor() == 41)
+        {
+            return true;
+        }
+
+        if (fg instanceof XSSFColor xc)
+        {
+            byte[] rgb = xc.getRGB();
+            if (rgb != null && rgb.length >= 3)
+            {
+                int r = rgb[0] & 0xFF;
+                int g = rgb[1] & 0xFF;
+                int b = rgb[2] & 0xFF;
+                return b > r + 20 && b > g + 20;
+            }
+        }
+        return false;
+    }
+
+    private static String getCellString(Cell c)
     {
         Map<String, Integer> nameCounts = new HashMap<>();
         List<BandSpec> bands = new ArrayList<>();
@@ -212,8 +438,22 @@ public class ExcelScanner
 
         for (int r = 0; r <= ctx.maxRow; r++)
         {
-            Row row = ctx.sheet.getRow(r);
-            if (row == null)
+            case STRING -> c.getStringCellValue();
+            case NUMERIC -> DateUtil.isCellDateFormatted(c)
+                ? c.getDateCellValue().toString()
+                : Double.toString(c.getNumericCellValue());
+            case BOOLEAN -> Boolean.toString(c.getBooleanCellValue());
+            case FORMULA -> c.getCellFormula();
+            case BLANK, _NONE, ERROR -> "";
+        };
+    }
+
+    private static String colorToARGB(Color c)
+    {
+        if (c instanceof XSSFColor xc)
+        {
+            byte[] argb = xc.getARGB();
+            if (argb != null)
             {
                 continue;
             }
@@ -392,574 +632,181 @@ public class ExcelScanner
         }
     }
 
-    private static String getCellString(Cell c)
+    private static Optional<Map<String, String>> readTag(Cell cell, String kind)
     {
-        if (c == null)
+        if (cell == null)
+        {
+            return Optional.empty();
+        }
+
+        String comment = cell.getCellComment() == null ? null : cell.getCellComment().getString().getString();
+        String text = cell.getCellType() == CellType.STRING ? cell.getStringCellValue() : null;
+
+        for (String source : List.of(comment, text))
+        {
+            if (source == null)
+            {
+                continue;
+            }
+            Matcher m = TAG_PATTERN.matcher(source);
+            if (m.find() && kind.equalsIgnoreCase(m.group(1)))
+            {
+                String body = m.group(2);
+                Map<String, String> attrs = new HashMap<>();
+                String[] parts = body.trim().split("\\s+");
+                for (String p : parts)
+                {
+                    String[] kv = p.split("=", 2);
+                    if (kv.length == 2)
+                    {
+                        attrs.put(kv[0].trim(), kv[1].replaceAll("^\"|\"$", ""));
+                    }
+                }
+                return Optional.of(attrs);
+            }
+        }
+
+        return Optional.empty();
+    }
+
+    private static String cleanValue(String original, Optional<Map<String, String>> tag)
+    {
+        if (original == null)
         {
             return "";
         }
 
-        return switch (c.getCellType())
+        if (tag.isPresent())
         {
-            case STRING -> c.getStringCellValue();
-            case NUMERIC -> DateUtil.isCellDateFormatted(c)
-                ? c.getDateCellValue().toString()
-                : Double.toString(c.getNumericCellValue());
-            case BOOLEAN -> Boolean.toString(c.getBooleanCellValue());
-            case FORMULA -> c.getCellFormula();
-            case BLANK, _NONE, ERROR -> "";
+            return original.replaceAll("\\[\\[.*?\\]\\]", "").trim();
+        }
+        return original;
+    }
+
+    private static double mergedWidth(double[] colWidths, Map<String, CellRangeAddress> mergedLookup, int row, int col)
+    {
+        CellRangeAddress cra = mergedLookup.get(row + ":" + col);
+        if (cra == null)
+        {
+            return colWidths[col];
+        }
+        return sum(colWidths, cra.getFirstColumn(), cra.getLastColumn() + 1);
+    }
+
+    private static double mergedHeight(List<Double> rowHeights, Map<String, CellRangeAddress> mergedLookup, int row, int col)
+    {
+        CellRangeAddress cra = mergedLookup.get(row + ":" + col);
+        if (cra == null)
+        {
+            return rowHeights.get(row);
+        }
+        return sum(rowHeights, cra.getFirstRow(), cra.getLastRow() + 1);
+    }
+
+    private static double sum(double[] values, int fromInclusive, int toExclusive)
+    {
+        double total = 0;
+        for (int i = fromInclusive; i < toExclusive && i < values.length; i++)
+        {
+            total += values[i];
+        }
+        return total;
+    }
+
+    private static double sum(List<Double> values, int fromInclusive, int toExclusive)
+    {
+        double total = 0;
+        for (int i = fromInclusive; i < toExclusive && i < values.size(); i++)
+        {
+            total += values.get(i);
+        }
+        return total;
+    }
+
+    private static double pxToPoints(double px)
+    {
+        return px * 72.0 / 96.0;
+    }
+
+    private static double readFontSize(Cell cell)
+    {
+        CellStyle style = cell.getCellStyle();
+        if (style == null)
+        {
+            return 10;
+        }
+        Font font = cell.getSheet().getWorkbook().getFontAt(style.getFontIndex());
+        return font == null ? 10 : font.getFontHeightInPoints();
+    }
+
+    private static String readAlignment(Cell cell)
+    {
+        HorizontalAlignment align = cell.getCellStyle().getAlignment();
+        return switch (align)
+        {
+            case CENTER, CENTER_SELECTION, JUSTIFY -> "Center";
+            case RIGHT, FILL -> "Right";
+            default -> "Left";
         };
     }
 
-    private static class ParsedFieldTag
+    private static String inferType(Cell cell)
     {
-        final String name;
-        final String type;
-        final String pattern;
-        final String alignment;
-        final boolean force;
-
-        ParsedFieldTag(String name, String type, String pattern, String alignment, boolean force)
+        if (DateUtil.isCellDateFormatted(cell))
         {
-            this.name = name;
-            this.type = type;
-            this.pattern = pattern;
-            this.alignment = alignment;
-            this.force = force;
+            return "java.util.Date";
         }
+
+        CellType type = cell.getCellType();
+        if (type == CellType.FORMULA)
+        {
+            type = cell.getCachedFormulaResultType();
+        }
+
+        return switch (type)
+        {
+            case NUMERIC -> "java.lang.Double";
+            default -> "java.lang.String";
+        };
     }
 
-    private static class ParsedBandTag
+    private static String inferPattern(Cell cell)
     {
-        final String name;
-        final Integer idx;
-        final Double height;
-        final String splitType;
-        final String printWhen;
-
-        ParsedBandTag(String name, Integer idx, Double height, String splitType, String printWhen)
+        String format = cell.getCellStyle() == null ? null : cell.getCellStyle().getDataFormatString();
+        if (format == null)
         {
-            this.name = name;
-            this.idx = idx;
-            this.height = height;
-            this.splitType = splitType;
-            this.printWhen = printWhen;
-        }
-    }
-
-    private static class Rect
-    {
-        final int top;
-        final int bottom;
-        final int left;
-        final int right;
-
-        Rect(int top, int bottom, int left, int right)
-        {
-            this.top = top;
-            this.bottom = bottom;
-            this.left = left;
-            this.right = right;
-        }
-
-        static Rect fromCells(Set<CellPos> cells)
-        {
-            int top = cells.stream().mapToInt(cp -> cp.row).min().orElse(0);
-            int bottom = cells.stream().mapToInt(cp -> cp.row).max().orElse(0);
-            int left = cells.stream().mapToInt(cp -> cp.col).min().orElse(0);
-            int right = cells.stream().mapToInt(cp -> cp.col).max().orElse(0);
-            return new Rect(top, bottom, left, right);
-        }
-    }
-
-    private record CellPos(int row, int col){}
-
-    private class SheetContext
-    {
-        private final Sheet sheet;
-        private final double[] colWidths;
-        private final double[] rowHeights;
-        private final double scaleX;
-        private final double scaleY;
-        private final int maxRow;
-        private final int maxCol;
-        private final double totalWidthScaled;
-        private final double totalHeightScaled;
-        private final List<CellRangeAddress> merges;
-
-        SheetContext(Sheet sheet)
-        {
-            this.sheet = sheet;
-            this.maxRow = sheet.getLastRowNum();
-            this.maxCol = findMaxColumn(sheet);
-            this.colWidths = new double[maxCol + 1];
-            this.rowHeights = new double[maxRow + 1];
-
-            for (int c = 0; c <= maxCol; c++)
-            {
-                colWidths[c] = sheet.getColumnWidth(c) / 256.0;
-            }
-
-            double defaultRowHeight = sheet.getDefaultRowHeightInPoints();
-            for (int r = 0; r <= maxRow; r++)
-            {
-                Row row = sheet.getRow(r);
-                rowHeights[r] = (row == null) ? defaultRowHeight : row.getHeightInPoints();
-            }
-
-            double totalWidth = Arrays.stream(colWidths).sum();
-            double totalHeight = Arrays.stream(rowHeights).sum();
-
-            double availableWidth = pageWidth - leftMargin - rightMargin;
-            double availableHeight = pageHeight - topMargin - bottomMargin - DEFAULT_TITLE_HEIGHT;
-
-            this.scaleX = (totalWidth == 0) ? 1.0 : availableWidth / totalWidth;
-            this.scaleY = (totalHeight == 0) ? 1.0 : availableHeight / totalHeight;
-            this.totalWidthScaled = totalWidth * scaleX;
-            this.totalHeightScaled = totalHeight * scaleY;
-            this.merges = sheet.getMergedRegions();
-        }
-
-        double positionX(int col)
-        {
-            double sum = 0;
-            for (int c = 0; c < col; c++)
-            {
-                sum += colWidths[c];
-            }
-            return sum * scaleX;
-        }
-
-        double positionY(int row)
-        {
-            double sum = 0;
-            for (int r = 0; r < row; r++)
-            {
-                sum += rowHeights[r];
-            }
-            return sum * scaleY;
-        }
-
-        double width(int startCol, Cell cell)
-        {
-            int endCol = startCol;
-            CellRangeAddress region = findMerge(cell);
-            if (region != null)
-            {
-                endCol = region.getLastColumn();
-            }
-            return width(startCol, endCol);
-        }
-
-        double width(int startCol, int endCol)
-        {
-            double sum = 0;
-            for (int c = startCol; c <= endCol && c < colWidths.length; c++)
-            {
-                sum += colWidths[c];
-            }
-            return sum * scaleX;
-        }
-
-        double height(int startRow, Cell cell)
-        {
-            int endRow = startRow;
-            CellRangeAddress region = findMerge(cell);
-            if (region != null)
-            {
-                endRow = region.getLastRow();
-            }
-            return height(startRow, endRow);
-        }
-
-        double height(int startRow, int endRow)
-        {
-            double sum = 0;
-            for (int r = startRow; r <= endRow && r < rowHeights.length; r++)
-            {
-                sum += rowHeights[r];
-            }
-            return sum * scaleY;
-        }
-
-        boolean isMergedAndNotTopLeft(Cell cell)
-        {
-            CellRangeAddress region = findMerge(cell);
-            if (region == null)
-            {
-                return false;
-            }
-            return !(cell.getRowIndex() == region.getFirstRow()
-                && cell.getColumnIndex() == region.getFirstColumn());
-        }
-
-        CellRangeAddress findMerge(Cell cell)
-        {
-            if (cell == null)
-            {
-                return null;
-            }
-            int r = cell.getRowIndex();
-            int c = cell.getColumnIndex();
-            for (CellRangeAddress reg : merges)
-            {
-                if (reg.isInRange(r, c))
-                {
-                    return reg;
-                }
-            }
             return null;
         }
 
-        Role classify(Cell cell, ParsedFieldTag tag)
+        String lower = format.toLowerCase(Locale.ROOT);
+        if (lower.contains("accounting") || lower.contains("$") || lower.contains("[$"))
         {
-            if (tag != null && tag.force)
-            {
-                return Role.DYNAMIC;
-            }
-
-            if (cell.getCellType() == CellType.FORMULA)
-            {
-                return Role.DYNAMIC;
-            }
-
-            CellStyle style = cell.getCellStyle();
-            if (style != null)
-            {
-                FillPatternType pattern = style.getFillPattern();
-                Color fg = style.getFillForegroundColorColor();
-
-                if (pattern == FillPatternType.SOLID_FOREGROUND && fg != null)
-                {
-                    if (isBlue(fg))
-                    {
-                        return Role.DYNAMIC;
-                    }
-                    if (isMagenta(fg))
-                    {
-                        return null;
-                    }
-                    if (isGreen(fg))
-                    {
-                        return null;
-                    }
-                }
-            }
-
-            String v = getCellDisplayText(cell);
-            if (v == null || v.isBlank())
-            {
-                return null;
-            }
-
-            return Role.STATIC;
+            return "$ #,##0.00";
         }
 
-        String getCellDisplayText(Cell cell)
+        if (DateUtil.isCellDateFormatted(cell))
         {
-            String raw = getCellString(cell);
-            return stripTag(raw);
+            return "MMM d, yyyy";
         }
 
-        String stripTag(String raw)
+        if (lower.matches(".*[0#/,].*"))
         {
-            if (raw == null)
-            {
-                return null;
-            }
-            Matcher m = TAG_PATTERN.matcher(raw);
-            return m.replaceAll("").trim();
+            return "#,##0.###";
         }
 
-        boolean isMagenta(Cell cell)
-        {
-            CellStyle style = cell.getCellStyle();
-            if (style == null)
-            {
-                return false;
-            }
-            if (style.getFillPattern() != FillPatternType.SOLID_FOREGROUND)
-            {
-                return false;
-            }
-            Color fg = style.getFillForegroundColorColor();
-            return isMagenta(fg);
-        }
-
-        boolean isMagenta(Color color)
-        {
-            if (color instanceof XSSFColor xc)
-            {
-                byte[] rgb = xc.getRGB();
-                if (rgb != null)
-                {
-                    return (rgb[0] & 0xFF) == 0xFF
-                        && (rgb[1] & 0xFF) == 0x00
-                        && (rgb[2] & 0xFF) == 0xFF;
-                }
-            }
-            return false;
-        }
-
-        boolean isGreen(Color c)
-        {
-            if (c instanceof XSSFColor xc)
-            {
-                byte[] rgb = xc.getRGB();
-                if (rgb != null)
-                {
-                    return (rgb[0] & 0xFF) == 0xCC && (rgb[1] & 0xFF) == 0xFF && (rgb[2] & 0xFF) == 0xCC
-                        || (rgb[0] & 0xFF) == 0xC6 && (rgb[1] & 0xFF) == 0xEF && (rgb[2] & 0xFF) == 0xCE;
-                }
-            }
-            return false;
-        }
-
-        boolean isBlue(Color c)
-        {
-            if (c instanceof XSSFColor xc)
-            {
-                if (xc.getIndex() == 41)
-                {
-                    return true;
-                }
-
-                byte[] rgb = xc.getRGB();
-                if (rgb != null)
-                {
-                    int r = rgb[0] & 0xFF;
-                    int g = rgb[1] & 0xFF;
-                    int b = rgb[2] & 0xFF;
-                    return b > (r + g) / 2 && b > 80;
-                }
-            }
-            return false;
-        }
-
-        ParsedFieldTag parseFieldTag(Cell cell)
-        {
-            String src = null;
-            if (cell.getCellComment() != null)
-            {
-                src = cell.getCellComment().getString().getString();
-            }
-            else
-            {
-                src = getCellString(cell);
-            }
-
-            if (src == null)
-            {
-                return null;
-            }
-
-            Matcher m = TAG_PATTERN.matcher(src);
-            while (m.find())
-            {
-                String inner = m.group(1).trim();
-                if (inner.startsWith("field"))
-                {
-                    Map<String, String> attrs = parseAttributes(inner.substring("field".length()));
-                    String name = attrs.get("name");
-                    String type = attrs.get("type");
-                    String pattern = attrs.get("pattern");
-                    String align = attrs.get("align");
-                    boolean force = "1".equals(attrs.get("force"));
-                    return new ParsedFieldTag(name, type, pattern, align, force);
-                }
-            }
-            return null;
-        }
-
-        ParsedBandTag parseBandTag(Cell cell)
-        {
-            if (cell == null)
-            {
-                return null;
-            }
-            String src = getCellString(cell);
-            Matcher m = TAG_PATTERN.matcher(src);
-            while (m.find())
-            {
-                String inner = m.group(1).trim();
-                if (inner.startsWith("band"))
-                {
-                    Map<String, String> attrs = parseAttributes(inner.substring("band".length()));
-                    String name = attrs.get("name");
-                    Integer idx = attrs.containsKey("idx") ? Integer.parseInt(attrs.get("idx")) : null;
-                    Double height = attrs.containsKey("height") ? Double.parseDouble(attrs.get("height")) : null;
-                    String split = attrs.getOrDefault("split", "Stretch");
-                    String printWhen = attrs.get("printWhen");
-                    return new ParsedBandTag(name, idx, height, split, printWhen);
-                }
-            }
-            return null;
-        }
-
-        Map<String, String> parseAttributes(String src)
-        {
-            Map<String, String> attrs = new HashMap<>();
-            Matcher m = Pattern.compile("([a-zA-Z]+)=\\"?([^\\"\\s]+[^\\"]*)\\"?").matcher(src);
-            while (m.find())
-            {
-                attrs.put(m.group(1).trim(), m.group(2).trim());
-            }
-            return attrs;
-        }
-
-        Set<CellPos> collectComponent(int startRow, int startCol, Set<CellPos> visited)
-        {
-            Set<CellPos> component = new HashSet<>();
-            Deque<CellPos> stack = new ArrayDeque<>();
-            stack.push(new CellPos(startRow, startCol));
-
-            while (!stack.isEmpty())
-            {
-                CellPos pos = stack.pop();
-                if (visited.contains(pos))
-                {
-                    continue;
-                }
-                visited.add(pos);
-                component.add(pos);
-
-                int[][] dirs = {{1,0},{-1,0},{0,1},{0,-1}};
-                for (int[] d : dirs)
-                {
-                    int nr = pos.row + d[0];
-                    int nc = pos.col + d[1];
-                    if (nr < 0 || nc < 0 || nr > maxRow || nc > maxCol)
-                    {
-                        continue;
-                    }
-                    Row row = sheet.getRow(nr);
-                    if (row == null)
-                    {
-                        continue;
-                    }
-                    Cell neighbor = row.getCell(nc);
-                    if (neighbor != null && isMagenta(neighbor))
-                    {
-                        CellPos np = new CellPos(nr, nc);
-                        if (!visited.contains(np))
-                        {
-                            stack.push(np);
-                        }
-                    }
-                }
-            }
-            return component;
-        }
-
-        String inferType(Cell cell)
-        {
-            if (DateUtil.isCellDateFormatted(cell))
-            {
-                return "java.util.Date";
-            }
-            if (cell.getCellType() == CellType.NUMERIC)
-            {
-                return "java.lang.Double";
-            }
-            return "java.lang.String";
-        }
-
-        String inferPattern(Cell cell, String javaType)
-        {
-            String fmt = excelFormat(cell);
-            if (fmt == null)
-            {
-                return null;
-            }
-
-            if (fmt.contains("[$") || fmt.contains("$"))
-            {
-                return "$ #,##0.00";
-            }
-            if (DateUtil.isCellDateFormatted(cell) || "java.util.Date".equals(javaType))
-            {
-                return "MMM d, yyyy";
-            }
-            if (fmt.contains("0") || fmt.contains("#") || fmt.contains(","))
-            {
-                return "#,##0.###";
-            }
-            return null;
-        }
-
-        String excelFormat(Cell cell)
-        {
-            CellStyle style = cell.getCellStyle();
-            if (style == null)
-            {
-                return null;
-            }
-            return style.getDataFormatString();
-        }
-
-        String inferAlignment(Cell cell)
-        {
-            HorizontalAlignment ha = cell.getCellStyle() != null
-                ? cell.getCellStyle().getAlignment()
-                : HorizontalAlignment.LEFT;
-
-            return switch (ha)
-            {
-                case RIGHT -> "Right";
-                case CENTER -> "Center";
-                case JUSTIFY -> "Justified";
-                default -> "Left";
-            };
-        }
-
-        double fontSize(Cell cell)
-        {
-            CellStyle style = cell.getCellStyle();
-            if (style == null)
-            {
-                return clampFont(10.0 * scaleY);
-            }
-            Font font = sheet.getWorkbook().getFontAt(style.getFontIndexAsInt());
-            double size = font.getFontHeightInPoints();
-            return clampFont(size * scaleY);
-        }
-
-        boolean isBold(Cell cell)
-        {
-            CellStyle style = cell.getCellStyle();
-            if (style == null)
-            {
-                return false;
-            }
-            Font font = sheet.getWorkbook().getFontAt(style.getFontIndexAsInt());
-            return font.getBold();
-        }
-
-        private double clampFont(double size)
-        {
-            if (size < MIN_FONT)
-            {
-                return MIN_FONT;
-            }
-            if (size > MAX_FONT)
-            {
-                return MAX_FONT;
-            }
-            return size;
-        }
+        return null;
     }
 
-    private static int findMaxColumn(Sheet sheet)
+    private static String defaultAlignment(String type)
     {
-        int max = 0;
-        for (Row row : sheet)
+        if (type == null)
         {
-            int last = row.getLastCellNum();
-            if (last > 0 && (last - 1) > max)
-            {
-                max = last - 1;
-            }
+            return "Left";
         }
-        return max;
+        if (type.contains("Double") || type.contains("Integer") || type.contains("Long") || type.contains("BigDecimal"))
+        {
+            return "Right";
+        }
+        return "Left";
     }
 }

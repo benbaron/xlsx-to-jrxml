@@ -12,14 +12,10 @@ public record CellItem(
     double height,
     String value,
     Role role,
-    String fieldName,
-    String javaType,
-    String pattern,
-    String alignment,
+    FieldSpec fieldSpec,
     double fontSize,
-    boolean bold,
-    String excelFormat,
-    BandSpec band
+    String alignment,
+    boolean render
 )
 {
     public enum Role
@@ -36,5 +32,10 @@ public record CellItem(
     public boolean isDynamic()
     {
         return role == Role.DYNAMIC;
+    }
+
+    public String fieldName()
+    {
+        return fieldSpec == null ? null : fieldSpec.name();
     }
 }

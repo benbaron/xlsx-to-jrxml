@@ -1,7 +1,7 @@
 package com.acme.jrgen;
 
 /**
- * Encapsulates JRXML fragments using real Jasper elements.
+ * JRXML snippets used by the builder.
  */
 public final class FragmentLibrary
 {
@@ -18,6 +18,7 @@ public final class FragmentLibrary
                                 int bottom)
     {
         int columnWidth = pageWidth - (left + right);
+
         return String.format("""
             <?xml version=\"1.0\" encoding=\"UTF-8\"?>
             <jasperReport name=\"%s\" language=\"java\"
@@ -25,7 +26,8 @@ public final class FragmentLibrary
                           columnWidth=\"%d\"
                           leftMargin=\"%d\" rightMargin=\"%d\"
                           topMargin=\"%d\" bottomMargin=\"%d\"
-                          uuid=\"00000000-0000-0000-0000-000000000000\">\n""",
+                          uuid=\"00000000-0000-0000-0000-000000000000\">
+            """,
             escape(reportName),
             pageWidth,
             pageHeight,
@@ -43,7 +45,7 @@ public final class FragmentLibrary
               <style name=\"base\" fontName=\"SansSerif\" fontSize=\"10\"/>
               <style name=\"label\" isBold=\"true\"/>
               <style name=\"value\"/>
-            """;
+            ";
     }
 
     public static String parameters()
@@ -51,12 +53,7 @@ public final class FragmentLibrary
         return """
               <parameter name=\"reportTitle\" class=\"java.lang.String\"/>
               <parameter name=\"organizationName\" class=\"java.lang.String\"/>
-            """;
-    }
-
-    public static String footer()
-    {
-        return "</jasperReport>\n";
+            ";
     }
 
     public static String staticText(int x,
@@ -65,19 +62,22 @@ public final class FragmentLibrary
                                     int h,
                                     String text,
                                     double fontSize,
-                                    boolean bold)
+                                    String align)
     {
-        String template = """
-                  <staticText>
-                    <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" style=\"label\"/>
-                    <textElement>
-                      <font size=\"%.1f\"%s/>
-                    </textElement>
-                    <text><![CDATA[%s]]></text>
-                  </staticText>\n""";
-
-        String boldAttr = bold ? " isBold=\"true\"" : "";
-        return String.format(template, x, y, w, h, fontSize, boldAttr, cdata(text));
+        return String.format("""
+                <staticText>
+                  <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
+                  <textElement textAlignment=\"%s\">
+                    <font size=\"%s\"/>
+                  </textElement>
+                  <text><![CDATA[%s]]></text>
+                </staticText>
+            """,
+            x, y, w, h,
+            escape(align == null ? "Left" : align),
+            formatFont(fontSize),
+            cdata(text)
+        );
     }
 
     public static String textField(int x,
@@ -85,35 +85,58 @@ public final class FragmentLibrary
                                    int w,
                                    int h,
                                    String fieldName,
-                                   String alignment,
-                                   String pattern,
                                    double fontSize,
-                                   boolean bold)
+                                   String align,
+                                   String pattern)
     {
-        String patternAttr = (pattern == null) ? "" : " pattern=\"" + escape(pattern) + "\"";
-        String alignAttr = alignment == null ? "" : String.format("<textAlignment>%s</textAlignment>\n", alignment);
-        String template = """
-                  <textField%s>
-                    <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" style=\"value\"/>
-                    <textElement>
-                      %s      <font size=\"%.1f\"%s/>
-                    </textElement>
-                    <textFieldExpression><![CDATA[$F{%s}]]></textFieldExpression>
-                  </textField>\n""";
+        String patternFragment = (pattern == null || pattern.isBlank())
+            ? ""
+            : String.format("      <pattern>%s</pattern>%n", escape(pattern));
 
-        String boldAttr = bold ? " isBold=\"true\"" : "";
-        return String.format(
-            template,
-            patternAttr,
-            x,
-            y,
-            w,
-            h,
-            alignAttr,
-            fontSize,
-            boldAttr,
+        return String.format("""
+                <textField>
+                  <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
+                  <textElement textAlignment=\"%s\">
+                    <font size=\"%s\"/>
+                  </textElement>
+%s                  <textFieldExpression><![CDATA[$F{%s}]]></textFieldExpression>
+                </textField>
+            """,
+            x, y, w, h,
+            escape(align == null ? "Left" : align),
+            formatFont(fontSize),
+            patternFragment,
             escape(fieldName)
         );
+    }
+
+    public static String expressionTextField(int x,
+                                             int y,
+                                             int w,
+                                             int h,
+                                             String expression,
+                                             double fontSize,
+                                             String align)
+    {
+        return String.format("""
+                <textField>
+                  <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
+                  <textElement textAlignment=\"%s\">
+                    <font size=\"%s\"/>
+                  </textElement>
+                  <textFieldExpression><![CDATA[%s]]></textFieldExpression>
+                </textField>
+            """,
+            x, y, w, h,
+            escape(align == null ? "Left" : align),
+            formatFont(fontSize),
+            expression
+        );
+    }
+
+    public static String footer()
+    {
+        return "</jasperReport>\n";
     }
 
     static String escape(String s)
@@ -134,5 +157,10 @@ public final class FragmentLibrary
     static String cdata(String s)
     {
         return (s == null) ? "" : s;
+    }
+
+    private static String formatFont(double fontSize)
+    {
+        return String.format("%s", fontSize);
     }
 }
