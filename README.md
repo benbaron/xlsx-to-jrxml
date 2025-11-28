@@ -27,6 +27,11 @@ java -jar target/xlsx2jrxml-1.0.0-all.jar \
 - `--margins`: left,right,top,bottom margins (points; default 20,20,20,20).
 - `--xsd`: optional JRXML XSD validation (skip with `--skipValidation`).
 - `--beans`: enable bean/metadata/mapping CSV generation.
+- `--beans-package` / `--beanPackage`: package for generated beans.
+- `--beanSuffix`: suffix appended to generated bean class names.
+- `--generator-package`: package recorded for generated Jasper generator classes in metadata.
+- `--generatorSuffix`: suffix appended to Jasper generator class names in metadata.
+- `--reportTypeSuffix`: suffix appended to report type enum names in metadata.
 
 ## Authoring quick reference
 - Blue cells or formulas become dynamic fields; nearest headers/row labels drive auto names unless `[[field name=...]]` overrides.
