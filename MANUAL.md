@@ -31,6 +31,9 @@ java -jar target/xlsx2jrxml-1.0.0-all.jar \
 - `--beans`: Generate Java beans and a field-mapping CSV alongside JRXML output.
 - `--beans-package` / `--beanPackage`: Package for generated beans (default `com.acme.jrgen.beans`).
 - `--beanSuffix`: Suffix added to each bean class name (default `Bean`).
+- `--generator-package`: Package for generated Jasper generator classes in metadata (default `com.acme.jrgen.generator`).
+- `--generatorSuffix`: Suffix for generated Jasper generator class names (default `JasperGenerator`).
+- `--reportTypeSuffix`: Suffix for generated report type enums in metadata (default `_JASPER`).
 - `--pageWidth` / `--pageHeight`: Override JR page size in points (defaults 612×792 for Letter).
 - `--margins`: `left,right,top,bottom` margins in points (default `20,20,20,20`).
 - `--xsd`: Path to a JRXML XSD schema for validation.

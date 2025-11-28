@@ -2,7 +2,6 @@ package com.acme.jrgen;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
@@ -101,11 +100,25 @@ public class Main implements Callable<Integer>
     String beanSuffix;
 
     @Option(
-        names = "--beans",
-        defaultValue = "false",
-        description = "Generate Java beans and field mapping CSV"
+        names = "--generator-package",
+        defaultValue = "com.acme.jrgen.generator",
+        description = "Package name for generated Jasper generator classes (default: ${DEFAULT-VALUE})"
     )
-    boolean beans;
+    String generatorPackage;
+
+    @Option(
+        names = "--generatorSuffix",
+        defaultValue = "JasperGenerator",
+        description = "Suffix appended to generated Jasper generator class names (default: ${DEFAULT-VALUE})"
+    )
+    String generatorSuffix;
+
+    @Option(
+        names = "--reportTypeSuffix",
+        defaultValue = "_JASPER",
+        description = "Suffix appended to generated report type enums (default: ${DEFAULT-VALUE})"
+    )
+    String reportTypeSuffix;
 
     @Override
     public Integer call() throws Exception
