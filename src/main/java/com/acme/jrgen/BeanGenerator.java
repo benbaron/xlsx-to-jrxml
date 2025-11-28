@@ -1,5 +1,6 @@
 ﻿package com.acme.jrgen;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -21,9 +22,10 @@ public class BeanGenerator
                                       String beanPackage,
                                       String beanSuffix)
     {
-        var dyn = model.items().stream()
+        var dyn = model.bands().stream()
+            .flatMap(b -> b.items().stream())
             .filter(CellItem::isDynamic)
-            .filter(ci -> ci.fieldName() != null)
+            .filter(ci -> ci.fieldSpec() != null && ci.fieldName() != null)
             .toList();
 
         String pkg = (beanPackage == null || beanPackage.isBlank())
@@ -36,6 +38,9 @@ public class BeanGenerator
 
         String baseName = model.sheetName();
         String cls = baseName + suffix;
+
+        var typeLookup = new LinkedHashMap<String, String>();
+        dyn.forEach(ci -> typeLookup.putIfAbsent(ci.fieldName(), normalizeType(ci.fieldSpec().type())));
 
         Set<String> names = dyn.stream()
             .map(CellItem::fieldName)
@@ -51,7 +56,11 @@ public class BeanGenerator
         // fields
         for (String n : names)
         {
-            sb.append("    private String ").append(n).append(";\n");
+            sb.append("    private ")
+              .append(typeLookup.getOrDefault(n, "java.lang.String"))
+              .append(" ")
+              .append(n)
+              .append(";\n");
         }
 
         sb.append("\n");
@@ -61,12 +70,13 @@ public class BeanGenerator
         {
             String cap = capitalize(n);
 
-            sb.append("    public String get").append(cap).append("()\n");
+            String type = typeLookup.getOrDefault(n, "java.lang.String");
+            sb.append("    public ").append(type).append(" get").append(cap).append("()\n");
             sb.append("    {\n");
             sb.append("        return ").append(n).append(";\n");
             sb.append("    }\n\n");
 
-            sb.append("    public void set").append(cap).append("(String v)\n");
+            sb.append("    public void set").append(cap).append("(").append(type).append(" v)\n");
             sb.append("    {\n");
             sb.append("        this.").append(n).append(" = v;\n");
             sb.append("    }\n\n");
@@ -90,5 +100,24 @@ public class BeanGenerator
         }
 
         return Character.toUpperCase(s.charAt(0)) + s.substring(1);
+    }
+
+    private static String normalizeType(String raw)
+    {
+        if (raw == null || raw.isBlank())
+        {
+            return "java.lang.String";
+        }
+
+        return switch (raw)
+        {
+            case "String", "java.lang.String" -> "java.lang.String";
+            case "Double", "java.lang.Double" -> "java.lang.Double";
+            case "Date", "java.util.Date" -> "java.util.Date";
+            case "Integer", "java.lang.Integer" -> "java.lang.Integer";
+            case "Long", "java.lang.Long" -> "java.lang.Long";
+            case "BigDecimal", "java.math.BigDecimal" -> "java.math.BigDecimal";
+            default -> raw;
+        };
     }
 }

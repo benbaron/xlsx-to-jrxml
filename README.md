@@ -1,121 +1,35 @@
-Perfect—here’s a tiny Maven project scaffold that builds a **single runnable fat-jar** for the converter you approved.
+# xlsx-to-jrxml
 
-# Project layout
+Generate JRXML (detail-only bands) directly from Excel workbooks using the authoring rules for blue dynamic cells and magenta detail rectangles. The tool can also emit Java bean classes and a field mapping CSV for data binding.
 
-```
-xlsx2jrxml/
-├─ pom.xml
-└─ src/
-   └─ main/
-      └─ java/
-         └─ XlsxToJrxml.java   ← paste the full Java file I gave you earlier
-```
+## Highlights
+- Solid magenta rectangles (#FF00FF) mark detail bands; the top-left cell supports `[[band ...]]` tags for name/index/height/split/printWhen settings.
+- Blue cells (palette 41 or blue-ish RGB), formulas, or `[[field ...]]` tags mark dynamic fields. Inline tags accept `name`, `type`, `pattern`, `align`, and `force=1` overrides.
+- Column widths and row heights come from Excel, then the layout is scaled to fill a Letter portrait page (defaults 612×792 with 20pt margins). Font sizes scale with Y and clamp between 6–22pt.
+- Non-blue, non-formula text becomes `<staticText>` with the required JRXML element order.
+- Each JRXML includes base styles, two parameters (`reportTitle`, `organizationName`), and a three-line title band (title, organization, sheet name).
+- Optional `--beans` generation writes one bean per sheet plus `meta/field_mapping.csv` with column/row → field/type/format mappings.
 
-# `pom.xml`
-
-```xml
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>org.scaledger.tools</groupId>
-  <artifactId>xlsx2jrxml</artifactId>
-  <version>1.0.0</version>
-  <name>xlsx2jrxml</name>
-  <description>XLSX/XLSM → JRXML (detail-only bands, blue-field naming, optional beans)</description>
-  <properties>
-    <!-- set your JDK; 17 is a good default for current Eclipse/IDE setups -->
-    <maven.compiler.release>17</maven.compiler.release>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <main.class>XlsxToJrxml</main.class>
-    <poi.version>5.2.5</poi.version>
-  </properties>
-
-  <dependencies>
-    <!-- Apache POI: brings poi-ooxml and its transitives (xmlbeans, commons-*, curvesapi) -->
-    <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi-ooxml</artifactId>
-      <version>${poi.version}</version>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <!-- compile against chosen Java release -->
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.13.0</version>
-        <configuration>
-          <release>${maven.compiler.release}</release>
-          <encoding>${project.build.sourceEncoding}</encoding>
-        </configuration>
-      </plugin>
-
-      <!-- build a single fat-jar with Main-Class set -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.3</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals><goal>shade</goal></goals>
-            <configuration>
-              <createDependencyReducedPom>true</createDependencyReducedPom>
-              <shadedArtifactAttached>true</shadedArtifactAttached>
-              <shadedClassifierName>all</shadedClassifierName>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>${main.class}</mainClass>
-                </transformer>
-              </transformers>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-</project>
-```
-
-# Build
+## Usage
 
 ```bash
-cd xlsx2jrxml
-mvn -q -DskipTests clean package
-# Fat jar: target/xlsx2jrxml-1.0.0-all.jar
-```
-
-# Run (examples)
-
-```bash
-# Basic: JRXML only
+mvn -q package
 java -jar target/xlsx2jrxml-1.0.0-all.jar \
-  --in SCAFinancialReportv6_LARGE_NOLONGERLOCKED.xlsm \
-  --out outdir
-
-# With beans (default package org.scaledger.reports.AccountBeans)
-java -jar target/xlsx2jrxml-1.0.0-all.jar \
-  --in SCAFinancialReportv6_LARGE_NOLONGERLOCKED.xlsm \
-  --out outdir \
+  --excel MyReport.xlsx \
+  --out output-dir \
   --beans \
   --beans-package org.scaledger.reports.AccountBeans
 ```
 
-# Notes you can tweak
+### Key flags
+- `--sheets`: comma-separated list to limit scanning.
+- `--pageWidth` / `--pageHeight`: override Letter defaults (points).
+- `--margins`: left,right,top,bottom margins (points; default 20,20,20,20).
+- `--xsd`: optional JRXML XSD validation (skip with `--skipValidation`).
+- `--beans`: enable bean/metadata/mapping CSV generation.
 
-* **JDK version:** change `<maven.compiler.release>` to 21 if you prefer Java 21.
-* **Main class name/location:** the POM assumes `XlsxToJrxml` is in the default package. If you move it into a package (e.g., `org.scaledger.tools`), update:
-
-  * The first line of the `.java` (`package …;`), and
-  * `<main.class>` in the POM to that FQCN.
-* **Offline builds:** since you often vendor deps, the shaded jar already contains everything. If you need a local repo freeze, I can add a `dependency:go-offline` step or a script to populate a local Maven cache.
-
-Want me to generate a ready-to-import ZIP with this layout and the Java file pre-dropped in?
-
-
-  
-
+## Authoring quick reference
+- Blue cells or formulas become dynamic fields; nearest headers/row labels drive auto names unless `[[field name=...]]` overrides.
+- Magenta rectangles split sheets into multiple detail bands; content inside renders relative to the rectangle origin. No overlaps allowed.
+- Patterns infer from Excel formats (accounting → `$ #,##0.00`, dates → `MMM d, yyyy`, numeric tokens → `#,##0.###`).
+- Fonts, widths, and heights follow Excel proportions after scaling to the Letter page.
