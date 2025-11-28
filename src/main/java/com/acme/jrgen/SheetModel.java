@@ -3,8 +3,11 @@
 import java.util.List;
 
 /**
- * Simple per-sheet model: sheet name + list of cell items.
+ * Sheet model: width/height plus ordered bands containing cell items.
  */
-public record SheetModel(String sheetName, List<CellItem> items)
+public record SheetModel(String sheetName,
+                         double totalWidth,
+                         double totalHeight,
+                         List<Band> bands)
 {
 }

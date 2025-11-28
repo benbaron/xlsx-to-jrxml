@@ -1,17 +1,13 @@
-﻿package com.acme.jrgen;
+package com.acme.jrgen;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
- * Build JRXML text from a SheetModel using your semantic format:
- *
- * - <jasperReport ...>
- * - <field .../>
- * - <title height="..."> <element .../> ... </title>
- * - <detail> <band height="..."> <element .../> ... </band> </detail>
+ * Build JRXML text from a SheetModel using the authoring rules.
  */
 public class JRXMLBuilder
 {
@@ -25,105 +21,122 @@ public class JRXMLBuilder
     {
         StringBuilder sb = new StringBuilder(64_000);
 
-        // <jasperReport ...>
-        sb.append(
-            FragmentLibrary.header(
-                m.sheetName(),
-                pageWidth,
-                pageHeight,
-                leftMargin,
-                rightMargin,
-                topMargin,
-                bottomMargin
-            )
-        );
+        double availableWidth = pageWidth - (leftMargin + rightMargin);
+        double availableHeight = pageHeight - (topMargin + bottomMargin);
+        double scaleX = availableWidth / m.totalWidth();
+        double scaleY = availableHeight / m.totalHeight();
 
-        // --- Fields: one per dynamic cell (String for now) ----------------
-        Set<String> dynamicFields = m.items().stream()
+        sb.append(FragmentLibrary.header(
+            m.sheetName(),
+            pageWidth,
+            pageHeight,
+            leftMargin,
+            rightMargin,
+            topMargin,
+            bottomMargin
+        ));
+
+        sb.append(FragmentLibrary.styles());
+        sb.append(FragmentLibrary.parameters());
+
+        Set<String> fieldOrder = new LinkedHashSet<>();
+        Map<String, FieldSpec> fieldLookup = new LinkedHashMap<>();
+        m.bands().forEach(b -> b.items().stream()
             .filter(CellItem::isDynamic)
-            .map(CellItem::fieldName)
+            .map(CellItem::fieldSpec)
             .filter(Objects::nonNull)
-            .collect(Collectors.toCollection(LinkedHashSet::new));
+            .forEach(fs -> {
+                fieldOrder.add(fs.name());
+                fieldLookup.putIfAbsent(fs.name(), fs);
+            }));
 
-        for (String f : dynamicFields)
+        for (String f : fieldOrder)
         {
+            FieldSpec fs = fieldLookup.get(f);
+            String clazz = fs.type() == null || fs.type().isBlank() ? "java.lang.String" : fs.type();
             sb.append("  <field name=\"")
-              .append(escape(f))
-              .append("\" class=\"java.lang.String\"/>\n");
+              .append(FragmentLibrary.escape(f))
+              .append("\" class=\"")
+              .append(FragmentLibrary.escape(clazz))
+              .append("\"/>\n");
         }
 
         sb.append("\n");
 
-        // --- Layout -------------------------------------------------------
-        // We previously stuffed all elements into the <title> section. That
-        // caused generated content to show up in the report title rather than
-        // the detail band. Compute the height based on the items, keep a tiny
-        // placeholder title, and render elements inside the detail band.
-        int maxBottom = m.items().stream()
-            .mapToInt(ci -> ci.y() + ci.height())
-            .max()
-            .orElse(0);
+        sb.append(buildTitle(m.sheetName()));
 
-        int detailHeight = maxBottom + 10;  // small padding
-
-        sb.append("  <title height=\"10\">\n");
-        sb.append("  </title>\n\n");
-
-        // --- Detail band: render all elements here -----------------------
         sb.append("  <detail>\n");
-        sb.append("    <band height=\"")
-          .append(detailHeight)
-          .append("\">\n");
-
-        for (CellItem ci : m.items())
+        for (Band band : m.bands())
         {
-            if (ci.isStatic())
-            {
-                sb.append(
-                    FragmentLibrary.staticText(
-                        ci.x(),
-                        ci.y(),
-                        ci.width(),
-                        ci.height(),
-                        ci.value()
-                    )
-                );
-            }
-            else if (ci.isDynamic() && ci.fieldName() != null)
-            {
-                sb.append(
-                    FragmentLibrary.textField(
-                        ci.x(),
-                        ci.y(),
-                        ci.width(),
-                        ci.height(),
-                        ci.fieldName()
-                    )
-                );
-            }
+            sb.append(buildBand(band, scaleX, scaleY));
         }
-
-        sb.append("    </band>\n");
         sb.append("  </detail>\n");
 
-        // Close report
         sb.append(FragmentLibrary.footer());
 
         return sb.toString();
     }
 
-    private static String escape(String s)
+    private static String buildTitle(String sheetName)
     {
-        if (s == null)
+        StringBuilder sb = new StringBuilder();
+        sb.append("  <title>\n");
+        sb.append("    <band height=\"80\">\n");
+        sb.append(FragmentLibrary.expressionTextField(10, 0, 400, 20, "$P{reportTitle}", 12, "Left"));
+        sb.append(FragmentLibrary.expressionTextField(10, 22, 400, 20, "$P{organizationName}", 10, "Left"));
+        sb.append(FragmentLibrary.staticText(10, 44, 400, 20, sheetName, 10, "Left"));
+        sb.append("    </band>\n");
+        sb.append("  </title>\n\n");
+        return sb.toString();
+    }
+
+    private static String buildBand(Band band, double scaleX, double scaleY)
+    {
+        StringBuilder sb = new StringBuilder();
+        double bandHeight = band.effectiveHeight(scaleY);
+        sb.append("    <band height=\"")
+          .append((int) Math.round(bandHeight))
+          .append("\" splitType=\"")
+          .append(band.splitType() == null ? "Stretch" : band.splitType())
+          .append("\">");
+
+        if (band.printWhenExpression() != null && !band.printWhenExpression().isBlank())
         {
-            return "";
+            sb.append("\n      <printWhenExpression><![CDATA[")
+              .append(band.printWhenExpression())
+              .append("]]></printWhenExpression>");
+        }
+        sb.append('\n');
+
+        for (CellItem ci : band.items())
+        {
+            if (!ci.render())
+            {
+                continue;
+            }
+
+            int x = (int) Math.round(ci.x() * scaleX);
+            int y = (int) Math.round(ci.y() * scaleY);
+            int w = (int) Math.round(ci.width() * scaleX);
+            int h = (int) Math.round(ci.height() * scaleY);
+            double font = clampFont(ci.fontSize() * scaleY);
+
+            if (ci.isStatic())
+            {
+                sb.append(FragmentLibrary.staticText(x, y, w, h, ci.value(), font, ci.alignment()));
+            }
+            else if (ci.isDynamic() && ci.fieldName() != null)
+            {
+                sb.append(FragmentLibrary.textField(x, y, w, h, ci.fieldName(), font, ci.fieldSpec().alignment(), ci.fieldSpec().pattern()));
+            }
         }
 
-        return s
-            .replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-            .replace("\"", "&quot;")
-            .replace("'", "&apos;");
+        sb.append("    </band>\n");
+        return sb.toString();
+    }
+
+    private static double clampFont(double size)
+    {
+        return Math.max(6.0, Math.min(22.0, size));
     }
 }
