@@ -141,45 +141,45 @@ public class Main implements Callable<Integer>
     @Override
     public Integer call() throws Exception
     {
-        Files.createDirectories(outDir);
+        Files.createDirectories(this.outDir);
 
-        int cellW = cellSize.get(0);
-        int cellH = cellSize.get(1);
+        int cellW = this.cellSize.get(0);
+        int cellH = this.cellSize.get(1);
 
-        ExcelScanner scanner = new ExcelScanner(excelPath, cellW, cellH);
-        var models = scanner.scan(sheets);
+        ExcelScanner scanner = new ExcelScanner(this.excelPath, cellW, cellH);
+        var models = scanner.scan(this.sheets);
 
         for (SheetModel model : models)
         {
             // Generate JRXML
             String jrxml = JRXMLBuilder.buildJRXML(
                 model,
-                pageWidth,
-                pageHeight,
-                margins.get(0),
-                margins.get(1),
-                margins.get(2),
-                margins.get(3)
+                this.pageWidth,
+                this.pageHeight,
+                this.margins.get(0),
+                this.margins.get(1),
+                this.margins.get(2),
+                this.margins.get(3)
             );
 
             String baseName = model.sheetName();
 
-            Path jrxmlOut = outDir.resolve(baseName + ".jrxml");
+            Path jrxmlOut = this.outDir.resolve(baseName + ".jrxml");
             Files.writeString(jrxmlOut, jrxml);
 
             // Generate Java Bean source
             String beanSrc = BeanGenerator.generateBean(
                 model,
-                beanPackage,
-                beanSuffix
+                this.beanPackage,
+                this.beanSuffix
             );
-            Path javaOut = outDir.resolve(baseName + beanSuffix + ".java");
+            Path javaOut = this.outDir.resolve(baseName + this.beanSuffix + ".java");
             Files.writeString(javaOut, beanSrc);
 
             // Optional validation
-            if (!skipValidation && xsdPath != null)
+            if (!this.skipValidation && this.xsdPath != null)
             {
-                var errs = XsdValidator.validate(jrxmlOut, xsdPath);
+                var errs = XsdValidator.validate(jrxmlOut, this.xsdPath);
                 if (!errs.isEmpty())
                 {
                     System.err.println("XSD validation errors for " + jrxmlOut.getFileName() + ":");
@@ -197,13 +197,13 @@ public class Main implements Callable<Integer>
             // Metadata .properties file
             String metaText = MetadataGenerator.generateMetadata(
                 model,
-                beanPackage,
-                beanSuffix,
-                generatorPackage,
-                generatorSuffix,
-                reportTypeSuffix
+                this.beanPackage,
+                this.beanSuffix,
+                this.generatorPackage,
+                this.generatorSuffix,
+                this.reportTypeSuffix
             );
-            Path metaOut = outDir.resolve(baseName + ".properties");
+            Path metaOut = this.outDir.resolve(baseName + ".properties");
             Files.writeString(metaOut, metaText);
 
             System.out.println(

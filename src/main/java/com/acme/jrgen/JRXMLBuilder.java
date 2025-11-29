@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * - <jasperReport ...>
  * - <field name="..." class="..."/>
- * - <title height="..."> <element .../> ... </title>
+ * - optional background/title/pageHeader/columnHeader/columnFooter/pageFooter/summary
  * - <detail>
  *       <band height="..." [splitType="..."]>
  *           [<printWhenExpression>...</printWhenExpression>]
@@ -19,8 +19,18 @@ import java.util.Map;
  *       </band>
  *   </detail>
  *
- * Magenta rectangles (via BandSpec) define which rows belong to the detail band.
- * All other cells remain in the title section.
+ * Section routing is driven by CellItem.section():
+ *   BACKGROUND    -> <background ...>
+ *   TITLE         -> <title ...>
+ *   PAGE_HEADER   -> <pageHeader ...>
+ *   COLUMN_HEADER -> <columnHeader ...>
+ *   DETAIL        -> <detail><band ...>...</band></detail>
+ *   COLUMN_FOOTER -> <columnFooter ...>
+ *   PAGE_FOOTER   -> <pageFooter ...>
+ *   SUMMARY       -> <summary ...>
+ *
+ * If no cells are mapped to a section, that section is omitted (except <detail>,
+ * which is always present with at least a stub band).
  */
 public class JRXMLBuilder
 {
@@ -80,84 +90,226 @@ public class JRXMLBuilder
         sb.append("\n");
 
         // -----------------------------------------------------------------
-        // Partition items into title vs detail (if band is defined)
+        // Partition items into sections
+        // -----------------------------------------------------------------
+        List<CellItem> backgroundItems    = new ArrayList<>();
+        List<CellItem> titleItems         = new ArrayList<>();
+        List<CellItem> pageHeaderItems    = new ArrayList<>();
+        List<CellItem> columnHeaderItems  = new ArrayList<>();
+        List<CellItem> detailItems        = new ArrayList<>();
+        List<CellItem> columnFooterItems  = new ArrayList<>();
+        List<CellItem> pageFooterItems    = new ArrayList<>();
+        List<CellItem> summaryItems       = new ArrayList<>();
+
+        for (CellItem ci : m.items())
+        {
+            Section sec = ci.section() != null ? ci.section() : Section.DETAIL;
+
+            switch (sec)
+            {
+                case BACKGROUND   -> backgroundItems.add(ci);
+                case TITLE        -> titleItems.add(ci);
+                case PAGE_HEADER  -> pageHeaderItems.add(ci);
+                case COLUMN_HEADER-> columnHeaderItems.add(ci);
+                case DETAIL       -> detailItems.add(ci);
+                case COLUMN_FOOTER-> columnFooterItems.add(ci);
+                case PAGE_FOOTER  -> pageFooterItems.add(ci);
+                case SUMMARY      -> summaryItems.add(ci);
+				default -> throw new IllegalArgumentException("Unexpected value: " + sec);
+            }
+        }
+
+        // -----------------------------------------------------------------
+        // Background
+        // -----------------------------------------------------------------
+        if (!backgroundItems.isEmpty())
+        {
+            int h = computeMaxBottom(backgroundItems);
+            if (h <= 0)
+            {
+                h = 10;
+            }
+
+            sb.append("  <background height=\"")
+              .append(h)
+              .append("\">\n");
+
+            for (CellItem ci : backgroundItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </background>\n\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Title
+        // -----------------------------------------------------------------
+        if (!titleItems.isEmpty())
+        {
+            int titleHeight = computeMaxBottom(titleItems);
+            if (titleHeight <= 0)
+            {
+                titleHeight = 10;
+            }
+
+            sb.append("  <title height=\"")
+              .append(titleHeight)
+              .append("\">\n");
+
+            for (CellItem ci : titleItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </title>\n\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Page header
+        // -----------------------------------------------------------------
+        if (!pageHeaderItems.isEmpty())
+        {
+            int h = computeMaxBottom(pageHeaderItems);
+            if (h <= 0)
+            {
+                h = 10;
+            }
+
+            sb.append("  <pageHeader height=\"")
+              .append(h)
+              .append("\">\n");
+
+            for (CellItem ci : pageHeaderItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </pageHeader>\n\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Column header
+        // -----------------------------------------------------------------
+        if (!columnHeaderItems.isEmpty())
+        {
+            int h = computeMaxBottom(columnHeaderItems);
+            if (h <= 0)
+            {
+                h = 10;
+            }
+
+            sb.append("  <columnHeader height=\"")
+              .append(h)
+              .append("\">\n");
+
+            for (CellItem ci : columnHeaderItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </columnHeader>\n\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Detail band (always present, stub if empty)
         // -----------------------------------------------------------------
         BandSpec band = m.band();
-        List<CellItem> titleItems = new ArrayList<>();
-        List<CellItem> detailItems = new ArrayList<>();
 
-        if (band != null && band.topRow() <= band.bottomRow())
-        {
-            int topRow = band.topRow();
-            int bottomRow = band.bottomRow();
-
-            for (CellItem ci : m.items())
-            {
-                if (ci.row() >= topRow && ci.row() <= bottomRow)
-                {
-                    detailItems.add(ci);
-                }
-                else
-                {
-                    titleItems.add(ci);
-                }
-            }
-        }
-        else
-        {
-            // No band: everything goes into title; detail is a stub band
-            titleItems.addAll(m.items());
-        }
-
-        // -----------------------------------------------------------------
-        // Title section
-        // -----------------------------------------------------------------
-        int titleHeight = computeMaxBottom(titleItems);
-        if (titleHeight <= 0)
-        {
-            titleHeight = 10;
-        }
-
-        sb.append("  <title height=\"")
-          .append(titleHeight)
-          .append("\">\n");
-
-        for (CellItem ci : titleItems)
-        {
-            if (ci.isStatic())
-            {
-                sb.append(
-                    FragmentLibrary.staticText(
-                        ci.x(),
-                        ci.y(),
-                        ci.width(),
-                        ci.height(),
-                        ci.value()
-                    )
-                );
-            }
-            else if (ci.isDynamic() && ci.fieldName() != null)
-            {
-                sb.append(
-                    FragmentLibrary.textField(
-                        ci.x(),
-                        ci.y(),
-                        ci.width(),
-                        ci.height(),
-                        ci.fieldName()
-                    )
-                );
-            }
-        }
-
-        sb.append("  </title>\n\n");
-
-        // -----------------------------------------------------------------
-        // Detail band
-        // -----------------------------------------------------------------
         if (detailItems.isEmpty())
         {
-            // No magenta band or no cells in band: keep a tiny stub
             sb.append("  <detail>\n");
             sb.append("    <band height=\"10\"/>\n");
             sb.append("  </detail>\n");
@@ -247,6 +399,144 @@ public class JRXMLBuilder
 
             sb.append("    </band>\n");
             sb.append("  </detail>\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Column footer
+        // -----------------------------------------------------------------
+        if (!columnFooterItems.isEmpty())
+        {
+            int h = computeMaxBottom(columnFooterItems);
+            if (h <= 0)
+            {
+                h = 10;
+            }
+
+            sb.append("  <columnFooter height=\"")
+              .append(h)
+              .append("\">\n");
+
+            for (CellItem ci : columnFooterItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </columnFooter>\n\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Page footer
+        // -----------------------------------------------------------------
+        if (!pageFooterItems.isEmpty())
+        {
+            int h = computeMaxBottom(pageFooterItems);
+            if (h <= 0)
+            {
+                h = 10;
+            }
+
+            sb.append("  <pageFooter height=\"")
+              .append(h)
+              .append("\">\n");
+
+            for (CellItem ci : pageFooterItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </pageFooter>\n\n");
+        }
+
+        // -----------------------------------------------------------------
+        // Summary
+        // -----------------------------------------------------------------
+        if (!summaryItems.isEmpty())
+        {
+            int h = computeMaxBottom(summaryItems);
+            if (h <= 0)
+            {
+                h = 10;
+            }
+
+            sb.append("  <summary height=\"")
+              .append(h)
+              .append("\">\n");
+
+            for (CellItem ci : summaryItems)
+            {
+                if (ci.isStatic())
+                {
+                    sb.append(
+                        FragmentLibrary.staticText(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.value()
+                        )
+                    );
+                }
+                else if (ci.isDynamic() && ci.fieldName() != null)
+                {
+                    sb.append(
+                        FragmentLibrary.textField(
+                            ci.x(),
+                            ci.y(),
+                            ci.width(),
+                            ci.height(),
+                            ci.fieldName()
+                        )
+                    );
+                }
+            }
+
+            sb.append("  </summary>\n\n");
         }
 
         // Close report

@@ -22,10 +22,10 @@ public record Band(String name,
 {
     public double effectiveHeight(double scaleY)
     {
-        if (explicitHeight != null)
+        if (this.explicitHeight != null)
         {
-            return explicitHeight;
+            return this.explicitHeight;
         }
-        return height * scaleY;
+        return this.height * scaleY;
     }
 }

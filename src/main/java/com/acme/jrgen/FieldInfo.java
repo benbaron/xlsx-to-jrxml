@@ -16,6 +16,6 @@ public record FieldInfo(
      */
     public String javaType()
     {
-        return type;
+        return this.type;
     }
 }

@@ -19,7 +19,8 @@ public record CellItem(
     String javaType,    // e.g., "java.lang.String", "java.lang.Double"
     String pattern,     // optional JR pattern from [[field pattern=...]]
     String hAlign,      // optional alignment from [[field align=...]]
-    String excelFormat  // raw Excel data format string (CellStyle.getDataFormatString())
+    String excelFormat, // raw Excel data format string
+    Section section     // where this cell should go: DETAIL, PAGE_HEADER, etc.
 )
 {
     public enum Role
@@ -30,11 +31,11 @@ public record CellItem(
 
     public boolean isStatic()
     {
-        return role == Role.STATIC;
+        return this.role == Role.STATIC;
     }
 
     public boolean isDynamic()
     {
-        return role == Role.DYNAMIC;
+        return this.role == Role.DYNAMIC;
     }
 }

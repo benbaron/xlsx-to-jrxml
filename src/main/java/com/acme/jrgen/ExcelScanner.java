@@ -20,8 +20,9 @@ import java.util.*;
  *   - no fill/white + text  -> STATIC
  *
  * Annotations:
- *   [[field name=... type=Double pattern="$ #,##0.00" align=Right force=1]]
+ *   [[field name=... type=Double pattern="$ #,##0.00" align=Right force=1 section=pageHeader]]
  *   [[band  name=Deposits idx=1 height=160 split=Prevent printWhen=$V{PAGE_NUMBER}==1]]
+ *   [[section pageHeader]]  (standalone, for static or dynamic cells)
  */
 public class ExcelScanner
 {
@@ -38,7 +39,7 @@ public class ExcelScanner
 
     public List<SheetModel> scan(List<String> restrictToSheets) throws Exception
     {
-        try (InputStream in = Files.newInputStream(excelPath);
+        try (InputStream in = Files.newInputStream(this.excelPath);
              Workbook wb = new XSSFWorkbook(in))
         {
             List<SheetModel> result = new ArrayList<>();
@@ -115,7 +116,7 @@ public class ExcelScanner
                             continue;
                         }
 
-                        // Field-level hint (from comment or inline text)
+                        // Field + section hints (from comment or inline text)
                         FieldHint fieldHint = readFieldHint(cell);
 
                         Role role = classify(cell, fieldHint);
@@ -124,8 +125,8 @@ public class ExcelScanner
                             continue;
                         }
 
-                        int x = colIdx * cellW;
-                        int y = rowIdx * cellH;
+                        int x = colIdx * this.cellW;
+                        int y = rowIdx * this.cellH;
 
                         String rawValue = getCellString(cell);
                         String displayValue = stripTags(rawValue);
@@ -165,20 +166,27 @@ public class ExcelScanner
 
                         String excelFormat = excelDataFormat(cell);
 
+                        Section section = Section.DETAIL; // default: everything in DETAIL
+                        if (fieldHint != null && fieldHint.section != null && !fieldHint.section.isBlank())
+                        {
+                            section = parseSection(fieldHint.section);
+                        }
+
                         items.add(new CellItem(
                             colIdx,
                             rowIdx,
                             x,
                             y,
-                            cellW,
-                            cellH,
+                            this.cellW,
+                            this.cellH,
                             displayValue,
                             role,
                             fieldName,
                             javaType,
                             pattern,
                             align,
-                            excelFormat
+                            excelFormat,
+                            section
                         ));
                     }
                 }
@@ -546,6 +554,44 @@ public class ExcelScanner
     }
 
     /**
+     * Parse a section name into a Section enum. Defaults to DETAIL.
+     */
+    private static Section parseSection(String s)
+    {
+        if (s == null)
+        {
+            return Section.DETAIL;
+        }
+
+        String v = s.trim().toLowerCase(Locale.ROOT);
+
+        switch (v)
+        {
+            case "background":
+                return Section.BACKGROUND;
+            case "title":
+                return Section.TITLE;
+            case "pageheader":
+            case "page_header":
+                return Section.PAGE_HEADER;
+            case "columnheader":
+            case "column_header":
+                return Section.COLUMN_HEADER;
+            case "columnfooter":
+            case "column_footer":
+                return Section.COLUMN_FOOTER;
+            case "pagefooter":
+            case "page_footer":
+                return Section.PAGE_FOOTER;
+            case "summary":
+                return Section.SUMMARY;
+            case "detail":
+            default:
+                return Section.DETAIL;
+        }
+    }
+
+    /**
      * Is this cell part of a magenta (#FF00FF) filled rectangle?
      */
     private static boolean isMagentaCell(Cell cell)
@@ -578,7 +624,7 @@ public class ExcelScanner
     }
 
     // ---------------------------------------------------------------------
-    // Annotation helpers: [[field ...]] and [[band ...]]
+    // Annotation helpers: [[field ...]] and [[band ...]] and [[section ...]]
     // ---------------------------------------------------------------------
 
     static class FieldHint
@@ -588,6 +634,7 @@ public class ExcelScanner
         String pattern;     // JR pattern (e.g., "$ #,##0.00")
         String align;       // Left, Center, Right, Justified
         boolean force;      // treat as dynamic even if cell not colored
+        String section;     // optional section name (detail, pageHeader, pageFooter, etc.)
     }
 
     static class BandHint
@@ -622,49 +669,115 @@ public class ExcelScanner
         }
 
         raw = raw.trim();
-        if (!raw.contains("[[field"))
+        FieldHint h = null;
+
+        // [[field ...]] tag
+        if (raw.contains("[[field"))
+        {
+            int s = raw.indexOf("[[field");
+            int e = raw.indexOf("]]", s);
+            if (s >= 0 && e > s)
+            {
+                String body = raw.substring(s + 2, e); // "field name=... type=... ..."
+                String[] toks = body.split("\\s+");
+
+                h = new FieldHint();
+                for (int i = 1; i < toks.length; i++)
+                {
+                    String t = toks[i];
+                    int eq = t.indexOf('=');
+                    if (eq <= 0)
+                    {
+                        continue;
+                    }
+
+                    String k = t.substring(0, eq);
+                    String v = t.substring(eq + 1);
+                    if (v.startsWith("\"") && v.endsWith("\"") && v.length() >= 2)
+                    {
+                        v = v.substring(1, v.length() - 1);
+                    }
+
+                    switch (k)
+                    {
+                        case "name"    -> h.name = v;
+                        case "type"    -> h.type = v;
+                        case "pattern" -> h.pattern = v;
+                        case "align"   -> h.align = v;
+                        case "force"   -> h.force = "1".equals(v) || "true".equalsIgnoreCase(v);
+                        case "section" -> h.section = v;
+						default -> throw new IllegalArgumentException("Unexpected value: " + k);
+                    }
+                }
+            }
+        }
+
+        // Standalone [[section ...]] tag (works for static or dynamic cells)
+        String sectionFromTag = extractSectionTag(raw);
+        if (sectionFromTag != null && !sectionFromTag.isBlank())
+        {
+            if (h == null)
+            {
+                h = new FieldHint();
+            }
+            h.section = sectionFromTag;
+        }
+
+        return h;
+    }
+
+    /**
+     * Extract section name from a [[section ...]] tag.
+     *
+     * Supported forms:
+     *   [[section pageHeader]]
+     *   [[section name=pageHeader]]
+     *   [[section section=pageHeader]]
+     */
+    private static String extractSectionTag(String raw)
+    {
+        if (raw == null)
         {
             return null;
         }
 
-        int s = raw.indexOf("[[field");
+        int s = raw.indexOf("[[section");
+        if (s < 0)
+        {
+            return null;
+        }
         int e = raw.indexOf("]]", s);
-        if (s < 0 || e < 0)
+        if (e < 0)
         {
             return null;
         }
 
-        String body = raw.substring(s + 2, e); // "field name=... type=... ..."
+        String body = raw.substring(s + 2, e); // "section pageHeader" or "section name=pageHeader"
         String[] toks = body.split("\\s+");
-
-        FieldHint h = new FieldHint();
         for (int i = 1; i < toks.length; i++)
         {
             String t = toks[i];
             int eq = t.indexOf('=');
-            if (eq <= 0)
+            if (eq > 0)
             {
-                continue;
+                String k = t.substring(0, eq);
+                String v = t.substring(eq + 1);
+                if (v.startsWith("\"") && v.endsWith("\"") && v.length() >= 2)
+                {
+                    v = v.substring(1, v.length() - 1);
+                }
+                if ("name".equals(k) || "section".equals(k))
+                {
+                    return v;
+                }
             }
-
-            String k = t.substring(0, eq);
-            String v = t.substring(eq + 1);
-            if (v.startsWith("\"") && v.endsWith("\"") && v.length() >= 2)
+            else if (!t.isBlank())
             {
-                v = v.substring(1, v.length() - 1);
-            }
-
-            switch (k)
-            {
-                case "name"    -> h.name = v;
-                case "type"    -> h.type = v;
-                case "pattern" -> h.pattern = v;
-                case "align"   -> h.align = v;
-                case "force"   -> h.force = "1".equals(v) || "true".equalsIgnoreCase(v);
+                // First bare token after "section" is the section name
+                return t;
             }
         }
-
-        return h;
+        return null;
     }
 
     private static BandHint readBandHint(Cell cell)
@@ -729,6 +842,7 @@ public class ExcelScanner
                 case "height"    -> h.height = safeInt(v);
                 case "split"     -> h.split = v;
                 case "printWhen" -> h.printWhenExpr = v;
+				default -> throw new IllegalArgumentException("Unexpected value: " + k);
             }
         }
 

@@ -22,7 +22,7 @@ public record SheetModel(
     {
         Map<String, FieldInfo> map = new LinkedHashMap<>();
 
-        for (CellItem ci : items)
+        for (CellItem ci : this.items)
         {
             if (ci.isDynamic() && ci.fieldName() != null)
             {
