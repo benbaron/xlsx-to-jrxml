@@ -1,24 +1,21 @@
 package com.acme.jrgen;
 
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import com.acme.jrgen.CellItem;
-import com.acme.jrgen.Band;
-
-import picocli.CommandLine;
-import picocli.CommandLine.Command;
-import picocli.CommandLine.Option;
-
 /**
- * CLI entry point for Excel -> JRXML + Bean generation.
+ * CLI entry point for Excel -> JRXML + Bean + metadata generation.
  */
 @Command(
     name = "jrxml-excel-generator",
     mixinStandardHelpOptions = true,
-    description = "Generate JRXML + Java Beans from Excel."
+    description = "Generate JRXML + Java Beans + metadata from Excel."
 )
 public class Main implements Callable<Integer>
 {
@@ -44,23 +41,16 @@ public class Main implements Callable<Integer>
     Path outDir;
 
     @Option(
-        names = "--beans",
-        defaultValue = "false",
-        description = "Generate Java beans and field mapping CSV"
-    )
-    boolean beans;
-
-    @Option(
         names = "--pageWidth",
-        defaultValue = "612",
-        description = "JR pageWidth (default Letter 612)"
+        defaultValue = "595",
+        description = "JR pageWidth (default 595)"
     )
     int pageWidth;
 
     @Option(
         names = "--pageHeight",
-        defaultValue = "792",
-        description = "JR pageHeight (default Letter 792)"
+        defaultValue = "842",
+        description = "JR pageHeight (default 842)"
     )
     int pageHeight;
 
@@ -71,6 +61,14 @@ public class Main implements Callable<Integer>
         description = "left,right,top,bottom margins (default 20,20,20,20)"
     )
     List<Integer> margins;
+
+    @Option(
+        names = "--cellSize",
+        split = ",",
+        defaultValue = "80,20",
+        description = "cellWidth,cellHeight pixel mapping (default 80,20)"
+    )
+    List<Integer> cellSize;
 
     @Option(
         names = "--xsd",
@@ -85,13 +83,21 @@ public class Main implements Callable<Integer>
     )
     boolean skipValidation;
 
+    /**
+     * Package for generated bean classes and for the metadata beanClass.
+     * Example: nonprofitbookkeeping.reports.datasource
+     */
     @Option(
-        names = {"--beans-package", "--beanPackage"},
+        names = "--beanPackage",
         defaultValue = "com.acme.jrgen.beans",
-        description = "Package name for generated beans (default: ${DEFAULT-VALUE})"
+        description = "Package name for generated beans and metadata beanClass (default: ${DEFAULT-VALUE})"
     )
     String beanPackage;
 
+    /**
+     * Suffix for generated bean simple class names.
+     * Example: RowBean -> AccountSummaryRowBean
+     */
     @Option(
         names = "--beanSuffix",
         defaultValue = "Bean",
@@ -99,24 +105,36 @@ public class Main implements Callable<Integer>
     )
     String beanSuffix;
 
+    /**
+     * Base package for generatorClass in metadata.
+     * Example: nonprofitbookkeeping.reports.jasper
+     */
     @Option(
-        names = "--generator-package",
-        defaultValue = "com.acme.jrgen.generator",
-        description = "Package name for generated Jasper generator classes (default: ${DEFAULT-VALUE})"
+        names = "--generatorPackage",
+        defaultValue = "nonprofitbookkeeping.reports.jasper",
+        description = "Base package for generatorClass in metadata (default: ${DEFAULT-VALUE})"
     )
     String generatorPackage;
 
+    /**
+     * Suffix for generator simple class names in metadata.
+     * Example: JasperGenerator -> AccountSummaryJasperGenerator
+     */
     @Option(
         names = "--generatorSuffix",
         defaultValue = "JasperGenerator",
-        description = "Suffix appended to generated Jasper generator class names (default: ${DEFAULT-VALUE})"
+        description = "Suffix appended to generator class simple name in metadata (default: ${DEFAULT-VALUE})"
     )
     String generatorSuffix;
 
+    /**
+     * Suffix appended to the reportType constant in metadata.
+     * Example: _JASPER -> ACCOUNT_SUMMARY_JASPER
+     */
     @Option(
         names = "--reportTypeSuffix",
         defaultValue = "_JASPER",
-        description = "Suffix appended to generated report type enums (default: ${DEFAULT-VALUE})"
+        description = "Suffix appended to reportType constant in metadata (default: ${DEFAULT-VALUE})"
     )
     String reportTypeSuffix;
 
@@ -125,14 +143,11 @@ public class Main implements Callable<Integer>
     {
         Files.createDirectories(outDir);
 
-        ExcelScanner scanner = new ExcelScanner(excelPath);
-        var models = scanner.scan(sheets);
+        int cellW = cellSize.get(0);
+        int cellH = cellSize.get(1);
 
-        StringBuilder mappingCsv = new StringBuilder();
-        if (beans)
-        {
-            mappingCsv.append("sheet,cell,field_name,java_type,excel_number_format\n");
-        }
+        ExcelScanner scanner = new ExcelScanner(excelPath, cellW, cellH);
+        var models = scanner.scan(sheets);
 
         for (SheetModel model : models)
         {
@@ -152,34 +167,14 @@ public class Main implements Callable<Integer>
             Path jrxmlOut = outDir.resolve(baseName + ".jrxml");
             Files.writeString(jrxmlOut, jrxml);
 
-            Path javaOut = null;
-            Path metaOut = null;
-
-            if (beans)
-            {
-                // Generate Java Bean source
-                String beanSrc = BeanGenerator.generateBean(
-                    model,
-                    beanPackage,
-                    beanSuffix
-                );
-                javaOut = outDir.resolve(baseName + beanSuffix + ".java");
-                Files.writeString(javaOut, beanSrc);
-
-                // Metadata .properties file
-                String metaText = MetadataGenerator.generateMetadata(
-                    model,
-                    beanPackage,
-                    beanSuffix,
-                    generatorPackage,
-                    generatorSuffix,
-                    reportTypeSuffix
-                );
-                metaOut = outDir.resolve(baseName + ".properties");
-                Files.writeString(metaOut, metaText);
-
-                appendMapping(model, mappingCsv);
-            }
+            // Generate Java Bean source
+            String beanSrc = BeanGenerator.generateBean(
+                model,
+                beanPackage,
+                beanSuffix
+            );
+            Path javaOut = outDir.resolve(baseName + beanSuffix + ".java");
+            Files.writeString(javaOut, beanSrc);
 
             // Optional validation
             if (!skipValidation && xsdPath != null)
@@ -199,66 +194,26 @@ public class Main implements Callable<Integer>
                 }
             }
 
-            if (beans)
-            {
-                System.out.println(
-                    "Wrote: " + jrxmlOut.getFileName()
-                    + ", " + javaOut.getFileName()
-                    + ", " + metaOut.getFileName()
-                );
-            }
-            else
-            {
-                System.out.println("Wrote: " + jrxmlOut.getFileName());
-            }
-        }
+            // Metadata .properties file
+            String metaText = MetadataGenerator.generateMetadata(
+                model,
+                beanPackage,
+                beanSuffix,
+                generatorPackage,
+                generatorSuffix,
+                reportTypeSuffix
+            );
+            Path metaOut = outDir.resolve(baseName + ".properties");
+            Files.writeString(metaOut, metaText);
 
-        if (beans)
-        {
-            Path metaDir = outDir.resolve("meta");
-            Files.createDirectories(metaDir);
-            Path mappingOut = metaDir.resolve("field_mapping.csv");
-            Files.writeString(mappingOut, mappingCsv.toString());
+            System.out.println(
+                "Wrote: " + jrxmlOut.getFileName()
+                + ", " + javaOut.getFileName()
+                + ", " + metaOut.getFileName()
+            );
         }
 
         return 0;
-    }
-
-    private void appendMapping(SheetModel model, StringBuilder mappingCsv)
-    {
-        for (Band band : model.bands())
-        {
-            for (CellItem ci : band.items())
-            {
-                if (ci.fieldSpec() == null)
-                {
-                    continue;
-                }
-
-                mappingCsv.append(model.sheetName()).append(',')
-                    .append(toCellRef(ci.row(), ci.col())).append(',')
-                    .append(ci.fieldName()).append(',')
-                    .append(ci.fieldSpec().type()).append(',')
-                    .append(ci.fieldSpec().originalFormat() == null ? "" : ci.fieldSpec().originalFormat())
-                    .append('\n');
-            }
-        }
-    }
-
-    private static String toCellRef(int row, int col)
-    {
-        StringBuilder sb = new StringBuilder();
-        int c = col;
-        do
-        {
-            int rem = c % 26;
-            sb.insert(0, (char) ('A' + rem));
-            c = (c / 26) - 1;
-        }
-        while (c >= 0);
-
-        sb.append(row + 1);
-        return sb.toString();
     }
 
     public static void main(String[] args)

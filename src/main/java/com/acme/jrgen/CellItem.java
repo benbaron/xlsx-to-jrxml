@@ -2,20 +2,24 @@
 
 /**
  * One logical cell to be rendered into JRXML.
+ *
+ * Coordinates (x, y, width, height) are already scaled to JR units
+ * based on the cellWidth / cellHeight mapping in ExcelScanner.
  */
 public record CellItem(
     int col,
     int row,
-    double x,
-    double y,
-    double width,
-    double height,
+    int x,
+    int y,
+    int width,
+    int height,
     String value,
     Role role,
-    FieldSpec fieldSpec,
-    double fontSize,
-    String alignment,
-    boolean render
+    String fieldName,   // null for static cells
+    String javaType,    // e.g., "java.lang.String", "java.lang.Double"
+    String pattern,     // optional JR pattern from [[field pattern=...]]
+    String hAlign,      // optional alignment from [[field align=...]]
+    String excelFormat  // raw Excel data format string (CellStyle.getDataFormatString())
 )
 {
     public enum Role
@@ -32,10 +36,5 @@ public record CellItem(
     public boolean isDynamic()
     {
         return role == Role.DYNAMIC;
-    }
-
-    public String fieldName()
-    {
-        return fieldSpec == null ? null : fieldSpec.name();
     }
 }

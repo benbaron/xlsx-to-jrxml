@@ -2,8 +2,6 @@ package com.acme.jrgen;
 
 import com.acme.jrgen.CellItem.Role;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.SheetUtil;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -11,21 +9,31 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
- * Scans Excel sheets and produces SheetModel objects using the richer authoring rules.
+ * Scans Excel sheets and produces SheetModel objects.
+ *
+ * Color rules:
+ *   - green fill            -> IGNORE
+ *   - magenta fill (#FF00FF)-> band marker (not a data cell)
+ *   - non-white solid fill  -> DYNAMIC
+ *   - no fill/white + text  -> STATIC
+ *
+ * Annotations:
+ *   [[field name=... type=Double pattern="$ #,##0.00" align=Right force=1]]
+ *   [[band  name=Deposits idx=1 height=160 split=Prevent printWhen=$V{PAGE_NUMBER}==1]]
  */
 public class ExcelScanner
 {
-    private static final Pattern TAG_PATTERN = Pattern.compile("\\[\\[(field|band)\\s+([^]]+)\\]\\]");
-
     private final Path excelPath;
+    private final int cellW;
+    private final int cellH;
 
-    public ExcelScanner(Path excelPath)
+    public ExcelScanner(Path excelPath, int cellW, int cellH)
     {
         this.excelPath = excelPath;
+        this.cellW = cellW;
+        this.cellH = cellH;
     }
 
     public List<SheetModel> scan(List<String> restrictToSheets) throws Exception
@@ -50,349 +58,203 @@ public class ExcelScanner
                     }
                 }
 
-                SheetModel model = scanSheet(sheet);
-                result.add(model);
+                List<CellItem> items = new ArrayList<>();
+                Map<String, Integer> nameCounts = new HashMap<>();
+
+                // Magenta-based band extents and hint
+                int bandTopRow = Integer.MAX_VALUE;
+                int bandBottomRow = -1;
+                int bandTopLeftRow = Integer.MAX_VALUE;
+                int bandTopLeftCol = Integer.MAX_VALUE;
+                BandHint bandHint = null;
+
+                for (Row row : sheet)
+                {
+                    if (row == null)
+                    {
+                        continue;
+                    }
+
+                    for (Cell cell : row)
+                    {
+                        if (cell == null)
+                        {
+                            continue;
+                        }
+
+                        int rowIdx = cell.getRowIndex();
+                        int colIdx = cell.getColumnIndex();
+
+                        // Detect magenta band cells first; they are not data.
+                        if (isMagentaCell(cell))
+                        {
+                            // Track vertical extent
+                            if (rowIdx < bandTopRow)
+                            {
+                                bandTopRow = rowIdx;
+                            }
+                            if (rowIdx > bandBottomRow)
+                            {
+                                bandBottomRow = rowIdx;
+                            }
+
+                            // Track top-left cell to read [[band ...]] from it
+                            if (rowIdx < bandTopLeftRow
+                                || (rowIdx == bandTopLeftRow && colIdx < bandTopLeftCol))
+                            {
+                                bandTopLeftRow = rowIdx;
+                                bandTopLeftCol = colIdx;
+                                BandHint h = readBandHint(cell);
+                                if (h != null)
+                                {
+                                    bandHint = h;
+                                }
+                            }
+
+                            // Magenta rectangles are markers only, not content
+                            continue;
+                        }
+
+                        // Field-level hint (from comment or inline text)
+                        FieldHint fieldHint = readFieldHint(cell);
+
+                        Role role = classify(cell, fieldHint);
+                        if (role == null)
+                        {
+                            continue;
+                        }
+
+                        int x = colIdx * cellW;
+                        int y = rowIdx * cellH;
+
+                        String rawValue = getCellString(cell);
+                        String displayValue = stripTags(rawValue);
+
+                        String fieldName = null;
+                        String javaType = null;
+                        String pattern = null;
+                        String align = null;
+
+                        if (role == Role.DYNAMIC)
+                        {
+                            String baseName;
+                            if (fieldHint != null && fieldHint.name != null && !fieldHint.name.isBlank())
+                            {
+                                baseName = fieldHint.name;
+                            }
+                            else
+                            {
+                                baseName = buildBaseName(sheet, cell);
+                            }
+
+                            fieldName = uniquify(baseName, nameCounts);
+
+                            // Type: annotation override, else infer from cell
+                            if (fieldHint != null && fieldHint.type != null && !fieldHint.type.isBlank())
+                            {
+                                javaType = mapToJavaFqcn(fieldHint.type);
+                            }
+                            else
+                            {
+                                javaType = inferJavaType(cell);
+                            }
+
+                            pattern = (fieldHint != null) ? fieldHint.pattern : null;
+                            align   = (fieldHint != null) ? fieldHint.align   : null;
+                        }
+
+                        String excelFormat = excelDataFormat(cell);
+
+                        items.add(new CellItem(
+                            colIdx,
+                            rowIdx,
+                            x,
+                            y,
+                            cellW,
+                            cellH,
+                            displayValue,
+                            role,
+                            fieldName,
+                            javaType,
+                            pattern,
+                            align,
+                            excelFormat
+                        ));
+                    }
+                }
+
+                BandSpec bandSpec = null;
+                if (bandTopRow != Integer.MAX_VALUE && bandBottomRow >= bandTopRow)
+                {
+                    bandSpec = new BandSpec(
+                        bandTopRow,
+                        bandBottomRow,
+                        (bandHint != null ? bandHint.height : null),
+                        (bandHint != null ? bandHint.split : null),
+                        (bandHint != null ? bandHint.printWhenExpr : null),
+                        (bandHint != null ? bandHint.name : null)
+                    );
+                }
+
+                result.add(new SheetModel(name, items, bandSpec));
             }
 
             return result;
         }
     }
 
-    private SheetModel scanSheet(Sheet sheet)
+    // ---------------------------------------------------------------------
+    // Classification & helpers
+    // ---------------------------------------------------------------------
+
+    /**
+     * Role classification based on annotation, formulas, fill, and content.
+     */
+    private static Role classify(Cell cell, FieldHint hint)
     {
-        Map<String, Integer> nameCounts = new HashMap<>();
-        Map<String, CellRangeAddress> mergedTopLeft = new HashMap<>();
-        Map<String, CellRangeAddress> mergedLookup = new HashMap<>();
-
-        for (CellRangeAddress cra : sheet.getMergedRegions())
+        if (cell == null)
         {
-            mergedLookup.put(cra.getFirstRow() + ":" + cra.getFirstColumn(), cra);
-            for (int r = cra.getFirstRow(); r <= cra.getLastRow(); r++)
+            return null;
+        }
+
+        // Annotation may force dynamic
+        if (hint != null && hint.force)
+        {
+            return Role.DYNAMIC;
+        }
+
+        // Formulas are always dynamic
+        if (cell.getCellType() == CellType.FORMULA)
+        {
+            return Role.DYNAMIC;
+        }
+
+        CellStyle style = cell.getCellStyle();
+        if (style != null)
+        {
+            FillPatternType pattern = style.getFillPattern();
+            Color fg = style.getFillForegroundColorColor();
+
+            if (pattern == FillPatternType.SOLID_FOREGROUND && fg != null)
             {
-                for (int c = cra.getFirstColumn(); c <= cra.getLastColumn(); c++)
+                String argb = colorToARGB(fg);
+
+                // Greens => ignore
+                if ("FFCCFFCC".equalsIgnoreCase(argb) || "FFC6EFCE".equalsIgnoreCase(argb))
                 {
-                    mergedTopLeft.put(r + ":" + c, cra);
-                }
-            }
-        }
-
-        int maxCol = 0;
-        for (Row r : sheet)
-        {
-            if (r.getLastCellNum() > maxCol)
-            {
-                maxCol = r.getLastCellNum();
-            }
-        }
-
-        double[] colWidths = new double[maxCol + 1];
-        for (int c = 0; c <= maxCol; c++)
-        {
-            colWidths[c] = pxToPoints(SheetUtil.getColumnWidth(sheet, c, false));
-        }
-
-        List<Double> rowHeights = new ArrayList<>();
-        int lastRow = sheet.getLastRowNum();
-        for (int r = 0; r <= lastRow; r++)
-        {
-            Row row = sheet.getRow(r);
-            double h = (row == null) ? sheet.getDefaultRowHeightInPoints() : row.getHeightInPoints();
-            rowHeights.add(h);
-        }
-
-        double totalWidth = Arrays.stream(colWidths).sum();
-        double totalHeight = rowHeights.stream().mapToDouble(Double::doubleValue).sum();
-
-        List<Band> bands = buildBands(sheet, colWidths, rowHeights);
-
-        for (Band b : bands)
-        {
-            List<CellItem> bandItems = new ArrayList<>();
-            for (Row row : sheet)
-            {
-                for (Cell cell : row)
-                {
-                    int colIdx = cell.getColumnIndex();
-                    int rowIdx = cell.getRowIndex();
-
-                    if (isMergedButNotTopLeft(mergedLookup, mergedTopLeft, rowIdx, colIdx))
-                    {
-                        continue;
-                    }
-
-                    if (!isInsideBand(b, rowIdx, colIdx))
-                    {
-                        continue;
-                    }
-
-                    Role role = classify(cell);
-                    String value = getCellString(cell);
-
-                    Optional<Map<String, String>> tag = readTag(cell, "field");
-                    boolean forceDynamic = tag.map(m -> "1".equals(m.get("force"))).orElse(false);
-
-                    if (!forceDynamic && role == null)
-                    {
-                        continue;
-                    }
-
-                    if (isMagenta(cell))
-                    {
-                        continue;
-                    }
-
-                    boolean render = true;
-                    if (tag.isPresent())
-                    {
-                        render = false; // hide inline tag text
-                    }
-
-                    FieldSpec fieldSpec = null;
-                    Role effectiveRole = role;
-
-                    if (forceDynamic || tag.isPresent() || cell.getCellType() == CellType.FORMULA)
-                    {
-                        effectiveRole = Role.DYNAMIC;
-                    }
-
-                    if (effectiveRole == Role.DYNAMIC)
-                    {
-                        String baseName = tag.map(m -> m.get("name")).orElse(buildBaseName(sheet, cell));
-                        String fieldName = uniquify(baseName, nameCounts);
-                        String type = tag.map(m -> m.get("type")).orElse(inferType(cell));
-                        String pattern = tag.map(m -> m.get("pattern")).orElse(inferPattern(cell));
-                        String align = tag.map(m -> m.get("align")).orElse(defaultAlignment(type));
-                        String originalFormat = cell.getCellStyle() == null ? null : cell.getCellStyle().getDataFormatString();
-
-                        if (tag.isPresent() && tag.get().containsKey("name"))
-                        {
-                            fieldName = tag.get().get("name");
-                        }
-                        fieldSpec = new FieldSpec(fieldName, type, pattern, align, forceDynamic, originalFormat);
-                    }
-
-                    double rawX = sum(colWidths, 0, colIdx);
-                    double rawY = sum(rowHeights, 0, rowIdx);
-                    double rawW = mergedWidth(colWidths, mergedLookup, rowIdx, colIdx);
-                    double rawH = mergedHeight(rowHeights, mergedLookup, rowIdx, colIdx);
-
-                    double fontSize = readFontSize(cell);
-                    String alignment = (fieldSpec != null && fieldSpec.alignment() != null)
-                        ? fieldSpec.alignment()
-                        : readAlignment(cell);
-
-                    bandItems.add(new CellItem(
-                        colIdx,
-                        rowIdx,
-                        rawX - b.originX(),
-                        rawY - b.originY(),
-                        rawW,
-                        rawH,
-                        cleanValue(value, tag),
-                        effectiveRole,
-                        fieldSpec,
-                        fontSize,
-                        alignment,
-                        render
-                    ));
-                }
-            }
-            bandItems.sort(Comparator.comparingInt(CellItem::row).thenComparingInt(CellItem::col));
-            bands.set(bands.indexOf(b), new Band(
-                b.name(),
-                b.idx(),
-                b.startRow(),
-                b.endRow(),
-                b.startCol(),
-                b.endCol(),
-                b.originX(),
-                b.originY(),
-                b.width(),
-                b.height(),
-                b.explicitHeight(),
-                b.splitType(),
-                b.printWhenExpression(),
-                bandItems
-            ));
-        }
-
-        bands.sort(Comparator
-            .comparing((Band b) -> b.idx() == null ? Integer.MAX_VALUE : b.idx())
-            .thenComparingDouble(Band::originY)
-            .thenComparingDouble(Band::originX));
-
-        return new SheetModel(sheet.getSheetName(), totalWidth, totalHeight, bands);
-    }
-
-    private static List<Band> buildBands(Sheet sheet, double[] colWidths, List<Double> rowHeights)
-    {
-        List<Band> bands = new ArrayList<>();
-        boolean hasMagenta = false;
-        Set<String> visited = new HashSet<>();
-
-        for (Row row : sheet)
-        {
-            for (Cell cell : row)
-            {
-                int r = cell.getRowIndex();
-                int c = cell.getColumnIndex();
-                String key = r + ":" + c;
-                if (visited.contains(key))
-                {
-                    continue;
+                    return null; // IGNORE
                 }
 
-                if (isMagenta(cell))
-                {
-                    hasMagenta = true;
-                    Band rect = captureRectangle(sheet, r, c, visited, colWidths, rowHeights);
-                    bands.add(rect);
-                }
-            }
-        }
-
-        if (!hasMagenta)
-        {
-            double height = rowHeights.stream().mapToDouble(Double::doubleValue).sum();
-            double width = Arrays.stream(colWidths).sum();
-            bands.add(new Band("detail", null, 0, rowHeights.size() - 1, 0, colWidths.length - 1, 0, 0, width, height, null, "Stretch", null, new ArrayList<>()));
-        }
-
-        return bands;
-    }
-
-    private static Band captureRectangle(Sheet sheet,
-                                         int startRow,
-                                         int startCol,
-                                         Set<String> visited,
-                                         double[] colWidths,
-                                         List<Double> rowHeights)
-    {
-        int endCol = startCol;
-        int endRow = startRow;
-
-        while (isMagenta(sheet, startRow, endCol + 1))
-        {
-            endCol++;
-        }
-
-        while (isMagenta(sheet, endRow + 1, startCol))
-        {
-            endRow++;
-        }
-
-        for (int r = startRow; r <= endRow; r++)
-        {
-            for (int c = startCol; c <= endCol; c++)
-            {
-                if (!isMagenta(sheet, r, c))
-                {
-                    continue;
-                }
-                visited.add(r + ":" + c);
-            }
-        }
-
-        Cell topLeft = sheet.getRow(startRow).getCell(startCol);
-        Optional<Map<String, String>> tag = readTag(topLeft, "band");
-        String name = tag.map(m -> m.getOrDefault("name", "detail" + startRow)).orElse("detail" + startRow);
-        Integer idx = tag.map(m -> m.get("idx")).map(Integer::valueOf).orElse(null);
-        Double explicitHeight = tag.map(m -> m.get("height")).map(Double::valueOf).orElse(null);
-        String splitType = tag.map(m -> m.get("split")).orElse("Stretch");
-        String printWhen = tag.map(m -> m.get("printWhen")).orElse(null);
-
-        double originX = sum(colWidths, 0, startCol);
-        double originY = sum(rowHeights, 0, startRow);
-        double width = sum(colWidths, startCol, endCol + 1);
-        double height = sum(rowHeights, startRow, endRow + 1);
-
-        return new Band(name, idx, startRow, endRow, startCol, endCol, originX, originY, width, height, explicitHeight, splitType, printWhen, new ArrayList<>());
-    }
-
-    private static boolean isMagenta(Cell cell)
-    {
-        return isMagenta(cell.getSheet(), cell.getRowIndex(), cell.getColumnIndex());
-    }
-
-    private static boolean isMagenta(Sheet sheet, int row, int col)
-    {
-        Row r = sheet.getRow(row);
-        if (r == null)
-        {
-            return false;
-        }
-        Cell c = r.getCell(col);
-        if (c == null)
-        {
-            return false;
-        }
-
-        CellStyle style = c.getCellStyle();
-        if (style == null)
-        {
-            return false;
-        }
-
-        if (style.getFillPattern() != FillPatternType.SOLID_FOREGROUND)
-        {
-            return false;
-        }
-
-        Color fg = style.getFillForegroundColorColor();
-        if (fg instanceof XSSFColor xc)
-        {
-            byte[] rgb = xc.getRGB();
-            if (rgb != null)
-            {
-                return (rgb[0] & 0xFF) == 0xFF && (rgb[1] & 0xFF) == 0x00 && (rgb[2] & 0xFF) == 0xFF;
-            }
-        }
-        return false;
-    }
-
-    private static boolean isInsideBand(Band band, int row, int col)
-    {
-        return row >= band.startRow() && row <= band.endRow()
-            && col >= band.startCol() && col <= band.endCol();
-    }
-
-    private static boolean isMergedButNotTopLeft(Map<String, CellRangeAddress> mergedLookup,
-                                                 Map<String, CellRangeAddress> mergedTopLeft,
-                                                 int row,
-                                                 int col)
-    {
-        CellRangeAddress cra = mergedTopLeft.get(row + ":" + col);
-        if (cra == null)
-        {
-            return false;
-        }
-        return !(cra.getFirstRow() == row && cra.getFirstColumn() == col);
-    }
-
-    private static Role classify(Cell cell)
-    {
-        for (BandSpec b : bands)
-        {
-            if (b.containsCell(rowIdx, colIdx))
-            {
-                String rgb = colorToARGB(fg);
-
-                if (isBlue(style, fg))
-                {
-                    return Role.DYNAMIC;
-                }
-
-                if ("FFFFFFFF".equalsIgnoreCase(rgb))
+                // Explicit white => static (if there is text)
+                if ("FFFFFFFF".equalsIgnoreCase(argb))
                 {
                     String v = getCellString(cell);
                     return (v == null || v.isBlank()) ? null : Role.STATIC;
                 }
-            }
-        }
 
-        if (cell.getCellType() == CellType.FORMULA)
-        {
-            return Role.DYNAMIC;
+                // Any other solid fill => dynamic (blue-ish, etc.)
+                return Role.DYNAMIC;
+            }
         }
 
         String v = getCellString(cell);
@@ -404,39 +266,14 @@ public class ExcelScanner
         return Role.STATIC;
     }
 
-    private static boolean isBlue(CellStyle style, Color fg)
-    {
-        if (style.getFillPattern() != FillPatternType.SOLID_FOREGROUND)
-        {
-            return false;
-        }
-
-        if (style.getFillForegroundColor() == 41)
-        {
-            return true;
-        }
-
-        if (fg instanceof XSSFColor xc)
-        {
-            byte[] rgb = xc.getRGB();
-            if (rgb != null && rgb.length >= 3)
-            {
-                int r = rgb[0] & 0xFF;
-                int g = rgb[1] & 0xFF;
-                int b = rgb[2] & 0xFF;
-                return b > r + 20 && b > g + 20;
-            }
-        }
-        return false;
-    }
-
     private static String getCellString(Cell c)
     {
-        Map<String, Integer> nameCounts = new HashMap<>();
-        List<BandSpec> bands = new ArrayList<>();
-        Set<CellPos> visited = new HashSet<>();
+        if (c == null)
+        {
+            return "";
+        }
 
-        for (int r = 0; r <= ctx.maxRow; r++)
+        return switch (c.getCellType())
         {
             case STRING -> c.getStringCellValue();
             case NUMERIC -> DateUtil.isCellDateFormatted(c)
@@ -448,6 +285,28 @@ public class ExcelScanner
         };
     }
 
+    private static String excelDataFormat(Cell cell)
+    {
+        if (cell == null)
+        {
+            return null;
+        }
+        CellStyle style = cell.getCellStyle();
+        if (style == null)
+        {
+            return null;
+        }
+        String fmt = style.getDataFormatString();
+        if (fmt == null || fmt.isBlank())
+        {
+            return null;
+        }
+        return fmt;
+    }
+
+    /**
+     * Convert POI color to ARGB hex when possible.
+     */
     private static String colorToARGB(Color c)
     {
         if (c instanceof XSSFColor xc)
@@ -455,61 +314,74 @@ public class ExcelScanner
             byte[] argb = xc.getARGB();
             if (argb != null)
             {
-                continue;
-            }
-            for (int c = 0; c <= ctx.maxCol; c++)
-            {
-                Cell cell = row.getCell(c);
-                if (cell == null || visited.contains(new CellPos(r, c)))
+                StringBuilder sb = new StringBuilder();
+                for (byte b : argb)
                 {
-                    continue;
+                    sb.append(String.format("%02X", b));
                 }
-                if (!ctx.isMagenta(cell))
-                {
-                    continue;
-                }
-
-                Set<CellPos> component = ctx.collectComponent(r, c, visited);
-                Rect rect = Rect.fromCells(component);
-                Cell topLeft = ctx.sheet.getRow(rect.top).getCell(rect.left);
-                ParsedBandTag tag = ctx.parseBandTag(topLeft);
-
-                String baseName = (tag != null && tag.name != null) ? tag.name : "Band";
-                int order = (tag != null && tag.idx != null) ? tag.idx : bands.size() + 1;
-                String name = uniquify(baseName, nameCounts);
-
-                double x = ctx.positionX(rect.left);
-                double y = ctx.positionY(rect.top);
-                double width = ctx.width(rect.left, rect.right);
-                double height = (tag != null && tag.height != null)
-                    ? tag.height
-                    : ctx.height(rect.top, rect.bottom);
-
-                BandSpec spec = new BandSpec(
-                    name,
-                    order,
-                    x,
-                    y,
-                    width,
-                    height,
-                    tag != null ? tag.splitType : "Stretch",
-                    tag != null ? tag.printWhen : null,
-                    rect.top,
-                    rect.bottom,
-                    rect.left,
-                    rect.right
-                );
-                bands.add(spec);
+                return sb.toString();
             }
         }
-
-        bands.sort(Comparator.comparingInt(BandSpec::order)
-            .thenComparingDouble(BandSpec::y)
-            .thenComparingDouble(BandSpec::x));
-
-        return bands;
+        return null;
     }
 
+    /**
+     * Sanitize arbitrary header/label text into a safe Java identifier.
+     */
+    private static String sanitizeToJavaIdentifier(String raw)
+    {
+        String s = (raw == null) ? "" : raw.toLowerCase(Locale.ROOT);
+
+        // Replace non-alphanumeric with underscores
+        s = s.replaceAll("[^a-z0-9]+", "_");
+        s = s.replaceAll("_+", "_");
+        s = s.replaceAll("^_+|_+$", "");
+
+        if (s.isEmpty())
+        {
+            s = "field";
+        }
+
+        if (Character.isDigit(s.charAt(0)))
+        {
+            s = "_" + s;
+        }
+
+        return s;
+    }
+
+    /**
+     * Ensure uniqueness of field names on a sheet.
+     */
+    private static String uniquify(String base, Map<String, Integer> counts)
+    {
+        String clean = sanitizeToJavaIdentifier(base);
+        if (clean.isEmpty())
+        {
+            clean = "field";
+        }
+
+        Integer n = counts.get(clean);
+
+        if (n == null)
+        {
+            counts.put(clean, 1);
+            return clean;
+        }
+        else
+        {
+            n = n + 1;
+            counts.put(clean, n);
+            return clean + "_" + n;
+        }
+    }
+
+    /**
+     * Build a base field name using:
+     *   - nearest header above in same column
+     *   - nearest label to the left in same row
+     *   - fallback: SHEET_RxCy
+     */
     private static String buildBaseName(Sheet sheet, Cell cell)
     {
         int col = cell.getColumnIndex();
@@ -541,7 +413,7 @@ public class ExcelScanner
             base = sheet.getSheetName() + "_R" + (row + 1) + "C" + (col + 1);
         }
 
-        return sanitizeToJavaIdentifier(base);
+        return base;
     }
 
     private static String findHeader(Sheet sheet, int row, int col)
@@ -594,219 +466,284 @@ public class ExcelScanner
         return null;
     }
 
-    private static String sanitizeToJavaIdentifier(String raw)
+    /**
+     * Strip any [[...]] tags from visible cell content.
+     */
+    private static String stripTags(String s)
     {
-        String s = (raw == null) ? "" : raw.toLowerCase(Locale.ROOT);
-
-        s = s.replaceAll("[^a-z0-9]+", "_");
-        s = s.replaceAll("_+", "_");
-        s = s.replaceAll("^_+|_+$", "");
-
-        if (s.isEmpty())
-        {
-            s = "field";
-        }
-
-        if (Character.isDigit(s.charAt(0)))
-        {
-            s = "_" + s;
-        }
-
-        return s;
-    }
-
-    private static String uniquify(String base, Map<String, Integer> counts)
-    {
-        Integer n = counts.get(base);
-
-        if (n == null)
-        {
-            counts.put(base, 1);
-            return base;
-        }
-        else
-        {
-            n = n + 1;
-            counts.put(base, n);
-            return base + "_" + n;
-        }
-    }
-
-    private static Optional<Map<String, String>> readTag(Cell cell, String kind)
-    {
-        if (cell == null)
-        {
-            return Optional.empty();
-        }
-
-        String comment = cell.getCellComment() == null ? null : cell.getCellComment().getString().getString();
-        String text = cell.getCellType() == CellType.STRING ? cell.getStringCellValue() : null;
-
-        for (String source : List.of(comment, text))
-        {
-            if (source == null)
-            {
-                continue;
-            }
-            Matcher m = TAG_PATTERN.matcher(source);
-            if (m.find() && kind.equalsIgnoreCase(m.group(1)))
-            {
-                String body = m.group(2);
-                Map<String, String> attrs = new HashMap<>();
-                String[] parts = body.trim().split("\\s+");
-                for (String p : parts)
-                {
-                    String[] kv = p.split("=", 2);
-                    if (kv.length == 2)
-                    {
-                        attrs.put(kv[0].trim(), kv[1].replaceAll("^\"|\"$", ""));
-                    }
-                }
-                return Optional.of(attrs);
-            }
-        }
-
-        return Optional.empty();
-    }
-
-    private static String cleanValue(String original, Optional<Map<String, String>> tag)
-    {
-        if (original == null)
-        {
-            return "";
-        }
-
-        if (tag.isPresent())
-        {
-            return original.replaceAll("\\[\\[.*?\\]\\]", "").trim();
-        }
-        return original;
-    }
-
-    private static double mergedWidth(double[] colWidths, Map<String, CellRangeAddress> mergedLookup, int row, int col)
-    {
-        CellRangeAddress cra = mergedLookup.get(row + ":" + col);
-        if (cra == null)
-        {
-            return colWidths[col];
-        }
-        return sum(colWidths, cra.getFirstColumn(), cra.getLastColumn() + 1);
-    }
-
-    private static double mergedHeight(List<Double> rowHeights, Map<String, CellRangeAddress> mergedLookup, int row, int col)
-    {
-        CellRangeAddress cra = mergedLookup.get(row + ":" + col);
-        if (cra == null)
-        {
-            return rowHeights.get(row);
-        }
-        return sum(rowHeights, cra.getFirstRow(), cra.getLastRow() + 1);
-    }
-
-    private static double sum(double[] values, int fromInclusive, int toExclusive)
-    {
-        double total = 0;
-        for (int i = fromInclusive; i < toExclusive && i < values.length; i++)
-        {
-            total += values[i];
-        }
-        return total;
-    }
-
-    private static double sum(List<Double> values, int fromInclusive, int toExclusive)
-    {
-        double total = 0;
-        for (int i = fromInclusive; i < toExclusive && i < values.size(); i++)
-        {
-            total += values.get(i);
-        }
-        return total;
-    }
-
-    private static double pxToPoints(double px)
-    {
-        return px * 72.0 / 96.0;
-    }
-
-    private static double readFontSize(Cell cell)
-    {
-        CellStyle style = cell.getCellStyle();
-        if (style == null)
-        {
-            return 10;
-        }
-        Font font = cell.getSheet().getWorkbook().getFontAt(style.getFontIndex());
-        return font == null ? 10 : font.getFontHeightInPoints();
-    }
-
-    private static String readAlignment(Cell cell)
-    {
-        HorizontalAlignment align = cell.getCellStyle().getAlignment();
-        return switch (align)
-        {
-            case CENTER, CENTER_SELECTION, JUSTIFY -> "Center";
-            case RIGHT, FILL -> "Right";
-            default -> "Left";
-        };
-    }
-
-    private static String inferType(Cell cell)
-    {
-        if (DateUtil.isCellDateFormatted(cell))
-        {
-            return "java.util.Date";
-        }
-
-        CellType type = cell.getCellType();
-        if (type == CellType.FORMULA)
-        {
-            type = cell.getCachedFormulaResultType();
-        }
-
-        return switch (type)
-        {
-            case NUMERIC -> "java.lang.Double";
-            default -> "java.lang.String";
-        };
-    }
-
-    private static String inferPattern(Cell cell)
-    {
-        String format = cell.getCellStyle() == null ? null : cell.getCellStyle().getDataFormatString();
-        if (format == null)
+        if (s == null)
         {
             return null;
         }
 
-        String lower = format.toLowerCase(Locale.ROOT);
-        if (lower.contains("accounting") || lower.contains("$") || lower.contains("[$"))
+        String out = s;
+        int start = out.indexOf("[[");
+        while (start >= 0)
         {
-            return "$ #,##0.00";
+            int end = out.indexOf("]]", start + 2);
+            if (end < 0)
+            {
+                break;
+            }
+            out = out.substring(0, start) + out.substring(end + 2);
+            start = out.indexOf("[[");
         }
-
-        if (DateUtil.isCellDateFormatted(cell))
-        {
-            return "MMM d, yyyy";
-        }
-
-        if (lower.matches(".*[0#/,].*"))
-        {
-            return "#,##0.###";
-        }
-
-        return null;
+        return out.trim();
     }
 
-    private static String defaultAlignment(String type)
+    /**
+     * Infer Java type from the cell when no explicit [[field type=...]] is provided.
+     */
+    private static String inferJavaType(Cell cell)
     {
-        if (type == null)
+        if (cell == null)
         {
-            return "Left";
+            return "java.lang.String";
         }
-        if (type.contains("Double") || type.contains("Integer") || type.contains("Long") || type.contains("BigDecimal"))
+
+        CellType t = cell.getCellType();
+        switch (t)
         {
-            return "Right";
+            case NUMERIC:
+                if (DateUtil.isCellDateFormatted(cell))
+                {
+                    return "java.util.Date";
+                }
+                return "java.lang.Double";
+
+            case BOOLEAN:
+                return "java.lang.Boolean";
+
+            case FORMULA:
+                return "java.lang.Double";
+
+            default:
+                return "java.lang.String";
         }
-        return "Left";
+    }
+
+    /**
+     * Map short type names to fully-qualified Java class names.
+     */
+    private static String mapToJavaFqcn(String t)
+    {
+        if (t == null || t.isBlank())
+        {
+            return "java.lang.String";
+        }
+
+        return switch (t)
+        {
+            case "String"     -> "java.lang.String";
+            case "Double"     -> "java.lang.Double";
+            case "Integer"    -> "java.lang.Integer";
+            case "Long"       -> "java.lang.Long";
+            case "BigDecimal" -> "java.math.BigDecimal";
+            case "Date"       -> "java.util.Date";
+            case "Boolean"    -> "java.lang.Boolean";
+            default           -> "java.lang.String";
+        };
+    }
+
+    /**
+     * Is this cell part of a magenta (#FF00FF) filled rectangle?
+     */
+    private static boolean isMagentaCell(Cell cell)
+    {
+        if (cell == null)
+        {
+            return false;
+        }
+
+        CellStyle style = cell.getCellStyle();
+        if (style == null)
+        {
+            return false;
+        }
+
+        if (style.getFillPattern() != FillPatternType.SOLID_FOREGROUND)
+        {
+            return false;
+        }
+
+        Color fg = style.getFillForegroundColorColor();
+        String argb = colorToARGB(fg);
+        if (argb == null)
+        {
+            return false;
+        }
+
+        // Magenta: A=FF, R=FF, G=00, B=FF
+        return "FFFF00FF".equalsIgnoreCase(argb);
+    }
+
+    // ---------------------------------------------------------------------
+    // Annotation helpers: [[field ...]] and [[band ...]]
+    // ---------------------------------------------------------------------
+
+    static class FieldHint
+    {
+        String name;        // override field name
+        String type;        // String, Double, Date, Integer, Long, BigDecimal
+        String pattern;     // JR pattern (e.g., "$ #,##0.00")
+        String align;       // Left, Center, Right, Justified
+        boolean force;      // treat as dynamic even if cell not colored
+    }
+
+    static class BandHint
+    {
+        String name;
+        Integer idx;
+        Integer height;
+        String split;
+        String printWhenExpr;
+    }
+
+    private static FieldHint readFieldHint(Cell cell)
+    {
+        if (cell == null)
+        {
+            return null;
+        }
+
+        String raw = null;
+        if (cell.getCellComment() != null)
+        {
+            raw = cell.getCellComment().getString().getString();
+        }
+        else if (cell.getCellType() == CellType.STRING)
+        {
+            raw = cell.getStringCellValue();
+        }
+
+        if (raw == null)
+        {
+            return null;
+        }
+
+        raw = raw.trim();
+        if (!raw.contains("[[field"))
+        {
+            return null;
+        }
+
+        int s = raw.indexOf("[[field");
+        int e = raw.indexOf("]]", s);
+        if (s < 0 || e < 0)
+        {
+            return null;
+        }
+
+        String body = raw.substring(s + 2, e); // "field name=... type=... ..."
+        String[] toks = body.split("\\s+");
+
+        FieldHint h = new FieldHint();
+        for (int i = 1; i < toks.length; i++)
+        {
+            String t = toks[i];
+            int eq = t.indexOf('=');
+            if (eq <= 0)
+            {
+                continue;
+            }
+
+            String k = t.substring(0, eq);
+            String v = t.substring(eq + 1);
+            if (v.startsWith("\"") && v.endsWith("\"") && v.length() >= 2)
+            {
+                v = v.substring(1, v.length() - 1);
+            }
+
+            switch (k)
+            {
+                case "name"    -> h.name = v;
+                case "type"    -> h.type = v;
+                case "pattern" -> h.pattern = v;
+                case "align"   -> h.align = v;
+                case "force"   -> h.force = "1".equals(v) || "true".equalsIgnoreCase(v);
+            }
+        }
+
+        return h;
+    }
+
+    private static BandHint readBandHint(Cell cell)
+    {
+        if (cell == null)
+        {
+            return null;
+        }
+
+        String raw = null;
+        if (cell.getCellComment() != null)
+        {
+            raw = cell.getCellComment().getString().getString();
+        }
+        else if (cell.getCellType() == CellType.STRING)
+        {
+            raw = cell.getStringCellValue();
+        }
+
+        if (raw == null)
+        {
+            return null;
+        }
+
+        raw = raw.trim();
+        if (!raw.contains("[[band"))
+        {
+            return null;
+        }
+
+        int s = raw.indexOf("[[band");
+        int e = raw.indexOf("]]", s);
+        if (s < 0 || e < 0)
+        {
+            return null;
+        }
+
+        String body = raw.substring(s + 2, e); // "band name=... idx=... ..."
+        String[] toks = body.split("\\s+");
+
+        BandHint h = new BandHint();
+        for (int i = 1; i < toks.length; i++)
+        {
+            String t = toks[i];
+            int eq = t.indexOf('=');
+            if (eq <= 0)
+            {
+                continue;
+            }
+
+            String k = t.substring(0, eq);
+            String v = t.substring(eq + 1);
+            if (v.startsWith("\"") && v.endsWith("\"") && v.length() >= 2)
+            {
+                v = v.substring(1, v.length() - 1);
+            }
+
+            switch (k)
+            {
+                case "name"      -> h.name = v;
+                case "idx"       -> h.idx = safeInt(v);
+                case "height"    -> h.height = safeInt(v);
+                case "split"     -> h.split = v;
+                case "printWhen" -> h.printWhenExpr = v;
+            }
+        }
+
+        return h;
+    }
+
+    private static Integer safeInt(String v)
+    {
+        try
+        {
+            return Integer.valueOf(v);
+        }
+        catch (NumberFormatException ex)
+        {
+            return null;
+        }
     }
 }

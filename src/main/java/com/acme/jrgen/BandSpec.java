@@ -1,25 +1,15 @@
 package com.acme.jrgen;
 
 /**
- * Describes a detail band detected from magenta rectangles.
+ * Optional detail-band specification derived from magenta rectangles and [[band ...]] tags.
+ *
+ * Rows are zero-based Excel row indices (inclusive for topRow and bottomRow).
  */
 public record BandSpec(
-    String name,
-    int order,
-    double x,
-    double y,
-    double width,
-    double height,
-    String splitType,
-    String printWhenExpression,
     int topRow,
     int bottomRow,
-    int leftCol,
-    int rightCol
-)
-{
-    public boolean containsCell(int row, int col)
-    {
-        return row >= topRow && row <= bottomRow && col >= leftCol && col <= rightCol;
-    }
-}
+    Integer heightOverride,      // explicit band height in JR units (optional)
+    String splitType,            // Prevent | Stretch | Immediate (optional)
+    String printWhenExpression,  // JR expression string (optional)
+    String name                  // logical band name (optional)
+) {}
