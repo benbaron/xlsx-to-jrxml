@@ -143,6 +143,23 @@ public class Main implements Callable<Integer>
     {
         Files.createDirectories(this.outDir);
 
+        Path jrxmlDir = this.outDir.resolve("jrxml");
+        Path beanDir = this.outDir.resolve("beans");
+        Path generatorDir = this.outDir.resolve("generators");
+
+        Files.createDirectories(jrxmlDir);
+        Files.createDirectories(beanDir);
+        Files.createDirectories(generatorDir);
+
+        String resolvedBeanSuffix =
+            (this.beanSuffix == null || this.beanSuffix.isBlank())
+                ? "Bean"
+                : this.beanSuffix;
+        String resolvedGeneratorSuffix =
+            (this.generatorSuffix == null || this.generatorSuffix.isBlank())
+                ? "JasperGenerator"
+                : this.generatorSuffix;
+
         int cellW = this.cellSize.get(0);
         int cellH = this.cellSize.get(1);
 
@@ -164,17 +181,29 @@ public class Main implements Callable<Integer>
 
             String baseName = model.sheetName();
 
-            Path jrxmlOut = this.outDir.resolve(baseName + ".jrxml");
+            Path jrxmlOut = jrxmlDir.resolve(baseName + ".jrxml");
             Files.writeString(jrxmlOut, jrxml);
 
             // Generate Java Bean source
             String beanSrc = BeanGenerator.generateBean(
                 model,
                 this.beanPackage,
-                this.beanSuffix
+                resolvedBeanSuffix
             );
-            Path javaOut = this.outDir.resolve(baseName + this.beanSuffix + ".java");
+            Path javaOut = beanDir.resolve(baseName + resolvedBeanSuffix + ".java");
             Files.writeString(javaOut, beanSrc);
+
+            // Generate generator shell
+            String generatorSrc = GeneratorShellGenerator.generateGenerator(
+                model,
+                this.beanPackage,
+                resolvedBeanSuffix,
+                this.generatorPackage,
+                resolvedGeneratorSuffix
+            );
+            Path generatorOut =
+                generatorDir.resolve(baseName + resolvedGeneratorSuffix + ".java");
+            Files.writeString(generatorOut, generatorSrc);
 
             // Optional validation
             if (!this.skipValidation && this.xsdPath != null)
@@ -198,18 +227,23 @@ public class Main implements Callable<Integer>
             String metaText = MetadataGenerator.generateMetadata(
                 model,
                 this.beanPackage,
-                this.beanSuffix,
+                resolvedBeanSuffix,
                 this.generatorPackage,
-                this.generatorSuffix,
+                resolvedGeneratorSuffix,
                 this.reportTypeSuffix
             );
-            Path metaOut = this.outDir.resolve(baseName + ".properties");
+            Path metaOut = jrxmlDir.resolve(baseName + ".properties");
             Files.writeString(metaOut, metaText);
 
             System.out.println(
                 "Wrote: " + jrxmlOut.getFileName()
+                + " (" + jrxmlDir.getFileName() + ")"
                 + ", " + javaOut.getFileName()
+                + " (" + beanDir.getFileName() + ")"
+                + ", " + generatorOut.getFileName()
+                + " (" + generatorDir.getFileName() + ")"
                 + ", " + metaOut.getFileName()
+                + " (" + jrxmlDir.getFileName() + ")"
             );
         }
 
