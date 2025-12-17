@@ -146,6 +146,7 @@ public class Main implements Callable<Integer>
         Path jrxmlDir = this.outDir.resolve("jrxml");
         Path beanDir = this.outDir.resolve("beans");
         Path generatorDir = this.outDir.resolve("generators");
+        Path fieldmapDir = jrxmlDir; // colocate with JRXML + metadata for now
 
         Files.createDirectories(jrxmlDir);
         Files.createDirectories(beanDir);
@@ -235,6 +236,13 @@ public class Main implements Callable<Integer>
             Path metaOut = jrxmlDir.resolve(baseName + ".properties");
             Files.writeString(metaOut, metaText);
 
+            // Field mapping CSV
+            Path fieldmapOut = FieldMappingGenerator.writeCsv(
+                model,
+                fieldmapDir,
+                baseName
+            );
+
             System.out.println(
                 "Wrote: " + jrxmlOut.getFileName()
                 + " (" + jrxmlDir.getFileName() + ")"
@@ -244,6 +252,8 @@ public class Main implements Callable<Integer>
                 + " (" + generatorDir.getFileName() + ")"
                 + ", " + metaOut.getFileName()
                 + " (" + jrxmlDir.getFileName() + ")"
+                + ", " + fieldmapOut.getFileName()
+                + " (" + fieldmapDir.getFileName() + ")"
             );
         }
 
