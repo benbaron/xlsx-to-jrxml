@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="INCOME_DTL_11a" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="income_dtl_11a_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="_1a_fundraising_income_internal_event" class="java.lang.String"/>
+  <field name="activity_at_the_event" class="java.lang.String"/>
+  <field name="amount" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_2" class="java.lang.String"/>
+  <field name="activity_at_the_event_2" class="java.lang.String"/>
+  <field name="amount_2" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_3" class="java.lang.String"/>
+  <field name="activity_at_the_event_3" class="java.lang.String"/>
+  <field name="amount_3" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_4" class="java.lang.String"/>
+  <field name="activity_at_the_event_4" class="java.lang.String"/>
+  <field name="amount_4" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_5" class="java.lang.String"/>
+  <field name="activity_at_the_event_5" class="java.lang.String"/>
+  <field name="amount_5" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_6" class="java.lang.String"/>
+  <field name="activity_at_the_event_6" class="java.lang.String"/>
+  <field name="amount_6" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_7" class="java.lang.String"/>
+  <field name="activity_at_the_event_7" class="java.lang.String"/>
+  <field name="amount_7" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_8" class="java.lang.String"/>
+  <field name="activity_at_the_event_8" class="java.lang.String"/>
+  <field name="amount_8" class="java.lang.String"/>
+  <field name="_1a_fundraising_income_internal_event_9" class="java.lang.String"/>
+  <field name="activity_at_the_event_9" class="java.lang.String"/>
+  <field name="amount_9" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_1a" class="java.lang.Double"/>
+  <field name="_1b_fundraising_income_external_place" class="java.lang.String"/>
+  <field name="activity" class="java.lang.String"/>
+  <field name="amount_10" class="java.lang.String"/>
+  <field name="_1b_fundraising_income_external_place_2" class="java.lang.String"/>
+  <field name="activity_2" class="java.lang.String"/>
+  <field name="amount_11" class="java.lang.String"/>
+  <field name="_1b_fundraising_income_external_place_3" class="java.lang.String"/>
+  <field name="activity_3" class="java.lang.String"/>
+  <field name="amount_12" class="java.lang.String"/>
+  <field name="_1b_fundraising_income_external_place_4" class="java.lang.String"/>
+  <field name="activity_4" class="java.lang.String"/>
+  <field name="amount_13" class="java.lang.String"/>
+  <field name="_1b_fundraising_income_external_place_5" class="java.lang.String"/>
+  <field name="activity_5" class="java.lang.String"/>
+  <field name="amount_14" class="java.lang.String"/>
+  <field name="_1b_fundraising_income_external_place_6" class="java.lang.String"/>
+  <field name="activity_6" class="java.lang.String"/>
+  <field name="amount_15" class="java.lang.String"/>
+  <field name="_1b_fundraising_income_external_place_7" class="java.lang.String"/>
+  <field name="activity_7" class="java.lang.String"/>
+  <field name="amount_16" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_1b" class="java.lang.Double"/>
+  <field name="amount_a_donations_received_without_consideration_list_each_transaction_on_income_dtl_11c_worksheet" class="java.lang.Double"/>
+  <field name="income_dtl_11c_g24_income_dtl_11c_g66_show_total_on_pg_4_line_2" class="java.lang.Double"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from" class="java.lang.String"/>
+  <field name="activity_8" class="java.lang.String"/>
+  <field name="amount_17" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_2" class="java.lang.String"/>
+  <field name="activity_9" class="java.lang.String"/>
+  <field name="amount_18" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_3" class="java.lang.String"/>
+  <field name="activity_10" class="java.lang.String"/>
+  <field name="amount_19" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_4" class="java.lang.String"/>
+  <field name="activity_11" class="java.lang.String"/>
+  <field name="amount_20" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_5" class="java.lang.String"/>
+  <field name="activity_12" class="java.lang.String"/>
+  <field name="amount_21" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_6" class="java.lang.String"/>
+  <field name="activity_13" class="java.lang.String"/>
+  <field name="amount_22" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_7" class="java.lang.String"/>
+  <field name="activity_14" class="java.lang.String"/>
+  <field name="amount_23" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_8" class="java.lang.String"/>
+  <field name="activity_15" class="java.lang.String"/>
+  <field name="amount_24" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_9" class="java.lang.String"/>
+  <field name="activity_16" class="java.lang.String"/>
+  <field name="amount_25" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_10" class="java.lang.String"/>
+  <field name="activity_17" class="java.lang.String"/>
+  <field name="amount_26" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_11" class="java.lang.String"/>
+  <field name="activity_18" class="java.lang.String"/>
+  <field name="amount_27" class="java.lang.String"/>
+  <field name="_3a_income_from_demos_and_activity_fees_from_12" class="java.lang.String"/>
+  <field name="activity_19" class="java.lang.String"/>
+  <field name="amount_28" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_3a" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1060">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{income_dtl_11a_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[INCOME DETAIL PART 1]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[1a. FUNDRAISING INCOME (INTERNAL) Event]]></text>
+      </element>
+      <element kind="staticText" x="240" y="160" width="80" height="20">
+        <text><![CDATA[Activity at the event]]></text>
+      </element>
+      <element kind="staticText" x="320" y="160" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="180" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="180" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="180" width="80" height="20">
+        <expression><![CDATA[$F{amount}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="200" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="200" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="200" width="80" height="20">
+        <expression><![CDATA[$F{amount_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="220" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="220" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="220" width="80" height="20">
+        <expression><![CDATA[$F{amount_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="240" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="240" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{amount_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="260" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{amount_5}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="280" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{amount_6}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="300" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{amount_7}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="320" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{amount_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="340" width="80" height="20">
+        <expression><![CDATA[$F{_1a_fundraising_income_internal_event_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{activity_at_the_event_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{amount_9}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="360" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 1a]]></text>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_1a}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="400" width="80" height="20">
+        <text><![CDATA[1b. FUNDRAISING INCOME (EXTERNAL) Place]]></text>
+      </element>
+      <element kind="staticText" x="240" y="400" width="80" height="20">
+        <text><![CDATA[Activity]]></text>
+      </element>
+      <element kind="staticText" x="320" y="400" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{activity}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{amount_10}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="440" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{activity_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{amount_11}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="460" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{activity_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{amount_12}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="480" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{activity_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{amount_13}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{activity_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{amount_14}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{activity_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{amount_15}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{_1b_fundraising_income_external_place_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{activity_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{amount_16}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="560" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 1b]]></text>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_1b}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="620" width="80" height="20">
+        <text><![CDATA[2. DIRECT CONTRIBUTIONS]]></text>
+      </element>
+      <element kind="staticText" x="320" y="620" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="160" y="640" width="80" height="20">
+        <text><![CDATA[a) Donations received without consideration -  List each transaction on INCOME_DTL_11c Worksheet]]></text>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{amount_a_donations_received_without_consideration_list_each_transaction_on_income_dtl_11c_worksheet}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="680" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 2]]></text>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{income_dtl_11c_g24_income_dtl_11c_g66_show_total_on_pg_4_line_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="740" width="80" height="20">
+        <text><![CDATA[3a. INCOME FROM DEMOS AND ACTIVITY FEES From]]></text>
+      </element>
+      <element kind="staticText" x="240" y="740" width="80" height="20">
+        <text><![CDATA[Activity]]></text>
+      </element>
+      <element kind="staticText" x="320" y="740" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="760" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{activity_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{amount_17}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="780" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{activity_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{amount_18}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="800" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{activity_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{amount_19}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{activity_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{amount_20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{activity_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{amount_21}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{activity_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{amount_22}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{activity_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{amount_23}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="900" width="80" height="20">
+        <expression><![CDATA[$F{activity_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{amount_24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="920" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="920" width="80" height="20">
+        <expression><![CDATA[$F{activity_16}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{amount_25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{activity_17}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{amount_26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{activity_18}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{amount_27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{_3a_income_from_demos_and_activity_fees_from_12}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{activity_19}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{amount_28}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="1000" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 3a]]></text>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_3a}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1020" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1040" width="80" height="20">
+        <text><![CDATA[-11a-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

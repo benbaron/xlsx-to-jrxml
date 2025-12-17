@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="NEWSLETTER_15" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="newsletter_15_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="newsletter_name" class="java.lang.String"/>
+  <field name="newsletter_name_2" class="java.lang.String"/>
+  <field name="newsletter_name_3" class="java.lang.String"/>
+  <field name="gross_income" class="java.lang.String"/>
+  <field name="gross_income_a" class="java.lang.Double"/>
+  <field name="i11_start_subs_due_b" class="java.lang.Double"/>
+  <field name="rate_1_price_of_one_subscription" class="java.lang.String"/>
+  <field name="rate_2_price_of_one_subscription" class="java.lang.String"/>
+  <field name="balance_3_g31_end_subs_due_c" class="java.lang.Double"/>
+  <field name="rate_1_of_issues_per_subscription" class="java.lang.String"/>
+  <field name="rate_2_of_issues_per_subscription" class="java.lang.String"/>
+  <field name="i59_adj_gross_income_a_b_c" class="java.lang.Double"/>
+  <field name="rate_1_price_per_issue" class="java.lang.Double"/>
+  <field name="rate_2_if_h16_0_0_round_h15_h16_2" class="java.lang.Double"/>
+  <field name="expiring_1_0" class="java.lang.String"/>
+  <field name="price_per_issue_1_0" class="java.lang.String"/>
+  <field name="subscription_due_1_0" class="java.lang.Double"/>
+  <field name="expiring_e22_c22_d22" class="java.lang.String"/>
+  <field name="price_per_issue_e22_c22_d22" class="java.lang.String"/>
+  <field name="subscription_due_e22_c22_d22" class="java.lang.Double"/>
+  <field name="_1_0" class="java.lang.Double"/>
+  <field name="expiring_c22_1" class="java.lang.String"/>
+  <field name="price_per_issue_c22_1" class="java.lang.String"/>
+  <field name="e22_c22_d22_c22_1" class="java.lang.Double"/>
+  <field name="expiring_e23_c23_d23" class="java.lang.String"/>
+  <field name="price_per_issue_e23_c23_d23" class="java.lang.String"/>
+  <field name="h22_c22_g22_e23_c23_d23" class="java.lang.Double"/>
+  <field name="c22_1" class="java.lang.Double"/>
+  <field name="expiring_c23_1" class="java.lang.String"/>
+  <field name="price_per_issue_c23_1" class="java.lang.String"/>
+  <field name="e23_c23_d23_c23_1" class="java.lang.Double"/>
+  <field name="expiring_e24_c24_d24" class="java.lang.String"/>
+  <field name="price_per_issue_e24_c24_d24" class="java.lang.String"/>
+  <field name="h23_c23_g23_e24_c24_d24" class="java.lang.Double"/>
+  <field name="c23_1" class="java.lang.Double"/>
+  <field name="expiring_c24_1" class="java.lang.String"/>
+  <field name="price_per_issue_c24_1" class="java.lang.String"/>
+  <field name="e24_c24_d24_c24_1" class="java.lang.Double"/>
+  <field name="expiring_e25_c25_d25" class="java.lang.String"/>
+  <field name="price_per_issue_e25_c25_d25" class="java.lang.String"/>
+  <field name="h24_c24_g24_e25_c25_d25" class="java.lang.Double"/>
+  <field name="c24_1" class="java.lang.Double"/>
+  <field name="expiring_c25_1" class="java.lang.String"/>
+  <field name="price_per_issue_c25_1" class="java.lang.String"/>
+  <field name="e25_c25_d25_c25_1" class="java.lang.Double"/>
+  <field name="expiring_e26_c26_d26" class="java.lang.String"/>
+  <field name="price_per_issue_e26_c26_d26" class="java.lang.String"/>
+  <field name="h25_c25_g25_e26_c26_d26" class="java.lang.Double"/>
+  <field name="c25_1" class="java.lang.Double"/>
+  <field name="expiring_c26_1" class="java.lang.String"/>
+  <field name="price_per_issue_c26_1" class="java.lang.String"/>
+  <field name="e26_c26_d26_c26_1" class="java.lang.Double"/>
+  <field name="expiring_e27_c27_d27" class="java.lang.String"/>
+  <field name="price_per_issue_e27_c27_d27" class="java.lang.String"/>
+  <field name="h26_c26_g26_e27_c27_d27" class="java.lang.Double"/>
+  <field name="c26_1" class="java.lang.Double"/>
+  <field name="expiring_c27_1" class="java.lang.String"/>
+  <field name="price_per_issue_c27_1" class="java.lang.String"/>
+  <field name="e27_c27_d27_c27_1" class="java.lang.Double"/>
+  <field name="expiring_e28_c28_d28" class="java.lang.String"/>
+  <field name="price_per_issue_e28_c28_d28" class="java.lang.String"/>
+  <field name="h27_c27_g27_e28_c28_d28" class="java.lang.Double"/>
+  <field name="c27_1" class="java.lang.Double"/>
+  <field name="expiring_c28_1" class="java.lang.String"/>
+  <field name="price_per_issue_c28_1" class="java.lang.String"/>
+  <field name="e28_c28_d28_c28_1" class="java.lang.Double"/>
+  <field name="expiring_e29_c29_d29" class="java.lang.String"/>
+  <field name="price_per_issue_e29_c29_d29" class="java.lang.String"/>
+  <field name="h28_c28_g28_e29_c29_d29" class="java.lang.Double"/>
+  <field name="c28_1" class="java.lang.Double"/>
+  <field name="expiring_c29_1" class="java.lang.String"/>
+  <field name="price_per_issue_c29_1" class="java.lang.String"/>
+  <field name="e29_c29_d29_c29_1" class="java.lang.Double"/>
+  <field name="expiring_e30_c30_d30" class="java.lang.String"/>
+  <field name="price_per_issue_e30_c30_d30" class="java.lang.String"/>
+  <field name="h29_c29_g29_e30_c30_d30" class="java.lang.Double"/>
+  <field name="c29_1" class="java.lang.Double"/>
+  <field name="expiring_c30_1" class="java.lang.String"/>
+  <field name="price_per_issue_c30_1" class="java.lang.String"/>
+  <field name="e30_c30_d30_c30_1" class="java.lang.Double"/>
+  <field name="expiring_e31_c31_d31" class="java.lang.String"/>
+  <field name="price_per_issue_e31_c31_d31" class="java.lang.String"/>
+  <field name="h30_c30_g30_e31_c31_d31" class="java.lang.Double"/>
+  <field name="c30_1" class="java.lang.Double"/>
+  <field name="expiring_c31_1" class="java.lang.String"/>
+  <field name="price_per_issue_c31_1" class="java.lang.String"/>
+  <field name="e31_c31_d31_c31_1" class="java.lang.Double"/>
+  <field name="expiring_e32_c32_d32" class="java.lang.String"/>
+  <field name="price_per_issue_e32_c32_d32" class="java.lang.String"/>
+  <field name="h31_c31_g31_e32_c32_d32" class="java.lang.Double"/>
+  <field name="c31_1" class="java.lang.Double"/>
+  <field name="expiring_c32_1" class="java.lang.String"/>
+  <field name="price_per_issue_c32_1" class="java.lang.String"/>
+  <field name="e32_c32_d32_c32_1" class="java.lang.Double"/>
+  <field name="expiring_e33_c33_d33" class="java.lang.String"/>
+  <field name="price_per_issue_e33_c33_d33" class="java.lang.String"/>
+  <field name="h32_c32_g32_e33_c33_d33" class="java.lang.Double"/>
+  <field name="c32_1" class="java.lang.Double"/>
+  <field name="expiring_c33_1" class="java.lang.String"/>
+  <field name="price_per_issue_c33_1" class="java.lang.String"/>
+  <field name="e33_c33_d33_c33_1" class="java.lang.Double"/>
+  <field name="expiring_e34_c34_d34" class="java.lang.String"/>
+  <field name="price_per_issue_e34_c34_d34" class="java.lang.String"/>
+  <field name="h33_c33_g33_e34_c34_d34" class="java.lang.Double"/>
+  <field name="c33_1" class="java.lang.Double"/>
+  <field name="expiring_c34_1" class="java.lang.String"/>
+  <field name="price_per_issue_c34_1" class="java.lang.String"/>
+  <field name="e34_c34_d34_c34_1" class="java.lang.Double"/>
+  <field name="expiring_e35_c35_d35" class="java.lang.String"/>
+  <field name="price_per_issue_e35_c35_d35" class="java.lang.String"/>
+  <field name="h34_c34_g34_e35_c35_d35" class="java.lang.Double"/>
+  <field name="c34_1" class="java.lang.Double"/>
+  <field name="expiring_c35_1" class="java.lang.String"/>
+  <field name="price_per_issue_c35_1" class="java.lang.String"/>
+  <field name="e35_c35_d35_c35_1" class="java.lang.Double"/>
+  <field name="expiring_e36_c36_d36" class="java.lang.String"/>
+  <field name="price_per_issue_e36_c36_d36" class="java.lang.String"/>
+  <field name="h35_c35_g35_e36_c36_d36" class="java.lang.Double"/>
+  <field name="c35_1" class="java.lang.Double"/>
+  <field name="expiring_c36_1" class="java.lang.String"/>
+  <field name="price_per_issue_c36_1" class="java.lang.String"/>
+  <field name="e36_c36_d36_c36_1" class="java.lang.Double"/>
+  <field name="expiring_e37_c37_d37" class="java.lang.String"/>
+  <field name="price_per_issue_e37_c37_d37" class="java.lang.String"/>
+  <field name="h36_c36_g36_e37_c37_d37" class="java.lang.Double"/>
+  <field name="c36_1" class="java.lang.Double"/>
+  <field name="expiring_c37_1" class="java.lang.String"/>
+  <field name="price_per_issue_c37_1" class="java.lang.String"/>
+  <field name="e37_c37_d37_c37_1" class="java.lang.Double"/>
+  <field name="expiring_e38_c38_d38" class="java.lang.String"/>
+  <field name="price_per_issue_e38_c38_d38" class="java.lang.String"/>
+  <field name="h37_c37_g37_e38_c38_d38" class="java.lang.Double"/>
+  <field name="c37_1" class="java.lang.Double"/>
+  <field name="expiring_c38_1" class="java.lang.String"/>
+  <field name="price_per_issue_c38_1" class="java.lang.String"/>
+  <field name="e38_c38_d38_c38_1" class="java.lang.Double"/>
+  <field name="expiring_e39_c39_d39" class="java.lang.String"/>
+  <field name="price_per_issue_e39_c39_d39" class="java.lang.String"/>
+  <field name="h38_c38_g38_e39_c39_d39" class="java.lang.Double"/>
+  <field name="c38_1" class="java.lang.Double"/>
+  <field name="expiring_c39_1" class="java.lang.String"/>
+  <field name="price_per_issue_c39_1" class="java.lang.String"/>
+  <field name="e39_c39_d39_c39_1" class="java.lang.Double"/>
+  <field name="expiring_e40_c40_d40" class="java.lang.String"/>
+  <field name="price_per_issue_e40_c40_d40" class="java.lang.String"/>
+  <field name="h39_c39_g39_e40_c40_d40" class="java.lang.Double"/>
+  <field name="c39_1" class="java.lang.Double"/>
+  <field name="expiring_c40_1" class="java.lang.String"/>
+  <field name="price_per_issue_c40_1" class="java.lang.String"/>
+  <field name="e40_c40_d40_c40_1" class="java.lang.Double"/>
+  <field name="expiring_e41_c41_d41" class="java.lang.String"/>
+  <field name="price_per_issue_e41_c41_d41" class="java.lang.String"/>
+  <field name="h40_c40_g40_e41_c41_d41" class="java.lang.Double"/>
+  <field name="c40_1" class="java.lang.Double"/>
+  <field name="expiring_c41_1" class="java.lang.String"/>
+  <field name="price_per_issue_c41_1" class="java.lang.String"/>
+  <field name="e41_c41_d41_c41_1" class="java.lang.Double"/>
+  <field name="expiring_e42_c42_d42" class="java.lang.String"/>
+  <field name="price_per_issue_e42_c42_d42" class="java.lang.String"/>
+  <field name="h41_c41_g41_e42_c42_d42" class="java.lang.Double"/>
+  <field name="c41_1" class="java.lang.Double"/>
+  <field name="expiring_c42_1" class="java.lang.String"/>
+  <field name="price_per_issue_c42_1" class="java.lang.String"/>
+  <field name="e42_c42_d42_c42_1" class="java.lang.Double"/>
+  <field name="expiring_e43_c43_d43" class="java.lang.String"/>
+  <field name="price_per_issue_e43_c43_d43" class="java.lang.String"/>
+  <field name="h42_c42_g42_e43_c43_d43" class="java.lang.Double"/>
+  <field name="c42_1" class="java.lang.Double"/>
+  <field name="expiring_c43_1" class="java.lang.String"/>
+  <field name="price_per_issue_c43_1" class="java.lang.String"/>
+  <field name="e43_c43_d43_c43_1" class="java.lang.Double"/>
+  <field name="expiring_e44_c44_d44" class="java.lang.String"/>
+  <field name="price_per_issue_e44_c44_d44" class="java.lang.String"/>
+  <field name="h43_c43_g43_e44_c44_d44" class="java.lang.Double"/>
+  <field name="c43_1" class="java.lang.Double"/>
+  <field name="expiring_c44_1" class="java.lang.String"/>
+  <field name="price_per_issue_c44_1" class="java.lang.String"/>
+  <field name="e44_c44_d44_c44_1" class="java.lang.Double"/>
+  <field name="expiring_e45_c45_d45" class="java.lang.String"/>
+  <field name="price_per_issue_e45_c45_d45" class="java.lang.String"/>
+  <field name="h44_c44_g44_e45_c45_d45" class="java.lang.Double"/>
+  <field name="c44_1" class="java.lang.Double"/>
+  <field name="expiring_c45_1" class="java.lang.String"/>
+  <field name="price_per_issue_c45_1" class="java.lang.String"/>
+  <field name="e45_c45_d45_c45_1" class="java.lang.Double"/>
+  <field name="expiring_e46_c46_d46" class="java.lang.String"/>
+  <field name="price_per_issue_e46_c46_d46" class="java.lang.String"/>
+  <field name="h45_c45_g45_e46_c46_d46" class="java.lang.Double"/>
+  <field name="c45_1" class="java.lang.Double"/>
+  <field name="expiring_c46_1" class="java.lang.String"/>
+  <field name="price_per_issue_c46_1" class="java.lang.String"/>
+  <field name="e46_c46_d46_c46_1" class="java.lang.Double"/>
+  <field name="expiring_e47_c47_d47" class="java.lang.String"/>
+  <field name="price_per_issue_e47_c47_d47" class="java.lang.String"/>
+  <field name="h46_c46_g46_e47_c47_d47" class="java.lang.Double"/>
+  <field name="c46_1" class="java.lang.Double"/>
+  <field name="expiring_c47_1" class="java.lang.String"/>
+  <field name="price_per_issue_c47_1" class="java.lang.String"/>
+  <field name="e47_c47_d47_c47_1" class="java.lang.Double"/>
+  <field name="expiring_e48_c48_d48" class="java.lang.String"/>
+  <field name="price_per_issue_e48_c48_d48" class="java.lang.String"/>
+  <field name="h47_c47_g47_e48_c48_d48" class="java.lang.Double"/>
+  <field name="c47_1" class="java.lang.Double"/>
+  <field name="expiring_c48_1" class="java.lang.String"/>
+  <field name="price_per_issue_c48_1" class="java.lang.String"/>
+  <field name="e48_c48_d48_c48_1" class="java.lang.Double"/>
+  <field name="expiring_e49_c49_d49" class="java.lang.String"/>
+  <field name="price_per_issue_e49_c49_d49" class="java.lang.String"/>
+  <field name="h48_c48_g48_e49_c49_d49" class="java.lang.Double"/>
+  <field name="c48_1" class="java.lang.Double"/>
+  <field name="expiring_c49_1" class="java.lang.String"/>
+  <field name="price_per_issue_c49_1" class="java.lang.String"/>
+  <field name="e49_c49_d49_c49_1" class="java.lang.Double"/>
+  <field name="expiring_e50_c50_d50" class="java.lang.String"/>
+  <field name="price_per_issue_e50_c50_d50" class="java.lang.String"/>
+  <field name="h49_c49_g49_e50_c50_d50" class="java.lang.Double"/>
+  <field name="c49_1" class="java.lang.Double"/>
+  <field name="expiring_c50_1" class="java.lang.String"/>
+  <field name="price_per_issue_c50_1" class="java.lang.String"/>
+  <field name="e50_c50_d50_c50_1" class="java.lang.Double"/>
+  <field name="expiring_e51_c51_d51" class="java.lang.String"/>
+  <field name="price_per_issue_e51_c51_d51" class="java.lang.String"/>
+  <field name="h50_c50_g50_e51_c51_d51" class="java.lang.Double"/>
+  <field name="c50_1" class="java.lang.Double"/>
+  <field name="expiring_c51_1" class="java.lang.String"/>
+  <field name="price_per_issue_c51_1" class="java.lang.String"/>
+  <field name="e51_c51_d51_c51_1" class="java.lang.Double"/>
+  <field name="expiring_e52_c52_d52" class="java.lang.String"/>
+  <field name="price_per_issue_e52_c52_d52" class="java.lang.String"/>
+  <field name="h51_c51_g51_e52_c52_d52" class="java.lang.Double"/>
+  <field name="c51_1" class="java.lang.Double"/>
+  <field name="expiring_c52_1" class="java.lang.String"/>
+  <field name="price_per_issue_c52_1" class="java.lang.String"/>
+  <field name="e52_c52_d52_c52_1" class="java.lang.Double"/>
+  <field name="expiring_e53_c53_d53" class="java.lang.String"/>
+  <field name="price_per_issue_e53_c53_d53" class="java.lang.String"/>
+  <field name="h52_c52_g52_e53_c53_d53" class="java.lang.Double"/>
+  <field name="c52_1" class="java.lang.Double"/>
+  <field name="expiring_c53_1" class="java.lang.String"/>
+  <field name="price_per_issue_c53_1" class="java.lang.String"/>
+  <field name="e53_c53_d53_c53_1" class="java.lang.Double"/>
+  <field name="expiring_e54_c54_d54" class="java.lang.String"/>
+  <field name="price_per_issue_e54_c54_d54" class="java.lang.String"/>
+  <field name="h53_c53_g53_e54_c54_d54" class="java.lang.Double"/>
+  <field name="c53_1" class="java.lang.Double"/>
+  <field name="expiring_c54_1" class="java.lang.String"/>
+  <field name="price_per_issue_c54_1" class="java.lang.String"/>
+  <field name="e54_c54_d54_c54_1" class="java.lang.Double"/>
+  <field name="expiring_e55_c55_d55" class="java.lang.String"/>
+  <field name="price_per_issue_e55_c55_d55" class="java.lang.String"/>
+  <field name="h54_c54_g54_e55_c55_d55" class="java.lang.Double"/>
+  <field name="c54_1" class="java.lang.Double"/>
+  <field name="expiring_c55_1" class="java.lang.String"/>
+  <field name="price_per_issue_c55_1" class="java.lang.String"/>
+  <field name="e55_c55_d55_c55_1" class="java.lang.Double"/>
+  <field name="expiring_e56_c56_d56" class="java.lang.String"/>
+  <field name="price_per_issue_e56_c56_d56" class="java.lang.String"/>
+  <field name="h55_c55_g55_e56_c56_d56" class="java.lang.Double"/>
+  <field name="c55_1" class="java.lang.Double"/>
+  <field name="expiring_c56_1" class="java.lang.String"/>
+  <field name="price_per_issue_c56_1" class="java.lang.String"/>
+  <field name="e56_c56_d56_c56_1" class="java.lang.Double"/>
+  <field name="expiring_e57_c57_d57" class="java.lang.String"/>
+  <field name="price_per_issue_e57_c57_d57" class="java.lang.String"/>
+  <field name="h56_c56_g56_e57_c57_d57" class="java.lang.Double"/>
+  <field name="e57_c57_d57_calculate_separately" class="java.lang.String"/>
+  <field name="h57_c57_g57_calculate_separately" class="java.lang.String"/>
+  <field name="h57_c57_g57_total" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1180">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{newsletter_15_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[NEWSLETTER INCOME WORKSHEET]]></text>
+      </element>
+      <element kind="staticText" x="160" y="140" width="80" height="20">
+        <text><![CDATA[Use this form only if you sell issues of your newsletter.]]></text>
+      </element>
+      <element kind="staticText" x="240" y="180" width="80" height="20">
+        <text><![CDATA[Newsletter Name:]]></text>
+      </element>
+      <element kind="textField" x="320" y="180" width="80" height="20">
+        <expression><![CDATA[$F{newsletter_name}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="180" width="80" height="20">
+        <expression><![CDATA[$F{newsletter_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="180" width="80" height="20">
+        <expression><![CDATA[$F{newsletter_name_3}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="180" width="80" height="20">
+        <text><![CDATA[Gross Income:]]></text>
+      </element>
+      <element kind="textField" x="640" y="180" width="80" height="20">
+        <expression><![CDATA[$F{gross_income}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[If you sell issues IN ADVANCE using subscriptions, fill in the sections below.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[Gross Income (A)]]></text>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{gross_income_a}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="240" width="80" height="20">
+        <text><![CDATA[For calculating price per Issue:]]></text>
+      </element>
+      <element kind="staticText" x="560" y="240" width="80" height="20">
+        <text><![CDATA[Rate 1]]></text>
+      </element>
+      <element kind="staticText" x="640" y="240" width="80" height="20">
+        <text><![CDATA[Rate 2]]></text>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[Start Subs Due (B)]]></text>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{i11_start_subs_due_b}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="260" width="80" height="20">
+        <text><![CDATA[Price of one subscription:]]></text>
+      </element>
+      <element kind="textField" x="560" y="260" width="80" height="20">
+        <expression><![CDATA[$F{rate_1_price_of_one_subscription}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="260" width="80" height="20">
+        <expression><![CDATA[$F{rate_2_price_of_one_subscription}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="280" width="80" height="20">
+        <text><![CDATA[End Subs Due (C)]]></text>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{balance_3_g31_end_subs_due_c}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="280" width="80" height="20">
+        <text><![CDATA[# of Issues per Subscription:]]></text>
+      </element>
+      <element kind="textField" x="560" y="280" width="80" height="20">
+        <expression><![CDATA[$F{rate_1_of_issues_per_subscription}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="280" width="80" height="20">
+        <expression><![CDATA[$F{rate_2_of_issues_per_subscription}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[Adj. Gross Income (A+B-C)]]></text>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{i59_adj_gross_income_a_b_c}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="300" width="80" height="20">
+        <text><![CDATA[Price Per Issue:]]></text>
+      </element>
+      <element kind="textField" x="560" y="300" width="80" height="20">
+        <expression><![CDATA[$F{rate_1_price_per_issue}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="300" width="80" height="20">
+        <expression><![CDATA[$F{rate_2_if_h16_0_0_round_h15_h16_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[(A)]]></text>
+      </element>
+      <element kind="staticText" x="240" y="340" width="80" height="20">
+        <text><![CDATA[(B1)]]></text>
+      </element>
+      <element kind="staticText" x="320" y="340" width="80" height="20">
+        <text><![CDATA[(C1)]]></text>
+      </element>
+      <element kind="staticText" x="400" y="340" width="80" height="20">
+        <text><![CDATA[(A) x (B1) x (C1)]]></text>
+      </element>
+      <element kind="staticText" x="480" y="340" width="80" height="20">
+        <text><![CDATA[(B2)]]></text>
+      </element>
+      <element kind="staticText" x="560" y="340" width="80" height="20">
+        <text><![CDATA[(C2)]]></text>
+      </element>
+      <element kind="staticText" x="640" y="340" width="80" height="20">
+        <text><![CDATA[(A) x (B2) x (C2)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="360" width="80" height="20">
+        <text><![CDATA[# of Issues]]></text>
+      </element>
+      <element kind="staticText" x="240" y="360" width="80" height="20">
+        <text><![CDATA[# of Subs]]></text>
+      </element>
+      <element kind="staticText" x="320" y="360" width="80" height="20">
+        <text><![CDATA[Price per Issue]]></text>
+      </element>
+      <element kind="staticText" x="400" y="360" width="80" height="20">
+        <text><![CDATA[Balance of]]></text>
+      </element>
+      <element kind="staticText" x="480" y="360" width="80" height="20">
+        <text><![CDATA[# of Subs]]></text>
+      </element>
+      <element kind="staticText" x="560" y="360" width="80" height="20">
+        <text><![CDATA[Price per Issue]]></text>
+      </element>
+      <element kind="staticText" x="640" y="360" width="80" height="20">
+        <text><![CDATA[Balance of]]></text>
+      </element>
+      <element kind="staticText" x="160" y="380" width="80" height="20">
+        <text><![CDATA[Remaining]]></text>
+      </element>
+      <element kind="staticText" x="240" y="380" width="80" height="20">
+        <text><![CDATA[Expiring]]></text>
+      </element>
+      <element kind="staticText" x="400" y="380" width="80" height="20">
+        <text><![CDATA[Subscription Due]]></text>
+      </element>
+      <element kind="staticText" x="480" y="380" width="80" height="20">
+        <text><![CDATA[Expiring]]></text>
+      </element>
+      <element kind="staticText" x="640" y="380" width="80" height="20">
+        <text><![CDATA[Subscription Due]]></text>
+      </element>
+      <element kind="staticText" x="160" y="400" width="80" height="20">
+        <text><![CDATA[1.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{expiring_1_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_1_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{subscription_due_1_0}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e22_c22_d22}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e22_c22_d22}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="400" width="80" height="20">
+        <expression><![CDATA[$F{subscription_due_e22_c22_d22}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{_1_0}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c22_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c22_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{e22_c22_d22_c22_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e23_c23_d23}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e23_c23_d23}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="420" width="80" height="20">
+        <expression><![CDATA[$F{h22_c22_g22_e23_c23_d23}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="440" width="80" height="20">
+        <expression><![CDATA[$F{c22_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c23_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c23_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{e23_c23_d23_c23_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="440" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e24_c24_d24}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e24_c24_d24}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="440" width="80" height="20">
+        <expression><![CDATA[$F{h23_c23_g23_e24_c24_d24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="460" width="80" height="20">
+        <expression><![CDATA[$F{c23_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c24_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c24_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{e24_c24_d24_c24_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e25_c25_d25}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="460" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e25_c25_d25}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="460" width="80" height="20">
+        <expression><![CDATA[$F{h24_c24_g24_e25_c25_d25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="480" width="80" height="20">
+        <expression><![CDATA[$F{c24_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c25_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c25_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{e25_c25_d25_c25_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="480" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e26_c26_d26}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e26_c26_d26}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="480" width="80" height="20">
+        <expression><![CDATA[$F{h25_c25_g25_e26_c26_d26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{c25_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c26_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c26_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{e26_c26_d26_c26_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="500" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e27_c27_d27}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="500" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e27_c27_d27}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="500" width="80" height="20">
+        <expression><![CDATA[$F{h26_c26_g26_e27_c27_d27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{c26_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c27_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c27_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{e27_c27_d27_c27_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="520" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e28_c28_d28}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="520" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e28_c28_d28}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="520" width="80" height="20">
+        <expression><![CDATA[$F{h27_c27_g27_e28_c28_d28}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{c27_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c28_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c28_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{e28_c28_d28_c28_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e29_c29_d29}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="540" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e29_c29_d29}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="540" width="80" height="20">
+        <expression><![CDATA[$F{h28_c28_g28_e29_c29_d29}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="560" width="80" height="20">
+        <expression><![CDATA[$F{c28_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c29_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c29_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{e29_c29_d29_c29_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e30_c30_d30}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="560" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e30_c30_d30}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="560" width="80" height="20">
+        <expression><![CDATA[$F{h29_c29_g29_e30_c30_d30}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="580" width="80" height="20">
+        <expression><![CDATA[$F{c29_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c30_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c30_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{e30_c30_d30_c30_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e31_c31_d31}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e31_c31_d31}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="580" width="80" height="20">
+        <expression><![CDATA[$F{h30_c30_g30_e31_c31_d31}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="600" width="80" height="20">
+        <expression><![CDATA[$F{c30_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c31_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c31_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{e31_c31_d31_c31_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="600" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e32_c32_d32}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="600" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e32_c32_d32}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="600" width="80" height="20">
+        <expression><![CDATA[$F{h31_c31_g31_e32_c32_d32}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="620" width="80" height="20">
+        <expression><![CDATA[$F{c31_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c32_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c32_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{e32_c32_d32_c32_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="620" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e33_c33_d33}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="620" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e33_c33_d33}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="620" width="80" height="20">
+        <expression><![CDATA[$F{h32_c32_g32_e33_c33_d33}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="640" width="80" height="20">
+        <expression><![CDATA[$F{c32_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c33_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c33_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{e33_c33_d33_c33_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="640" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e34_c34_d34}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="640" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e34_c34_d34}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="640" width="80" height="20">
+        <expression><![CDATA[$F{h33_c33_g33_e34_c34_d34}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="660" width="80" height="20">
+        <expression><![CDATA[$F{c33_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c34_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c34_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{e34_c34_d34_c34_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="660" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e35_c35_d35}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="660" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e35_c35_d35}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="660" width="80" height="20">
+        <expression><![CDATA[$F{h34_c34_g34_e35_c35_d35}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="680" width="80" height="20">
+        <expression><![CDATA[$F{c34_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c35_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c35_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{e35_c35_d35_c35_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="680" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e36_c36_d36}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="680" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e36_c36_d36}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="680" width="80" height="20">
+        <expression><![CDATA[$F{h35_c35_g35_e36_c36_d36}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="700" width="80" height="20">
+        <expression><![CDATA[$F{c35_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c36_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c36_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{e36_c36_d36_c36_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="700" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e37_c37_d37}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="700" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e37_c37_d37}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="700" width="80" height="20">
+        <expression><![CDATA[$F{h36_c36_g36_e37_c37_d37}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="720" width="80" height="20">
+        <expression><![CDATA[$F{c36_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c37_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c37_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{e37_c37_d37_c37_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="720" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e38_c38_d38}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="720" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e38_c38_d38}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="720" width="80" height="20">
+        <expression><![CDATA[$F{h37_c37_g37_e38_c38_d38}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="740" width="80" height="20">
+        <expression><![CDATA[$F{c37_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c38_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c38_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{e38_c38_d38_c38_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="740" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e39_c39_d39}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="740" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e39_c39_d39}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="740" width="80" height="20">
+        <expression><![CDATA[$F{h38_c38_g38_e39_c39_d39}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="760" width="80" height="20">
+        <expression><![CDATA[$F{c38_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c39_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c39_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{e39_c39_d39_c39_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="760" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e40_c40_d40}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="760" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e40_c40_d40}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="760" width="80" height="20">
+        <expression><![CDATA[$F{h39_c39_g39_e40_c40_d40}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="780" width="80" height="20">
+        <expression><![CDATA[$F{c39_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c40_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c40_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{e40_c40_d40_c40_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="780" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e41_c41_d41}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="780" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e41_c41_d41}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="780" width="80" height="20">
+        <expression><![CDATA[$F{h40_c40_g40_e41_c41_d41}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="800" width="80" height="20">
+        <expression><![CDATA[$F{c40_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c41_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c41_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{e41_c41_d41_c41_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="800" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e42_c42_d42}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="800" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e42_c42_d42}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="800" width="80" height="20">
+        <expression><![CDATA[$F{h41_c41_g41_e42_c42_d42}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{c41_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c42_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c42_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{e42_c42_d42_c42_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="820" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e43_c43_d43}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="820" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e43_c43_d43}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="820" width="80" height="20">
+        <expression><![CDATA[$F{h42_c42_g42_e43_c43_d43}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{c42_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c43_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c43_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{e43_c43_d43_c43_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e44_c44_d44}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="840" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e44_c44_d44}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="840" width="80" height="20">
+        <expression><![CDATA[$F{h43_c43_g43_e44_c44_d44}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{c43_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c44_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c44_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{e44_c44_d44_c44_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="860" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e45_c45_d45}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="860" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e45_c45_d45}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="860" width="80" height="20">
+        <expression><![CDATA[$F{h44_c44_g44_e45_c45_d45}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{c44_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c45_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c45_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{e45_c45_d45_c45_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="880" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e46_c46_d46}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="880" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e46_c46_d46}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="880" width="80" height="20">
+        <expression><![CDATA[$F{h45_c45_g45_e46_c46_d46}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="900" width="80" height="20">
+        <expression><![CDATA[$F{c45_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="900" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c46_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c46_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="900" width="80" height="20">
+        <expression><![CDATA[$F{e46_c46_d46_c46_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="900" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e47_c47_d47}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="900" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e47_c47_d47}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="900" width="80" height="20">
+        <expression><![CDATA[$F{h46_c46_g46_e47_c47_d47}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="920" width="80" height="20">
+        <expression><![CDATA[$F{c46_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="920" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c47_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c47_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="920" width="80" height="20">
+        <expression><![CDATA[$F{e47_c47_d47_c47_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="920" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e48_c48_d48}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="920" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e48_c48_d48}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="920" width="80" height="20">
+        <expression><![CDATA[$F{h47_c47_g47_e48_c48_d48}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{c47_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c48_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c48_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{e48_c48_d48_c48_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="940" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e49_c49_d49}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="940" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e49_c49_d49}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="940" width="80" height="20">
+        <expression><![CDATA[$F{h48_c48_g48_e49_c49_d49}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{c48_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c49_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c49_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{e49_c49_d49_c49_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="960" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e50_c50_d50}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="960" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e50_c50_d50}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="960" width="80" height="20">
+        <expression><![CDATA[$F{h49_c49_g49_e50_c50_d50}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{c49_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c50_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c50_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{e50_c50_d50_c50_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="980" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e51_c51_d51}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="980" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e51_c51_d51}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="980" width="80" height="20">
+        <expression><![CDATA[$F{h50_c50_g50_e51_c51_d51}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{c50_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c51_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c51_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{e51_c51_d51_c51_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e52_c52_d52}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e52_c52_d52}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{h51_c51_g51_e52_c52_d52}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{c51_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c52_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c52_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{e52_c52_d52_c52_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e53_c53_d53}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e53_c53_d53}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{h52_c52_g52_e53_c53_d53}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{c52_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c53_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c53_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{e53_c53_d53_c53_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e54_c54_d54}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e54_c54_d54}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{h53_c53_g53_e54_c54_d54}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{c53_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c54_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c54_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{e54_c54_d54_c54_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e55_c55_d55}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e55_c55_d55}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{h54_c54_g54_e55_c55_d55}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{c54_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c55_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c55_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{e55_c55_d55_c55_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e56_c56_d56}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e56_c56_d56}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{h55_c55_g55_e56_c56_d56}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{c55_1}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{expiring_c56_1}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_c56_1}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{e56_c56_d56_c56_1}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{expiring_e57_c57_d57}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{price_per_issue_e57_c57_d57}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{h56_c56_g56_e57_c57_d57}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1120" width="80" height="20">
+        <text><![CDATA[BEYOND 36 ISSUES]]></text>
+      </element>
+      <element kind="staticText" x="320" y="1120" width="80" height="20">
+        <text><![CDATA[Calculate Separately]]></text>
+      </element>
+      <element kind="textField" x="400" y="1120" width="80" height="20">
+        <expression><![CDATA[$F{e57_c57_d57_calculate_separately}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="1120" width="80" height="20">
+        <text><![CDATA[Calculate Separately]]></text>
+      </element>
+      <element kind="textField" x="640" y="1120" width="80" height="20">
+        <expression><![CDATA[$F{h57_c57_g57_calculate_separately}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="1140" width="80" height="20">
+        <text><![CDATA[Total :]]></text>
+      </element>
+      <element kind="textField" x="640" y="1140" width="80" height="20">
+        <expression><![CDATA[$F{h57_c57_g57_total}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1160" width="80" height="20">
+        <text><![CDATA[-15-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>
