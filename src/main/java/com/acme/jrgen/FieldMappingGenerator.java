@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.acme.jrgen.model.CellItem;
 import com.acme.jrgen.model.FieldInfo;
 import com.acme.jrgen.model.SheetModel;
 

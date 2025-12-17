@@ -4,6 +4,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.acme.jrgen.model.CellItem;
+
 /**
  * Simple per-sheet model:
  * - sheetName: Excel sheet name

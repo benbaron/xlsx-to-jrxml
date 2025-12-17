@@ -1,4 +1,6 @@
-﻿package com.acme.jrgen;
+﻿package com.acme.jrgen.model;
+
+import com.acme.jrgen.Section;
 
 /**
  * One logical cell to be rendered into JRXML.

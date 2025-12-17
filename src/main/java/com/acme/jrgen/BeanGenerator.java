@@ -3,6 +3,8 @@ package com.acme.jrgen;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import com.acme.jrgen.model.CellItem;
+
 /**
  * Generates a Java Bean source for a sheet, using dynamic fields.
  * Field types are derived from CellItem.javaType().

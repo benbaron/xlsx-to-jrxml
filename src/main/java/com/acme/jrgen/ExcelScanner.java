@@ -1,9 +1,11 @@
 package com.acme.jrgen;
 
-import com.acme.jrgen.CellItem.Role;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.acme.jrgen.model.CellItem;
+import com.acme.jrgen.model.CellItem.Role;
 
 import java.io.InputStream;
 import java.nio.file.Files;

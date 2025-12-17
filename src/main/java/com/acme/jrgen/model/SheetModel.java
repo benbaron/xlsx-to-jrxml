@@ -5,8 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.acme.jrgen.CellItem;
-
 /**
  * Immutable model of a single Excel sheet as understood by the generator.
  *

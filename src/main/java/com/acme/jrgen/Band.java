@@ -2,6 +2,8 @@ package com.acme.jrgen;
 
 import java.util.List;
 
+import com.acme.jrgen.model.CellItem;
+
 /**
  * Represents a detail band derived from a magenta rectangle or the full sheet.
  */
