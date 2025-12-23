@@ -35,8 +35,8 @@ public class Main implements Callable<Integer>
 
     @Option(
         names = "--out",
-        required = true,
-        description = "Output directory"
+        defaultValue = "src/main/resources/nonprofitbookkeeping/reports/jrxml",
+        description = "Output directory (default: ${DEFAULT-VALUE})"
     )
     Path outDir;
 
@@ -89,7 +89,7 @@ public class Main implements Callable<Integer>
      */
     @Option(
         names = "--beanPackage",
-        defaultValue = "com.acme.jrgen.beans",
+        defaultValue = "nonprofitbookkeeping.reports.beans",
         description = "Package name for generated beans and metadata beanClass (default: ${DEFAULT-VALUE})"
     )
     String beanPackage;
@@ -111,7 +111,7 @@ public class Main implements Callable<Integer>
      */
     @Option(
         names = "--generatorPackage",
-        defaultValue = "nonprofitbookkeeping.reports.jasper",
+        defaultValue = "nonprofitbookkeeping.reports.datasource",
         description = "Base package for generatorClass in metadata (default: ${DEFAULT-VALUE})"
     )
     String generatorPackage;
