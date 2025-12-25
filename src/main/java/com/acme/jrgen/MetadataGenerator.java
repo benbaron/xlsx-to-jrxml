@@ -11,6 +11,7 @@ import java.util.Locale;
  * reportType=ACCOUNT_SUMMARY_JASPER
  * template=AccountSummary.jrxml
  * beanClass=nonprofitbookkeeping.reports.datasource.AccountSummaryRowBean
+ * beanName=AccountSummaryRowBean
  * description=Summary balances by account. Data bean: AccountSummaryRowBean.
  */
 public final class MetadataGenerator
@@ -69,6 +70,7 @@ public final class MetadataGenerator
         sb.append("reportType=").append(reportType).append('\n');
         sb.append("template=").append(template).append('\n');
         sb.append("beanClass=").append(beanFqcn).append('\n');
+        sb.append("beanName=").append(beanSimple).append('\n');
         sb.append("description=").append(description).append('\n');
 
         return sb.toString();
