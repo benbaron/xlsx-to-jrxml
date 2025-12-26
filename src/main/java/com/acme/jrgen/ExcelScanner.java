@@ -265,6 +265,11 @@ public class ExcelScanner
                 // Any other solid fill => dynamic (blue-ish, etc.)
                 return Role.DYNAMIC;
             }
+            else if (pattern == FillPatternType.SOLID_FOREGROUND)
+            {
+                // If color can't be resolved but fill is solid, treat as dynamic.
+                return Role.DYNAMIC;
+            }
         }
 
         String v = getCellString(cell);
