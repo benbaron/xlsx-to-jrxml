@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet INVENTORY_DTL_6 */
 public class INVENTORY_DTL_6Bean

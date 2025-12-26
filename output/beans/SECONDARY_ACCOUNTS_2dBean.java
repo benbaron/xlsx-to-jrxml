@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet SECONDARY_ACCOUNTS_2d */
 public class SECONDARY_ACCOUNTS_2dBean

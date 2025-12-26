@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet INCOME_4 */
 public class INCOME_4Bean

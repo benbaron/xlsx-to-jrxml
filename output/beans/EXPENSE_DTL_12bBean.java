@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet EXPENSE_DTL_12b */
 public class EXPENSE_DTL_12bBean

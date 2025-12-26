@@ -1,4 +1,4 @@
-package nonprofitbookkeeping.reports.jasper;
+package nonprofitbookkeeping.reports.jasper.generator;
 
 import nonprofitbookkeeping.exception.ActionCancelledException;
 import nonprofitbookkeeping.exception.NoFileCreatedException;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.acme.jrgen.beans.INVENTORY_DTL_6bBean;
+import nonprofitbookkeeping.reports.jasper.beans.INVENTORY_DTL_6bBean;
 
 /** Skeleton generator for JRXML template INVENTORY_DTL_6b.jrxml */
 public class INVENTORY_DTL_6bJasperGenerator extends AbstractReportGenerator

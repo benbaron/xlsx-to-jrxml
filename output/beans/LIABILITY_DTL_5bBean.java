@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet LIABILITY_DTL_5b */
 public class LIABILITY_DTL_5bBean

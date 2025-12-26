@@ -1,4 +1,4 @@
-package nonprofitbookkeeping.reports.jasper;
+package nonprofitbookkeeping.reports.jasper.generator;
 
 import nonprofitbookkeeping.exception.ActionCancelledException;
 import nonprofitbookkeeping.exception.NoFileCreatedException;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.acme.jrgen.beans.ContentsBean;
+import nonprofitbookkeeping.reports.jasper.beans.ContentsBean;
 
 /** Skeleton generator for JRXML template Contents.jrxml */
 public class ContentsJasperGenerator extends AbstractReportGenerator

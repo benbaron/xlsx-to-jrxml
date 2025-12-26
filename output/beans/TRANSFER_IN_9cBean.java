@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet TRANSFER_IN_9c */
 public class TRANSFER_IN_9cBean

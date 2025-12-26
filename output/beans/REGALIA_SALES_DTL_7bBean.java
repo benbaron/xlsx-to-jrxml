@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet REGALIA_SALES_DTL_7b */
 public class REGALIA_SALES_DTL_7bBean

@@ -1,4 +1,4 @@
-package nonprofitbookkeeping.reports.jasper;
+package nonprofitbookkeeping.reports.jasper.generator;
 
 import nonprofitbookkeeping.exception.ActionCancelledException;
 import nonprofitbookkeeping.exception.NoFileCreatedException;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.acme.jrgen.beans.TRANSFER_IN_9dBean;
+import nonprofitbookkeeping.reports.jasper.beans.TRANSFER_IN_9dBean;
 
 /** Skeleton generator for JRXML template TRANSFER_IN_9d.jrxml */
 public class TRANSFER_IN_9dJasperGenerator extends AbstractReportGenerator

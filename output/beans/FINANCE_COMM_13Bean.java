@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet FINANCE_COMM_13 */
 public class FINANCE_COMM_13Bean

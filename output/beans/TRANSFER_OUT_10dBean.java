@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet TRANSFER_OUT_10d */
 public class TRANSFER_OUT_10dBean

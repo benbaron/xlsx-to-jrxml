@@ -1,4 +1,4 @@
-package com.acme.jrgen.beans;
+package nonprofitbookkeeping.reports.jasper.beans;
 
 /** Generated bean for sheet CONTACT_INFO_1 */
 public class CONTACT_INFO_1Bean

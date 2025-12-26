@@ -1,4 +1,4 @@
-package nonprofitbookkeeping.reports.jasper;
+package nonprofitbookkeeping.reports.jasper.generator;
 
 import nonprofitbookkeeping.exception.ActionCancelledException;
 import nonprofitbookkeeping.exception.NoFileCreatedException;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.acme.jrgen.beans.COMMENTSBean;
+import nonprofitbookkeeping.reports.jasper.beans.COMMENTSBean;
 
 /** Skeleton generator for JRXML template COMMENTS.jrxml */
 public class COMMENTSJasperGenerator extends AbstractReportGenerator
