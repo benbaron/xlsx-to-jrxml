@@ -537,6 +537,7 @@ public class JRXMLBuilder
                     );
                 }
             }
+        }
 
             sb.append("  </summary>\n\n");
         }
