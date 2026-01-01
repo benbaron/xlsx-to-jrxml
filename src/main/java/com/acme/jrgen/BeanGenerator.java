@@ -1,25 +1,28 @@
 package com.acme.jrgen;
 
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.Map;
+
+import com.acme.jrgen.model.CellItem;
 
 /**
- * Generates Java Beans for dynamic fields.
+ * Generates a Java Bean source for a sheet, using dynamic fields.
+ * Field types are derived from CellItem.javaType().
  */
 public class BeanGenerator
 {
+    /**
+     * Generate a bean source file for the given sheet.
+     *
+     * @param model        sheet model
+     * @param beanPackage  package name for the bean (e.g. nonprofitbookkeeping.reports.datasource)
+     * @param beanSuffix   suffix for the simple class name (e.g. "Bean" or "RowBean")
+     * @return Java source text
+     */
     public static String generateBean(SheetModel model,
                                       String beanPackage,
                                       String beanSuffix)
     {
-        var dyn = model.bands().stream()
-            .flatMap(b -> b.items().stream())
-            .filter(CellItem::isDynamic)
-            .filter(ci -> ci.fieldSpec() != null && ci.fieldName() != null)
-            .toList();
-
         String pkg = (beanPackage == null || beanPackage.isBlank())
             ? "com.acme.jrgen.beans"
             : beanPackage;
@@ -31,12 +34,23 @@ public class BeanGenerator
         String baseName = model.sheetName();
         String cls = baseName + suffix;
 
-        var typeLookup = new LinkedHashMap<String, String>();
-        dyn.forEach(ci -> typeLookup.putIfAbsent(ci.fieldName(), normalizeType(ci.fieldSpec().type())));
+        // fieldName -> javaType
+        Map<String, String> fieldTypes = new LinkedHashMap<>();
 
-        Set<String> names = dyn.stream()
-            .map(CellItem::fieldName)
-            .collect(Collectors.toCollection(LinkedHashSet::new));
+        for (CellItem ci : model.items())
+        {
+            if (ci.isDynamic() && ci.fieldName() != null)
+            {
+                String name = ci.fieldName();
+                String type = ci.javaType();
+                if (type == null || type.isBlank())
+                {
+                    type = "java.lang.String";
+                }
+
+                fieldTypes.putIfAbsent(name, type);
+            }
+        }
 
         StringBuilder sb = new StringBuilder(32_000);
 
@@ -45,49 +59,43 @@ public class BeanGenerator
         sb.append("public class ").append(cls).append("\n");
         sb.append("{\n\n");
 
-        for (FieldInfo f : fields.values())
+        // fields
+        for (Map.Entry<String, String> e : fieldTypes.entrySet())
         {
-            sb.append("    private ")
-              .append(typeLookup.getOrDefault(n, "java.lang.String"))
-              .append(" ")
-              .append(n)
-              .append(";\n");
+            String name = e.getKey();
+            String type = e.getValue();
+
+            sb.append("    private ").append(type).append(" ").append(name).append(";\n");
         }
-        sb.append('\n');
 
-        for (FieldInfo f : fields.values())
+        sb.append("\n");
+
+        // getters/setters
+        for (Map.Entry<String, String> e : fieldTypes.entrySet())
         {
-            String cap = capitalize(n);
+            String name = e.getKey();
+            String type = e.getValue();
+            String cap = capitalize(name);
 
-            String type = typeLookup.getOrDefault(n, "java.lang.String");
             sb.append("    public ").append(type).append(" get").append(cap).append("()\n");
             sb.append("    {\n");
-            sb.append("        return ").append(f.name()).append(";\n");
+            sb.append("        return ").append(name).append(";\n");
             sb.append("    }\n\n");
 
             sb.append("    public void set").append(cap).append("(").append(type).append(" v)\n");
             sb.append("    {\n");
-            sb.append("        this.").append(f.name()).append(" = ")
-                .append(f.name()).append(";\n");
+            sb.append("        this.").append(name).append(" = v;\n");
             sb.append("    }\n\n");
         }
 
+        // default ctor
         sb.append("    public ").append(cls).append("()\n");
         sb.append("    {\n");
         sb.append("    }\n\n");
+
         sb.append("}\n");
 
         return sb.toString();
-    }
-
-    private static String simpleType(String fqcn)
-    {
-        if (fqcn == null || fqcn.isBlank())
-        {
-            return "String";
-        }
-        int idx = fqcn.lastIndexOf('.');
-        return (idx >= 0) ? fqcn.substring(idx + 1) : fqcn;
     }
 
     private static String capitalize(String s)
@@ -98,24 +106,5 @@ public class BeanGenerator
         }
 
         return Character.toUpperCase(s.charAt(0)) + s.substring(1);
-    }
-
-    private static String normalizeType(String raw)
-    {
-        if (raw == null || raw.isBlank())
-        {
-            return "java.lang.String";
-        }
-
-        return switch (raw)
-        {
-            case "String", "java.lang.String" -> "java.lang.String";
-            case "Double", "java.lang.Double" -> "java.lang.Double";
-            case "Date", "java.util.Date" -> "java.util.Date";
-            case "Integer", "java.lang.Integer" -> "java.lang.Integer";
-            case "Long", "java.lang.Long" -> "java.lang.Long";
-            case "BigDecimal", "java.math.BigDecimal" -> "java.math.BigDecimal";
-            default -> raw;
-        };
     }
 }

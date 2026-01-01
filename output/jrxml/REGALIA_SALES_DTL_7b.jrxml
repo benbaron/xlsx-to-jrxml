@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="REGALIA_SALES_DTL_7b" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="regalia_sales_dtl_7b_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="regalia_non_depreciated_equipment" class="java.lang.String"/>
+  <field name="don_t_use_this_section_anymore" class="java.lang.String"/>
+  <field name="don_t_use_this_section_anymore_2" class="java.lang.String"/>
+  <field name="don_t_use_this_section_anymore_3" class="java.lang.String"/>
+  <field name="don_t_use_this_section_anymore_4" class="java.lang.String"/>
+  <field name="item_description" class="java.lang.String"/>
+  <field name="qty" class="java.lang.String"/>
+  <field name="year_acquired" class="java.lang.String"/>
+  <field name="a_start_prior_value" class="java.lang.String"/>
+  <field name="b_value_of_new_item" class="java.lang.String"/>
+  <field name="c_value_adjustment" class="java.lang.String"/>
+  <field name="a_or_b_c_end_value" class="java.lang.Double"/>
+  <field name="item_description_2" class="java.lang.String"/>
+  <field name="qty_2" class="java.lang.String"/>
+  <field name="year_acquired_2" class="java.lang.String"/>
+  <field name="a_start_prior_value_2" class="java.lang.String"/>
+  <field name="b_value_of_new_item_2" class="java.lang.String"/>
+  <field name="c_value_adjustment_2" class="java.lang.String"/>
+  <field name="if_f20_0_f20_g20_h20" class="java.lang.Double"/>
+  <field name="item_description_3" class="java.lang.String"/>
+  <field name="qty_3" class="java.lang.String"/>
+  <field name="year_acquired_3" class="java.lang.String"/>
+  <field name="a_start_prior_value_3" class="java.lang.String"/>
+  <field name="b_value_of_new_item_3" class="java.lang.String"/>
+  <field name="c_value_adjustment_3" class="java.lang.String"/>
+  <field name="if_f21_0_f21_g21_h21" class="java.lang.Double"/>
+  <field name="item_description_4" class="java.lang.String"/>
+  <field name="qty_4" class="java.lang.String"/>
+  <field name="year_acquired_4" class="java.lang.String"/>
+  <field name="a_start_prior_value_4" class="java.lang.String"/>
+  <field name="b_value_of_new_item_4" class="java.lang.String"/>
+  <field name="c_value_adjustment_4" class="java.lang.String"/>
+  <field name="if_f22_0_f22_g22_h22" class="java.lang.Double"/>
+  <field name="item_description_5" class="java.lang.String"/>
+  <field name="qty_5" class="java.lang.String"/>
+  <field name="year_acquired_5" class="java.lang.String"/>
+  <field name="a_start_prior_value_5" class="java.lang.String"/>
+  <field name="b_value_of_new_item_5" class="java.lang.String"/>
+  <field name="c_value_adjustment_5" class="java.lang.String"/>
+  <field name="if_f23_0_f23_g23_h23" class="java.lang.Double"/>
+  <field name="item_description_6" class="java.lang.String"/>
+  <field name="qty_6" class="java.lang.String"/>
+  <field name="year_acquired_6" class="java.lang.String"/>
+  <field name="a_start_prior_value_6" class="java.lang.String"/>
+  <field name="b_value_of_new_item_6" class="java.lang.String"/>
+  <field name="c_value_adjustment_6" class="java.lang.String"/>
+  <field name="if_f24_0_f24_g24_h24" class="java.lang.Double"/>
+  <field name="item_description_7" class="java.lang.String"/>
+  <field name="qty_7" class="java.lang.String"/>
+  <field name="year_acquired_7" class="java.lang.String"/>
+  <field name="a_start_prior_value_7" class="java.lang.String"/>
+  <field name="b_value_of_new_item_7" class="java.lang.String"/>
+  <field name="c_value_adjustment_7" class="java.lang.String"/>
+  <field name="if_f25_0_f25_g25_h25" class="java.lang.Double"/>
+  <field name="item_description_8" class="java.lang.String"/>
+  <field name="qty_8" class="java.lang.String"/>
+  <field name="year_acquired_8" class="java.lang.String"/>
+  <field name="a_start_prior_value_8" class="java.lang.String"/>
+  <field name="b_value_of_new_item_8" class="java.lang.String"/>
+  <field name="c_value_adjustment_8" class="java.lang.String"/>
+  <field name="if_f26_0_f26_g26_h26" class="java.lang.Double"/>
+  <field name="item_description_9" class="java.lang.String"/>
+  <field name="qty_9" class="java.lang.String"/>
+  <field name="year_acquired_9" class="java.lang.String"/>
+  <field name="a_start_prior_value_9" class="java.lang.String"/>
+  <field name="b_value_of_new_item_9" class="java.lang.String"/>
+  <field name="c_value_adjustment_9" class="java.lang.String"/>
+  <field name="if_f27_0_f27_g27_h27" class="java.lang.Double"/>
+  <field name="item_description_10" class="java.lang.String"/>
+  <field name="qty_10" class="java.lang.String"/>
+  <field name="year_acquired_10" class="java.lang.String"/>
+  <field name="a_start_prior_value_10" class="java.lang.String"/>
+  <field name="b_value_of_new_item_10" class="java.lang.String"/>
+  <field name="c_value_adjustment_10" class="java.lang.String"/>
+  <field name="if_f28_0_f28_g28_h28" class="java.lang.Double"/>
+  <field name="item_description_11" class="java.lang.String"/>
+  <field name="qty_11" class="java.lang.String"/>
+  <field name="year_acquired_11" class="java.lang.String"/>
+  <field name="a_start_prior_value_11" class="java.lang.String"/>
+  <field name="b_value_of_new_item_11" class="java.lang.String"/>
+  <field name="c_value_adjustment_11" class="java.lang.String"/>
+  <field name="if_f29_0_f29_g29_h29" class="java.lang.Double"/>
+  <field name="item_description_12" class="java.lang.String"/>
+  <field name="qty_12" class="java.lang.String"/>
+  <field name="year_acquired_12" class="java.lang.String"/>
+  <field name="a_start_prior_value_12" class="java.lang.String"/>
+  <field name="b_value_of_new_item_12" class="java.lang.String"/>
+  <field name="c_value_adjustment_12" class="java.lang.String"/>
+  <field name="if_f30_0_f30_g30_h30" class="java.lang.Double"/>
+  <field name="a_start_prior_value_total" class="java.lang.Double"/>
+  <field name="c_value_adjustment_sum_f20_f31" class="java.lang.Double"/>
+  <field name="if_f31_0_f31_g31_h31_sumif_h20_h31_0_h20_h31" class="java.lang.Double"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased" class="java.lang.String"/>
+  <field name="qty_13" class="java.lang.String"/>
+  <field name="show_on" class="java.lang.String"/>
+  <field name="pg_3_i_e_start" class="java.lang.String"/>
+  <field name="b_value_of_new_item_13" class="java.lang.String"/>
+  <field name="number_sold" class="java.lang.String"/>
+  <field name="income_from_sale" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_2" class="java.lang.String"/>
+  <field name="qty_14" class="java.lang.String"/>
+  <field name="show_on_2" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_2" class="java.lang.String"/>
+  <field name="b_value_of_new_item_14" class="java.lang.String"/>
+  <field name="number_sold_2" class="java.lang.String"/>
+  <field name="income_from_sale_2" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_3" class="java.lang.String"/>
+  <field name="qty_15" class="java.lang.String"/>
+  <field name="show_on_3" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_3" class="java.lang.String"/>
+  <field name="b_value_of_new_item_15" class="java.lang.String"/>
+  <field name="number_sold_3" class="java.lang.String"/>
+  <field name="income_from_sale_3" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_4" class="java.lang.String"/>
+  <field name="qty_16" class="java.lang.String"/>
+  <field name="show_on_4" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_4" class="java.lang.String"/>
+  <field name="b_value_of_new_item_16" class="java.lang.String"/>
+  <field name="number_sold_4" class="java.lang.String"/>
+  <field name="income_from_sale_4" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_5" class="java.lang.String"/>
+  <field name="qty_17" class="java.lang.String"/>
+  <field name="show_on_5" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_5" class="java.lang.String"/>
+  <field name="b_value_of_new_item_17" class="java.lang.String"/>
+  <field name="number_sold_5" class="java.lang.String"/>
+  <field name="income_from_sale_5" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_6" class="java.lang.String"/>
+  <field name="qty_18" class="java.lang.String"/>
+  <field name="show_on_6" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_6" class="java.lang.String"/>
+  <field name="b_value_of_new_item_18" class="java.lang.String"/>
+  <field name="number_sold_6" class="java.lang.String"/>
+  <field name="income_from_sale_6" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_7" class="java.lang.String"/>
+  <field name="qty_19" class="java.lang.String"/>
+  <field name="show_on_7" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_7" class="java.lang.String"/>
+  <field name="b_value_of_new_item_19" class="java.lang.String"/>
+  <field name="number_sold_7" class="java.lang.String"/>
+  <field name="income_from_sale_7" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_8" class="java.lang.String"/>
+  <field name="qty_20" class="java.lang.String"/>
+  <field name="show_on_8" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_8" class="java.lang.String"/>
+  <field name="b_value_of_new_item_20" class="java.lang.String"/>
+  <field name="number_sold_8" class="java.lang.String"/>
+  <field name="income_from_sale_8" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_9" class="java.lang.String"/>
+  <field name="qty_21" class="java.lang.String"/>
+  <field name="show_on_9" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_9" class="java.lang.String"/>
+  <field name="b_value_of_new_item_21" class="java.lang.String"/>
+  <field name="number_sold_9" class="java.lang.String"/>
+  <field name="income_from_sale_9" class="java.lang.String"/>
+  <field name="_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_10" class="java.lang.String"/>
+  <field name="qty_22" class="java.lang.String"/>
+  <field name="show_on_10" class="java.lang.String"/>
+  <field name="pg_3_i_e_start_10" class="java.lang.String"/>
+  <field name="b_value_of_new_item_22" class="java.lang.String"/>
+  <field name="number_sold_10" class="java.lang.String"/>
+  <field name="income_from_sale_10" class="java.lang.String"/>
+  <field name="income_from_sale_total_1" class="java.lang.Double"/>
+  <field name="_2_released_or_sold_asset_listed_on_pg_7_or_8_in_a_prior_report" class="java.lang.String"/>
+  <field name="qty_23" class="java.lang.String"/>
+  <field name="year_acquired_13" class="java.lang.String"/>
+  <field name="a_start_prior_value_from_pg_7_or_8" class="java.lang.String"/>
+  <field name="b_start_accum_depr_if_from_pg_8" class="java.lang.String"/>
+  <field name="a_b_value_lost" class="java.lang.Double"/>
+  <field name="income_from_sale_if_any_f49_g49" class="java.lang.String"/>
+  <field name="_2_released_or_sold_asset_listed_on_pg_7_or_8_in_a_prior_report_2" class="java.lang.String"/>
+  <field name="qty_24" class="java.lang.String"/>
+  <field name="year_acquired_14" class="java.lang.String"/>
+  <field name="a_start_prior_value_from_pg_7_or_8_2" class="java.lang.String"/>
+  <field name="b_start_accum_depr_if_from_pg_8_2" class="java.lang.String"/>
+  <field name="f49_g49" class="java.lang.Double"/>
+  <field name="income_from_sale_if_any_f50_g50" class="java.lang.String"/>
+  <field name="_2_released_or_sold_asset_listed_on_pg_7_or_8_in_a_prior_report_3" class="java.lang.String"/>
+  <field name="qty_25" class="java.lang.String"/>
+  <field name="year_acquired_15" class="java.lang.String"/>
+  <field name="a_start_prior_value_from_pg_7_or_8_3" class="java.lang.String"/>
+  <field name="b_start_accum_depr_if_from_pg_8_3" class="java.lang.String"/>
+  <field name="f50_g50" class="java.lang.Double"/>
+  <field name="income_from_sale_if_any_f51_g51" class="java.lang.String"/>
+  <field name="f51_g51_total_2" class="java.lang.Double"/>
+  <field name="income_from_sale_if_any_sum_h49_h51" class="java.lang.Double"/>
+  <field name="sum_i49_i51_total_1_2" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1100">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{regalia_sales_dtl_7b_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[OTHER SALES DETAIL - OVERFLOW]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[REGALIA & NON-DEPRECIATED EQUIPMENT]]></text>
+      </element>
+      <element kind="textField" x="160" y="180" width="80" height="20">
+        <expression><![CDATA[$F{regalia_non_depreciated_equipment}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="180" width="80" height="20">
+        <expression><![CDATA[$F{don_t_use_this_section_anymore}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="180" width="80" height="20">
+        <expression><![CDATA[$F{don_t_use_this_section_anymore_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="180" width="80" height="20">
+        <expression><![CDATA[$F{don_t_use_this_section_anymore_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="180" width="80" height="20">
+        <expression><![CDATA[$F{don_t_use_this_section_anymore_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[Item Description]]></text>
+      </element>
+      <element kind="staticText" x="240" y="300" width="80" height="20">
+        <text><![CDATA[QTY]]></text>
+      </element>
+      <element kind="staticText" x="320" y="300" width="80" height="20">
+        <text><![CDATA[Year 
+Acquired]]></text>
+      </element>
+      <element kind="staticText" x="400" y="300" width="80" height="20">
+        <text><![CDATA[(A)
+(Start) 
+Prior Value]]></text>
+      </element>
+      <element kind="staticText" x="480" y="300" width="80" height="20">
+        <text><![CDATA[(B)
+Value of New Item]]></text>
+      </element>
+      <element kind="staticText" x="560" y="300" width="80" height="20">
+        <text><![CDATA[(C) Value Adjustment]]></text>
+      </element>
+      <element kind="staticText" x="640" y="300" width="80" height="20">
+        <text><![CDATA[(A or B)+(C)
+(End) 
+Value]]></text>
+      </element>
+      <element kind="textField" x="160" y="360" width="80" height="20">
+        <expression><![CDATA[$F{item_description}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{qty}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="360" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="360" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="360" width="80" height="20">
+        <expression><![CDATA[$F{a_or_b_c_end_value}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="380" width="80" height="20">
+        <expression><![CDATA[$F{item_description_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{qty_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="380" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_f20_0_f20_g20_h20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="400" width="80" height="20">
+        <expression><![CDATA[$F{item_description_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{qty_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_3}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_f21_0_f21_g21_h21}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{item_description_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{qty_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_f22_0_f22_g22_h22}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="440" width="80" height="20">
+        <expression><![CDATA[$F{item_description_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{qty_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="440" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_5}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_5}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_f23_0_f23_g23_h23}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="460" width="80" height="20">
+        <expression><![CDATA[$F{item_description_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{qty_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_6}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="460" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_6}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_f24_0_f24_g24_h24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="480" width="80" height="20">
+        <expression><![CDATA[$F{item_description_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{qty_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_7}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="480" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_7}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_f25_0_f25_g25_h25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{item_description_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{qty_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="500" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_8}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="500" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_8}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_f26_0_f26_g26_h26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{item_description_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{qty_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_9}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="520" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_9}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="520" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_9}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_f27_0_f27_g27_h27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{item_description_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{qty_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_10}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_10}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="540" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_10}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_f28_0_f28_g28_h28}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="560" width="80" height="20">
+        <expression><![CDATA[$F{item_description_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{qty_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_11}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_11}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="560" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_11}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_f29_0_f29_g29_h29}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="580" width="80" height="20">
+        <expression><![CDATA[$F{item_description_12}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{qty_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_12}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_12}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_12}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_f30_0_f30_g30_h30}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="600" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_total}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="600" width="80" height="20">
+        <expression><![CDATA[$F{c_value_adjustment_sum_f20_f31}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_f31_0_f31_g31_h31_sumif_h20_h31_0_h20_h31}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="620" width="80" height="20">
+        <text><![CDATA[Show on]]></text>
+      </element>
+      <element kind="staticText" x="400" y="620" width="80" height="20">
+        <text><![CDATA[Pg. 3 I.e (Start)]]></text>
+      </element>
+      <element kind="staticText" x="560" y="620" width="80" height="20">
+        <text><![CDATA[Pg. 31a, Line 2.c]]></text>
+      </element>
+      <element kind="staticText" x="640" y="620" width="80" height="20">
+        <text><![CDATA[Pg. 3 I.e (End)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="660" width="80" height="20">
+        <text><![CDATA[OTHER SALES INCOME (not reported as Major Inventory):]]></text>
+      </element>
+      <element kind="staticText" x="160" y="680" width="80" height="20">
+        <text><![CDATA[(1) Minor Inventory 
+(Not reported as Major Inventory, and expensed as Supplies when purchased)]]></text>
+      </element>
+      <element kind="staticText" x="560" y="680" width="80" height="20">
+        <text><![CDATA[Number Sold]]></text>
+      </element>
+      <element kind="staticText" x="640" y="680" width="80" height="20">
+        <text><![CDATA[Income from 
+Sale]]></text>
+      </element>
+      <element kind="textField" x="160" y="700" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{qty_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{show_on}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="700" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_13}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="700" width="80" height="20">
+        <expression><![CDATA[$F{number_sold}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="700" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="720" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{qty_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{show_on_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="720" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_14}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="720" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="720" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="740" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{qty_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{show_on_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="740" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_15}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="740" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_3}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="740" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="760" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{qty_16}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{show_on_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="760" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_16}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="760" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="760" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="780" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{qty_17}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{show_on_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="780" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_17}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="780" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_5}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="780" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_5}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="800" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{qty_18}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{show_on_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="800" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_18}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="800" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_6}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="800" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_6}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{qty_19}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{show_on_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_7}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="820" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_19}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="820" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_7}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="820" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_7}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{qty_20}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{show_on_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_20}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="840" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_8}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="840" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{qty_21}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{show_on_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_9}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="860" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_21}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="860" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_9}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="860" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_9}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{_1_minor_inventory_not_reported_as_major_inventory_and_expensed_as_supplies_when_purchased_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{qty_22}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{show_on_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_e_start_10}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="880" width="80" height="20">
+        <expression><![CDATA[$F{b_value_of_new_item_22}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="880" width="80" height="20">
+        <expression><![CDATA[$F{number_sold_10}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="880" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_10}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="900" width="80" height="20">
+        <text><![CDATA[TOTAL (1)]]></text>
+      </element>
+      <element kind="textField" x="640" y="900" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_total_1}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="920" width="80" height="20">
+        <text><![CDATA[(2) Released or Sold Asset
+(listed on pg 7 or 8 in a prior report)]]></text>
+      </element>
+      <element kind="staticText" x="240" y="920" width="80" height="20">
+        <text><![CDATA[QTY]]></text>
+      </element>
+      <element kind="staticText" x="320" y="920" width="80" height="20">
+        <text><![CDATA[Year 
+Acquired]]></text>
+      </element>
+      <element kind="staticText" x="400" y="920" width="80" height="20">
+        <text><![CDATA[(A)   (Start) 
+Prior Value
+(from pg 7 or 8)]]></text>
+      </element>
+      <element kind="staticText" x="480" y="920" width="80" height="20">
+        <text><![CDATA[(B)   (Start)
+Accum. Depr.
+(if from pg 8)]]></text>
+      </element>
+      <element kind="staticText" x="560" y="920" width="80" height="20">
+        <text><![CDATA[(A - B)
+Value 
+Lost]]></text>
+      </element>
+      <element kind="staticText" x="640" y="920" width="80" height="20">
+        <text><![CDATA[Income from 
+Sale (if any)]]></text>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{_2_released_or_sold_asset_listed_on_pg_7_or_8_in_a_prior_report}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{qty_23}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_13}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_from_pg_7_or_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="940" width="80" height="20">
+        <expression><![CDATA[$F{b_start_accum_depr_if_from_pg_8}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="940" width="80" height="20">
+        <expression><![CDATA[$F{a_b_value_lost}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="940" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_if_any_f49_g49}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{_2_released_or_sold_asset_listed_on_pg_7_or_8_in_a_prior_report_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{qty_24}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_14}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_from_pg_7_or_8_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="960" width="80" height="20">
+        <expression><![CDATA[$F{b_start_accum_depr_if_from_pg_8_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="960" width="80" height="20">
+        <expression><![CDATA[$F{f49_g49}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="960" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_if_any_f50_g50}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{_2_released_or_sold_asset_listed_on_pg_7_or_8_in_a_prior_report_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{qty_25}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{year_acquired_15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{a_start_prior_value_from_pg_7_or_8_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="980" width="80" height="20">
+        <expression><![CDATA[$F{b_start_accum_depr_if_from_pg_8_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="980" width="80" height="20">
+        <expression><![CDATA[$F{f50_g50}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="980" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_if_any_f51_g51}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="1000" width="80" height="20">
+        <text><![CDATA[TOTAL (2)]]></text>
+      </element>
+      <element kind="textField" x="560" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{f51_g51_total_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{income_from_sale_if_any_sum_h49_h51}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="1020" width="80" height="20">
+        <text><![CDATA[TOTAL (1)+(2)]]></text>
+      </element>
+      <element kind="textField" x="640" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{sum_i49_i51_total_1_2}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="1040" width="80" height="20">
+        <text><![CDATA[Show on]]></text>
+      </element>
+      <element kind="staticText" x="560" y="1040" width="80" height="20">
+        <text><![CDATA[Pg. 4, Ln 24]]></text>
+      </element>
+      <element kind="staticText" x="640" y="1040" width="80" height="20">
+        <text><![CDATA[Pg. 4 Ln 7]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1060" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1080" width="80" height="20">
+        <text><![CDATA[-7b-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

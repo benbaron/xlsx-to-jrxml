@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="FINANCE_COMM_13" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="finance_comm_13_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="mark_only_one" class="java.lang.String"/>
+  <field name="mark_only_one_2" class="java.lang.String"/>
+  <field name="mark_only_one_3" class="java.lang.String"/>
+  <field name="sca_name_seneschal" class="java.lang.Double"/>
+  <field name="number_if_contents_c_9_contents_c_9" class="java.lang.String"/>
+  <field name="mm_yyyy_if_contents_c_9_contents_c_9" class="java.lang.String"/>
+  <field name="if_contents_c_9_contents_c_9" class="java.lang.String"/>
+  <field name="number" class="java.lang.String"/>
+  <field name="mm_yyyy" class="java.lang.String"/>
+  <field name="if_contents_c_9_contents_c_9_exchequer" class="java.lang.Double"/>
+  <field name="number_if_contents_c_10_contents_c_10" class="java.lang.Double"/>
+  <field name="mm_yyyy_if_isblank_contact_info_1_h15_contact_info_1_h15" class="java.lang.Double"/>
+  <field name="if_contents_c_10_contents_c_10" class="java.lang.Double"/>
+  <field name="exchequer" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16" class="java.lang.String"/>
+  <field name="exchequer_2" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_2" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_2" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_2" class="java.lang.String"/>
+  <field name="exchequer_3" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_3" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_3" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_3" class="java.lang.String"/>
+  <field name="exchequer_4" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_4" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_4" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_4" class="java.lang.String"/>
+  <field name="exchequer_5" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_5" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_5" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_5" class="java.lang.String"/>
+  <field name="exchequer_6" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_6" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_6" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_6" class="java.lang.String"/>
+  <field name="exchequer_7" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_7" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_7" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_7" class="java.lang.String"/>
+  <field name="exchequer_8" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_8" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_8" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_8" class="java.lang.String"/>
+  <field name="exchequer_9" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_9" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_9" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_9" class="java.lang.String"/>
+  <field name="exchequer_10" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_10" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_10" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_10" class="java.lang.String"/>
+  <field name="exchequer_11" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_11" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_11" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_11" class="java.lang.String"/>
+  <field name="exchequer_12" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_12" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_12" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_12" class="java.lang.String"/>
+  <field name="exchequer_13" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_13" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_13" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_13" class="java.lang.String"/>
+  <field name="exchequer_14" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_14" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_14" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_14" class="java.lang.String"/>
+  <field name="exchequer_15" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_15" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_15" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_15" class="java.lang.String"/>
+  <field name="exchequer_16" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_16" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_16" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_16" class="java.lang.String"/>
+  <field name="exchequer_17" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_17" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_17" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_17" class="java.lang.String"/>
+  <field name="exchequer_18" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_18" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_18" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_18" class="java.lang.String"/>
+  <field name="exchequer_19" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_19" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_19" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_19" class="java.lang.String"/>
+  <field name="exchequer_20" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_20" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_20" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_20" class="java.lang.String"/>
+  <field name="exchequer_21" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_21" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_21" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_21" class="java.lang.String"/>
+  <field name="exchequer_22" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_22" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_22" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_22" class="java.lang.String"/>
+  <field name="exchequer_23" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_23" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_23" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_23" class="java.lang.String"/>
+  <field name="exchequer_24" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_24" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_24" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_24" class="java.lang.String"/>
+  <field name="exchequer_25" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_25" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_25" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_25" class="java.lang.String"/>
+  <field name="exchequer_26" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_26" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_26" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_26" class="java.lang.String"/>
+  <field name="exchequer_27" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_27" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_27" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_27" class="java.lang.String"/>
+  <field name="exchequer_28" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_28" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_28" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_28" class="java.lang.String"/>
+  <field name="exchequer_29" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_29" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_29" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_29" class="java.lang.String"/>
+  <field name="exchequer_30" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_30" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_30" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_30" class="java.lang.String"/>
+  <field name="exchequer_31" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_31" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_31" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_31" class="java.lang.String"/>
+  <field name="exchequer_32" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_32" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_32" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_32" class="java.lang.String"/>
+  <field name="exchequer_33" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_33" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_33" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_33" class="java.lang.String"/>
+  <field name="exchequer_34" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_d16_contact_info_1_d16_34" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h15_contact_info_1_h15_34" class="java.lang.String"/>
+  <field name="if_isblank_contact_info_1_h16_contact_info_1_h16_34" class="java.lang.String"/>
+  <field name="x" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1180">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{finance_comm_13_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[FINANCIAL COMMITTEE MEMBERSHIP]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[Mark Only One:]]></text>
+      </element>
+      <element kind="textField" x="160" y="180" width="80" height="20">
+        <expression><![CDATA[$F{mark_only_one}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="180" width="80" height="20">
+        <text><![CDATA[Financial Committee consists of Seneschal, Exchequer, and all other paid members in the branch.]]></text>
+      </element>
+      <element kind="textField" x="160" y="200" width="80" height="20">
+        <expression><![CDATA[$F{mark_only_one_2}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="200" width="80" height="20">
+        <text><![CDATA[Financial Committee consists of Seneschal, Exchequer, and all other paid members voting at a meeting.]]></text>
+      </element>
+      <element kind="textField" x="160" y="220" width="80" height="20">
+        <expression><![CDATA[$F{mark_only_one_3}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="220" width="80" height="20">
+        <text><![CDATA[Financial Committee consists of Seneschal, Exchequer, and other specified individuals below.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[Title]]></text>
+      </element>
+      <element kind="staticText" x="240" y="260" width="80" height="20">
+        <text><![CDATA[Modern Name]]></text>
+      </element>
+      <element kind="staticText" x="320" y="260" width="80" height="20">
+        <text><![CDATA[Membership]]></text>
+      </element>
+      <element kind="staticText" x="400" y="260" width="80" height="20">
+        <text><![CDATA[Expiration]]></text>
+      </element>
+      <element kind="staticText" x="240" y="280" width="80" height="20">
+        <text><![CDATA[SCA Name]]></text>
+      </element>
+      <element kind="staticText" x="320" y="280" width="80" height="20">
+        <text><![CDATA[Number]]></text>
+      </element>
+      <element kind="staticText" x="400" y="280" width="80" height="20">
+        <text><![CDATA[mm/yyyy]]></text>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[Seneschal]]></text>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{sca_name_seneschal}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{number_if_contents_c_9_contents_c_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{mm_yyyy_if_contents_c_9_contents_c_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_9_contents_c_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{number}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{mm_yyyy}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[Exchequer]]></text>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_9_contents_c_9_exchequer}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{number_if_contents_c_10_contents_c_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{mm_yyyy_if_isblank_contact_info_1_h15_contact_info_1_h15}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="380" width="80" height="20">
+        <expression><![CDATA[$F{exchequer}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="400" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="440" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="460" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_5}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="480" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_6}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_7}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_9}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="560" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_10}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="580" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_11}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="600" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_12}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_12}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="620" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_13}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_13}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_13}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="640" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_14}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_14}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_14}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="660" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_15}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_15}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="680" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_16}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_16}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_16}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_16}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="700" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_17}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_17}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_17}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_17}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="720" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_18}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_18}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_18}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_18}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="740" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_19}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_19}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_19}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_19}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="760" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_20}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_20}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_20}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="780" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_21}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_21}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_21}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_21}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="800" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_22}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_22}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_22}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_22}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_23}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_23}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_23}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_23}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_24}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_24}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_24}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_25}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_25}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_25}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_26}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_26}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_26}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="900" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_27}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="900" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_27}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_27}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="900" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="920" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_28}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="920" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_28}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_28}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="920" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_28}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_29}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_29}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_29}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_29}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_30}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_30}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_30}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_30}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_31}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_31}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_31}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_31}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_32}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_32}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_32}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_32}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_33}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_33}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_33}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_33}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_34}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_d16_contact_info_1_d16_34}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h15_contact_info_1_h15_34}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h16_contact_info_1_h16_34}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1060" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1080" width="80" height="20">
+        <text><![CDATA[-13-]]></text>
+      </element>
+      <element kind="textField" x="160" y="1160" width="80" height="20">
+        <expression><![CDATA[$F{x}]]></expression>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

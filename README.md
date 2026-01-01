@@ -9,6 +9,7 @@ Generate JRXML (detail-only bands) directly from Excel workbooks using the autho
 - Non-blue, non-formula text becomes `<staticText>` with the required JRXML element order.
 - Each JRXML includes base styles, two parameters (`reportTitle`, `organizationName`), and a three-line title band (title, organization, sheet name).
 - Optional `--beans` generation writes one bean per sheet plus `meta/field_mapping.csv` with column/row → field/type/format mappings.
+- JRXML + metadata files are written under `out/jrxml`, beans under `out/beans`, and generator shells under `out/generators`.
 
 ## Usage
 
@@ -27,6 +28,12 @@ java -jar target/xlsx2jrxml-1.0.0-all.jar \
 - `--margins`: left,right,top,bottom margins (points; default 20,20,20,20).
 - `--xsd`: optional JRXML XSD validation (skip with `--skipValidation`).
 - `--beans`: enable bean/metadata/mapping CSV generation.
+- `--beans-package` / `--beanPackage`: package for generated beans.
+- `--beanSuffix`: suffix appended to generated bean class names.
+- `--generator-package`: package recorded for generated Jasper generator classes in metadata.
+- `--generatorSuffix`: suffix appended to Jasper generator class names in metadata.
+- `--reportTypeSuffix`: suffix appended to report type enum names in metadata.
+- Output is organized into subdirectories: JRXML + `.properties` in `jrxml/`, beans in `beans/`, generator shells in `generators/`.
 
 ## Authoring quick reference
 - Blue cells or formulas become dynamic fields; nearest headers/row labels drive auto names unless `[[field name=...]]` overrides.

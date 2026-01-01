@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="SECONDARY_ACCOUNTS_2c" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="secondary_accounts_2c_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="bank_name" class="java.lang.String"/>
+  <field name="bank_name_2" class="java.lang.String"/>
+  <field name="bank_name_3" class="java.lang.String"/>
+  <field name="bank_name_4" class="java.lang.String"/>
+  <field name="account_number" class="java.lang.String"/>
+  <field name="account_number_2" class="java.lang.String"/>
+  <field name="account_number_3" class="java.lang.String"/>
+  <field name="account_number_4" class="java.lang.String"/>
+  <field name="bank_s_signature_req" class="java.lang.String"/>
+  <field name="dual_signature" class="java.lang.String"/>
+  <field name="dual_signature_2" class="java.lang.String"/>
+  <field name="dual_signature_3" class="java.lang.String"/>
+  <field name="dual_signature_account_type" class="java.lang.String"/>
+  <field name="dual_signature_account_type_2" class="java.lang.String"/>
+  <field name="dual_signature_account_type_3" class="java.lang.String"/>
+  <field name="dual_signature_account_type_4" class="java.lang.String"/>
+  <field name="dual_signature_interest_bearing" class="java.lang.String"/>
+  <field name="dual_signature_interest_bearing_2" class="java.lang.String"/>
+  <field name="dual_signature_interest_bearing_3" class="java.lang.String"/>
+  <field name="dual_signature_interest_bearing_4" class="java.lang.String"/>
+  <field name="dual_signature_statement_end_date" class="java.lang.String"/>
+  <field name="dual_signature_statement_end_date_2" class="java.lang.String"/>
+  <field name="dual_signature_statement_end_date_3" class="java.lang.String"/>
+  <field name="dual_signature_statement_end_date_4" class="java.lang.String"/>
+  <field name="dual_signature_a_statement_ending_balance" class="java.lang.String"/>
+  <field name="dual_signature_a_statement_ending_balance_2" class="java.lang.String"/>
+  <field name="dual_signature_a_statement_ending_balance_3" class="java.lang.String"/>
+  <field name="dual_signature_a_statement_ending_balance_4" class="java.lang.String"/>
+  <field name="a" class="java.lang.Double"/>
+  <field name="dual_signature_b_total_deposits_not_credited" class="java.lang.String"/>
+  <field name="dual_signature_b_total_deposits_not_credited_2" class="java.lang.String"/>
+  <field name="dual_signature_b_total_deposits_not_credited_3" class="java.lang.String"/>
+  <field name="dual_signature_b_total_deposits_not_credited_4" class="java.lang.String"/>
+  <field name="dual_signature_c_total_withdrawals_not_cleared" class="java.lang.String"/>
+  <field name="dual_signature_c_total_withdrawals_not_cleared_2" class="java.lang.String"/>
+  <field name="dual_signature_c_total_withdrawals_not_cleared_3" class="java.lang.String"/>
+  <field name="dual_signature_c_total_withdrawals_not_cleared_4" class="java.lang.String"/>
+  <field name="dual_signature_non_interest_bearing_adjusted_bank_balance_a_b_c" class="java.lang.Double"/>
+  <field name="dual_signature_if_and_d_17_yes_d_18_d_19_0_d_19_d_20_d_21_0" class="java.lang.Double"/>
+  <field name="dual_signature_if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0" class="java.lang.Double"/>
+  <field name="dual_signature_if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0" class="java.lang.Double"/>
+  <field name="contents_c_14_pg_1_i_a" class="java.lang.Double"/>
+  <field name="if_and_d_17_yes_d_18_d_19_0_d_19_d_20_d_21_0_interest_bearing_adjusted_bank_balance_a_b_c" class="java.lang.Double"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_if_and_d_17_yes_d_18_d_19_0_d_19_d_20_d_21_0" class="java.lang.Double"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0" class="java.lang.Double"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0" class="java.lang.Double"/>
+  <field name="if_d22_d25_d22_0_if_e22_e25_e22_0_if_f22_f25_f22_0_if_g22_g25_g22_0_pg_1_i_b" class="java.lang.Double"/>
+  <field name="ending_balances_ending_balance_in_register_ledger" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_ending_balance_in_register_ledger" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_ending_balance_in_register_ledger" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_ending_balance_in_register_ledger" class="java.lang.String"/>
+  <field name="signatories_legal_name" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name" class="java.lang.String"/>
+  <field name="signatories_member" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member" class="java.lang.String"/>
+  <field name="signatories_expiration_mm_yyyy" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy" class="java.lang.String"/>
+  <field name="signatories_legal_name_2" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_2" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_2" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_2" class="java.lang.String"/>
+  <field name="signatories_member_2" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_2" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_2" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_2" class="java.lang.String"/>
+  <field name="signatories_expiration_mm_yyyy_2" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_2" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_2" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_2" class="java.lang.String"/>
+  <field name="signatories_legal_name_3" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_3" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_3" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_3" class="java.lang.String"/>
+  <field name="signatories_member_3" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_3" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_3" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_3" class="java.lang.String"/>
+  <field name="signatories_expiration_mm_yyyy_3" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_3" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_3" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_3" class="java.lang.String"/>
+  <field name="signatories_legal_name_4" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_4" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_4" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_4" class="java.lang.String"/>
+  <field name="signatories_member_4" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_4" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_4" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_4" class="java.lang.String"/>
+  <field name="signatories_expiration_mm_yyyy_4" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_4" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_4" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_4" class="java.lang.String"/>
+  <field name="signatories_legal_name_5" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_5" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_5" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_5" class="java.lang.String"/>
+  <field name="signatories_member_5" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_5" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_5" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_5" class="java.lang.String"/>
+  <field name="signatories_expiration_mm_yyyy_5" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_5" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_5" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_5" class="java.lang.String"/>
+  <field name="signatories_legal_name_6" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_6" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_6" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_6" class="java.lang.String"/>
+  <field name="signatories_member_6" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_6" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_6" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_6" class="java.lang.String"/>
+  <field name="signatories_expiration_mm_yyyy_6" class="java.lang.String"/>
+  <field name="if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_6" class="java.lang.String"/>
+  <field name="if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_6" class="java.lang.String"/>
+  <field name="if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_6" class="java.lang.String"/>
+  <field name="other" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1240">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{secondary_accounts_2c_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[SECONDARY ACCOUNTS RECONCILIATION - OVERFLOW]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[Complete one column for each secondary bank account held and managed by this Society branch or office.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="180" width="80" height="20">
+        <text><![CDATA[Attach copies of the bank statements which include ending date of period and reconciliation for each account.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[Kingdoms may require more information to be attached.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[Bank Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[Account  Number]]></text>
+      </element>
+      <element kind="textField" x="240" y="240" width="80" height="20">
+        <expression><![CDATA[$F{account_number}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{account_number_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{account_number_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{account_number_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[Bank's Signature Req:]]></text>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{bank_s_signature_req}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="260" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="260" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="280" width="80" height="20">
+        <text><![CDATA[Account Type]]></text>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_account_type}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_account_type_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_account_type_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="280" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_account_type_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[Interest Bearing?]]></text>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_interest_bearing}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_interest_bearing_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_interest_bearing_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="300" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_interest_bearing_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="300" width="80" height="20">
+        <text><![CDATA[**]]></text>
+      </element>
+      <element kind="staticText" x="160" y="320" width="80" height="20">
+        <text><![CDATA[Statement End Date]]></text>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_statement_end_date}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_statement_end_date_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_statement_end_date_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="320" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_statement_end_date_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="320" width="80" height="20">
+        <text><![CDATA[**]]></text>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[A: Statement Ending Balance]]></text>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_a_statement_ending_balance}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_a_statement_ending_balance_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_a_statement_ending_balance_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="340" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_a_statement_ending_balance_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="340" width="80" height="20">
+        <text><![CDATA[A]]></text>
+      </element>
+      <element kind="textField" x="640" y="340" width="80" height="20">
+        <expression><![CDATA[$F{a}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="360" width="80" height="20">
+        <text><![CDATA[B: Total Deposits not credited]]></text>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_b_total_deposits_not_credited}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_b_total_deposits_not_credited_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_b_total_deposits_not_credited_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="360" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_b_total_deposits_not_credited_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="360" width="80" height="20">
+        <text><![CDATA[B]]></text>
+      </element>
+      <element kind="staticText" x="160" y="380" width="80" height="20">
+        <text><![CDATA[C: Total Withdrawals not cleared]]></text>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_c_total_withdrawals_not_cleared}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_c_total_withdrawals_not_cleared_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_c_total_withdrawals_not_cleared_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_c_total_withdrawals_not_cleared_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="380" width="80" height="20">
+        <text><![CDATA[C]]></text>
+      </element>
+      <element kind="staticText" x="160" y="400" width="80" height="20">
+        <text><![CDATA[Non-Interest Bearing Adjusted Bank Balance (A + B - C)]]></text>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_non_interest_bearing_adjusted_bank_balance_a_b_c}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_if_and_d_17_yes_d_18_d_19_0_d_19_d_20_d_21_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{dual_signature_if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="400" width="80" height="20">
+        <text><![CDATA[Pg.
+ 1 
+I.a]]></text>
+      </element>
+      <element kind="textField" x="640" y="400" width="80" height="20">
+        <expression><![CDATA[$F{contents_c_14_pg_1_i_a}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="420" width="80" height="20">
+        <text><![CDATA[Interest Bearing Adjusted Bank Balance (A + B - C)]]></text>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_and_d_17_yes_d_18_d_19_0_d_19_d_20_d_21_0_interest_bearing_adjusted_bank_balance_a_b_c}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_if_and_d_17_yes_d_18_d_19_0_d_19_d_20_d_21_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="420" width="80" height="20">
+        <text><![CDATA[Pg.
+ 1 
+I.b]]></text>
+      </element>
+      <element kind="textField" x="640" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_d22_d25_d22_0_if_e22_e25_e22_0_if_f22_f25_f22_0_if_g22_g25_g22_0_pg_1_i_b}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="440" width="80" height="20">
+        <text><![CDATA[ENDING BALANCES]]></text>
+      </element>
+      <element kind="staticText" x="160" y="460" width="80" height="20">
+        <text><![CDATA[Ending Balance in Register/Ledger]]></text>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{ending_balances_ending_balance_in_register_ledger}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_ending_balance_in_register_ledger}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_ending_balance_in_register_ledger}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_ending_balance_in_register_ledger}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="480" width="80" height="20">
+        <text><![CDATA[SIGNATORIES]]></text>
+      </element>
+      <element kind="staticText" x="160" y="500" width="80" height="20">
+        <text><![CDATA[Legal Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{signatories_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="500" width="80" height="20">
+        <text><![CDATA[1.0]]></text>
+      </element>
+      <element kind="staticText" x="160" y="520" width="80" height="20">
+        <text><![CDATA[Member #]]></text>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{signatories_member}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="520" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="540" width="80" height="20">
+        <text><![CDATA[Expiration mm/yyyy]]></text>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{signatories_expiration_mm_yyyy}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="560" width="80" height="20">
+        <text><![CDATA[Legal Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{signatories_legal_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_2}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="560" width="80" height="20">
+        <text><![CDATA[2.0]]></text>
+      </element>
+      <element kind="staticText" x="160" y="580" width="80" height="20">
+        <text><![CDATA[Member #]]></text>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{signatories_member_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="600" width="80" height="20">
+        <text><![CDATA[Expiration mm/yyyy]]></text>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{signatories_expiration_mm_yyyy_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="600" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="620" width="80" height="20">
+        <text><![CDATA[Legal Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{signatories_legal_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_3}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="620" width="80" height="20">
+        <text><![CDATA[3.0]]></text>
+      </element>
+      <element kind="staticText" x="160" y="640" width="80" height="20">
+        <text><![CDATA[Member #]]></text>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{signatories_member_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="660" width="80" height="20">
+        <text><![CDATA[Expiration mm/yyyy]]></text>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{signatories_expiration_mm_yyyy_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="680" width="80" height="20">
+        <text><![CDATA[Legal Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{signatories_legal_name_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="680" width="80" height="20">
+        <text><![CDATA[4.0]]></text>
+      </element>
+      <element kind="staticText" x="160" y="700" width="80" height="20">
+        <text><![CDATA[Member #]]></text>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{signatories_member_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="720" width="80" height="20">
+        <text><![CDATA[Expiration mm/yyyy]]></text>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{signatories_expiration_mm_yyyy_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="740" width="80" height="20">
+        <text><![CDATA[Legal Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{signatories_legal_name_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_5}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="740" width="80" height="20">
+        <text><![CDATA[5.0]]></text>
+      </element>
+      <element kind="staticText" x="160" y="760" width="80" height="20">
+        <text><![CDATA[Member #]]></text>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{signatories_member_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_5}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="780" width="80" height="20">
+        <text><![CDATA[Expiration mm/yyyy]]></text>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{signatories_expiration_mm_yyyy_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_5}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="800" width="80" height="20">
+        <text><![CDATA[Legal Name]]></text>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{signatories_legal_name_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_legal_name_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_legal_name_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_legal_name_6}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="800" width="80" height="20">
+        <text><![CDATA[6.0]]></text>
+      </element>
+      <element kind="staticText" x="160" y="820" width="80" height="20">
+        <text><![CDATA[Member #]]></text>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{signatories_member_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_member_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_member_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_member_6}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="840" width="80" height="20">
+        <text><![CDATA[Expiration mm/yyyy]]></text>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{signatories_expiration_mm_yyyy_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e_17_yes_e_18_e_19_0_e_19_e_20_e_21_0_expiration_mm_yyyy_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f_17_yes_f_18_f_19_0_f_19_f_20_f_21_0_expiration_mm_yyyy_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g_17_yes_g_18_g_19_0_g_19_g_20_g_21_0_expiration_mm_yyyy_6}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="860" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="880" width="80" height="20">
+        <text><![CDATA[-2c-]]></text>
+      </element>
+      <element kind="textField" x="160" y="1220" width="80" height="20">
+        <expression><![CDATA[$F{other}]]></expression>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

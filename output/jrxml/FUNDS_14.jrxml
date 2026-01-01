@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="FUNDS_14" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="funds_14_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="funds_14_r6c4" class="java.lang.Double"/>
+  <field name="total_of_lines_i_a_end_and_i_b_end_on_the_comparative_balance_sheet_cash" class="java.lang.Double"/>
+  <field name="end_of_period_all_non_dedicated_funds" class="java.lang.String"/>
+  <field name="general_fund_2_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_2_0" class="java.lang.String"/>
+  <field name="end_of_period_2_0" class="java.lang.String"/>
+  <field name="general_fund_3_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_3_0" class="java.lang.String"/>
+  <field name="end_of_period_3_0" class="java.lang.String"/>
+  <field name="general_fund_4_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_4_0" class="java.lang.String"/>
+  <field name="end_of_period_4_0" class="java.lang.String"/>
+  <field name="general_fund_5_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_5_0" class="java.lang.String"/>
+  <field name="end_of_period_5_0" class="java.lang.String"/>
+  <field name="general_fund_6_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_6_0" class="java.lang.String"/>
+  <field name="end_of_period_6_0" class="java.lang.String"/>
+  <field name="general_fund_7_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_7_0" class="java.lang.String"/>
+  <field name="end_of_period_7_0" class="java.lang.String"/>
+  <field name="general_fund_8_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_8_0" class="java.lang.String"/>
+  <field name="end_of_period_8_0" class="java.lang.String"/>
+  <field name="general_fund_9_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_9_0" class="java.lang.String"/>
+  <field name="end_of_period_9_0" class="java.lang.String"/>
+  <field name="general_fund_10_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_10_0" class="java.lang.String"/>
+  <field name="end_of_period_10_0" class="java.lang.String"/>
+  <field name="general_fund_11_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_11_0" class="java.lang.String"/>
+  <field name="end_of_period_11_0" class="java.lang.String"/>
+  <field name="general_fund_12_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_12_0" class="java.lang.String"/>
+  <field name="end_of_period_12_0" class="java.lang.String"/>
+  <field name="general_fund_13_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_13_0" class="java.lang.String"/>
+  <field name="end_of_period_13_0" class="java.lang.String"/>
+  <field name="general_fund_14_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_14_0" class="java.lang.String"/>
+  <field name="end_of_period_14_0" class="java.lang.String"/>
+  <field name="general_fund_15_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_15_0" class="java.lang.String"/>
+  <field name="end_of_period_15_0" class="java.lang.String"/>
+  <field name="general_fund_16_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_16_0" class="java.lang.String"/>
+  <field name="end_of_period_16_0" class="java.lang.String"/>
+  <field name="general_fund_17_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_17_0" class="java.lang.String"/>
+  <field name="end_of_period_17_0" class="java.lang.String"/>
+  <field name="general_fund_18_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_18_0" class="java.lang.String"/>
+  <field name="end_of_period_18_0" class="java.lang.String"/>
+  <field name="general_fund_19_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_19_0" class="java.lang.String"/>
+  <field name="end_of_period_19_0" class="java.lang.String"/>
+  <field name="general_fund_20_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_20_0" class="java.lang.String"/>
+  <field name="end_of_period_20_0" class="java.lang.String"/>
+  <field name="general_fund_21_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_21_0" class="java.lang.String"/>
+  <field name="end_of_period_21_0" class="java.lang.String"/>
+  <field name="general_fund_22_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_22_0" class="java.lang.String"/>
+  <field name="end_of_period_22_0" class="java.lang.String"/>
+  <field name="general_fund_23_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_23_0" class="java.lang.String"/>
+  <field name="end_of_period_23_0" class="java.lang.String"/>
+  <field name="general_fund_24_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_24_0" class="java.lang.String"/>
+  <field name="end_of_period_24_0" class="java.lang.String"/>
+  <field name="general_fund_25_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_25_0" class="java.lang.String"/>
+  <field name="end_of_period_25_0" class="java.lang.String"/>
+  <field name="general_fund_26_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_26_0" class="java.lang.String"/>
+  <field name="end_of_period_26_0" class="java.lang.String"/>
+  <field name="general_fund_27_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_27_0" class="java.lang.String"/>
+  <field name="end_of_period_27_0" class="java.lang.String"/>
+  <field name="general_fund_28_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_28_0" class="java.lang.String"/>
+  <field name="end_of_period_28_0" class="java.lang.String"/>
+  <field name="general_fund_29_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_29_0" class="java.lang.String"/>
+  <field name="end_of_period_29_0" class="java.lang.String"/>
+  <field name="general_fund_30_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_30_0" class="java.lang.String"/>
+  <field name="end_of_period_30_0" class="java.lang.String"/>
+  <field name="general_fund_31_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_31_0" class="java.lang.String"/>
+  <field name="end_of_period_31_0" class="java.lang.String"/>
+  <field name="general_fund_32_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_32_0" class="java.lang.String"/>
+  <field name="end_of_period_32_0" class="java.lang.String"/>
+  <field name="general_fund_33_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_33_0" class="java.lang.String"/>
+  <field name="end_of_period_33_0" class="java.lang.String"/>
+  <field name="general_fund_34_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_34_0" class="java.lang.String"/>
+  <field name="end_of_period_34_0" class="java.lang.String"/>
+  <field name="general_fund_35_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_35_0" class="java.lang.String"/>
+  <field name="end_of_period_35_0" class="java.lang.String"/>
+  <field name="general_fund_36_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_36_0" class="java.lang.String"/>
+  <field name="end_of_period_36_0" class="java.lang.String"/>
+  <field name="general_fund_37_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_37_0" class="java.lang.String"/>
+  <field name="end_of_period_37_0" class="java.lang.String"/>
+  <field name="general_fund_38_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_38_0" class="java.lang.String"/>
+  <field name="end_of_period_38_0" class="java.lang.String"/>
+  <field name="general_fund_39_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_39_0" class="java.lang.String"/>
+  <field name="end_of_period_39_0" class="java.lang.String"/>
+  <field name="general_fund_40_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_40_0" class="java.lang.String"/>
+  <field name="end_of_period_40_0" class="java.lang.String"/>
+  <field name="general_fund_41_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_41_0" class="java.lang.String"/>
+  <field name="end_of_period_41_0" class="java.lang.String"/>
+  <field name="general_fund_42_0" class="java.lang.String"/>
+  <field name="all_non_dedicated_funds_42_0" class="java.lang.String"/>
+  <field name="end_of_period_42_0" class="java.lang.String"/>
+  <field name="end_of_period_total" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1140">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{funds_14_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="80" width="80" height="20">
+        <expression><![CDATA[$F{funds_14_r6c4}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="120" width="80" height="20">
+        <text><![CDATA[DEDICATED FUND LIST]]></text>
+      </element>
+      <element kind="staticText" x="240" y="140" width="80" height="20">
+        <text><![CDATA[Use this form only if you manage multiple funds within your group's accounts. This is a list of all funds and their current balances]]></text>
+      </element>
+      <element kind="staticText" x="240" y="160" width="80" height="20">
+        <text><![CDATA[as of the end date on this report. The total of all funds must equal the total ending cash from the Balance Sheet.]]></text>
+      </element>
+      <element kind="staticText" x="240" y="180" width="80" height="20">
+        <text><![CDATA[Total of lines I.a (End) and I.b (End) on the Comparative Balance Sheet - CASH:]]></text>
+      </element>
+      <element kind="textField" x="400" y="180" width="80" height="20">
+        <expression><![CDATA[$F{total_of_lines_i_a_end_and_i_b_end_on_the_comparative_balance_sheet_cash}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="220" width="80" height="20">
+        <text><![CDATA[Name of Fund]]></text>
+      </element>
+      <element kind="staticText" x="320" y="220" width="80" height="20">
+        <text><![CDATA[Purpose of Fund]]></text>
+      </element>
+      <element kind="staticText" x="400" y="220" width="80" height="20">
+        <text><![CDATA[End-of-Period]]></text>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[1.0]]></text>
+      </element>
+      <element kind="staticText" x="240" y="240" width="80" height="20">
+        <text><![CDATA[General Fund]]></text>
+      </element>
+      <element kind="staticText" x="320" y="240" width="80" height="20">
+        <text><![CDATA[All Non-Dedicated Funds]]></text>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_all_non_dedicated_funds}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[2.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_2_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_2_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="260" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_2_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="280" width="80" height="20">
+        <text><![CDATA[3.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_3_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_3_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_3_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[4.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_4_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_4_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_4_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="320" width="80" height="20">
+        <text><![CDATA[5.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_5_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_5_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_5_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[6.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_6_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_6_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_6_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="360" width="80" height="20">
+        <text><![CDATA[7.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_7_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_7_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_7_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="380" width="80" height="20">
+        <text><![CDATA[8.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_8_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_8_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_8_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="400" width="80" height="20">
+        <text><![CDATA[9.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_9_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_9_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_9_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="420" width="80" height="20">
+        <text><![CDATA[10.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_10_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_10_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_10_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="440" width="80" height="20">
+        <text><![CDATA[11.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_11_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_11_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_11_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="460" width="80" height="20">
+        <text><![CDATA[12.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_12_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_12_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_12_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="480" width="80" height="20">
+        <text><![CDATA[13.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_13_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_13_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_13_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="500" width="80" height="20">
+        <text><![CDATA[14.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_14_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_14_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_14_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="520" width="80" height="20">
+        <text><![CDATA[15.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_15_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_15_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_15_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="540" width="80" height="20">
+        <text><![CDATA[16.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_16_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_16_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_16_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="560" width="80" height="20">
+        <text><![CDATA[17.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_17_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_17_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_17_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="580" width="80" height="20">
+        <text><![CDATA[18.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_18_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_18_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_18_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="600" width="80" height="20">
+        <text><![CDATA[19.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_19_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_19_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_19_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="620" width="80" height="20">
+        <text><![CDATA[20.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_20_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_20_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_20_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="640" width="80" height="20">
+        <text><![CDATA[21.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_21_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_21_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_21_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="660" width="80" height="20">
+        <text><![CDATA[22.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_22_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_22_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_22_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="680" width="80" height="20">
+        <text><![CDATA[23.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_23_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_23_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_23_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="700" width="80" height="20">
+        <text><![CDATA[24.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_24_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_24_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_24_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="720" width="80" height="20">
+        <text><![CDATA[25.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_25_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_25_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_25_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="740" width="80" height="20">
+        <text><![CDATA[26.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_26_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_26_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_26_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="760" width="80" height="20">
+        <text><![CDATA[27.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_27_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_27_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_27_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="780" width="80" height="20">
+        <text><![CDATA[28.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_28_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_28_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_28_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="800" width="80" height="20">
+        <text><![CDATA[29.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_29_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_29_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_29_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="820" width="80" height="20">
+        <text><![CDATA[30.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_30_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_30_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_30_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="840" width="80" height="20">
+        <text><![CDATA[31.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_31_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_31_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_31_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="860" width="80" height="20">
+        <text><![CDATA[32.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_32_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_32_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_32_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="880" width="80" height="20">
+        <text><![CDATA[33.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_33_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_33_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_33_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="900" width="80" height="20">
+        <text><![CDATA[34.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="900" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_34_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_34_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="900" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_34_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="920" width="80" height="20">
+        <text><![CDATA[35.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="920" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_35_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_35_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="920" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_35_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="940" width="80" height="20">
+        <text><![CDATA[36.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_36_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_36_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_36_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="960" width="80" height="20">
+        <text><![CDATA[37.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_37_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_37_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_37_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="980" width="80" height="20">
+        <text><![CDATA[38.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_38_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_38_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_38_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1000" width="80" height="20">
+        <text><![CDATA[39.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_39_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_39_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_39_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1020" width="80" height="20">
+        <text><![CDATA[40.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_40_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_40_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_40_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1040" width="80" height="20">
+        <text><![CDATA[41.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_41_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_41_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_41_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1060" width="80" height="20">
+        <text><![CDATA[42.0]]></text>
+      </element>
+      <element kind="textField" x="240" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{general_fund_42_0}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{all_non_dedicated_funds_42_0}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_42_0}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="1080" width="80" height="20">
+        <text><![CDATA[TOTAL:]]></text>
+      </element>
+      <element kind="textField" x="400" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{end_of_period_total}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1100" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1120" width="80" height="20">
+        <text><![CDATA[-14-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>
