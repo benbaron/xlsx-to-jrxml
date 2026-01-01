@@ -67,14 +67,14 @@ public final class FragmentLibrary
         return String.format("""
                 <staticText>
                   <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
-                  <textElement textAlignment=\"%s\">
+                  <textElement%s>
                     <font size=\"%s\"/>
                   </textElement>
                   <text><![CDATA[%s]]></text>
                 </staticText>
             """,
             x, y, w, h,
-            escape(align == null ? "Left" : align),
+            alignmentAttribute(align),
             formatFont(fontSize),
             cdata(text)
         );
@@ -96,14 +96,14 @@ public final class FragmentLibrary
         return String.format("""
                 <textField>
                   <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
-                  <textElement textAlignment=\"%s\">
+                  <textElement%s>
                     <font size=\"%s\"/>
                   </textElement>
 %s                  <textFieldExpression><![CDATA[$F{%s}]]></textFieldExpression>
                 </textField>
             """,
             x, y, w, h,
-            escape(align == null ? "Left" : align),
+            alignmentAttribute(align),
             formatFont(fontSize),
             patternFragment,
             escape(fieldName)
@@ -121,14 +121,14 @@ public final class FragmentLibrary
         return String.format("""
                 <textField>
                   <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
-                  <textElement textAlignment=\"%s\">
+                  <textElement%s>
                     <font size=\"%s\"/>
                   </textElement>
                   <textFieldExpression><![CDATA[%s]]></textFieldExpression>
                 </textField>
             """,
             x, y, w, h,
-            escape(align == null ? "Left" : align),
+            alignmentAttribute(align),
             formatFont(fontSize),
             expression
         );
@@ -157,6 +157,16 @@ public final class FragmentLibrary
     static String cdata(String s)
     {
         return (s == null) ? "" : s;
+    }
+
+    private static String alignmentAttribute(String align)
+    {
+        if (align == null || align.isBlank())
+        {
+            return "";
+        }
+
+        return String.format(" textAlignment=\"%s\"", escape(align));
     }
 
     private static String formatFont(double fontSize)
