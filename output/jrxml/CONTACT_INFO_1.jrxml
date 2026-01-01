@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="CONTACT_INFO_1" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="contact_info_1_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="warrant_end_date" class="java.lang.String"/>
+  <field name="warrant_end_date_2" class="java.lang.String"/>
+  <field name="warrant_end_date_3" class="java.lang.String"/>
+  <field name="warrant_end_date_4" class="java.lang.String"/>
+  <field name="warrant_end_date_5" class="java.lang.String"/>
+  <field name="legal_name" class="java.lang.Double"/>
+  <field name="if_contents_c_10_contents_c_10_street_address" class="java.lang.String"/>
+  <field name="street_address" class="java.lang.String"/>
+  <field name="street_address_2" class="java.lang.String"/>
+  <field name="street_address_3" class="java.lang.String"/>
+  <field name="street_address_4" class="java.lang.String"/>
+  <field name="if_contents_c_10_contents_c_10_city" class="java.lang.String"/>
+  <field name="state_or_province" class="java.lang.String"/>
+  <field name="zip_or_postal_code" class="java.lang.String"/>
+  <field name="if_contents_c_10_contents_c_10_home_telephone" class="java.lang.String"/>
+  <field name="alternate_phone" class="java.lang.String"/>
+  <field name="zip_or_postal_code_alternate_phone" class="java.lang.String"/>
+  <field name="alternate_phone_2" class="java.lang.String"/>
+  <field name="if_contents_c_10_contents_c_10_internet_or_e_mail_address_required_if_available" class="java.lang.String"/>
+  <field name="alternate_phone_internet_or_e_mail_address_required_if_available" class="java.lang.String"/>
+  <field name="internet_or_e_mail_address_required_if_available" class="java.lang.String"/>
+  <field name="membership" class="java.lang.String"/>
+  <field name="if_contents_c_10_contents_c_10_sca_name" class="java.lang.String"/>
+  <field name="alternate_phone_sca_name" class="java.lang.String"/>
+  <field name="sca_name" class="java.lang.String"/>
+  <field name="exp_date" class="java.lang.String"/>
+  <field name="if_contents_c_10_contents_c_10_po_box_address" class="java.lang.String"/>
+  <field name="alternate_phone_po_box_address" class="java.lang.String"/>
+  <field name="po_box_address" class="java.lang.String"/>
+  <field name="exp_date_po_box_address" class="java.lang.String"/>
+  <field name="po_box_address_2" class="java.lang.String"/>
+  <field name="if_contents_c_10_contents_c_10_city_2" class="java.lang.String"/>
+  <field name="state_or_province_2" class="java.lang.String"/>
+  <field name="zip_or_postal_code_2" class="java.lang.String"/>
+  <field name="state_or_province_deputy_for" class="java.lang.String"/>
+  <field name="deputy_for" class="java.lang.String"/>
+  <field name="zip_or_postal_code_deputy_for" class="java.lang.String"/>
+  <field name="deputy_for_2" class="java.lang.String"/>
+  <field name="deputy_for_legal_name" class="java.lang.String"/>
+  <field name="state_or_province_legal_name" class="java.lang.String"/>
+  <field name="legal_name_2" class="java.lang.String"/>
+  <field name="zip_or_postal_code_legal_name" class="java.lang.String"/>
+  <field name="legal_name_3" class="java.lang.String"/>
+  <field name="deputy_for_street_address" class="java.lang.String"/>
+  <field name="state_or_province_street_address" class="java.lang.String"/>
+  <field name="street_address_5" class="java.lang.String"/>
+  <field name="zip_or_postal_code_street_address" class="java.lang.String"/>
+  <field name="street_address_6" class="java.lang.String"/>
+  <field name="deputy_for_city" class="java.lang.String"/>
+  <field name="state_or_province_3" class="java.lang.String"/>
+  <field name="zip_or_postal_code_3" class="java.lang.String"/>
+  <field name="deputy_for_home_telephone" class="java.lang.String"/>
+  <field name="alternate_phone_3" class="java.lang.String"/>
+  <field name="zip_or_postal_code_alternate_phone_2" class="java.lang.String"/>
+  <field name="alternate_phone_4" class="java.lang.String"/>
+  <field name="deputy_for_internet_or_e_mail_address_required_if_available" class="java.lang.String"/>
+  <field name="alternate_phone_internet_or_e_mail_address_required_if_available_2" class="java.lang.String"/>
+  <field name="internet_or_e_mail_address_required_if_available_2" class="java.lang.String"/>
+  <field name="membership_2" class="java.lang.String"/>
+  <field name="deputy_for_sca_name" class="java.lang.String"/>
+  <field name="alternate_phone_sca_name_2" class="java.lang.String"/>
+  <field name="sca_name_2" class="java.lang.String"/>
+  <field name="exp_date_2" class="java.lang.String"/>
+  <field name="alternate_phone_deputy_for" class="java.lang.String"/>
+  <field name="deputy_for_3" class="java.lang.String"/>
+  <field name="exp_date_deputy_for" class="java.lang.String"/>
+  <field name="deputy_for_4" class="java.lang.String"/>
+  <field name="deputy_for_legal_name_2" class="java.lang.String"/>
+  <field name="alternate_phone_legal_name" class="java.lang.String"/>
+  <field name="legal_name_4" class="java.lang.String"/>
+  <field name="exp_date_legal_name" class="java.lang.String"/>
+  <field name="legal_name_5" class="java.lang.String"/>
+  <field name="deputy_for_street_address_2" class="java.lang.String"/>
+  <field name="alternate_phone_street_address" class="java.lang.String"/>
+  <field name="street_address_7" class="java.lang.String"/>
+  <field name="exp_date_street_address" class="java.lang.String"/>
+  <field name="street_address_8" class="java.lang.String"/>
+  <field name="deputy_for_city_2" class="java.lang.String"/>
+  <field name="state_or_province_4" class="java.lang.String"/>
+  <field name="zip_or_postal_code_4" class="java.lang.String"/>
+  <field name="deputy_for_home_telephone_2" class="java.lang.String"/>
+  <field name="alternate_phone_5" class="java.lang.String"/>
+  <field name="zip_or_postal_code_alternate_phone_3" class="java.lang.String"/>
+  <field name="alternate_phone_6" class="java.lang.String"/>
+  <field name="deputy_for_internet_or_e_mail_address_required_if_available_2" class="java.lang.String"/>
+  <field name="alternate_phone_internet_or_e_mail_address_required_if_available_3" class="java.lang.String"/>
+  <field name="internet_or_e_mail_address_required_if_available_3" class="java.lang.String"/>
+  <field name="membership_3" class="java.lang.String"/>
+  <field name="deputy_for_sca_name_2" class="java.lang.String"/>
+  <field name="alternate_phone_sca_name_3" class="java.lang.String"/>
+  <field name="sca_name_3" class="java.lang.String"/>
+  <field name="exp_date_3" class="java.lang.String"/>
+  <field name="_1" class="java.lang.Double"/>
+
+  <detail>
+    <band height="760">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[CHANCELLOR OF THE EXCHEQUER CONTACT INFORMATION]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[Warrant End Date:]]></text>
+      </element>
+      <element kind="textField" x="240" y="160" width="80" height="20">
+        <expression><![CDATA[$F{warrant_end_date}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="160" width="80" height="20">
+        <expression><![CDATA[$F{warrant_end_date_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="160" width="80" height="20">
+        <expression><![CDATA[$F{warrant_end_date_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="160" width="80" height="20">
+        <expression><![CDATA[$F{warrant_end_date_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="160" width="80" height="20">
+        <expression><![CDATA[$F{warrant_end_date_5}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="180" width="80" height="20">
+        <text><![CDATA[Legal Name:]]></text>
+      </element>
+      <element kind="textField" x="240" y="180" width="80" height="20">
+        <expression><![CDATA[$F{legal_name}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[Street Address:]]></text>
+      </element>
+      <element kind="textField" x="240" y="200" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_street_address}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="200" width="80" height="20">
+        <expression><![CDATA[$F{street_address}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="200" width="80" height="20">
+        <expression><![CDATA[$F{street_address_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="200" width="80" height="20">
+        <expression><![CDATA[$F{street_address_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="200" width="80" height="20">
+        <expression><![CDATA[$F{street_address_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[City:]]></text>
+      </element>
+      <element kind="textField" x="240" y="220" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_city}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="220" width="80" height="20">
+        <text><![CDATA[State or
+Province:]]></text>
+      </element>
+      <element kind="textField" x="400" y="220" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="220" width="80" height="20">
+        <text><![CDATA[Zip or
+Postal Code:]]></text>
+      </element>
+      <element kind="textField" x="560" y="220" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[Home
+Telephone:]]></text>
+      </element>
+      <element kind="textField" x="240" y="240" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_home_telephone}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="240" width="80" height="20">
+        <text><![CDATA[Alternate 
+Phone:]]></text>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_alternate_phone}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="240" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[Internet or E-mail Address 
+(Required if available):]]></text>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_internet_or_e_mail_address_required_if_available}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_internet_or_e_mail_address_required_if_available}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="260" width="80" height="20">
+        <expression><![CDATA[$F{internet_or_e_mail_address_required_if_available}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="260" width="80" height="20">
+        <text><![CDATA[Membership #:]]></text>
+      </element>
+      <element kind="textField" x="560" y="260" width="80" height="20">
+        <expression><![CDATA[$F{membership}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="280" width="80" height="20">
+        <text><![CDATA[SCA Name:]]></text>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_sca_name}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_sca_name}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{sca_name}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="280" width="80" height="20">
+        <text><![CDATA[Exp. Date:]]></text>
+      </element>
+      <element kind="textField" x="560" y="280" width="80" height="20">
+        <expression><![CDATA[$F{exp_date}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[Mailing address (IF NOT THE SAME AS ABOVE):]]></text>
+      </element>
+      <element kind="staticText" x="160" y="320" width="80" height="20">
+        <text><![CDATA[PO Box/Address:]]></text>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_po_box_address}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_po_box_address}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{po_box_address}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="320" width="80" height="20">
+        <expression><![CDATA[$F{exp_date_po_box_address}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="320" width="80" height="20">
+        <expression><![CDATA[$F{po_box_address_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[City:]]></text>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_contents_c_10_contents_c_10_city_2}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="340" width="80" height="20">
+        <text><![CDATA[State or
+Province:]]></text>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province_2}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="340" width="80" height="20">
+        <text><![CDATA[Zip or
+Postal Code:]]></text>
+      </element>
+      <element kind="textField" x="560" y="340" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_2}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="380" width="80" height="20">
+        <text><![CDATA[Deputy for:]]></text>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province_deputy_for}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_deputy_for}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="380" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="400" width="80" height="20">
+        <text><![CDATA[Legal Name:]]></text>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{legal_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{legal_name_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="420" width="80" height="20">
+        <text><![CDATA[Street Address:]]></text>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_street_address}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province_street_address}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{street_address_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_street_address}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{street_address_6}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="440" width="80" height="20">
+        <text><![CDATA[City:]]></text>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_city}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="440" width="80" height="20">
+        <text><![CDATA[State or
+Province:]]></text>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province_3}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="440" width="80" height="20">
+        <text><![CDATA[Zip or
+Postal Code:]]></text>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="460" width="80" height="20">
+        <text><![CDATA[Home
+Telephone:]]></text>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_home_telephone}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="460" width="80" height="20">
+        <text><![CDATA[Alternate 
+Phone:]]></text>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_alternate_phone_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="460" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="480" width="80" height="20">
+        <text><![CDATA[Internet or E-mail Address 
+(Required if available):]]></text>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_internet_or_e_mail_address_required_if_available}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_internet_or_e_mail_address_required_if_available_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{internet_or_e_mail_address_required_if_available_2}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="480" width="80" height="20">
+        <text><![CDATA[Membership #:]]></text>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{membership_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="500" width="80" height="20">
+        <text><![CDATA[SCA Name:]]></text>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_sca_name}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_sca_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{sca_name_2}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="500" width="80" height="20">
+        <text><![CDATA[Exp. Date:]]></text>
+      </element>
+      <element kind="textField" x="560" y="500" width="80" height="20">
+        <expression><![CDATA[$F{exp_date_2}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="540" width="80" height="20">
+        <text><![CDATA[Deputy for:]]></text>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_deputy_for}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{exp_date_deputy_for}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="540" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="560" width="80" height="20">
+        <text><![CDATA[Legal Name:]]></text>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_legal_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{legal_name_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{exp_date_legal_name}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="560" width="80" height="20">
+        <expression><![CDATA[$F{legal_name_5}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="580" width="80" height="20">
+        <text><![CDATA[Street Address:]]></text>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_street_address_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_street_address}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{street_address_7}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{exp_date_street_address}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{street_address_8}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="600" width="80" height="20">
+        <text><![CDATA[City:]]></text>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_city_2}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="600" width="80" height="20">
+        <text><![CDATA[State or
+Province:]]></text>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{state_or_province_4}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="600" width="80" height="20">
+        <text><![CDATA[Zip or
+Postal Code:]]></text>
+      </element>
+      <element kind="textField" x="560" y="600" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="620" width="80" height="20">
+        <text><![CDATA[Home
+Telephone:]]></text>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_home_telephone_2}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="620" width="80" height="20">
+        <text><![CDATA[Alternate 
+Phone:]]></text>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="620" width="80" height="20">
+        <expression><![CDATA[$F{zip_or_postal_code_alternate_phone_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="620" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_6}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="640" width="80" height="20">
+        <text><![CDATA[Internet or E-mail Address 
+(Required if available):]]></text>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_internet_or_e_mail_address_required_if_available_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_internet_or_e_mail_address_required_if_available_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{internet_or_e_mail_address_required_if_available_3}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="640" width="80" height="20">
+        <text><![CDATA[Membership #:]]></text>
+      </element>
+      <element kind="textField" x="560" y="640" width="80" height="20">
+        <expression><![CDATA[$F{membership_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="660" width="80" height="20">
+        <text><![CDATA[SCA Name:]]></text>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{deputy_for_sca_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{alternate_phone_sca_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{sca_name_3}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="660" width="80" height="20">
+        <text><![CDATA[Exp. Date:]]></text>
+      </element>
+      <element kind="textField" x="560" y="660" width="80" height="20">
+        <expression><![CDATA[$F{exp_date_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="700" width="80" height="20">
+        <text><![CDATA[-1-]]></text>
+      </element>
+      <element kind="textField" x="160" y="740" width="80" height="20">
+        <expression><![CDATA[$F{_1}]]></expression>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

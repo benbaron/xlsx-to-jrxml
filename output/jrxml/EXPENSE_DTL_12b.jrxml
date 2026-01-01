@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="EXPENSE_DTL_12b" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="expense_dtl_12b_r2c3" class="java.lang.Double"/>
+  <field name="expense_dtl_12b_r3c2" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="organization_or_person_ar" class="java.lang.String"/>
+  <field name="ar" class="java.lang.String"/>
+  <field name="ar_2" class="java.lang.String"/>
+  <field name="check_ar" class="java.lang.String"/>
+  <field name="check_date_ar" class="java.lang.String"/>
+  <field name="amount_ar" class="java.lang.String"/>
+  <field name="organization_or_person_ar_2" class="java.lang.String"/>
+  <field name="ar_3" class="java.lang.String"/>
+  <field name="ar_4" class="java.lang.String"/>
+  <field name="check_ar_2" class="java.lang.String"/>
+  <field name="check_date_ar_2" class="java.lang.String"/>
+  <field name="amount_ar_2" class="java.lang.String"/>
+  <field name="organization_or_person_ar_3" class="java.lang.String"/>
+  <field name="ar_5" class="java.lang.String"/>
+  <field name="ar_6" class="java.lang.String"/>
+  <field name="check_ar_3" class="java.lang.String"/>
+  <field name="check_date_ar_3" class="java.lang.String"/>
+  <field name="amount_ar_3" class="java.lang.String"/>
+  <field name="organization_or_person_ar_4" class="java.lang.String"/>
+  <field name="ar_7" class="java.lang.String"/>
+  <field name="ar_8" class="java.lang.String"/>
+  <field name="check_ar_4" class="java.lang.String"/>
+  <field name="check_date_ar_4" class="java.lang.String"/>
+  <field name="amount_ar_4" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_20" class="java.lang.Double"/>
+  <field name="ar_9" class="java.lang.String"/>
+  <field name="organization_or_person_contact_your_kingdom_exchequer_before_using_this_section" class="java.lang.String"/>
+  <field name="contact_your_kingdom_exchequer_before_using_this_section" class="java.lang.String"/>
+  <field name="contact_your_kingdom_exchequer_before_using_this_section_2" class="java.lang.String"/>
+  <field name="check_contact_your_kingdom_exchequer_before_using_this_section" class="java.lang.String"/>
+  <field name="show_total_on_pg_4_line_20_contact_your_kingdom_exchequer_before_using_this_section" class="java.lang.String"/>
+  <field name="sum_i12_i15_contact_your_kingdom_exchequer_before_using_this_section" class="java.lang.String"/>
+  <field name="reason" class="java.lang.String"/>
+  <field name="organization_or_person" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r21c5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r21c6" class="java.lang.String"/>
+  <field name="check" class="java.lang.String"/>
+  <field name="paid_to" class="java.lang.String"/>
+  <field name="amount" class="java.lang.String"/>
+  <field name="reason_2" class="java.lang.String"/>
+  <field name="organization_or_person_2" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r22c5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r22c6" class="java.lang.String"/>
+  <field name="check_2" class="java.lang.String"/>
+  <field name="paid_to_2" class="java.lang.String"/>
+  <field name="amount_2" class="java.lang.String"/>
+  <field name="reason_3" class="java.lang.String"/>
+  <field name="organization_or_person_3" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r23c5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r23c6" class="java.lang.String"/>
+  <field name="check_3" class="java.lang.String"/>
+  <field name="paid_to_3" class="java.lang.String"/>
+  <field name="amount_3" class="java.lang.String"/>
+  <field name="reason_4" class="java.lang.String"/>
+  <field name="organization_or_person_4" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r24c5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r24c6" class="java.lang.String"/>
+  <field name="check_4" class="java.lang.String"/>
+  <field name="paid_to_4" class="java.lang.String"/>
+  <field name="amount_4" class="java.lang.String"/>
+  <field name="reason_5" class="java.lang.String"/>
+  <field name="organization_or_person_5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r25c5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r25c6" class="java.lang.String"/>
+  <field name="check_5" class="java.lang.String"/>
+  <field name="paid_to_5" class="java.lang.String"/>
+  <field name="amount_5" class="java.lang.String"/>
+  <field name="reason_6" class="java.lang.String"/>
+  <field name="organization_or_person_6" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r26c5" class="java.lang.String"/>
+  <field name="expense_dtl_12b_r26c6" class="java.lang.String"/>
+  <field name="check_6" class="java.lang.String"/>
+  <field name="paid_to_6" class="java.lang.String"/>
+  <field name="amount_6" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_28" class="java.lang.Double"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name" class="java.lang.String"/>
+  <field name="organization_or_person_7" class="java.lang.String"/>
+  <field name="reason_7" class="java.lang.String"/>
+  <field name="check_7" class="java.lang.String"/>
+  <field name="check_date" class="java.lang.String"/>
+  <field name="fed_id_number" class="java.lang.String"/>
+  <field name="amount_7" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_2" class="java.lang.String"/>
+  <field name="organization_or_person_8" class="java.lang.String"/>
+  <field name="reason_8" class="java.lang.String"/>
+  <field name="check_8" class="java.lang.String"/>
+  <field name="check_date_2" class="java.lang.String"/>
+  <field name="fed_id_number_2" class="java.lang.String"/>
+  <field name="amount_8" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_3" class="java.lang.String"/>
+  <field name="organization_or_person_9" class="java.lang.String"/>
+  <field name="reason_9" class="java.lang.String"/>
+  <field name="check_9" class="java.lang.String"/>
+  <field name="check_date_3" class="java.lang.String"/>
+  <field name="fed_id_number_3" class="java.lang.String"/>
+  <field name="amount_9" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_4" class="java.lang.String"/>
+  <field name="organization_or_person_10" class="java.lang.String"/>
+  <field name="reason_10" class="java.lang.String"/>
+  <field name="check_10" class="java.lang.String"/>
+  <field name="check_date_4" class="java.lang.String"/>
+  <field name="fed_id_number_4" class="java.lang.String"/>
+  <field name="amount_10" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_5" class="java.lang.String"/>
+  <field name="organization_or_person_11" class="java.lang.String"/>
+  <field name="reason_11" class="java.lang.String"/>
+  <field name="check_11" class="java.lang.String"/>
+  <field name="check_date_5" class="java.lang.String"/>
+  <field name="fed_id_number_5" class="java.lang.String"/>
+  <field name="amount_11" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_6" class="java.lang.String"/>
+  <field name="organization_or_person_12" class="java.lang.String"/>
+  <field name="reason_12" class="java.lang.String"/>
+  <field name="check_12" class="java.lang.String"/>
+  <field name="check_date_6" class="java.lang.String"/>
+  <field name="fed_id_number_6" class="java.lang.String"/>
+  <field name="amount_12" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_7" class="java.lang.String"/>
+  <field name="organization_or_person_13" class="java.lang.String"/>
+  <field name="reason_13" class="java.lang.String"/>
+  <field name="check_13" class="java.lang.String"/>
+  <field name="check_date_7" class="java.lang.String"/>
+  <field name="fed_id_number_7" class="java.lang.String"/>
+  <field name="amount_13" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_8" class="java.lang.String"/>
+  <field name="organization_or_person_14" class="java.lang.String"/>
+  <field name="reason_14" class="java.lang.String"/>
+  <field name="check_14" class="java.lang.String"/>
+  <field name="check_date_8" class="java.lang.String"/>
+  <field name="fed_id_number_8" class="java.lang.String"/>
+  <field name="amount_14" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_9" class="java.lang.String"/>
+  <field name="organization_or_person_15" class="java.lang.String"/>
+  <field name="reason_15" class="java.lang.String"/>
+  <field name="check_15" class="java.lang.String"/>
+  <field name="check_date_9" class="java.lang.String"/>
+  <field name="fed_id_number_9" class="java.lang.String"/>
+  <field name="amount_15" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_10" class="java.lang.String"/>
+  <field name="organization_or_person_16" class="java.lang.String"/>
+  <field name="reason_16" class="java.lang.String"/>
+  <field name="check_16" class="java.lang.String"/>
+  <field name="check_date_10" class="java.lang.String"/>
+  <field name="fed_id_number_10" class="java.lang.String"/>
+  <field name="amount_16" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_11" class="java.lang.String"/>
+  <field name="organization_or_person_17" class="java.lang.String"/>
+  <field name="reason_17" class="java.lang.String"/>
+  <field name="check_17" class="java.lang.String"/>
+  <field name="check_date_11" class="java.lang.String"/>
+  <field name="fed_id_number_11" class="java.lang.String"/>
+  <field name="amount_17" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_12" class="java.lang.String"/>
+  <field name="organization_or_person_18" class="java.lang.String"/>
+  <field name="reason_18" class="java.lang.String"/>
+  <field name="check_18" class="java.lang.String"/>
+  <field name="check_date_12" class="java.lang.String"/>
+  <field name="fed_id_number_12" class="java.lang.String"/>
+  <field name="amount_18" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_13" class="java.lang.String"/>
+  <field name="organization_or_person_19" class="java.lang.String"/>
+  <field name="reason_19" class="java.lang.String"/>
+  <field name="check_19" class="java.lang.String"/>
+  <field name="check_date_13" class="java.lang.String"/>
+  <field name="fed_id_number_13" class="java.lang.String"/>
+  <field name="amount_19" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_14" class="java.lang.String"/>
+  <field name="organization_or_person_20" class="java.lang.String"/>
+  <field name="reason_20" class="java.lang.String"/>
+  <field name="check_20" class="java.lang.String"/>
+  <field name="check_date_14" class="java.lang.String"/>
+  <field name="fed_id_number_14" class="java.lang.String"/>
+  <field name="amount_20" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_15" class="java.lang.String"/>
+  <field name="organization_or_person_21" class="java.lang.String"/>
+  <field name="reason_21" class="java.lang.String"/>
+  <field name="check_21" class="java.lang.String"/>
+  <field name="check_date_15" class="java.lang.String"/>
+  <field name="fed_id_number_15" class="java.lang.String"/>
+  <field name="amount_21" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_16" class="java.lang.String"/>
+  <field name="organization_or_person_22" class="java.lang.String"/>
+  <field name="reason_22" class="java.lang.String"/>
+  <field name="check_22" class="java.lang.String"/>
+  <field name="check_date_16" class="java.lang.String"/>
+  <field name="fed_id_number_16" class="java.lang.String"/>
+  <field name="amount_22" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_17" class="java.lang.String"/>
+  <field name="organization_or_person_23" class="java.lang.String"/>
+  <field name="reason_23" class="java.lang.String"/>
+  <field name="check_23" class="java.lang.String"/>
+  <field name="check_date_17" class="java.lang.String"/>
+  <field name="fed_id_number_17" class="java.lang.String"/>
+  <field name="amount_23" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_18" class="java.lang.String"/>
+  <field name="organization_or_person_24" class="java.lang.String"/>
+  <field name="reason_24" class="java.lang.String"/>
+  <field name="check_24" class="java.lang.String"/>
+  <field name="check_date_18" class="java.lang.String"/>
+  <field name="fed_id_number_18" class="java.lang.String"/>
+  <field name="amount_24" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_19" class="java.lang.String"/>
+  <field name="organization_or_person_25" class="java.lang.String"/>
+  <field name="reason_25" class="java.lang.String"/>
+  <field name="check_25" class="java.lang.String"/>
+  <field name="check_date_19" class="java.lang.String"/>
+  <field name="fed_id_number_19" class="java.lang.String"/>
+  <field name="amount_25" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_20" class="java.lang.String"/>
+  <field name="organization_or_person_26" class="java.lang.String"/>
+  <field name="reason_26" class="java.lang.String"/>
+  <field name="check_26" class="java.lang.String"/>
+  <field name="check_date_20" class="java.lang.String"/>
+  <field name="fed_id_number_20" class="java.lang.String"/>
+  <field name="amount_26" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_21" class="java.lang.String"/>
+  <field name="organization_or_person_27" class="java.lang.String"/>
+  <field name="reason_27" class="java.lang.String"/>
+  <field name="check_27" class="java.lang.String"/>
+  <field name="check_date_21" class="java.lang.String"/>
+  <field name="fed_id_number_21" class="java.lang.String"/>
+  <field name="amount_27" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_22" class="java.lang.String"/>
+  <field name="organization_or_person_28" class="java.lang.String"/>
+  <field name="reason_28" class="java.lang.String"/>
+  <field name="check_28" class="java.lang.String"/>
+  <field name="check_date_22" class="java.lang.String"/>
+  <field name="fed_id_number_22" class="java.lang.String"/>
+  <field name="amount_28" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_23" class="java.lang.String"/>
+  <field name="organization_or_person_29" class="java.lang.String"/>
+  <field name="reason_29" class="java.lang.String"/>
+  <field name="check_29" class="java.lang.String"/>
+  <field name="check_date_23" class="java.lang.String"/>
+  <field name="fed_id_number_23" class="java.lang.String"/>
+  <field name="amount_29" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_24" class="java.lang.String"/>
+  <field name="organization_or_person_30" class="java.lang.String"/>
+  <field name="reason_30" class="java.lang.String"/>
+  <field name="check_30" class="java.lang.String"/>
+  <field name="check_date_24" class="java.lang.String"/>
+  <field name="fed_id_number_24" class="java.lang.String"/>
+  <field name="amount_30" class="java.lang.String"/>
+  <field name="_501_c_3_nonprofit_organizations_organization_name_25" class="java.lang.String"/>
+  <field name="organization_or_person_31" class="java.lang.String"/>
+  <field name="reason_31" class="java.lang.String"/>
+  <field name="check_31" class="java.lang.String"/>
+  <field name="check_date_25" class="java.lang.String"/>
+  <field name="fed_id_number_25" class="java.lang.String"/>
+  <field name="amount_31" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_29" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1140">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="80" y="20" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r3c2}]]></expression>
+      </element>
+      <element kind="textField" x="80" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="80" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="120" width="80" height="20">
+        <text><![CDATA[EXPENSE DETAIL PART 2]]></text>
+      </element>
+      <element kind="staticText" x="240" y="160" width="80" height="20">
+        <text><![CDATA[20. INSURANCE (NON-SCA)]]></text>
+      </element>
+      <element kind="staticText" x="480" y="160" width="80" height="20">
+        <text><![CDATA[Check #]]></text>
+      </element>
+      <element kind="staticText" x="560" y="160" width="80" height="20">
+        <text><![CDATA[Check Date]]></text>
+      </element>
+      <element kind="staticText" x="640" y="160" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="240" y="180" width="80" height="20">
+        <text><![CDATA[Organization or Person]]></text>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[AR]]></text>
+      </element>
+      <element kind="textField" x="240" y="200" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_ar}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="200" width="80" height="20">
+        <expression><![CDATA[$F{ar}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="200" width="80" height="20">
+        <expression><![CDATA[$F{ar_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="200" width="80" height="20">
+        <expression><![CDATA[$F{check_ar}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="200" width="80" height="20">
+        <expression><![CDATA[$F{check_date_ar}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="200" width="80" height="20">
+        <expression><![CDATA[$F{amount_ar}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[AR]]></text>
+      </element>
+      <element kind="textField" x="240" y="220" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_ar_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="220" width="80" height="20">
+        <expression><![CDATA[$F{ar_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="220" width="80" height="20">
+        <expression><![CDATA[$F{ar_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="220" width="80" height="20">
+        <expression><![CDATA[$F{check_ar_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="220" width="80" height="20">
+        <expression><![CDATA[$F{check_date_ar_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="220" width="80" height="20">
+        <expression><![CDATA[$F{amount_ar_2}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[AR]]></text>
+      </element>
+      <element kind="textField" x="240" y="240" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_ar_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{ar_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{ar_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{check_ar_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="240" width="80" height="20">
+        <expression><![CDATA[$F{check_date_ar_3}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="240" width="80" height="20">
+        <expression><![CDATA[$F{amount_ar_3}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[AR]]></text>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_ar_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{ar_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="260" width="80" height="20">
+        <expression><![CDATA[$F{ar_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="260" width="80" height="20">
+        <expression><![CDATA[$F{check_ar_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="260" width="80" height="20">
+        <expression><![CDATA[$F{check_date_ar_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="260" width="80" height="20">
+        <expression><![CDATA[$F{amount_ar_4}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="280" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 20]]></text>
+      </element>
+      <element kind="textField" x="640" y="280" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="320" width="80" height="20">
+        <expression><![CDATA[$F{ar_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_contact_your_kingdom_exchequer_before_using_this_section}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{contact_your_kingdom_exchequer_before_using_this_section}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{contact_your_kingdom_exchequer_before_using_this_section_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="320" width="80" height="20">
+        <expression><![CDATA[$F{check_contact_your_kingdom_exchequer_before_using_this_section}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="320" width="80" height="20">
+        <expression><![CDATA[$F{show_total_on_pg_4_line_20_contact_your_kingdom_exchequer_before_using_this_section}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="320" width="80" height="20">
+        <expression><![CDATA[$F{sum_i12_i15_contact_your_kingdom_exchequer_before_using_this_section}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[28. OTHER EXPENSES:]]></text>
+      </element>
+      <element kind="staticText" x="560" y="340" width="80" height="20">
+        <text><![CDATA[Paid to]]></text>
+      </element>
+      <element kind="staticText" x="640" y="340" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="160" y="360" width="80" height="20">
+        <text><![CDATA[Reason]]></text>
+      </element>
+      <element kind="textField" x="160" y="380" width="80" height="20">
+        <expression><![CDATA[$F{reason}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r21c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r21c6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{check}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="380" width="80" height="20">
+        <expression><![CDATA[$F{paid_to}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="380" width="80" height="20">
+        <expression><![CDATA[$F{amount}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="400" width="80" height="20">
+        <expression><![CDATA[$F{reason_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r22c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r22c6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{check_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{paid_to_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="400" width="80" height="20">
+        <expression><![CDATA[$F{amount_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{reason_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r23c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r23c6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{check_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{paid_to_3}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="420" width="80" height="20">
+        <expression><![CDATA[$F{amount_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="440" width="80" height="20">
+        <expression><![CDATA[$F{reason_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r24c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r24c6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="440" width="80" height="20">
+        <expression><![CDATA[$F{check_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{paid_to_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="440" width="80" height="20">
+        <expression><![CDATA[$F{amount_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="460" width="80" height="20">
+        <expression><![CDATA[$F{reason_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r25c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r25c6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{check_5}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="460" width="80" height="20">
+        <expression><![CDATA[$F{paid_to_5}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="460" width="80" height="20">
+        <expression><![CDATA[$F{amount_5}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="480" width="80" height="20">
+        <expression><![CDATA[$F{reason_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r26c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12b_r26c6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="480" width="80" height="20">
+        <expression><![CDATA[$F{check_6}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{paid_to_6}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="480" width="80" height="20">
+        <expression><![CDATA[$F{amount_6}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="500" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 28]]></text>
+      </element>
+      <element kind="textField" x="640" y="500" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_28}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="540" width="80" height="20">
+        <text><![CDATA[29. DONATIONS TO SCA, Inc. SUBSIDIARIES AND OTHER]]></text>
+      </element>
+      <element kind="staticText" x="320" y="540" width="80" height="20">
+        <text><![CDATA[Reason]]></text>
+      </element>
+      <element kind="staticText" x="400" y="540" width="80" height="20">
+        <text><![CDATA[Check #]]></text>
+      </element>
+      <element kind="staticText" x="480" y="540" width="80" height="20">
+        <text><![CDATA[Check Date]]></text>
+      </element>
+      <element kind="staticText" x="560" y="540" width="80" height="20">
+        <text><![CDATA[FED ID Number]]></text>
+      </element>
+      <element kind="staticText" x="640" y="540" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="160" y="560" width="80" height="20">
+        <text><![CDATA[501(c)(3) [NONPROFIT] ORGANIZATIONS:  Organization Name:]]></text>
+      </element>
+      <element kind="textField" x="160" y="580" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{reason_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{check_7}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{check_date}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="580" width="80" height="20">
+        <expression><![CDATA[$F{amount_7}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="600" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{reason_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{check_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="600" width="80" height="20">
+        <expression><![CDATA[$F{check_date_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="600" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="600" width="80" height="20">
+        <expression><![CDATA[$F{amount_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="620" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{reason_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{check_9}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="620" width="80" height="20">
+        <expression><![CDATA[$F{check_date_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="620" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_3}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="620" width="80" height="20">
+        <expression><![CDATA[$F{amount_9}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="640" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{reason_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{check_10}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="640" width="80" height="20">
+        <expression><![CDATA[$F{check_date_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="640" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="640" width="80" height="20">
+        <expression><![CDATA[$F{amount_10}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="660" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{reason_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{check_11}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="660" width="80" height="20">
+        <expression><![CDATA[$F{check_date_5}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="660" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_5}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="660" width="80" height="20">
+        <expression><![CDATA[$F{amount_11}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="680" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{reason_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{check_12}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="680" width="80" height="20">
+        <expression><![CDATA[$F{check_date_6}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="680" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_6}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="680" width="80" height="20">
+        <expression><![CDATA[$F{amount_12}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="700" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{reason_13}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{check_13}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="700" width="80" height="20">
+        <expression><![CDATA[$F{check_date_7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="700" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_7}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="700" width="80" height="20">
+        <expression><![CDATA[$F{amount_13}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="720" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{reason_14}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{check_14}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="720" width="80" height="20">
+        <expression><![CDATA[$F{check_date_8}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="720" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_8}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="720" width="80" height="20">
+        <expression><![CDATA[$F{amount_14}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="740" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{reason_15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{check_15}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="740" width="80" height="20">
+        <expression><![CDATA[$F{check_date_9}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="740" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_9}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="740" width="80" height="20">
+        <expression><![CDATA[$F{amount_15}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="760" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_16}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{reason_16}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{check_16}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="760" width="80" height="20">
+        <expression><![CDATA[$F{check_date_10}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="760" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_10}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="760" width="80" height="20">
+        <expression><![CDATA[$F{amount_16}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="780" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_17}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{reason_17}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{check_17}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="780" width="80" height="20">
+        <expression><![CDATA[$F{check_date_11}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="780" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_11}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="780" width="80" height="20">
+        <expression><![CDATA[$F{amount_17}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="800" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_12}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_18}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{reason_18}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{check_18}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="800" width="80" height="20">
+        <expression><![CDATA[$F{check_date_12}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="800" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_12}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="800" width="80" height="20">
+        <expression><![CDATA[$F{amount_18}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_13}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_19}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{reason_19}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{check_19}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="820" width="80" height="20">
+        <expression><![CDATA[$F{check_date_13}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="820" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_13}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="820" width="80" height="20">
+        <expression><![CDATA[$F{amount_19}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_14}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_20}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{reason_20}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{check_20}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{check_date_14}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="840" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_14}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="840" width="80" height="20">
+        <expression><![CDATA[$F{amount_20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_15}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_21}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{reason_21}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{check_21}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="860" width="80" height="20">
+        <expression><![CDATA[$F{check_date_15}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="860" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_15}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="860" width="80" height="20">
+        <expression><![CDATA[$F{amount_21}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_16}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_22}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{reason_22}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{check_22}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="880" width="80" height="20">
+        <expression><![CDATA[$F{check_date_16}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="880" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_16}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="880" width="80" height="20">
+        <expression><![CDATA[$F{amount_22}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_17}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="900" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_23}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{reason_23}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="900" width="80" height="20">
+        <expression><![CDATA[$F{check_23}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="900" width="80" height="20">
+        <expression><![CDATA[$F{check_date_17}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="900" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_17}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="900" width="80" height="20">
+        <expression><![CDATA[$F{amount_23}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="920" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_18}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="920" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_24}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{reason_24}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="920" width="80" height="20">
+        <expression><![CDATA[$F{check_24}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="920" width="80" height="20">
+        <expression><![CDATA[$F{check_date_18}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="920" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_18}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="920" width="80" height="20">
+        <expression><![CDATA[$F{amount_24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_19}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_25}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{reason_25}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{check_25}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="940" width="80" height="20">
+        <expression><![CDATA[$F{check_date_19}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="940" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_19}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="940" width="80" height="20">
+        <expression><![CDATA[$F{amount_25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_20}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_26}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{reason_26}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{check_26}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="960" width="80" height="20">
+        <expression><![CDATA[$F{check_date_20}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="960" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_20}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="960" width="80" height="20">
+        <expression><![CDATA[$F{amount_26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_21}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_27}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{reason_27}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{check_27}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="980" width="80" height="20">
+        <expression><![CDATA[$F{check_date_21}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="980" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_21}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="980" width="80" height="20">
+        <expression><![CDATA[$F{amount_27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_22}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_28}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{reason_28}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{check_28}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{check_date_22}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_22}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{amount_28}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_23}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_29}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{reason_29}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{check_29}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{check_date_23}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_23}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{amount_29}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_24}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_30}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{reason_30}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{check_30}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{check_date_24}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_24}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{amount_30}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{_501_c_3_nonprofit_organizations_organization_name_25}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_31}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{reason_31}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{check_31}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{check_date_25}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{fed_id_number_25}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{amount_31}]]></expression>
+      </element>
+      <element kind="staticText" x="560" y="1080" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 29]]></text>
+      </element>
+      <element kind="textField" x="640" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_29}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1100" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1120" width="80" height="20">
+        <text><![CDATA[-12b-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="LIABILITY_DTL_5b" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="liability_dtl_5b_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="deferred_revenue_event" class="java.lang.String"/>
+  <field name="event" class="java.lang.String"/>
+  <field name="prior_amount" class="java.lang.String"/>
+  <field name="current_amount" class="java.lang.String"/>
+  <field name="deferred_revenue_event_2" class="java.lang.String"/>
+  <field name="event_2" class="java.lang.String"/>
+  <field name="prior_amount_2" class="java.lang.String"/>
+  <field name="current_amount_2" class="java.lang.String"/>
+  <field name="deferred_revenue_event_3" class="java.lang.String"/>
+  <field name="event_3" class="java.lang.String"/>
+  <field name="prior_amount_3" class="java.lang.String"/>
+  <field name="current_amount_3" class="java.lang.String"/>
+  <field name="deferred_revenue_event_4" class="java.lang.String"/>
+  <field name="event_4" class="java.lang.String"/>
+  <field name="prior_amount_4" class="java.lang.String"/>
+  <field name="current_amount_4" class="java.lang.String"/>
+  <field name="deferred_revenue_event_5" class="java.lang.String"/>
+  <field name="event_5" class="java.lang.String"/>
+  <field name="prior_amount_5" class="java.lang.String"/>
+  <field name="current_amount_5" class="java.lang.String"/>
+  <field name="deferred_revenue_event_6" class="java.lang.String"/>
+  <field name="event_6" class="java.lang.String"/>
+  <field name="prior_amount_6" class="java.lang.String"/>
+  <field name="current_amount_6" class="java.lang.String"/>
+  <field name="deferred_revenue_event_7" class="java.lang.String"/>
+  <field name="event_7" class="java.lang.String"/>
+  <field name="prior_amount_7" class="java.lang.String"/>
+  <field name="current_amount_7" class="java.lang.String"/>
+  <field name="deferred_revenue_event_8" class="java.lang.String"/>
+  <field name="event_8" class="java.lang.String"/>
+  <field name="prior_amount_8" class="java.lang.String"/>
+  <field name="current_amount_8" class="java.lang.String"/>
+  <field name="deferred_revenue_event_9" class="java.lang.String"/>
+  <field name="event_9" class="java.lang.String"/>
+  <field name="prior_amount_9" class="java.lang.String"/>
+  <field name="current_amount_9" class="java.lang.String"/>
+  <field name="deferred_revenue_event_10" class="java.lang.String"/>
+  <field name="event_10" class="java.lang.String"/>
+  <field name="prior_amount_10" class="java.lang.String"/>
+  <field name="current_amount_10" class="java.lang.String"/>
+  <field name="deferred_revenue_event_11" class="java.lang.String"/>
+  <field name="event_11" class="java.lang.String"/>
+  <field name="prior_amount_11" class="java.lang.String"/>
+  <field name="current_amount_11" class="java.lang.String"/>
+  <field name="deferred_revenue_event_12" class="java.lang.String"/>
+  <field name="event_12" class="java.lang.String"/>
+  <field name="prior_amount_12" class="java.lang.String"/>
+  <field name="current_amount_12" class="java.lang.String"/>
+  <field name="deferred_revenue_event_13" class="java.lang.String"/>
+  <field name="event_13" class="java.lang.String"/>
+  <field name="prior_amount_13" class="java.lang.String"/>
+  <field name="current_amount_13" class="java.lang.String"/>
+  <field name="deferred_revenue_event_14" class="java.lang.String"/>
+  <field name="event_14" class="java.lang.String"/>
+  <field name="prior_amount_14" class="java.lang.String"/>
+  <field name="current_amount_14" class="java.lang.String"/>
+  <field name="deferred_revenue_event_15" class="java.lang.String"/>
+  <field name="event_15" class="java.lang.String"/>
+  <field name="prior_amount_15" class="java.lang.String"/>
+  <field name="current_amount_15" class="java.lang.String"/>
+  <field name="prior_amount_total" class="java.lang.Double"/>
+  <field name="current_amount_sum_e16_e30" class="java.lang.Double"/>
+  <field name="payables_owed_to" class="java.lang.String"/>
+  <field name="reason" class="java.lang.String"/>
+  <field name="prior_amount_16" class="java.lang.String"/>
+  <field name="current_amount_16" class="java.lang.String"/>
+  <field name="payables_owed_to_2" class="java.lang.String"/>
+  <field name="reason_2" class="java.lang.String"/>
+  <field name="prior_amount_17" class="java.lang.String"/>
+  <field name="current_amount_17" class="java.lang.String"/>
+  <field name="payables_owed_to_3" class="java.lang.String"/>
+  <field name="reason_3" class="java.lang.String"/>
+  <field name="prior_amount_18" class="java.lang.String"/>
+  <field name="current_amount_18" class="java.lang.String"/>
+  <field name="payables_owed_to_4" class="java.lang.String"/>
+  <field name="reason_4" class="java.lang.String"/>
+  <field name="prior_amount_19" class="java.lang.String"/>
+  <field name="current_amount_19" class="java.lang.String"/>
+  <field name="payables_owed_to_5" class="java.lang.String"/>
+  <field name="reason_5" class="java.lang.String"/>
+  <field name="prior_amount_20" class="java.lang.String"/>
+  <field name="current_amount_20" class="java.lang.String"/>
+  <field name="payables_owed_to_6" class="java.lang.String"/>
+  <field name="reason_6" class="java.lang.String"/>
+  <field name="prior_amount_21" class="java.lang.String"/>
+  <field name="current_amount_21" class="java.lang.String"/>
+  <field name="payables_owed_to_7" class="java.lang.String"/>
+  <field name="reason_7" class="java.lang.String"/>
+  <field name="prior_amount_22" class="java.lang.String"/>
+  <field name="current_amount_22" class="java.lang.String"/>
+  <field name="prior_amount_total_2" class="java.lang.Double"/>
+  <field name="current_amount_sum_e37_e43" class="java.lang.Double"/>
+  <field name="other_liabilities_owed_to" class="java.lang.String"/>
+  <field name="reason_8" class="java.lang.String"/>
+  <field name="prior_amount_23" class="java.lang.String"/>
+  <field name="current_amount_23" class="java.lang.String"/>
+  <field name="other_liabilities_owed_to_2" class="java.lang.String"/>
+  <field name="reason_9" class="java.lang.String"/>
+  <field name="prior_amount_24" class="java.lang.String"/>
+  <field name="current_amount_24" class="java.lang.String"/>
+  <field name="other_liabilities_owed_to_3" class="java.lang.String"/>
+  <field name="reason_10" class="java.lang.String"/>
+  <field name="prior_amount_25" class="java.lang.String"/>
+  <field name="current_amount_25" class="java.lang.String"/>
+  <field name="other_liabilities_owed_to_4" class="java.lang.String"/>
+  <field name="reason_11" class="java.lang.String"/>
+  <field name="prior_amount_26" class="java.lang.String"/>
+  <field name="current_amount_26" class="java.lang.String"/>
+  <field name="other_liabilities_owed_to_5" class="java.lang.String"/>
+  <field name="reason_12" class="java.lang.String"/>
+  <field name="prior_amount_27" class="java.lang.String"/>
+  <field name="current_amount_27" class="java.lang.String"/>
+  <field name="other_liabilities_owed_to_6" class="java.lang.String"/>
+  <field name="reason_13" class="java.lang.String"/>
+  <field name="prior_amount_28" class="java.lang.String"/>
+  <field name="current_amount_28" class="java.lang.String"/>
+  <field name="other_liabilities_owed_to_7" class="java.lang.String"/>
+  <field name="reason_14" class="java.lang.String"/>
+  <field name="prior_amount_29" class="java.lang.String"/>
+  <field name="current_amount_29" class="java.lang.String"/>
+  <field name="prior_amount_total_3" class="java.lang.Double"/>
+  <field name="current_amount_sum_e49_e55" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1160">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{liability_dtl_5b_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[LIABILITY DETAIL WORKSHEET]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[Deferred Revenue is event income that has been collected before the end of the period for an event that will occur after the end]]></text>
+      </element>
+      <element kind="staticText" x="160" y="180" width="80" height="20">
+        <text><![CDATA[of the period. For the report before the event, enter the name of the event, and any event income collected as the current amount.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[For the report after the event, move the amount to the prior amount and zero out the current amount for that event.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[For example, Alabaster Alley's 12th night event accepts reservations in December. Any funds received in December would be]]></text>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[reported as Current Deferred Revenue on the 4th quarter report, and Prior Deferred Revenue on the 1st quarter report next year.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[DEFERRED REVENUE:  Event]]></text>
+      </element>
+      <element kind="staticText" x="240" y="260" width="80" height="20">
+        <text><![CDATA[Event]]></text>
+      </element>
+      <element kind="staticText" x="320" y="260" width="80" height="20">
+        <text><![CDATA[Prior Amount]]></text>
+      </element>
+      <element kind="staticText" x="400" y="260" width="80" height="20">
+        <text><![CDATA[Current Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="280" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{event}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{current_amount}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="300" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{event_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="320" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{event_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="340" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{event_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="360" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{event_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_5}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="380" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{event_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_6}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="400" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{event_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_7}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{event_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="440" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="440" width="80" height="20">
+        <expression><![CDATA[$F{event_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_9}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="460" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="460" width="80" height="20">
+        <expression><![CDATA[$F{event_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_10}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="480" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="480" width="80" height="20">
+        <expression><![CDATA[$F{event_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_11}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_12}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{event_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_12}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_13}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{event_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_13}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_13}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_14}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{event_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_14}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_14}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="560" width="80" height="20">
+        <expression><![CDATA[$F{deferred_revenue_event_15}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{event_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_15}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="580" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_total}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_sum_e16_e30}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="600" width="80" height="20">
+        <text><![CDATA[Show on]]></text>
+      </element>
+      <element kind="staticText" x="320" y="600" width="80" height="20">
+        <text><![CDATA[Pg. 3 II.b (Start)]]></text>
+      </element>
+      <element kind="staticText" x="400" y="600" width="80" height="20">
+        <text><![CDATA[Pg. 3 II.b (End)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="640" width="80" height="20">
+        <text><![CDATA[Payables are any funds owed to a third party that have not yet been paid. An example is a reimbursement for receipts]]></text>
+      </element>
+      <element kind="staticText" x="160" y="660" width="80" height="20">
+        <text><![CDATA[submitted, but a check has not yet been written.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="680" width="80" height="20">
+        <text><![CDATA[PAYABLES: Owed To]]></text>
+      </element>
+      <element kind="staticText" x="240" y="680" width="80" height="20">
+        <text><![CDATA[Reason]]></text>
+      </element>
+      <element kind="staticText" x="320" y="680" width="80" height="20">
+        <text><![CDATA[Prior Amount]]></text>
+      </element>
+      <element kind="staticText" x="400" y="680" width="80" height="20">
+        <text><![CDATA[Current Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="700" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{reason}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_16}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_16}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="720" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{reason_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_17}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_17}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="740" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{reason_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_18}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_18}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="760" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{reason_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_19}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_19}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="780" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{reason_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_20}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="800" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="800" width="80" height="20">
+        <expression><![CDATA[$F{reason_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_21}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_21}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{payables_owed_to_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{reason_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_22}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_22}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="840" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_total_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_sum_e37_e43}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="860" width="80" height="20">
+        <text><![CDATA[Show on]]></text>
+      </element>
+      <element kind="staticText" x="320" y="860" width="80" height="20">
+        <text><![CDATA[Pg. 3 II.c(Start)]]></text>
+      </element>
+      <element kind="staticText" x="400" y="860" width="80" height="20">
+        <text><![CDATA[Pg. 3 II.c (End)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="900" width="80" height="20">
+        <text><![CDATA[Other Liabilities are any other funds that are owed that do not fall into any other category. Collected Sales Tax would go here.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="920" width="80" height="20">
+        <text><![CDATA[OTHER LIABILITIES: Owed To]]></text>
+      </element>
+      <element kind="staticText" x="240" y="920" width="80" height="20">
+        <text><![CDATA[Reason]]></text>
+      </element>
+      <element kind="staticText" x="320" y="920" width="80" height="20">
+        <text><![CDATA[Prior Amount]]></text>
+      </element>
+      <element kind="staticText" x="400" y="920" width="80" height="20">
+        <text><![CDATA[Current Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{reason_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_23}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_23}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{reason_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_24}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{reason_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_25}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{reason_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_26}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{reason_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_27}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{reason_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_28}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_28}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{other_liabilities_owed_to_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{reason_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_29}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_29}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="1080" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="textField" x="320" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{prior_amount_total_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1080" width="80" height="20">
+        <expression><![CDATA[$F{current_amount_sum_e49_e55}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="1100" width="80" height="20">
+        <text><![CDATA[Show on]]></text>
+      </element>
+      <element kind="staticText" x="320" y="1100" width="80" height="20">
+        <text><![CDATA[Pg. 3 II.d (Start)]]></text>
+      </element>
+      <element kind="staticText" x="400" y="1100" width="80" height="20">
+        <text><![CDATA[Pg. 3 II.d (End)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1120" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1140" width="80" height="20">
+        <text><![CDATA[-5b-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

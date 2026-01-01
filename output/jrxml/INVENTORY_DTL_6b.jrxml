@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="INVENTORY_DTL_6b" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="inventory_dtl_6b_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="lot_item_description" class="java.lang.String"/>
+  <field name="lot_item_description_2" class="java.lang.String"/>
+  <field name="lot_item_description_3" class="java.lang.String"/>
+  <field name="lot_item_description_4" class="java.lang.String"/>
+  <field name="lot_item_description_5" class="java.lang.String"/>
+  <field name="lot_item_description_6" class="java.lang.String"/>
+  <field name="lot_item_description_7" class="java.lang.String"/>
+  <field name="lot_item_description_8" class="java.lang.String"/>
+  <field name="suggested_selling_price" class="java.lang.String"/>
+  <field name="suggested_selling_price_2" class="java.lang.String"/>
+  <field name="suggested_selling_price_3" class="java.lang.String"/>
+  <field name="suggested_selling_price_4" class="java.lang.String"/>
+  <field name="suggested_selling_price_5" class="java.lang.String"/>
+  <field name="suggested_selling_price_6" class="java.lang.String"/>
+  <field name="suggested_selling_price_7" class="java.lang.String"/>
+  <field name="suggested_selling_price_8" class="java.lang.String"/>
+  <field name="existing_lot_quantity" class="java.lang.String"/>
+  <field name="existing_lot_quantity_2" class="java.lang.String"/>
+  <field name="existing_lot_quantity_3" class="java.lang.String"/>
+  <field name="existing_lot_quantity_4" class="java.lang.String"/>
+  <field name="existing_lot_quantity_5" class="java.lang.String"/>
+  <field name="existing_lot_quantity_6" class="java.lang.String"/>
+  <field name="existing_lot_quantity_7" class="java.lang.String"/>
+  <field name="existing_lot_quantity_8" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_2" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_3" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_4" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_5" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_6" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_7" class="java.lang.String"/>
+  <field name="existing_lot_extended_cost_8" class="java.lang.String"/>
+  <field name="pg_3_i_d_start_existing_lot_extended_cost" class="java.lang.Double"/>
+  <field name="new_lot_purchase_quantity" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_2" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_3" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_4" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_5" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_6" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_7" class="java.lang.String"/>
+  <field name="new_lot_purchase_quantity_8" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_2" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_3" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_4" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_5" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_6" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_7" class="java.lang.String"/>
+  <field name="new_lot_purchase_cost_8" class="java.lang.String"/>
+  <field name="per_unit_cost_b1_a1_or_b2_a2" class="java.lang.Double"/>
+  <field name="if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0" class="java.lang.Double"/>
+  <field name="if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0" class="java.lang.Double"/>
+  <field name="if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0" class="java.lang.Double"/>
+  <field name="if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0" class="java.lang.Double"/>
+  <field name="if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0" class="java.lang.Double"/>
+  <field name="if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0" class="java.lang.Double"/>
+  <field name="if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0" class="java.lang.Double"/>
+  <field name="if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_l16_0_l17_0_l17_l16_if_and_l19_0_l20_0_l20_l19_0_quantity_sold_at_any_price" class="java.lang.String"/>
+  <field name="if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_l16_0_l17_0_l17_l16_if_and_l19_0_l20_0_l20_l19_0_quantity_removed_or_discarded" class="java.lang.String"/>
+  <field name="if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0_ending_quantity_b1or_b2_d_e" class="java.lang.Double"/>
+  <field name="if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0_if_e16_0_e16_e19_e24_e25" class="java.lang.Double"/>
+  <field name="if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0_if_f16_0_f16_f19_f24_f25" class="java.lang.Double"/>
+  <field name="if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0_if_g16_0_g16_g19_g24_g25" class="java.lang.Double"/>
+  <field name="if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0_if_h16_0_h16_h19_h24_h25" class="java.lang.Double"/>
+  <field name="if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0_if_i16_0_i16_i19_i24_i25" class="java.lang.Double"/>
+  <field name="if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0_if_j16_0_j16_j19_j24_j25" class="java.lang.Double"/>
+  <field name="if_and_l16_0_l17_0_l17_l16_if_and_l19_0_l20_0_l20_l19_0_if_k16_0_k16_k19_k24_k25" class="java.lang.Double"/>
+  <field name="if_e16_0_e16_e19_e24_e25_ending_extended_cost_f_x_c" class="java.lang.Double"/>
+  <field name="if_f16_0_f16_f19_f24_f25_e26_e22" class="java.lang.Double"/>
+  <field name="if_g16_0_g16_g19_g24_g25_f26_f22" class="java.lang.Double"/>
+  <field name="if_h16_0_h16_h19_h24_h25_g26_g22" class="java.lang.Double"/>
+  <field name="if_i16_0_i16_i19_i24_i25_h26_h22" class="java.lang.Double"/>
+  <field name="if_j16_0_j16_j19_j24_j25_i26_i22" class="java.lang.Double"/>
+  <field name="if_k16_0_k16_k19_k24_k25_j26_j22" class="java.lang.Double"/>
+  <field name="if_l16_0_l16_l19_l24_l25_k26_k22" class="java.lang.Double"/>
+  <field name="pg_3_i_d_end_l26_l22" class="java.lang.Double"/>
+  <field name="e26_e22_cost_of_goods_b1_b2_g" class="java.lang.Double"/>
+  <field name="f26_f22_e17_e20_e27" class="java.lang.Double"/>
+  <field name="g26_g22_f17_f20_f27" class="java.lang.Double"/>
+  <field name="h26_h22_g17_g20_g27" class="java.lang.Double"/>
+  <field name="i26_i22_h17_h20_h27" class="java.lang.Double"/>
+  <field name="j26_j22_i17_i20_i27" class="java.lang.Double"/>
+  <field name="k26_k22_j17_j20_j27" class="java.lang.Double"/>
+  <field name="l26_l22_k17_k20_k27" class="java.lang.Double"/>
+  <field name="sum_e27_l27_l17_l20_l27" class="java.lang.Double"/>
+  <field name="e17_e20_e27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="f17_f20_f27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="g17_g20_g27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="h17_h20_h27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="i17_i20_i27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="j17_j20_j27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="k17_k20_k27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="l17_l20_l27_actual_gross_income_from_inventory_sales" class="java.lang.String"/>
+  <field name="sum_e29_l29_actual_gross_income_from_inventory_sales" class="java.lang.Double"/>
+  <field name="e17_e20_e27_net_inventory_sales_income_i_h" class="java.lang.Double"/>
+  <field name="f17_f20_f27_e30_e29" class="java.lang.Double"/>
+  <field name="g17_g20_g27_f30_f29" class="java.lang.Double"/>
+  <field name="h17_h20_h27_g30_g29" class="java.lang.Double"/>
+  <field name="i17_i20_i27_h30_h29" class="java.lang.Double"/>
+  <field name="j17_j20_j27_i30_i29" class="java.lang.Double"/>
+  <field name="k17_k20_k27_j30_j29" class="java.lang.Double"/>
+  <field name="l17_l20_l27_k30_k29" class="java.lang.Double"/>
+
+  <detail>
+    <band height="640">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{inventory_dtl_6b_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[INVENTORY DETAIL - OVERFLOW]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[NOTE: Use this form for major inventory (purchased for lot price of $250 +). If a new lot originally cost less than US$250 (minor inventory), use Page 7 to report income from sales of those items.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="180" width="80" height="20">
+        <text><![CDATA[Report each purchase lot separately. Report sales from oldest lots of the same item first. Report discarded items on line E.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[Each Lot will either have A1 and B1 populated from a prior report, or A2 and B2 if the lot is new for this report.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[Lot Item Description]]></text>
+      </element>
+      <element kind="textField" x="320" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_5}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_6}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_7}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="220" width="80" height="20">
+        <expression><![CDATA[$F{lot_item_description_8}]]></expression>
+      </element>
+      <element kind="staticText" x="960" y="220" width="80" height="20">
+        <text><![CDATA[TOTAL ACROSS and where to report on prior pages]]></text>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[SP]]></text>
+      </element>
+      <element kind="staticText" x="240" y="240" width="80" height="20">
+        <text><![CDATA[Suggested Selling Price]]></text>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_5}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_6}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_7}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="240" width="80" height="20">
+        <expression><![CDATA[$F{suggested_selling_price_8}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[STARTING BALANCE (for items reported on a prior report)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="280" width="80" height="20">
+        <text><![CDATA[A1]]></text>
+      </element>
+      <element kind="staticText" x="240" y="280" width="80" height="20">
+        <text><![CDATA[Existing Lot Quantity]]></text>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_5}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_6}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_7}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="280" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_quantity_8}]]></expression>
+      </element>
+      <element kind="staticText" x="960" y="280" width="80" height="20">
+        <text><![CDATA[Pg. 3, I.d (Start)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[B1]]></text>
+      </element>
+      <element kind="staticText" x="240" y="300" width="80" height="20">
+        <text><![CDATA[Existing Lot Extended Cost]]></text>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_5}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_6}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_7}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="300" width="80" height="20">
+        <expression><![CDATA[$F{existing_lot_extended_cost_8}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="300" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_d_start_existing_lot_extended_cost}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="320" width="80" height="20">
+        <text><![CDATA[PURCHASES THIS PERIOD (for items NOT reported on a prior report)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[A2]]></text>
+      </element>
+      <element kind="staticText" x="240" y="340" width="80" height="20">
+        <text><![CDATA[New Lot Purchase Quantity]]></text>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_5}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_6}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_7}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="340" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_quantity_8}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="360" width="80" height="20">
+        <text><![CDATA[B2]]></text>
+      </element>
+      <element kind="staticText" x="240" y="360" width="80" height="20">
+        <text><![CDATA[New Lot Purchase Cost]]></text>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_4}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_5}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_6}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_7}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="360" width="80" height="20">
+        <expression><![CDATA[$F{new_lot_purchase_cost_8}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="380" width="80" height="20">
+        <text><![CDATA[PER-UNIT COST]]></text>
+      </element>
+      <element kind="staticText" x="160" y="400" width="80" height="20">
+        <text><![CDATA[C]]></text>
+      </element>
+      <element kind="staticText" x="240" y="400" width="80" height="20">
+        <text><![CDATA[Per Unit Cost
+(B1/A1 or B2/A2)]]></text>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{per_unit_cost_b1_a1_or_b2_a2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="420" width="80" height="20">
+        <text><![CDATA[ENDING BALANCE]]></text>
+      </element>
+      <element kind="staticText" x="160" y="440" width="80" height="20">
+        <text><![CDATA[D]]></text>
+      </element>
+      <element kind="staticText" x="240" y="440" width="80" height="20">
+        <text><![CDATA[Quantity Sold at any price]]></text>
+      </element>
+      <element kind="textField" x="320" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_l16_0_l17_0_l17_l16_if_and_l19_0_l20_0_l20_l19_0_quantity_sold_at_any_price}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="460" width="80" height="20">
+        <text><![CDATA[E]]></text>
+      </element>
+      <element kind="staticText" x="240" y="460" width="80" height="20">
+        <text><![CDATA[Quantity Removed or Discarded]]></text>
+      </element>
+      <element kind="textField" x="320" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_and_l16_0_l17_0_l17_l16_if_and_l19_0_l20_0_l20_l19_0_quantity_removed_or_discarded}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="480" width="80" height="20">
+        <text><![CDATA[F]]></text>
+      </element>
+      <element kind="staticText" x="240" y="480" width="80" height="20">
+        <text><![CDATA[Ending Quantity 
+((B1or B2)-D-E)]]></text>
+      </element>
+      <element kind="textField" x="320" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_e16_0_e17_0_e17_e16_if_and_e19_0_e20_0_e20_e19_0_ending_quantity_b1or_b2_d_e}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_f16_0_f17_0_f17_f16_if_and_f19_0_f20_0_f20_f19_0_if_e16_0_e16_e19_e24_e25}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_g16_0_g17_0_g17_g16_if_and_g19_0_g20_0_g20_g19_0_if_f16_0_f16_f19_f24_f25}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_h16_0_h17_0_h17_h16_if_and_h19_0_h20_0_h20_h19_0_if_g16_0_g16_g19_g24_g25}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_i16_0_i17_0_i17_i16_if_and_i19_0_i20_0_i20_i19_0_if_h16_0_h16_h19_h24_h25}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_j16_0_j17_0_j17_j16_if_and_j19_0_j20_0_j20_j19_0_if_i16_0_i16_i19_i24_i25}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_k16_0_k17_0_k17_k16_if_and_k19_0_k20_0_k20_k19_0_if_j16_0_j16_j19_j24_j25}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_and_l16_0_l17_0_l17_l16_if_and_l19_0_l20_0_l20_l19_0_if_k16_0_k16_k19_k24_k25}]]></expression>
+      </element>
+      <element kind="staticText" x="960" y="480" width="80" height="20">
+        <text><![CDATA[Pg. 3 I.d (End)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="500" width="80" height="20">
+        <text><![CDATA[G]]></text>
+      </element>
+      <element kind="staticText" x="240" y="500" width="80" height="20">
+        <text><![CDATA[Ending Extended 
+Cost (F x C)]]></text>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_e16_0_e16_e19_e24_e25_ending_extended_cost_f_x_c}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_f16_0_f16_f19_f24_f25_e26_e22}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_g16_0_g16_g19_g24_g25_f26_f22}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_h16_0_h16_h19_h24_h25_g26_g22}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_i16_0_i16_i19_i24_i25_h26_h22}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_j16_0_j16_j19_j24_j25_i26_i22}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_k16_0_k16_k19_k24_k25_j26_j22}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_l16_0_l16_l19_l24_l25_k26_k22}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="500" width="80" height="20">
+        <expression><![CDATA[$F{pg_3_i_d_end_l26_l22}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="520" width="80" height="20">
+        <text><![CDATA[NET INCOME]]></text>
+      </element>
+      <element kind="staticText" x="160" y="540" width="80" height="20">
+        <text><![CDATA[H]]></text>
+      </element>
+      <element kind="staticText" x="240" y="540" width="80" height="20">
+        <text><![CDATA[Cost of Goods 
+((B1 + B2) - G)]]></text>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{e26_e22_cost_of_goods_b1_b2_g}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{f26_f22_e17_e20_e27}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{g26_g22_f17_f20_f27}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="540" width="80" height="20">
+        <expression><![CDATA[$F{h26_h22_g17_g20_g27}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="540" width="80" height="20">
+        <expression><![CDATA[$F{i26_i22_h17_h20_h27}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="540" width="80" height="20">
+        <expression><![CDATA[$F{j26_j22_i17_i20_i27}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="540" width="80" height="20">
+        <expression><![CDATA[$F{k26_k22_j17_j20_j27}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="540" width="80" height="20">
+        <expression><![CDATA[$F{l26_l22_k17_k20_k27}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="540" width="80" height="20">
+        <expression><![CDATA[$F{sum_e27_l27_l17_l20_l27}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="560" width="80" height="20">
+        <text><![CDATA[I]]></text>
+      </element>
+      <element kind="staticText" x="240" y="560" width="80" height="20">
+        <text><![CDATA[Actual Gross Income from Inventory Sales]]></text>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{e17_e20_e27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{f17_f20_f27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{g17_g20_g27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="560" width="80" height="20">
+        <expression><![CDATA[$F{h17_h20_h27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="560" width="80" height="20">
+        <expression><![CDATA[$F{i17_i20_i27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="560" width="80" height="20">
+        <expression><![CDATA[$F{j17_j20_j27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="560" width="80" height="20">
+        <expression><![CDATA[$F{k17_k20_k27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="560" width="80" height="20">
+        <expression><![CDATA[$F{l17_l20_l27_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="560" width="80" height="20">
+        <expression><![CDATA[$F{sum_e29_l29_actual_gross_income_from_inventory_sales}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="580" width="80" height="20">
+        <text><![CDATA[J]]></text>
+      </element>
+      <element kind="staticText" x="240" y="580" width="80" height="20">
+        <text><![CDATA[Net Inventory Sales Income (I - H)]]></text>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{e17_e20_e27_net_inventory_sales_income_i_h}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{f17_f20_f27_e30_e29}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{g17_g20_g27_f30_f29}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{h17_h20_h27_g30_g29}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="580" width="80" height="20">
+        <expression><![CDATA[$F{i17_i20_i27_h30_h29}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="580" width="80" height="20">
+        <expression><![CDATA[$F{j17_j20_j27_i30_i29}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="580" width="80" height="20">
+        <expression><![CDATA[$F{k17_k20_k27_j30_j29}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="580" width="80" height="20">
+        <expression><![CDATA[$F{l17_l20_l27_k30_k29}]]></expression>
+      </element>
+      <element kind="staticText" x="960" y="580" width="80" height="20">
+        <text><![CDATA[Pg. 4, Ln 6]]></text>
+      </element>
+      <element kind="staticText" x="160" y="600" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="620" width="80" height="20">
+        <text><![CDATA[-6b-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="DEPR_DTL_8" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="depr_dtl_8_r2c4" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description" class="java.lang.String"/>
+  <field name="qty" class="java.lang.String"/>
+  <field name="purchase_year" class="java.lang.String"/>
+  <field name="a_this_year_from_grid_below" class="java.lang.Double"/>
+  <field name="prior_cost_or_value_if_g14_0_if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_offset_contents_b_75_0_contents_c_11_g14_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g14_0_g14_contents_c_11_contents_c_12_1_contents_c_12_a14_j14_if_and_g14_0_g14_contents_c_11_j14_0" class="java.lang.String"/>
+  <field name="c_start_accum_deprec_if_and_contents_c_13_sequential_g14_0_g14_contents_c_11_contents_c_12_1_contents_c_12_a14_j14_if_and_g14_0_g14_contents_c_11_j14_0" class="java.lang.Double"/>
+  <field name="d_depr_this_year_a_x_b_if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_round_offset_contents_b_73_0_contents_c_11_g14_1_j14_2_if_and_contents_c_11_0_j14_0_j14_0" class="java.lang.Double"/>
+  <field name="end_accum_deprec_c_d_if_h14_0_round_h14_j14_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_2" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_2" class="java.lang.String"/>
+  <field name="qty_2" class="java.lang.String"/>
+  <field name="purchase_year_2" class="java.lang.String"/>
+  <field name="if_g14_0_if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_offset_contents_b_75_0_contents_c_11_g14_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g14_0_g14_contents_c_11_contents_c_12_1_contents_c_12_a14_j14_if_and_g14_0_g14_contents_c_11_j14_0_if_g15_0_if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_offset_contents_b_75_0_contents_c_11_g15_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g15_0_g15_contents_c_11_contents_c_12_1_contents_c_12_a15_j15_if_and_g15_0_g15_contents_c_11_j15_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_round_offset_contents_b_73_0_contents_c_11_g14_1_j14_2_if_and_contents_c_11_0_j14_0_j14_0_if_and_contents_c_13_sequential_g15_0_g15_contents_c_11_contents_c_12_1_contents_c_12_a15_j15_if_and_g15_0_g15_contents_c_11_j15_0" class="java.lang.Double"/>
+  <field name="if_h14_0_round_h14_j14_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_round_offset_contents_b_73_0_contents_c_11_g15_1_j15_2_if_and_contents_c_11_0_j15_0_j15_0" class="java.lang.Double"/>
+  <field name="if_h14_0_k14_l14_if_h15_0_round_h15_j15_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_3" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_3" class="java.lang.String"/>
+  <field name="qty_3" class="java.lang.String"/>
+  <field name="purchase_year_3" class="java.lang.String"/>
+  <field name="if_g15_0_if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_offset_contents_b_75_0_contents_c_11_g15_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g15_0_g15_contents_c_11_contents_c_12_1_contents_c_12_a15_j15_if_and_g15_0_g15_contents_c_11_j15_0_if_g16_0_if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_offset_contents_b_75_0_contents_c_11_g16_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g16_0_g16_contents_c_11_contents_c_12_1_contents_c_12_a16_j16_if_and_g16_0_g16_contents_c_11_j16_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_round_offset_contents_b_73_0_contents_c_11_g15_1_j15_2_if_and_contents_c_11_0_j15_0_j15_0_if_and_contents_c_13_sequential_g16_0_g16_contents_c_11_contents_c_12_1_contents_c_12_a16_j16_if_and_g16_0_g16_contents_c_11_j16_0" class="java.lang.Double"/>
+  <field name="if_h15_0_round_h15_j15_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_round_offset_contents_b_73_0_contents_c_11_g16_1_j16_2_if_and_contents_c_11_0_j16_0_j16_0" class="java.lang.Double"/>
+  <field name="if_h15_0_k15_l15_if_h16_0_round_h16_j16_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_4" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_4" class="java.lang.String"/>
+  <field name="qty_4" class="java.lang.String"/>
+  <field name="purchase_year_4" class="java.lang.String"/>
+  <field name="if_g16_0_if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_offset_contents_b_75_0_contents_c_11_g16_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g16_0_g16_contents_c_11_contents_c_12_1_contents_c_12_a16_j16_if_and_g16_0_g16_contents_c_11_j16_0_if_g17_0_if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_offset_contents_b_75_0_contents_c_11_g17_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g17_0_g17_contents_c_11_contents_c_12_1_contents_c_12_a17_j17_if_and_g17_0_g17_contents_c_11_j17_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_round_offset_contents_b_73_0_contents_c_11_g16_1_j16_2_if_and_contents_c_11_0_j16_0_j16_0_if_and_contents_c_13_sequential_g17_0_g17_contents_c_11_contents_c_12_1_contents_c_12_a17_j17_if_and_g17_0_g17_contents_c_11_j17_0" class="java.lang.Double"/>
+  <field name="if_h16_0_round_h16_j16_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_round_offset_contents_b_73_0_contents_c_11_g17_1_j17_2_if_and_contents_c_11_0_j17_0_j17_0" class="java.lang.Double"/>
+  <field name="if_h16_0_k16_l16_if_h17_0_round_h17_j17_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_5" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_5" class="java.lang.String"/>
+  <field name="qty_5" class="java.lang.String"/>
+  <field name="purchase_year_5" class="java.lang.String"/>
+  <field name="if_g17_0_if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_offset_contents_b_75_0_contents_c_11_g17_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g17_0_g17_contents_c_11_contents_c_12_1_contents_c_12_a17_j17_if_and_g17_0_g17_contents_c_11_j17_0_if_g18_0_if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_offset_contents_b_75_0_contents_c_11_g18_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g18_0_g18_contents_c_11_contents_c_12_1_contents_c_12_a18_j18_if_and_g18_0_g18_contents_c_11_j18_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_round_offset_contents_b_73_0_contents_c_11_g17_1_j17_2_if_and_contents_c_11_0_j17_0_j17_0_if_and_contents_c_13_sequential_g18_0_g18_contents_c_11_contents_c_12_1_contents_c_12_a18_j18_if_and_g18_0_g18_contents_c_11_j18_0" class="java.lang.Double"/>
+  <field name="if_h17_0_round_h17_j17_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_round_offset_contents_b_73_0_contents_c_11_g18_1_j18_2_if_and_contents_c_11_0_j18_0_j18_0" class="java.lang.Double"/>
+  <field name="if_h17_0_k17_l17_if_h18_0_round_h18_j18_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_6" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_6" class="java.lang.String"/>
+  <field name="qty_6" class="java.lang.String"/>
+  <field name="purchase_year_6" class="java.lang.String"/>
+  <field name="if_g18_0_if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_offset_contents_b_75_0_contents_c_11_g18_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g18_0_g18_contents_c_11_contents_c_12_1_contents_c_12_a18_j18_if_and_g18_0_g18_contents_c_11_j18_0_if_g19_0_if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_offset_contents_b_75_0_contents_c_11_g19_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g19_0_g19_contents_c_11_contents_c_12_1_contents_c_12_a19_j19_if_and_g19_0_g19_contents_c_11_j19_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_round_offset_contents_b_73_0_contents_c_11_g18_1_j18_2_if_and_contents_c_11_0_j18_0_j18_0_if_and_contents_c_13_sequential_g19_0_g19_contents_c_11_contents_c_12_1_contents_c_12_a19_j19_if_and_g19_0_g19_contents_c_11_j19_0" class="java.lang.Double"/>
+  <field name="if_h18_0_round_h18_j18_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_round_offset_contents_b_73_0_contents_c_11_g19_1_j19_2_if_and_contents_c_11_0_j19_0_j19_0" class="java.lang.Double"/>
+  <field name="if_h18_0_k18_l18_if_h19_0_round_h19_j19_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_7" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_7" class="java.lang.String"/>
+  <field name="qty_7" class="java.lang.String"/>
+  <field name="purchase_year_7" class="java.lang.String"/>
+  <field name="if_g19_0_if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_offset_contents_b_75_0_contents_c_11_g19_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g19_0_g19_contents_c_11_contents_c_12_1_contents_c_12_a19_j19_if_and_g19_0_g19_contents_c_11_j19_0_if_g20_0_if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_offset_contents_b_75_0_contents_c_11_g20_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g20_0_g20_contents_c_11_contents_c_12_1_contents_c_12_a20_j20_if_and_g20_0_g20_contents_c_11_j20_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_round_offset_contents_b_73_0_contents_c_11_g19_1_j19_2_if_and_contents_c_11_0_j19_0_j19_0_if_and_contents_c_13_sequential_g20_0_g20_contents_c_11_contents_c_12_1_contents_c_12_a20_j20_if_and_g20_0_g20_contents_c_11_j20_0" class="java.lang.Double"/>
+  <field name="if_h19_0_round_h19_j19_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_round_offset_contents_b_73_0_contents_c_11_g20_1_j20_2_if_and_contents_c_11_0_j20_0_j20_0" class="java.lang.Double"/>
+  <field name="if_h19_0_k19_l19_if_h20_0_round_h20_j20_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_8" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_8" class="java.lang.String"/>
+  <field name="qty_8" class="java.lang.String"/>
+  <field name="purchase_year_8" class="java.lang.String"/>
+  <field name="if_g20_0_if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_offset_contents_b_75_0_contents_c_11_g20_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g20_0_g20_contents_c_11_contents_c_12_1_contents_c_12_a20_j20_if_and_g20_0_g20_contents_c_11_j20_0_if_g21_0_if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_offset_contents_b_75_0_contents_c_11_g21_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g21_0_g21_contents_c_11_contents_c_12_1_contents_c_12_a21_j21_if_and_g21_0_g21_contents_c_11_j21_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_round_offset_contents_b_73_0_contents_c_11_g20_1_j20_2_if_and_contents_c_11_0_j20_0_j20_0_if_and_contents_c_13_sequential_g21_0_g21_contents_c_11_contents_c_12_1_contents_c_12_a21_j21_if_and_g21_0_g21_contents_c_11_j21_0" class="java.lang.Double"/>
+  <field name="if_h20_0_round_h20_j20_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_round_offset_contents_b_73_0_contents_c_11_g21_1_j21_2_if_and_contents_c_11_0_j21_0_j21_0" class="java.lang.Double"/>
+  <field name="if_h20_0_k20_l20_if_h21_0_round_h21_j21_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_9" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_9" class="java.lang.String"/>
+  <field name="qty_9" class="java.lang.String"/>
+  <field name="purchase_year_9" class="java.lang.String"/>
+  <field name="if_g21_0_if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_offset_contents_b_75_0_contents_c_11_g21_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g21_0_g21_contents_c_11_contents_c_12_1_contents_c_12_a21_j21_if_and_g21_0_g21_contents_c_11_j21_0_if_g22_0_if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_offset_contents_b_75_0_contents_c_11_g22_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g22_0_g22_contents_c_11_contents_c_12_1_contents_c_12_a22_j22_if_and_g22_0_g22_contents_c_11_j22_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_round_offset_contents_b_73_0_contents_c_11_g21_1_j21_2_if_and_contents_c_11_0_j21_0_j21_0_if_and_contents_c_13_sequential_g22_0_g22_contents_c_11_contents_c_12_1_contents_c_12_a22_j22_if_and_g22_0_g22_contents_c_11_j22_0" class="java.lang.Double"/>
+  <field name="if_h21_0_round_h21_j21_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_round_offset_contents_b_73_0_contents_c_11_g22_1_j22_2_if_and_contents_c_11_0_j22_0_j22_0" class="java.lang.Double"/>
+  <field name="if_h21_0_k21_l21_if_h22_0_round_h22_j22_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_10" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_10" class="java.lang.String"/>
+  <field name="qty_10" class="java.lang.String"/>
+  <field name="purchase_year_10" class="java.lang.String"/>
+  <field name="if_g22_0_if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_offset_contents_b_75_0_contents_c_11_g22_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g22_0_g22_contents_c_11_contents_c_12_1_contents_c_12_a22_j22_if_and_g22_0_g22_contents_c_11_j22_0_if_g23_0_if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_offset_contents_b_75_0_contents_c_11_g23_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g23_0_g23_contents_c_11_contents_c_12_1_contents_c_12_a23_j23_if_and_g23_0_g23_contents_c_11_j23_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_round_offset_contents_b_73_0_contents_c_11_g22_1_j22_2_if_and_contents_c_11_0_j22_0_j22_0_if_and_contents_c_13_sequential_g23_0_g23_contents_c_11_contents_c_12_1_contents_c_12_a23_j23_if_and_g23_0_g23_contents_c_11_j23_0" class="java.lang.Double"/>
+  <field name="if_h22_0_round_h22_j22_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_round_offset_contents_b_73_0_contents_c_11_g23_1_j23_2_if_and_contents_c_11_0_j23_0_j23_0" class="java.lang.Double"/>
+  <field name="if_h22_0_k22_l22_if_h23_0_round_h23_j23_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g23_0_g23_contents_c_11_contents_c_12_1_contents_c_12_a23_j23_if_and_g23_0_g23_contents_c_11_j23_0_5_year_total" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_sum_i14_i23" class="java.lang.Double"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_round_offset_contents_b_73_0_contents_c_11_g23_1_j23_2_if_and_contents_c_11_0_j23_0_j23_0_sum_j14_j23" class="java.lang.Double"/>
+  <field name="if_h23_0_round_h23_j23_if_contents_c_12_4_1_0_2_sum_k14_k23" class="java.lang.Double"/>
+  <field name="if_h23_0_k23_l23_sum_l14_l23" class="java.lang.Double"/>
+  <field name="if_g23_0_if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_offset_contents_b_75_0_contents_c_11_g23_0_year_purchased" class="java.lang.Double"/>
+  <field name="sum_i14_i23_if_contents_c_11_year_now_contents_c_11" class="java.lang.Double"/>
+  <field name="sum_j14_j23_h26_1" class="java.lang.Double"/>
+  <field name="sum_k14_k23_i26_1" class="java.lang.Double"/>
+  <field name="sum_l14_l23_j26_1" class="java.lang.Double"/>
+  <field name="sum_m14_m23_k26_1" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_11" class="java.lang.String"/>
+  <field name="qty_11" class="java.lang.String"/>
+  <field name="purchase_year_11" class="java.lang.String"/>
+  <field name="a_this_year_from_grid_below_2" class="java.lang.Double"/>
+  <field name="prior_cost_or_value_if_g32_0_if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_offset_contents_b_79_0_contents_c_11_g32_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g32_0_g32_contents_c_11_contents_c_12_1_contents_c_12_a32_j32_if_and_g32_0_g32_contents_c_11_j32_0" class="java.lang.String"/>
+  <field name="c_start_accum_deprec_if_and_contents_c_13_sequential_g32_0_g32_contents_c_11_contents_c_12_1_contents_c_12_a32_j32_if_and_g32_0_g32_contents_c_11_j32_0" class="java.lang.Double"/>
+  <field name="d_depr_this_year_a_x_b_if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_round_offset_contents_b_77_0_contents_c_11_g32_1_j32_2_if_and_contents_c_11_0_j32_0_j32_0" class="java.lang.Double"/>
+  <field name="end_accum_deprec_c_d_if_h32_0_round_h32_j32_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_2" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_12" class="java.lang.String"/>
+  <field name="qty_12" class="java.lang.String"/>
+  <field name="purchase_year_12" class="java.lang.String"/>
+  <field name="if_g32_0_if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_offset_contents_b_79_0_contents_c_11_g32_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g32_0_g32_contents_c_11_contents_c_12_1_contents_c_12_a32_j32_if_and_g32_0_g32_contents_c_11_j32_0_if_g33_0_if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_offset_contents_b_79_0_contents_c_11_g33_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g33_0_g33_contents_c_11_contents_c_12_1_contents_c_12_a33_j33_if_and_g33_0_g33_contents_c_11_j33_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_round_offset_contents_b_77_0_contents_c_11_g32_1_j32_2_if_and_contents_c_11_0_j32_0_j32_0_if_and_contents_c_13_sequential_g33_0_g33_contents_c_11_contents_c_12_1_contents_c_12_a33_j33_if_and_g33_0_g33_contents_c_11_j33_0" class="java.lang.Double"/>
+  <field name="if_h32_0_round_h32_j32_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_round_offset_contents_b_77_0_contents_c_11_g33_1_j33_2_if_and_contents_c_11_0_j33_0_j33_0" class="java.lang.Double"/>
+  <field name="if_h32_0_k32_l32_if_h33_0_round_h33_j33_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_3" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_13" class="java.lang.String"/>
+  <field name="qty_13" class="java.lang.String"/>
+  <field name="purchase_year_13" class="java.lang.String"/>
+  <field name="if_g33_0_if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_offset_contents_b_79_0_contents_c_11_g33_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g33_0_g33_contents_c_11_contents_c_12_1_contents_c_12_a33_j33_if_and_g33_0_g33_contents_c_11_j33_0_if_g34_0_if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_offset_contents_b_79_0_contents_c_11_g34_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g34_0_g34_contents_c_11_contents_c_12_1_contents_c_12_a34_j34_if_and_g34_0_g34_contents_c_11_j34_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_round_offset_contents_b_77_0_contents_c_11_g33_1_j33_2_if_and_contents_c_11_0_j33_0_j33_0_if_and_contents_c_13_sequential_g34_0_g34_contents_c_11_contents_c_12_1_contents_c_12_a34_j34_if_and_g34_0_g34_contents_c_11_j34_0" class="java.lang.Double"/>
+  <field name="if_h33_0_round_h33_j33_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_round_offset_contents_b_77_0_contents_c_11_g34_1_j34_2_if_and_contents_c_11_0_j34_0_j34_0" class="java.lang.Double"/>
+  <field name="if_h33_0_k33_l33_if_h34_0_round_h34_j34_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_4" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_14" class="java.lang.String"/>
+  <field name="qty_14" class="java.lang.String"/>
+  <field name="purchase_year_14" class="java.lang.String"/>
+  <field name="if_g34_0_if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_offset_contents_b_79_0_contents_c_11_g34_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g34_0_g34_contents_c_11_contents_c_12_1_contents_c_12_a34_j34_if_and_g34_0_g34_contents_c_11_j34_0_if_g35_0_if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_offset_contents_b_79_0_contents_c_11_g35_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g35_0_g35_contents_c_11_contents_c_12_1_contents_c_12_a35_j35_if_and_g35_0_g35_contents_c_11_j35_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_round_offset_contents_b_77_0_contents_c_11_g34_1_j34_2_if_and_contents_c_11_0_j34_0_j34_0_if_and_contents_c_13_sequential_g35_0_g35_contents_c_11_contents_c_12_1_contents_c_12_a35_j35_if_and_g35_0_g35_contents_c_11_j35_0" class="java.lang.Double"/>
+  <field name="if_h34_0_round_h34_j34_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_round_offset_contents_b_77_0_contents_c_11_g35_1_j35_2_if_and_contents_c_11_0_j35_0_j35_0" class="java.lang.Double"/>
+  <field name="if_h34_0_k34_l34_if_h35_0_round_h35_j35_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_5" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_15" class="java.lang.String"/>
+  <field name="qty_15" class="java.lang.String"/>
+  <field name="purchase_year_15" class="java.lang.String"/>
+  <field name="if_g35_0_if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_offset_contents_b_79_0_contents_c_11_g35_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g35_0_g35_contents_c_11_contents_c_12_1_contents_c_12_a35_j35_if_and_g35_0_g35_contents_c_11_j35_0_if_g36_0_if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_offset_contents_b_79_0_contents_c_11_g36_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g36_0_g36_contents_c_11_contents_c_12_1_contents_c_12_a36_j36_if_and_g36_0_g36_contents_c_11_j36_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_round_offset_contents_b_77_0_contents_c_11_g35_1_j35_2_if_and_contents_c_11_0_j35_0_j35_0_if_and_contents_c_13_sequential_g36_0_g36_contents_c_11_contents_c_12_1_contents_c_12_a36_j36_if_and_g36_0_g36_contents_c_11_j36_0" class="java.lang.Double"/>
+  <field name="if_h35_0_round_h35_j35_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_round_offset_contents_b_77_0_contents_c_11_g36_1_j36_2_if_and_contents_c_11_0_j36_0_j36_0" class="java.lang.Double"/>
+  <field name="if_h35_0_k35_l35_if_h36_0_round_h36_j36_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_6" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_16" class="java.lang.String"/>
+  <field name="qty_16" class="java.lang.String"/>
+  <field name="purchase_year_16" class="java.lang.String"/>
+  <field name="if_g36_0_if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_offset_contents_b_79_0_contents_c_11_g36_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g36_0_g36_contents_c_11_contents_c_12_1_contents_c_12_a36_j36_if_and_g36_0_g36_contents_c_11_j36_0_if_g37_0_if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_offset_contents_b_79_0_contents_c_11_g37_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g37_0_g37_contents_c_11_contents_c_12_1_contents_c_12_a37_j37_if_and_g37_0_g37_contents_c_11_j37_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_round_offset_contents_b_77_0_contents_c_11_g36_1_j36_2_if_and_contents_c_11_0_j36_0_j36_0_if_and_contents_c_13_sequential_g37_0_g37_contents_c_11_contents_c_12_1_contents_c_12_a37_j37_if_and_g37_0_g37_contents_c_11_j37_0" class="java.lang.Double"/>
+  <field name="if_h36_0_round_h36_j36_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_round_offset_contents_b_77_0_contents_c_11_g37_1_j37_2_if_and_contents_c_11_0_j37_0_j37_0" class="java.lang.Double"/>
+  <field name="if_h36_0_k36_l36_if_h37_0_round_h37_j37_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_7" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_17" class="java.lang.String"/>
+  <field name="qty_17" class="java.lang.String"/>
+  <field name="purchase_year_17" class="java.lang.String"/>
+  <field name="if_g37_0_if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_offset_contents_b_79_0_contents_c_11_g37_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g37_0_g37_contents_c_11_contents_c_12_1_contents_c_12_a37_j37_if_and_g37_0_g37_contents_c_11_j37_0_if_g38_0_if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_offset_contents_b_79_0_contents_c_11_g38_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g38_0_g38_contents_c_11_contents_c_12_1_contents_c_12_a38_j38_if_and_g38_0_g38_contents_c_11_j38_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_round_offset_contents_b_77_0_contents_c_11_g37_1_j37_2_if_and_contents_c_11_0_j37_0_j37_0_if_and_contents_c_13_sequential_g38_0_g38_contents_c_11_contents_c_12_1_contents_c_12_a38_j38_if_and_g38_0_g38_contents_c_11_j38_0" class="java.lang.Double"/>
+  <field name="if_h37_0_round_h37_j37_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_round_offset_contents_b_77_0_contents_c_11_g38_1_j38_2_if_and_contents_c_11_0_j38_0_j38_0" class="java.lang.Double"/>
+  <field name="if_h37_0_k37_l37_if_h38_0_round_h38_j38_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_8" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_18" class="java.lang.String"/>
+  <field name="qty_18" class="java.lang.String"/>
+  <field name="purchase_year_18" class="java.lang.String"/>
+  <field name="if_g38_0_if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_offset_contents_b_79_0_contents_c_11_g38_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g38_0_g38_contents_c_11_contents_c_12_1_contents_c_12_a38_j38_if_and_g38_0_g38_contents_c_11_j38_0_if_g39_0_if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_offset_contents_b_79_0_contents_c_11_g39_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g39_0_g39_contents_c_11_contents_c_12_1_contents_c_12_a39_j39_if_and_g39_0_g39_contents_c_11_j39_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_round_offset_contents_b_77_0_contents_c_11_g38_1_j38_2_if_and_contents_c_11_0_j38_0_j38_0_if_and_contents_c_13_sequential_g39_0_g39_contents_c_11_contents_c_12_1_contents_c_12_a39_j39_if_and_g39_0_g39_contents_c_11_j39_0" class="java.lang.Double"/>
+  <field name="if_h38_0_round_h38_j38_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_round_offset_contents_b_77_0_contents_c_11_g39_1_j39_2_if_and_contents_c_11_0_j39_0_j39_0" class="java.lang.Double"/>
+  <field name="if_h38_0_k38_l38_if_h39_0_round_h39_j39_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_9" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_19" class="java.lang.String"/>
+  <field name="qty_19" class="java.lang.String"/>
+  <field name="purchase_year_19" class="java.lang.String"/>
+  <field name="if_g39_0_if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_offset_contents_b_79_0_contents_c_11_g39_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g39_0_g39_contents_c_11_contents_c_12_1_contents_c_12_a39_j39_if_and_g39_0_g39_contents_c_11_j39_0_if_g40_0_if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_offset_contents_b_79_0_contents_c_11_g40_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g40_0_g40_contents_c_11_contents_c_12_1_contents_c_12_a40_j40_if_and_g40_0_g40_contents_c_11_j40_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_round_offset_contents_b_77_0_contents_c_11_g39_1_j39_2_if_and_contents_c_11_0_j39_0_j39_0_if_and_contents_c_13_sequential_g40_0_g40_contents_c_11_contents_c_12_1_contents_c_12_a40_j40_if_and_g40_0_g40_contents_c_11_j40_0" class="java.lang.Double"/>
+  <field name="if_h39_0_round_h39_j39_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_round_offset_contents_b_77_0_contents_c_11_g40_1_j40_2_if_and_contents_c_11_0_j40_0_j40_0" class="java.lang.Double"/>
+  <field name="if_h39_0_k39_l39_if_h40_0_round_h40_j40_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_10" class="java.lang.String"/>
+  <field name="equipment_purchases_or_value_2000_each_item_description_20" class="java.lang.String"/>
+  <field name="qty_20" class="java.lang.String"/>
+  <field name="purchase_year_20" class="java.lang.String"/>
+  <field name="if_g40_0_if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_offset_contents_b_79_0_contents_c_11_g40_0" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g40_0_g40_contents_c_11_contents_c_12_1_contents_c_12_a40_j40_if_and_g40_0_g40_contents_c_11_j40_0_if_g41_0_if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_offset_contents_b_79_0_contents_c_11_g41_0" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_if_and_contents_c_13_sequential_g41_0_g41_contents_c_11_contents_c_12_1_contents_c_12_a41_j41_if_and_g41_0_g41_contents_c_11_j41_0" class="java.lang.String"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_round_offset_contents_b_77_0_contents_c_11_g40_1_j40_2_if_and_contents_c_11_0_j40_0_j40_0_if_and_contents_c_13_sequential_g41_0_g41_contents_c_11_contents_c_12_1_contents_c_12_a41_j41_if_and_g41_0_g41_contents_c_11_j41_0" class="java.lang.Double"/>
+  <field name="if_h40_0_round_h40_j40_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_round_offset_contents_b_77_0_contents_c_11_g41_1_j41_2_if_and_contents_c_11_0_j41_0_j41_0" class="java.lang.Double"/>
+  <field name="if_h40_0_k40_l40_if_h41_0_round_h41_j41_if_contents_c_12_4_1_0_2" class="java.lang.Double"/>
+  <field name="if_and_contents_c_13_sequential_g41_0_g41_contents_c_11_contents_c_12_1_contents_c_12_a41_j41_if_and_g41_0_g41_contents_c_11_j41_0_7_year_total" class="java.lang.Double"/>
+  <field name="b_current_cost_or_value_sum_i32_i41" class="java.lang.Double"/>
+  <field name="if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_round_offset_contents_b_77_0_contents_c_11_g41_1_j41_2_if_and_contents_c_11_0_j41_0_j41_0_sum_j32_j41" class="java.lang.Double"/>
+  <field name="if_h41_0_round_h41_j41_if_contents_c_12_4_1_0_2_sum_k32_k41" class="java.lang.Double"/>
+  <field name="if_h41_0_k41_l41_sum_l32_l41" class="java.lang.Double"/>
+  <field name="_7_year_total_year_purchased" class="java.lang.Double"/>
+  <field name="note_depreciation_this_year_d_is_only_calculated_during_4th_quarter_for_the_year_if_contents_c_11_year_now_contents_c_11" class="java.lang.Double"/>
+  <field name="if_g41_0_if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_offset_contents_b_79_0_contents_c_11_g41_0_f44_1" class="java.lang.Double"/>
+  <field name="sum_i32_i41_g44_1" class="java.lang.Double"/>
+  <field name="sum_j32_j41_h44_1" class="java.lang.Double"/>
+  <field name="sum_k32_k41_i44_1" class="java.lang.Double"/>
+  <field name="sum_l32_l41_j44_1" class="java.lang.Double"/>
+  <field name="sum_m32_m41_k44_1" class="java.lang.Double"/>
+  <field name="_0_1249_5_year_total_7_year_total" class="java.lang.Double"/>
+  <field name="_0_0893_i24_i42" class="java.lang.Double"/>
+  <field name="_0_0892_j24_j42" class="java.lang.Double"/>
+  <field name="_0_0893_k24_k42" class="java.lang.Double"/>
+  <field name="_0_0446_l24_l42" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1000">
+      <element kind="textField" x="240" y="0" width="80" height="20">
+        <expression><![CDATA[$F{depr_dtl_8_r2c4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="120" width="80" height="20">
+        <text><![CDATA[DEPRECIATION DETAIL]]></text>
+      </element>
+      <element kind="staticText" x="240" y="140" width="80" height="20">
+        <text><![CDATA[To remove an item previously listed, do not list it here. Instead, list it on the bottom of page 7 for reported equipment.]]></text>
+      </element>
+      <element kind="staticText" x="240" y="180" width="80" height="20">
+        <text><![CDATA[5 Year Depreciation: Trailers and Electronic Equipment]]></text>
+      </element>
+      <element kind="staticText" x="240" y="200" width="80" height="20">
+        <text><![CDATA[Note: If the item is not electronic or a trailer, it belongs to 7 year property below. For trailers, put in comments whether it is licensed.]]></text>
+      </element>
+      <element kind="staticText" x="0" y="220" width="80" height="20">
+        <text><![CDATA[Purch
+Q
+T
+R]]></text>
+      </element>
+      <element kind="staticText" x="240" y="220" width="80" height="20">
+        <text><![CDATA[OA, 
+AR or 
+FR]]></text>
+      </element>
+      <element kind="staticText" x="320" y="220" width="80" height="20">
+        <text><![CDATA[Equipment
+(purchases or value 
+> $2000 each)
+Item Description]]></text>
+      </element>
+      <element kind="staticText" x="400" y="220" width="80" height="20">
+        <text><![CDATA[Qty]]></text>
+      </element>
+      <element kind="staticText" x="480" y="220" width="80" height="20">
+        <text><![CDATA[Purchase Year]]></text>
+      </element>
+      <element kind="staticText" x="560" y="220" width="80" height="20">
+        <text><![CDATA[(A)
+% This Year from grid below]]></text>
+      </element>
+      <element kind="staticText" x="640" y="220" width="80" height="20">
+        <text><![CDATA[Prior Cost or Value]]></text>
+      </element>
+      <element kind="staticText" x="720" y="220" width="80" height="20">
+        <text><![CDATA[(B)
+Current Cost or Value]]></text>
+      </element>
+      <element kind="staticText" x="800" y="220" width="80" height="20">
+        <text><![CDATA[(C)
+(Start)
+Accum.
+Deprec.]]></text>
+      </element>
+      <element kind="staticText" x="880" y="220" width="80" height="20">
+        <text><![CDATA[(D)
+Depr. This
+Year
+(A x B)]]></text>
+      </element>
+      <element kind="staticText" x="960" y="220" width="80" height="20">
+        <text><![CDATA[(End)
+Accum.
+Deprec.
+(C + D)]]></text>
+      </element>
+      <element kind="textField" x="240" y="240" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{qty}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="240" width="80" height="20">
+        <expression><![CDATA[$F{a_this_year_from_grid_below}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="240" width="80" height="20">
+        <expression><![CDATA[$F{prior_cost_or_value_if_g14_0_if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_offset_contents_b_75_0_contents_c_11_g14_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="240" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g14_0_g14_contents_c_11_contents_c_12_1_contents_c_12_a14_j14_if_and_g14_0_g14_contents_c_11_j14_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="240" width="80" height="20">
+        <expression><![CDATA[$F{c_start_accum_deprec_if_and_contents_c_13_sequential_g14_0_g14_contents_c_11_contents_c_12_1_contents_c_12_a14_j14_if_and_g14_0_g14_contents_c_11_j14_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="240" width="80" height="20">
+        <expression><![CDATA[$F{d_depr_this_year_a_x_b_if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_round_offset_contents_b_73_0_contents_c_11_g14_1_j14_2_if_and_contents_c_11_0_j14_0_j14_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="240" width="80" height="20">
+        <expression><![CDATA[$F{end_accum_deprec_c_d_if_h14_0_round_h14_j14_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="260" width="80" height="20">
+        <expression><![CDATA[$F{qty_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="260" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_g14_0_if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_offset_contents_b_75_0_contents_c_11_g14_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g14_0_g14_contents_c_11_contents_c_12_1_contents_c_12_a14_j14_if_and_g14_0_g14_contents_c_11_j14_0_if_g15_0_if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_offset_contents_b_75_0_contents_c_11_g15_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="260" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g15_0_g15_contents_c_11_contents_c_12_1_contents_c_12_a15_j15_if_and_g15_0_g15_contents_c_11_j15_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g14_6_contents_c_11_g14_0_round_offset_contents_b_73_0_contents_c_11_g14_1_j14_2_if_and_contents_c_11_0_j14_0_j14_0_if_and_contents_c_13_sequential_g15_0_g15_contents_c_11_contents_c_12_1_contents_c_12_a15_j15_if_and_g15_0_g15_contents_c_11_j15_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_h14_0_round_h14_j14_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_round_offset_contents_b_73_0_contents_c_11_g15_1_j15_2_if_and_contents_c_11_0_j15_0_j15_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_h14_0_k14_l14_if_h15_0_round_h15_j15_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{qty_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="280" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_g15_0_if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_offset_contents_b_75_0_contents_c_11_g15_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g15_0_g15_contents_c_11_contents_c_12_1_contents_c_12_a15_j15_if_and_g15_0_g15_contents_c_11_j15_0_if_g16_0_if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_offset_contents_b_75_0_contents_c_11_g16_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="280" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g16_0_g16_contents_c_11_contents_c_12_1_contents_c_12_a16_j16_if_and_g16_0_g16_contents_c_11_j16_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g15_6_contents_c_11_g15_0_round_offset_contents_b_73_0_contents_c_11_g15_1_j15_2_if_and_contents_c_11_0_j15_0_j15_0_if_and_contents_c_13_sequential_g16_0_g16_contents_c_11_contents_c_12_1_contents_c_12_a16_j16_if_and_g16_0_g16_contents_c_11_j16_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_h15_0_round_h15_j15_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_round_offset_contents_b_73_0_contents_c_11_g16_1_j16_2_if_and_contents_c_11_0_j16_0_j16_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_h15_0_k15_l15_if_h16_0_round_h16_j16_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{qty_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="300" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="300" width="80" height="20">
+        <expression><![CDATA[$F{if_g16_0_if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_offset_contents_b_75_0_contents_c_11_g16_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="300" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g16_0_g16_contents_c_11_contents_c_12_1_contents_c_12_a16_j16_if_and_g16_0_g16_contents_c_11_j16_0_if_g17_0_if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_offset_contents_b_75_0_contents_c_11_g17_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="300" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g17_0_g17_contents_c_11_contents_c_12_1_contents_c_12_a17_j17_if_and_g17_0_g17_contents_c_11_j17_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="300" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g16_6_contents_c_11_g16_0_round_offset_contents_b_73_0_contents_c_11_g16_1_j16_2_if_and_contents_c_11_0_j16_0_j16_0_if_and_contents_c_13_sequential_g17_0_g17_contents_c_11_contents_c_12_1_contents_c_12_a17_j17_if_and_g17_0_g17_contents_c_11_j17_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="300" width="80" height="20">
+        <expression><![CDATA[$F{if_h16_0_round_h16_j16_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_round_offset_contents_b_73_0_contents_c_11_g17_1_j17_2_if_and_contents_c_11_0_j17_0_j17_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="300" width="80" height="20">
+        <expression><![CDATA[$F{if_h16_0_k16_l16_if_h17_0_round_h17_j17_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{qty_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="320" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_5}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_g17_0_if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_offset_contents_b_75_0_contents_c_11_g17_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g17_0_g17_contents_c_11_contents_c_12_1_contents_c_12_a17_j17_if_and_g17_0_g17_contents_c_11_j17_0_if_g18_0_if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_offset_contents_b_75_0_contents_c_11_g18_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="320" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g18_0_g18_contents_c_11_contents_c_12_1_contents_c_12_a18_j18_if_and_g18_0_g18_contents_c_11_j18_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g17_6_contents_c_11_g17_0_round_offset_contents_b_73_0_contents_c_11_g17_1_j17_2_if_and_contents_c_11_0_j17_0_j17_0_if_and_contents_c_13_sequential_g18_0_g18_contents_c_11_contents_c_12_1_contents_c_12_a18_j18_if_and_g18_0_g18_contents_c_11_j18_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_h17_0_round_h17_j17_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_round_offset_contents_b_73_0_contents_c_11_g18_1_j18_2_if_and_contents_c_11_0_j18_0_j18_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_h17_0_k17_l17_if_h18_0_round_h18_j18_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{qty_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="340" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_6}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_g18_0_if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_offset_contents_b_75_0_contents_c_11_g18_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g18_0_g18_contents_c_11_contents_c_12_1_contents_c_12_a18_j18_if_and_g18_0_g18_contents_c_11_j18_0_if_g19_0_if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_offset_contents_b_75_0_contents_c_11_g19_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="340" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g19_0_g19_contents_c_11_contents_c_12_1_contents_c_12_a19_j19_if_and_g19_0_g19_contents_c_11_j19_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g18_6_contents_c_11_g18_0_round_offset_contents_b_73_0_contents_c_11_g18_1_j18_2_if_and_contents_c_11_0_j18_0_j18_0_if_and_contents_c_13_sequential_g19_0_g19_contents_c_11_contents_c_12_1_contents_c_12_a19_j19_if_and_g19_0_g19_contents_c_11_j19_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_h18_0_round_h18_j18_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_round_offset_contents_b_73_0_contents_c_11_g19_1_j19_2_if_and_contents_c_11_0_j19_0_j19_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_h18_0_k18_l18_if_h19_0_round_h19_j19_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{qty_7}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="360" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_g19_0_if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_offset_contents_b_75_0_contents_c_11_g19_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g19_0_g19_contents_c_11_contents_c_12_1_contents_c_12_a19_j19_if_and_g19_0_g19_contents_c_11_j19_0_if_g20_0_if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_offset_contents_b_75_0_contents_c_11_g20_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="360" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g20_0_g20_contents_c_11_contents_c_12_1_contents_c_12_a20_j20_if_and_g20_0_g20_contents_c_11_j20_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g19_6_contents_c_11_g19_0_round_offset_contents_b_73_0_contents_c_11_g19_1_j19_2_if_and_contents_c_11_0_j19_0_j19_0_if_and_contents_c_13_sequential_g20_0_g20_contents_c_11_contents_c_12_1_contents_c_12_a20_j20_if_and_g20_0_g20_contents_c_11_j20_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_h19_0_round_h19_j19_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_round_offset_contents_b_73_0_contents_c_11_g20_1_j20_2_if_and_contents_c_11_0_j20_0_j20_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_h19_0_k19_l19_if_h20_0_round_h20_j20_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{qty_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_8}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_g20_0_if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_offset_contents_b_75_0_contents_c_11_g20_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g20_0_g20_contents_c_11_contents_c_12_1_contents_c_12_a20_j20_if_and_g20_0_g20_contents_c_11_j20_0_if_g21_0_if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_offset_contents_b_75_0_contents_c_11_g21_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="380" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g21_0_g21_contents_c_11_contents_c_12_1_contents_c_12_a21_j21_if_and_g21_0_g21_contents_c_11_j21_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g20_6_contents_c_11_g20_0_round_offset_contents_b_73_0_contents_c_11_g20_1_j20_2_if_and_contents_c_11_0_j20_0_j20_0_if_and_contents_c_13_sequential_g21_0_g21_contents_c_11_contents_c_12_1_contents_c_12_a21_j21_if_and_g21_0_g21_contents_c_11_j21_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_h20_0_round_h20_j20_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_round_offset_contents_b_73_0_contents_c_11_g21_1_j21_2_if_and_contents_c_11_0_j21_0_j21_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_h20_0_k20_l20_if_h21_0_round_h21_j21_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{qty_9}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_9}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_g21_0_if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_offset_contents_b_75_0_contents_c_11_g21_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g21_0_g21_contents_c_11_contents_c_12_1_contents_c_12_a21_j21_if_and_g21_0_g21_contents_c_11_j21_0_if_g22_0_if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_offset_contents_b_75_0_contents_c_11_g22_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="400" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g22_0_g22_contents_c_11_contents_c_12_1_contents_c_12_a22_j22_if_and_g22_0_g22_contents_c_11_j22_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g21_6_contents_c_11_g21_0_round_offset_contents_b_73_0_contents_c_11_g21_1_j21_2_if_and_contents_c_11_0_j21_0_j21_0_if_and_contents_c_13_sequential_g22_0_g22_contents_c_11_contents_c_12_1_contents_c_12_a22_j22_if_and_g22_0_g22_contents_c_11_j22_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_h21_0_round_h21_j21_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_round_offset_contents_b_73_0_contents_c_11_g22_1_j22_2_if_and_contents_c_11_0_j22_0_j22_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_h21_0_k21_l21_if_h22_0_round_h22_j22_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="420" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{qty_10}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_10}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_g22_0_if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_offset_contents_b_75_0_contents_c_11_g22_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g22_0_g22_contents_c_11_contents_c_12_1_contents_c_12_a22_j22_if_and_g22_0_g22_contents_c_11_j22_0_if_g23_0_if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_offset_contents_b_75_0_contents_c_11_g23_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="420" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g23_0_g23_contents_c_11_contents_c_12_1_contents_c_12_a23_j23_if_and_g23_0_g23_contents_c_11_j23_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g22_6_contents_c_11_g22_0_round_offset_contents_b_73_0_contents_c_11_g22_1_j22_2_if_and_contents_c_11_0_j22_0_j22_0_if_and_contents_c_13_sequential_g23_0_g23_contents_c_11_contents_c_12_1_contents_c_12_a23_j23_if_and_g23_0_g23_contents_c_11_j23_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_h22_0_round_h22_j22_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_round_offset_contents_b_73_0_contents_c_11_g23_1_j23_2_if_and_contents_c_11_0_j23_0_j23_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_h22_0_k22_l22_if_h23_0_round_h23_j23_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="440" width="80" height="20">
+        <text><![CDATA[5 YEAR TOTAL]]></text>
+      </element>
+      <element kind="textField" x="640" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g23_0_g23_contents_c_11_contents_c_12_1_contents_c_12_a23_j23_if_and_g23_0_g23_contents_c_11_j23_0_5_year_total}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="440" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_sum_i14_i23}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_round_offset_contents_b_73_0_contents_c_11_g23_1_j23_2_if_and_contents_c_11_0_j23_0_j23_0_sum_j14_j23}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_h23_0_round_h23_j23_if_contents_c_12_4_1_0_2_sum_k14_k23}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_h23_0_k23_l23_sum_l14_l23}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="460" width="80" height="20">
+        <text><![CDATA[MACRS Schedule 5 Year]]></text>
+      </element>
+      <element kind="staticText" x="480" y="460" width="80" height="20">
+        <text><![CDATA[NOTE: Depreciation this year (D) is only calculated during 4th quarter for the year.]]></text>
+      </element>
+      <element kind="staticText" x="240" y="480" width="80" height="20">
+        <text><![CDATA[Year Purchased]]></text>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_g23_0_if_and_contents_c_11_0_contents_c_11_g23_6_contents_c_11_g23_0_offset_contents_b_75_0_contents_c_11_g23_0_year_purchased}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="480" width="80" height="20">
+        <expression><![CDATA[$F{sum_i14_i23_if_contents_c_11_year_now_contents_c_11}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="480" width="80" height="20">
+        <expression><![CDATA[$F{sum_j14_j23_h26_1}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="480" width="80" height="20">
+        <expression><![CDATA[$F{sum_k14_k23_i26_1}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="480" width="80" height="20">
+        <expression><![CDATA[$F{sum_l14_l23_j26_1}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="480" width="80" height="20">
+        <expression><![CDATA[$F{sum_m14_m23_k26_1}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="500" width="80" height="20">
+        <text><![CDATA[Percent to depreciate by year]]></text>
+      </element>
+      <element kind="staticText" x="560" y="500" width="80" height="20">
+        <text><![CDATA[0.2]]></text>
+      </element>
+      <element kind="staticText" x="640" y="500" width="80" height="20">
+        <text><![CDATA[0.32]]></text>
+      </element>
+      <element kind="staticText" x="720" y="500" width="80" height="20">
+        <text><![CDATA[0.192]]></text>
+      </element>
+      <element kind="staticText" x="800" y="500" width="80" height="20">
+        <text><![CDATA[0.1152]]></text>
+      </element>
+      <element kind="staticText" x="880" y="500" width="80" height="20">
+        <text><![CDATA[0.1152]]></text>
+      </element>
+      <element kind="staticText" x="960" y="500" width="80" height="20">
+        <text><![CDATA[0.0576]]></text>
+      </element>
+      <element kind="staticText" x="240" y="540" width="80" height="20">
+        <text><![CDATA[7 Year Depreciation:]]></text>
+      </element>
+      <element kind="staticText" x="240" y="560" width="80" height="20">
+        <text><![CDATA[Seven year assets are all assets except electronic equipment and trailers. Thrones, pavilions, cooking equipment, Crowns etc. are all 7 year assets.]]></text>
+      </element>
+      <element kind="staticText" x="0" y="580" width="80" height="20">
+        <text><![CDATA[Purch
+Q
+T
+R]]></text>
+      </element>
+      <element kind="staticText" x="320" y="580" width="80" height="20">
+        <text><![CDATA[Equipment
+(purchases or value 
+> $2000 each)
+Item Description]]></text>
+      </element>
+      <element kind="staticText" x="400" y="580" width="80" height="20">
+        <text><![CDATA[Qty]]></text>
+      </element>
+      <element kind="staticText" x="480" y="580" width="80" height="20">
+        <text><![CDATA[Purchase Year]]></text>
+      </element>
+      <element kind="staticText" x="560" y="580" width="80" height="20">
+        <text><![CDATA[(A)
+% This Year from grid below]]></text>
+      </element>
+      <element kind="staticText" x="640" y="580" width="80" height="20">
+        <text><![CDATA[Prior Cost or Value]]></text>
+      </element>
+      <element kind="staticText" x="720" y="580" width="80" height="20">
+        <text><![CDATA[(B)
+Current Cost or Value]]></text>
+      </element>
+      <element kind="staticText" x="800" y="580" width="80" height="20">
+        <text><![CDATA[(C)
+(Start)
+Accum.
+Deprec.]]></text>
+      </element>
+      <element kind="staticText" x="880" y="580" width="80" height="20">
+        <text><![CDATA[(D)
+Depr. This
+Year
+(A x B)]]></text>
+      </element>
+      <element kind="staticText" x="960" y="580" width="80" height="20">
+        <text><![CDATA[(End)
+Accum.
+Deprec.
+(C + D)]]></text>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{qty_11}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="600" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_11}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="600" width="80" height="20">
+        <expression><![CDATA[$F{a_this_year_from_grid_below_2}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="600" width="80" height="20">
+        <expression><![CDATA[$F{prior_cost_or_value_if_g32_0_if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_offset_contents_b_79_0_contents_c_11_g32_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="600" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g32_0_g32_contents_c_11_contents_c_12_1_contents_c_12_a32_j32_if_and_g32_0_g32_contents_c_11_j32_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="600" width="80" height="20">
+        <expression><![CDATA[$F{c_start_accum_deprec_if_and_contents_c_13_sequential_g32_0_g32_contents_c_11_contents_c_12_1_contents_c_12_a32_j32_if_and_g32_0_g32_contents_c_11_j32_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="600" width="80" height="20">
+        <expression><![CDATA[$F{d_depr_this_year_a_x_b_if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_round_offset_contents_b_77_0_contents_c_11_g32_1_j32_2_if_and_contents_c_11_0_j32_0_j32_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="600" width="80" height="20">
+        <expression><![CDATA[$F{end_accum_deprec_c_d_if_h32_0_round_h32_j32_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{qty_12}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="620" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_12}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_g32_0_if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_offset_contents_b_79_0_contents_c_11_g32_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g32_0_g32_contents_c_11_contents_c_12_1_contents_c_12_a32_j32_if_and_g32_0_g32_contents_c_11_j32_0_if_g33_0_if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_offset_contents_b_79_0_contents_c_11_g33_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="620" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g33_0_g33_contents_c_11_contents_c_12_1_contents_c_12_a33_j33_if_and_g33_0_g33_contents_c_11_j33_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g32_9_contents_c_11_g32_0_round_offset_contents_b_77_0_contents_c_11_g32_1_j32_2_if_and_contents_c_11_0_j32_0_j32_0_if_and_contents_c_13_sequential_g33_0_g33_contents_c_11_contents_c_12_1_contents_c_12_a33_j33_if_and_g33_0_g33_contents_c_11_j33_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_h32_0_round_h32_j32_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_round_offset_contents_b_77_0_contents_c_11_g33_1_j33_2_if_and_contents_c_11_0_j33_0_j33_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="620" width="80" height="20">
+        <expression><![CDATA[$F{if_h32_0_k32_l32_if_h33_0_round_h33_j33_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_13}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{qty_13}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="640" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_13}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_g33_0_if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_offset_contents_b_79_0_contents_c_11_g33_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g33_0_g33_contents_c_11_contents_c_12_1_contents_c_12_a33_j33_if_and_g33_0_g33_contents_c_11_j33_0_if_g34_0_if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_offset_contents_b_79_0_contents_c_11_g34_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="640" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g34_0_g34_contents_c_11_contents_c_12_1_contents_c_12_a34_j34_if_and_g34_0_g34_contents_c_11_j34_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g33_9_contents_c_11_g33_0_round_offset_contents_b_77_0_contents_c_11_g33_1_j33_2_if_and_contents_c_11_0_j33_0_j33_0_if_and_contents_c_13_sequential_g34_0_g34_contents_c_11_contents_c_12_1_contents_c_12_a34_j34_if_and_g34_0_g34_contents_c_11_j34_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_h33_0_round_h33_j33_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_round_offset_contents_b_77_0_contents_c_11_g34_1_j34_2_if_and_contents_c_11_0_j34_0_j34_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="640" width="80" height="20">
+        <expression><![CDATA[$F{if_h33_0_k33_l33_if_h34_0_round_h34_j34_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_14}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{qty_14}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="660" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_14}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_g34_0_if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_offset_contents_b_79_0_contents_c_11_g34_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g34_0_g34_contents_c_11_contents_c_12_1_contents_c_12_a34_j34_if_and_g34_0_g34_contents_c_11_j34_0_if_g35_0_if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_offset_contents_b_79_0_contents_c_11_g35_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="660" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g35_0_g35_contents_c_11_contents_c_12_1_contents_c_12_a35_j35_if_and_g35_0_g35_contents_c_11_j35_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g34_9_contents_c_11_g34_0_round_offset_contents_b_77_0_contents_c_11_g34_1_j34_2_if_and_contents_c_11_0_j34_0_j34_0_if_and_contents_c_13_sequential_g35_0_g35_contents_c_11_contents_c_12_1_contents_c_12_a35_j35_if_and_g35_0_g35_contents_c_11_j35_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_h34_0_round_h34_j34_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_round_offset_contents_b_77_0_contents_c_11_g35_1_j35_2_if_and_contents_c_11_0_j35_0_j35_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="660" width="80" height="20">
+        <expression><![CDATA[$F{if_h34_0_k34_l34_if_h35_0_round_h35_j35_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{qty_15}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="680" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_15}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_g35_0_if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_offset_contents_b_79_0_contents_c_11_g35_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g35_0_g35_contents_c_11_contents_c_12_1_contents_c_12_a35_j35_if_and_g35_0_g35_contents_c_11_j35_0_if_g36_0_if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_offset_contents_b_79_0_contents_c_11_g36_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="680" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g36_0_g36_contents_c_11_contents_c_12_1_contents_c_12_a36_j36_if_and_g36_0_g36_contents_c_11_j36_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g35_9_contents_c_11_g35_0_round_offset_contents_b_77_0_contents_c_11_g35_1_j35_2_if_and_contents_c_11_0_j35_0_j35_0_if_and_contents_c_13_sequential_g36_0_g36_contents_c_11_contents_c_12_1_contents_c_12_a36_j36_if_and_g36_0_g36_contents_c_11_j36_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_h35_0_round_h35_j35_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_round_offset_contents_b_77_0_contents_c_11_g36_1_j36_2_if_and_contents_c_11_0_j36_0_j36_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="680" width="80" height="20">
+        <expression><![CDATA[$F{if_h35_0_k35_l35_if_h36_0_round_h36_j36_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_16}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{qty_16}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="700" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_16}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_g36_0_if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_offset_contents_b_79_0_contents_c_11_g36_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g36_0_g36_contents_c_11_contents_c_12_1_contents_c_12_a36_j36_if_and_g36_0_g36_contents_c_11_j36_0_if_g37_0_if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_offset_contents_b_79_0_contents_c_11_g37_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="700" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g37_0_g37_contents_c_11_contents_c_12_1_contents_c_12_a37_j37_if_and_g37_0_g37_contents_c_11_j37_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g36_9_contents_c_11_g36_0_round_offset_contents_b_77_0_contents_c_11_g36_1_j36_2_if_and_contents_c_11_0_j36_0_j36_0_if_and_contents_c_13_sequential_g37_0_g37_contents_c_11_contents_c_12_1_contents_c_12_a37_j37_if_and_g37_0_g37_contents_c_11_j37_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_h36_0_round_h36_j36_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_round_offset_contents_b_77_0_contents_c_11_g37_1_j37_2_if_and_contents_c_11_0_j37_0_j37_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="700" width="80" height="20">
+        <expression><![CDATA[$F{if_h36_0_k36_l36_if_h37_0_round_h37_j37_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_17}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{qty_17}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="720" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_17}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_g37_0_if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_offset_contents_b_79_0_contents_c_11_g37_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g37_0_g37_contents_c_11_contents_c_12_1_contents_c_12_a37_j37_if_and_g37_0_g37_contents_c_11_j37_0_if_g38_0_if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_offset_contents_b_79_0_contents_c_11_g38_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="720" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g38_0_g38_contents_c_11_contents_c_12_1_contents_c_12_a38_j38_if_and_g38_0_g38_contents_c_11_j38_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g37_9_contents_c_11_g37_0_round_offset_contents_b_77_0_contents_c_11_g37_1_j37_2_if_and_contents_c_11_0_j37_0_j37_0_if_and_contents_c_13_sequential_g38_0_g38_contents_c_11_contents_c_12_1_contents_c_12_a38_j38_if_and_g38_0_g38_contents_c_11_j38_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_h37_0_round_h37_j37_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_round_offset_contents_b_77_0_contents_c_11_g38_1_j38_2_if_and_contents_c_11_0_j38_0_j38_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_h37_0_k37_l37_if_h38_0_round_h38_j38_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="740" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="740" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_18}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{qty_18}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="740" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_18}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_g38_0_if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_offset_contents_b_79_0_contents_c_11_g38_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g38_0_g38_contents_c_11_contents_c_12_1_contents_c_12_a38_j38_if_and_g38_0_g38_contents_c_11_j38_0_if_g39_0_if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_offset_contents_b_79_0_contents_c_11_g39_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="740" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g39_0_g39_contents_c_11_contents_c_12_1_contents_c_12_a39_j39_if_and_g39_0_g39_contents_c_11_j39_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g38_9_contents_c_11_g38_0_round_offset_contents_b_77_0_contents_c_11_g38_1_j38_2_if_and_contents_c_11_0_j38_0_j38_0_if_and_contents_c_13_sequential_g39_0_g39_contents_c_11_contents_c_12_1_contents_c_12_a39_j39_if_and_g39_0_g39_contents_c_11_j39_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_h38_0_round_h38_j38_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_round_offset_contents_b_77_0_contents_c_11_g39_1_j39_2_if_and_contents_c_11_0_j39_0_j39_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_h38_0_k38_l38_if_h39_0_round_h39_j39_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="760" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="760" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_19}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="760" width="80" height="20">
+        <expression><![CDATA[$F{qty_19}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="760" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_19}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_g39_0_if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_offset_contents_b_79_0_contents_c_11_g39_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g39_0_g39_contents_c_11_contents_c_12_1_contents_c_12_a39_j39_if_and_g39_0_g39_contents_c_11_j39_0_if_g40_0_if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_offset_contents_b_79_0_contents_c_11_g40_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="760" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g40_0_g40_contents_c_11_contents_c_12_1_contents_c_12_a40_j40_if_and_g40_0_g40_contents_c_11_j40_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g39_9_contents_c_11_g39_0_round_offset_contents_b_77_0_contents_c_11_g39_1_j39_2_if_and_contents_c_11_0_j39_0_j39_0_if_and_contents_c_13_sequential_g40_0_g40_contents_c_11_contents_c_12_1_contents_c_12_a40_j40_if_and_g40_0_g40_contents_c_11_j40_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_h39_0_round_h39_j39_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_round_offset_contents_b_77_0_contents_c_11_g40_1_j40_2_if_and_contents_c_11_0_j40_0_j40_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_h39_0_k39_l39_if_h40_0_round_h40_j40_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="780" width="80" height="20">
+        <expression><![CDATA[$F{seven_year_assets_are_all_assets_except_electronic_equipment_and_trailers_thrones_pavilions_cooking_equipment_crowns_etc_are_all_7_year_assets_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="780" width="80" height="20">
+        <expression><![CDATA[$F{equipment_purchases_or_value_2000_each_item_description_20}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="780" width="80" height="20">
+        <expression><![CDATA[$F{qty_20}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="780" width="80" height="20">
+        <expression><![CDATA[$F{purchase_year_20}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_g40_0_if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_offset_contents_b_79_0_contents_c_11_g40_0}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g40_0_g40_contents_c_11_contents_c_12_1_contents_c_12_a40_j40_if_and_g40_0_g40_contents_c_11_j40_0_if_g41_0_if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_offset_contents_b_79_0_contents_c_11_g41_0}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="780" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_if_and_contents_c_13_sequential_g41_0_g41_contents_c_11_contents_c_12_1_contents_c_12_a41_j41_if_and_g41_0_g41_contents_c_11_j41_0}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g40_9_contents_c_11_g40_0_round_offset_contents_b_77_0_contents_c_11_g40_1_j40_2_if_and_contents_c_11_0_j40_0_j40_0_if_and_contents_c_13_sequential_g41_0_g41_contents_c_11_contents_c_12_1_contents_c_12_a41_j41_if_and_g41_0_g41_contents_c_11_j41_0}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_h40_0_round_h40_j40_if_contents_c_12_4_1_0_2_if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_round_offset_contents_b_77_0_contents_c_11_g41_1_j41_2_if_and_contents_c_11_0_j41_0_j41_0}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_h40_0_k40_l40_if_h41_0_round_h41_j41_if_contents_c_12_4_1_0_2}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="800" width="80" height="20">
+        <text><![CDATA[7 YEAR TOTAL]]></text>
+      </element>
+      <element kind="textField" x="640" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_13_sequential_g41_0_g41_contents_c_11_contents_c_12_1_contents_c_12_a41_j41_if_and_g41_0_g41_contents_c_11_j41_0_7_year_total}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="800" width="80" height="20">
+        <expression><![CDATA[$F{b_current_cost_or_value_sum_i32_i41}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_round_offset_contents_b_77_0_contents_c_11_g41_1_j41_2_if_and_contents_c_11_0_j41_0_j41_0_sum_j32_j41}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_h41_0_round_h41_j41_if_contents_c_12_4_1_0_2_sum_k32_k41}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_h41_0_k41_l41_sum_l32_l41}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="820" width="80" height="20">
+        <text><![CDATA[MACRS Schedule 7 Year]]></text>
+      </element>
+      <element kind="staticText" x="480" y="820" width="80" height="20">
+        <text><![CDATA[NOTE: Depreciation this year (D) is only calculated during 4th quarter for the year.]]></text>
+      </element>
+      <element kind="staticText" x="240" y="840" width="80" height="20">
+        <text><![CDATA[Year Purchased]]></text>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{_7_year_total_year_purchased}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{note_depreciation_this_year_d_is_only_calculated_during_4th_quarter_for_the_year_if_contents_c_11_year_now_contents_c_11}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_g41_0_if_and_contents_c_11_0_contents_c_11_g41_9_contents_c_11_g41_0_offset_contents_b_79_0_contents_c_11_g41_0_f44_1}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="840" width="80" height="20">
+        <expression><![CDATA[$F{sum_i32_i41_g44_1}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="840" width="80" height="20">
+        <expression><![CDATA[$F{sum_j32_j41_h44_1}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="840" width="80" height="20">
+        <expression><![CDATA[$F{sum_k32_k41_i44_1}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="840" width="80" height="20">
+        <expression><![CDATA[$F{sum_l32_l41_j44_1}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="840" width="80" height="20">
+        <expression><![CDATA[$F{sum_m32_m41_k44_1}]]></expression>
+      </element>
+      <element kind="staticText" x="240" y="860" width="80" height="20">
+        <text><![CDATA[Percent to depreciate by year]]></text>
+      </element>
+      <element kind="staticText" x="400" y="860" width="80" height="20">
+        <text><![CDATA[0.1429]]></text>
+      </element>
+      <element kind="staticText" x="480" y="860" width="80" height="20">
+        <text><![CDATA[0.2449]]></text>
+      </element>
+      <element kind="staticText" x="560" y="860" width="80" height="20">
+        <text><![CDATA[0.1749]]></text>
+      </element>
+      <element kind="staticText" x="640" y="860" width="80" height="20">
+        <text><![CDATA[0.1249]]></text>
+      </element>
+      <element kind="staticText" x="720" y="860" width="80" height="20">
+        <text><![CDATA[0.0893]]></text>
+      </element>
+      <element kind="staticText" x="800" y="860" width="80" height="20">
+        <text><![CDATA[0.0892]]></text>
+      </element>
+      <element kind="staticText" x="880" y="860" width="80" height="20">
+        <text><![CDATA[0.0893]]></text>
+      </element>
+      <element kind="staticText" x="960" y="860" width="80" height="20">
+        <text><![CDATA[0.0446]]></text>
+      </element>
+      <element kind="staticText" x="240" y="900" width="80" height="20">
+        <text><![CDATA[5 Year Total + 7 Year Total]]></text>
+      </element>
+      <element kind="textField" x="640" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_0_1249_5_year_total_7_year_total}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_0_0893_i24_i42}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_0_0892_j24_j42}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_0_0893_k24_k42}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="900" width="80" height="20">
+        <expression><![CDATA[$F{_0_0446_l24_l42}]]></expression>
+      </element>
+      <element kind="staticText" x="640" y="920" width="80" height="20">
+        <text><![CDATA[Pg. 3 I.f]]></text>
+      </element>
+      <element kind="staticText" x="720" y="920" width="80" height="20">
+        <text><![CDATA[Pg. 3 I.f]]></text>
+      </element>
+      <element kind="staticText" x="800" y="920" width="80" height="20">
+        <text><![CDATA[Pg.1 I.g(Start)]]></text>
+      </element>
+      <element kind="staticText" x="880" y="920" width="80" height="20">
+        <text><![CDATA[Pg. 4 L 15]]></text>
+      </element>
+      <element kind="staticText" x="960" y="920" width="80" height="20">
+        <text><![CDATA[Pg. 3 I.g]]></text>
+      </element>
+      <element kind="staticText" x="640" y="940" width="80" height="20">
+        <text><![CDATA[(Start)]]></text>
+      </element>
+      <element kind="staticText" x="720" y="940" width="80" height="20">
+        <text><![CDATA[(End)]]></text>
+      </element>
+      <element kind="staticText" x="880" y="940" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="staticText" x="960" y="940" width="80" height="20">
+        <text><![CDATA[(End)]]></text>
+      </element>
+      <element kind="staticText" x="240" y="960" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary.]]></text>
+      </element>
+      <element kind="staticText" x="240" y="980" width="80" height="20">
+        <text><![CDATA[-8-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

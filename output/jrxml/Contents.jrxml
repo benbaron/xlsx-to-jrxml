@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="Contents" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="contents_r3c5" class="java.lang.Double"/>
+  <field name="financial_report_cells_in_blue_are_editable_all_other_cells_are_locked" class="java.lang.Double"/>
+  <field name="required" class="java.lang.Double"/>
+  <field name="name_of_branch" class="java.lang.String"/>
+  <field name="table_of_contents_1_contact_info" class="java.lang.Double"/>
+  <field name="g7_required" class="java.lang.Double"/>
+  <field name="seneschal_name" class="java.lang.String"/>
+  <field name="contact_information_if_isblank_datevalue_c_64_if_f_81_expired_signatory_if_g_81_expiring_signatory_2_a_primary_account" class="java.lang.Double"/>
+  <field name="g8_required" class="java.lang.Double"/>
+  <field name="exchequer_name" class="java.lang.String"/>
+  <field name="primary_account_reconciliation_if_isblank_datevalue_c_64_if_f_82_expired_signatory_if_g_82_expiring_signatory_2_b_secondary_accounts" class="java.lang.Double"/>
+  <field name="required_secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_83_expired_signatory_if_g_83_expiring_signatory" class="java.lang.Double"/>
+  <field name="g9_if_c_11_0_required_if_data_if_secondary_accounts_2b_d_19_0_no_data_required" class="java.lang.Double"/>
+  <field name="year_yyyy" class="java.lang.String"/>
+  <field name="secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_83_expired_signatory_if_g_83_expiring_signatory_3_balance" class="java.lang.Double"/>
+  <field name="g10_required" class="java.lang.Double"/>
+  <field name="quarter_1_2_3_4" class="java.lang.Double"/>
+  <field name="g11_required" class="java.lang.Double"/>
+  <field name="required_asset_detail" class="java.lang.Double"/>
+  <field name="g12_if_c_11_0_required_if_data_if_asset_dtl_5a_g_19_asset_dtl_5a_f_35_asset_dtl_5a_g_35_asset_dtl_5a_f_46_asset_dtl_5a_g_46_asset_dtl_5a_f_56_asset_dtl_5a_g_56_0_no_data_required" class="java.lang.Double"/>
+  <field name="cumulative_currency_type" class="java.lang.String"/>
+  <field name="if_c_11_0_required_if_data_if_asset_dtl_5a_g_19_asset_dtl_5a_f_35_asset_dtl_5a_g_35_asset_dtl_5a_f_46_asset_dtl_5a_g_46_asset_dtl_5a_f_56_asset_dtl_5a_g_56_0_no_data_required_liability_detail" class="java.lang.Double"/>
+  <field name="g13_if_c_11_0_required_if_data_if_liability_dtl_5b_f_31_liability_dtl_5b_e_31_liability_dtl_5b_f_44_liability_dtl_5b_e_44_liability_dtl_5b_f_56_liability_dtl_5b_e_56_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_liability_dtl_5b_f_31_liability_dtl_5b_e_31_liability_dtl_5b_f_44_liability_dtl_5b_e_44_liability_dtl_5b_f_56_liability_dtl_5b_e_56_0_no_data_required_inventory_detail" class="java.lang.Double"/>
+  <field name="g14_if_c_11_0_required_if_data_if_inventory_dtl_6_m_17_inventory_dtl_6_m_27_inventory_dtl_6_m_29_inventory_dtl_6_m_30_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_inventory_dtl_6_m_17_inventory_dtl_6_m_27_inventory_dtl_6_m_29_inventory_dtl_6_m_30_0_no_data_required_regalia_other_sales_detail" class="java.lang.Double"/>
+  <field name="g15_if_c_11_0_required_if_data_if_regalia_sales_dtl_7_f_32_regalia_sales_dtl_7_h_32_regalia_sales_dtl_7_i_32_regalia_sales_dtl_7_h_52_regalia_sales_dtl_7_i_53_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_regalia_sales_dtl_7_f_32_regalia_sales_dtl_7_h_32_regalia_sales_dtl_7_i_32_regalia_sales_dtl_7_h_52_regalia_sales_dtl_7_i_53_0_no_data_required_depreciation_detail" class="java.lang.Double"/>
+  <field name="g16_if_c_11_0_required_if_data_if_depr_dtl_8_i_47_depr_dtl_8_j_47_depr_dtl_8_k_47_depr_dtl_8_l_47_depr_dtl_8_m_47_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_depr_dtl_8_i_47_depr_dtl_8_j_47_depr_dtl_8_k_47_depr_dtl_8_l_47_depr_dtl_8_m_47_0_no_data_required_transfer_income_detail" class="java.lang.Double"/>
+  <field name="g17_if_c_11_0_required_if_data_if_transfer_in_9_f_38_transfer_in_9_f_58_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_in_9_f_38_transfer_in_9_f_58_0_no_data_required_transfer_expense_detail" class="java.lang.Double"/>
+  <field name="g18_if_c_11_0_required_if_data_if_transfer_out_10_f_25_transfer_out_10_f_52_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_out_10_f_25_transfer_out_10_f_52_0_no_data_required_income_detail_part_1" class="java.lang.Double"/>
+  <field name="g19_if_c_11_0_required_if_data_if_income_dtl_11a_e_20_income_dtl_11a_e_30_income_dtl_11a_e_36_income_dtl_11a_e_52_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_income_dtl_11a_e_20_income_dtl_11a_e_30_income_dtl_11a_e_36_income_dtl_11a_e_52_0_no_data_required_income_detail_part_2" class="java.lang.Double"/>
+  <field name="g20_if_c_11_0_required_if_data_if_income_dtl_11b_g_37_income_dtl_11b_g_43_income_dtl_11b_g_56_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_income_dtl_11b_g_37_income_dtl_11b_g_43_income_dtl_11b_g_56_0_no_data_required_income_detail_part_3" class="java.lang.Double"/>
+  <field name="g21_if_c_11_0_required_if_data_if_income_dtl_11c_g_24_income_dtl_11c_g_66_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_income_dtl_11c_g_24_income_dtl_11c_g_66_0_no_data_required_expense_detail_part_1" class="java.lang.Double"/>
+  <field name="g22_if_c_11_0_required_if_data_if_expense_dtl_12a_f_23_expense_dtl_12a_f_39_expense_dtl_12a_f_55_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_expense_dtl_12a_f_23_expense_dtl_12a_f_39_expense_dtl_12a_f_55_0_no_data_required_expense_detail_part_2" class="java.lang.Double"/>
+  <field name="g23_if_c_11_0_required_if_data_if_expense_dtl_12b_i_16_expense_dtl_12b_i_27_expense_dtl_12b_i_56_0_no_data_required" class="java.lang.Double"/>
+  <field name="expense_detail_part_2_13_finance_comm" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_expense_dtl_12b_i_16_expense_dtl_12b_i_27_expense_dtl_12b_i_56_0_no_data_required_financial_committee_information_if_isblank_datevalue_c_64_if_f_84_expired_member_if_g_84_expiring_member" class="java.lang.Double"/>
+  <field name="g24_if_c_11_0_required_if_data_if_and_counta_finance_comm_13_d_21_d_27_0_counta_finance_comm_13_c_11_c_13_0_no_data_required" class="java.lang.Double"/>
+  <field name="financial_committee_information_if_isblank_datevalue_c_64_if_f_84_expired_member_if_g_84_expiring_member_14_funds" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_and_counta_finance_comm_13_d_21_d_27_0_counta_finance_comm_13_c_11_c_13_0_no_data_required_dedicated_fund_list_if_and_balance_3_g_19_0_balance_3_h_19_0_balance_3_g_20_0_balance_3_h_20_0_funds_14_f_14_0_if_and_or_funds_14_f_11_0_funds_14_f_56_0_funds_14_f_11_funds_14_f_56_balanced_if_and_or_balance_3_g_19_0_balance_3_g_20_0_funds_14_f_14_0_funds_14_f_56_0_balanced_out_of_balance" class="java.lang.Double"/>
+  <field name="g25_if_c_11_0_required_if_data_if_funds_14_f_14_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_funds_14_f_14_0_no_data_required_newsletter_income_detail" class="java.lang.Double"/>
+  <field name="g26_if_c_11_0_required_if_data_if_sum_newsletter_15_e_27_e_50_0_no_subscription_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_sum_newsletter_15_e_27_e_50_0_no_subscription_data_required_comments" class="java.lang.Double"/>
+  <field name="g27_if_c_11_0_required_if_data_if_counta_comments_c_8_c_20_0_no_data_required" class="java.lang.Double"/>
+  <field name="comments_2_c_secondary_accounts" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_counta_comments_c_8_c_20_0_no_data_required_secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_85_expired_signatory_if_g_85_expiring_signatory" class="java.lang.Double"/>
+  <field name="noprint_if_c_11_0_required_if_data_if_secondary_accounts_2c_d_19_0_no_data_required" class="java.lang.Double"/>
+  <field name="secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_85_expired_signatory_if_g_85_expiring_signatory_2_d_secondary_accounts" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_secondary_accounts_2c_d_19_0_no_data_required_secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_86_expired_signatory_if_g_86_expiring_signatory" class="java.lang.Double"/>
+  <field name="g30_if_c_11_0_required_if_data_if_secondary_accounts_2d_d_19_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_secondary_accounts_2d_d_19_0_no_data_required_asset_detail" class="java.lang.Double"/>
+  <field name="g31_if_c_11_0_required_if_data_if_asset_dtl_5c_f_33_asset_dtl_5c_g_33_asset_dtl_5c_f_44_asset_dtl_5c_g_44_asset_dtl_5c_f_58_asset_dtl_5c_g_58_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_asset_dtl_5c_f_33_asset_dtl_5c_g_33_asset_dtl_5c_f_44_asset_dtl_5c_g_44_asset_dtl_5c_f_58_asset_dtl_5c_g_58_0_no_data_required_inventory_detail" class="java.lang.Double"/>
+  <field name="g32_if_c_11_0_required_if_data_if_inventory_dtl_6b_j_18_inventory_dtl_6b_j_28_inventory_dtl_6b_j_30_inventory_dtl_6b_j_31_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_inventory_dtl_6b_j_18_inventory_dtl_6b_j_28_inventory_dtl_6b_j_30_inventory_dtl_6b_j_31_0_no_data_required_regalia_other_sales_detail" class="java.lang.Double"/>
+  <field name="g39_if_c_11_0_required_if_data_if_regalia_sales_dtl_7b_f_32_regalia_sales_dtl_7b_h_32_regalia_sales_dtl_7b_i_32_regalia_sales_dtl_7b_i_53_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_regalia_sales_dtl_7b_f_32_regalia_sales_dtl_7b_h_32_regalia_sales_dtl_7b_i_32_regalia_sales_dtl_7b_i_53_0_no_data_required_depreciation_detail_5_year" class="java.lang.Double"/>
+  <field name="g40_if_c_11_0_required_if_data_if_depr_dtl_8b_i_54_depr_dtl_8b_j_54_depr_dtl_8b_k_54_depr_dtl_8b_l_54_depr_dtl_8b_m_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_depr_dtl_8b_i_54_depr_dtl_8b_j_54_depr_dtl_8b_k_54_depr_dtl_8b_l_54_depr_dtl_8b_m_54_0_no_data_required_depreciation_detail_7_year" class="java.lang.Double"/>
+  <field name="g41_if_c_11_0_required_if_data_if_depr_dtl_8c_i_54_depr_dtl_8c_j_54_depr_dtl_8c_k_54_depr_dtl_8c_l_54_depr_dtl_8c_m_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_depr_dtl_8c_i_54_depr_dtl_8c_j_54_depr_dtl_8c_k_54_depr_dtl_8c_l_54_depr_dtl_8c_m_54_0_no_data_required_transfer_income" class="java.lang.Double"/>
+  <field name="g42_if_c_11_0_required_if_data_if_transfer_in_9b_f_32_transfer_in_9b_f_47_transfer_in_9b_f_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_in_9b_f_32_transfer_in_9b_f_47_transfer_in_9b_f_54_0_no_data_required_transfer_income" class="java.lang.Double"/>
+  <field name="g43_if_c_11_0_required_if_data_if_transfer_in_9c_f_32_transfer_in_9c_f_47_transfer_in_9c_f_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_in_9c_f_32_transfer_in_9c_f_47_transfer_in_9c_f_54_0_no_data_required_transfer_income" class="java.lang.Double"/>
+  <field name="g44_if_c_11_0_required_if_data_if_transfer_in_9d_f_55_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_in_9d_f_55_0_no_data_required_transfer_expense" class="java.lang.Double"/>
+  <field name="g45_if_c_11_0_required_if_data_if_transfer_out_10b_f_28_transfer_out_10b_f_42_transfer_out_10b_f_36_transfer_out_10b_f_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_out_10b_f_28_transfer_out_10b_f_42_transfer_out_10b_f_36_transfer_out_10b_f_54_0_no_data_required_transfer_expense" class="java.lang.Double"/>
+  <field name="g46_if_c_11_0_required_if_data_if_transfer_out_10c_f_28_transfer_out_10c_f_42_transfer_out_10c_f_36_transfer_out_10c_f_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="if_c_11_0_required_if_data_if_transfer_out_10c_f_28_transfer_out_10c_f_42_transfer_out_10c_f_36_transfer_out_10c_f_54_0_no_data_required_transfer_expense" class="java.lang.Double"/>
+  <field name="g47_if_c_11_0_required_if_data_if_transfer_out_10d_f_28_transfer_out_10d_f_42_transfer_out_10d_f_38_transfer_out_10d_f_54_0_no_data_required" class="java.lang.Double"/>
+  <field name="free_form" class="java.lang.Double"/>
+  <field name="variables" class="java.lang.Double"/>
+  <field name="c67_c8_c71_c63_c69_c64_c70" class="java.lang.Double"/>
+  <field name="corporate_start_month" class="java.lang.Double"/>
+  <field name="if_or_c12_c11_if_or_c12_1_c13_d60_c13_d62_1_if_c13_d61_if_c12_2_4_if_c12_3_7_10_end_month" class="java.lang.Double"/>
+  <field name="if_or_c12_c11_c12_4_12_start_month" class="java.lang.Double"/>
+  <field name="if_c61_text_date_c65_c61_1_mm_dd_yyyy_end_month" class="java.lang.Double"/>
+  <field name="if_c62_text_date_c65_c62_c66_mm_dd_yyyy_year" class="java.lang.Double"/>
+  <field name="if_c11_if_c11_2000_2000_c11_c11_end_day" class="java.lang.Double"/>
+  <field name="trimmed_period" class="java.lang.Double"/>
+  <field name="_0_0893_contact_info" class="java.lang.Double"/>
+  <field name="_0_0892_if_c_64_false_min_h_81_j_81_datevalue_c_64" class="java.lang.Double"/>
+  <field name="_0_0893_if_c_64_false_date_year_min_h_81_j_81_month_min_min_h_81_j_81_day_min_min_h_81_j_81_60_datevalue_c_64" class="java.lang.Double"/>
+  <field name="_0_0446_if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16" class="java.lang.Double"/>
+  <field name="if_isblank_contact_info_1_h_27_datevalue_1_1_2099_contact_info_1_h_27" class="java.lang.Double"/>
+  <field name="if_c_64_false_min_h_81_j_81_datevalue_c_64_primary_acct" class="java.lang.Double"/>
+  <field name="if_c_64_false_date_year_min_h_81_j_81_month_min_min_h_81_j_81_day_min_min_h_81_j_81_60_datevalue_c_64_if_c_64_false_min_h82_m82_datevalue_c_64" class="java.lang.Double"/>
+  <field name="if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16_if_c_64_false_date_year_min_h_82_m_82_month_min_min_h_82_m_82_day_min_min_h_82_m_82_60_datevalue_c_64" class="java.lang.Double"/>
+  <field name="if_isblank_contact_info_1_h_27_datevalue_1_1_2099_contact_info_1_h_27_if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16" class="java.lang.Double"/>
+  <field name="if_isblank_contact_info_1_h_35_datevalue_1_1_2099_contact_info_1_h_35_if_isblank_primary_account_2a_h_45_datevalue_1_1_2099_primary_account_2a_h_45" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_47_datevalue_1_1_2099_primary_account_2a_h_47" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_49_datevalue_1_1_2099_primary_account_2a_h_49" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_51_datevalue_1_1_2099_primary_account_2a_h_51" class="java.lang.Double"/>
+  <field name="if_c_64_false_min_h82_m82_datevalue_c_64_secondary_acct" class="java.lang.Double"/>
+  <field name="if_c_64_false_date_year_min_h_82_m_82_month_min_min_h_82_m_82_day_min_min_h_82_m_82_60_datevalue_c_64_if_c_64_false_min_h83_m83_datevalue_c_64" class="java.lang.Double"/>
+  <field name="if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16_if_c_64_false_date_year_min_h_83_m_83_month_min_min_h_83_m_83_day_min_min_h_83_m_83_60_datevalue_c_64" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_45_datevalue_1_1_2099_primary_account_2a_h_45_min_if_isblank_secondary_accounts_2b_d_29_datevalue_1_1_2099_secondary_accounts_2b_d_29_if_isblank_secondary_accounts_2b_e_29_datevalue_1_1_2099_secondary_accounts_2b_e_29_if_isblank_secondary_accounts_2b_f_29_datevalue_1_1_2099_secondary_accounts_2b_f_29_if_isblank_secondary_accounts_2b_g_29_datevalue_1_1_2099_secondary_accounts_2b_g_29" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_47_datevalue_1_1_2099_primary_account_2a_h_47_min_if_isblank_secondary_accounts_2b_d_32_datevalue_1_1_2099_secondary_accounts_2b_d_32_if_isblank_secondary_accounts_2b_e_32_datevalue_1_1_2099_secondary_accounts_2b_e_32_if_isblank_secondary_accounts_2b_f_32_datevalue_1_1_2099_secondary_accounts_2b_f_32_if_isblank_secondary_accounts_2b_g_32_datevalue_1_1_2099_secondary_accounts_2b_g_32" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_49_datevalue_1_1_2099_primary_account_2a_h_49_min_if_isblank_secondary_accounts_2b_d_35_datevalue_1_1_2099_secondary_accounts_2b_d_35_if_isblank_secondary_accounts_2b_e_35_datevalue_1_1_2099_secondary_accounts_2b_e_35_if_isblank_secondary_accounts_2b_f_35_datevalue_1_1_2099_secondary_accounts_2b_f_35_if_isblank_secondary_accounts_2b_g_35_datevalue_1_1_2099_secondary_accounts_2b_g_35" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_51_datevalue_1_1_2099_primary_account_2a_h_51_min_if_isblank_secondary_accounts_2b_d_38_datevalue_1_1_2099_secondary_accounts_2b_d_38_if_isblank_secondary_accounts_2b_e_38_datevalue_1_1_2099_secondary_accounts_2b_e_38_if_isblank_secondary_accounts_2b_f_38_datevalue_1_1_2099_secondary_accounts_2b_f_38_if_isblank_secondary_accounts_2b_g_38_datevalue_1_1_2099_secondary_accounts_2b_g_38" class="java.lang.Double"/>
+  <field name="if_isblank_primary_account_2a_h_53_datevalue_1_1_2099_primary_account_2a_h_53_min_if_isblank_secondary_accounts_2b_d_41_datevalue_1_1_2099_secondary_accounts_2b_d_41_if_isblank_secondary_accounts_2b_e_41_datevalue_1_1_2099_secondary_accounts_2b_e_41_if_isblank_secondary_accounts_2b_f_41_datevalue_1_1_2099_secondary_accounts_2b_f_41_if_isblank_secondary_accounts_2b_g_41_datevalue_1_1_2099_secondary_accounts_2b_g_41" class="java.lang.Double"/>
+  <field name="if_c_64_false_min_h83_m83_datevalue_c_64_finance_committee" class="java.lang.Double"/>
+  <field name="if_c_64_false_date_year_min_h_83_m_83_month_min_min_h_83_m_83_day_min_min_h_83_m_83_60_datevalue_c_64_if_c_64_false_min_h84_l84_h84_datevalue_c_64" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2b_d_29_datevalue_1_1_2099_secondary_accounts_2b_d_29_if_isblank_secondary_accounts_2b_e_29_datevalue_1_1_2099_secondary_accounts_2b_e_29_if_isblank_secondary_accounts_2b_f_29_datevalue_1_1_2099_secondary_accounts_2b_f_29_if_isblank_secondary_accounts_2b_g_29_datevalue_1_1_2099_secondary_accounts_2b_g_29_if_c_64_false_date_year_min_h_84_l_84_month_min_min_h_84_l_84_day_min_min_h_84_l_84_60_datevalue_c_64" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2b_d_32_datevalue_1_1_2099_secondary_accounts_2b_d_32_if_isblank_secondary_accounts_2b_e_32_datevalue_1_1_2099_secondary_accounts_2b_e_32_if_isblank_secondary_accounts_2b_f_32_datevalue_1_1_2099_secondary_accounts_2b_f_32_if_isblank_secondary_accounts_2b_g_32_datevalue_1_1_2099_secondary_accounts_2b_g_32_if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2b_d_35_datevalue_1_1_2099_secondary_accounts_2b_d_35_if_isblank_secondary_accounts_2b_e_35_datevalue_1_1_2099_secondary_accounts_2b_e_35_if_isblank_secondary_accounts_2b_f_35_datevalue_1_1_2099_secondary_accounts_2b_f_35_if_isblank_secondary_accounts_2b_g_35_datevalue_1_1_2099_secondary_accounts_2b_g_35_if_isblank_finance_comm_13_f21_datevalue_1_1_2099_finance_comm_13_f21" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2b_d_38_datevalue_1_1_2099_secondary_accounts_2b_d_38_if_isblank_secondary_accounts_2b_e_38_datevalue_1_1_2099_secondary_accounts_2b_e_38_if_isblank_secondary_accounts_2b_f_38_datevalue_1_1_2099_secondary_accounts_2b_f_38_if_isblank_secondary_accounts_2b_g_38_datevalue_1_1_2099_secondary_accounts_2b_g_38_if_isblank_finance_comm_13_f25_datevalue_1_1_2099_finance_comm_13_f25" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2b_d_41_datevalue_1_1_2099_secondary_accounts_2b_d_41_if_isblank_secondary_accounts_2b_e_41_datevalue_1_1_2099_secondary_accounts_2b_e_41_if_isblank_secondary_accounts_2b_f_41_datevalue_1_1_2099_secondary_accounts_2b_f_41_if_isblank_secondary_accounts_2b_g_41_datevalue_1_1_2099_secondary_accounts_2b_g_41_if_isblank_finance_comm_13_f28_datevalue_1_1_2099_finance_comm_13_f28" class="java.lang.Double"/>
+  <field name="if_c_64_false_min_h84_l84_h84_datevalue_c_64_secondary_acct_2" class="java.lang.Double"/>
+  <field name="if_c_64_false_date_year_min_h_84_l_84_month_min_min_h_84_l_84_day_min_min_h_84_l_84_60_datevalue_c_64_if_c_64_false_min_h85_m85_datevalue_c_64" class="java.lang.Double"/>
+  <field name="if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16_if_c_64_false_date_year_min_h_85_m_85_month_min_min_h_85_m_85_day_min_min_h_85_m_85_60_datevalue_c_64" class="java.lang.Double"/>
+  <field name="if_isblank_finance_comm_13_f21_datevalue_1_1_2099_finance_comm_13_f21_min_if_isblank_secondary_accounts_2c_d_29_datevalue_1_1_2099_secondary_accounts_2c_d_29_if_isblank_secondary_accounts_2c_e_29_datevalue_1_1_2099_secondary_accounts_2c_e_29_if_isblank_secondary_accounts_2c_f_29_datevalue_1_1_2099_secondary_accounts_2c_f_29_if_isblank_secondary_accounts_2c_g_29_datevalue_1_1_2099_secondary_accounts_2c_g_29" class="java.lang.Double"/>
+  <field name="if_isblank_finance_comm_13_f25_datevalue_1_1_2099_finance_comm_13_f25_min_if_isblank_secondary_accounts_2c_d_32_datevalue_1_1_2099_secondary_accounts_2c_d_32_if_isblank_secondary_accounts_2c_e_32_datevalue_1_1_2099_secondary_accounts_2c_e_32_if_isblank_secondary_accounts_2c_f_32_datevalue_1_1_2099_secondary_accounts_2c_f_32_if_isblank_secondary_accounts_2c_g_32_datevalue_1_1_2099_secondary_accounts_2c_g_32" class="java.lang.Double"/>
+  <field name="if_isblank_finance_comm_13_f28_datevalue_1_1_2099_finance_comm_13_f28_min_if_isblank_secondary_accounts_2c_d_35_datevalue_1_1_2099_secondary_accounts_2c_d_35_if_isblank_secondary_accounts_2c_e_35_datevalue_1_1_2099_secondary_accounts_2c_e_35_if_isblank_secondary_accounts_2c_f_35_datevalue_1_1_2099_secondary_accounts_2c_f_35_if_isblank_secondary_accounts_2c_g_35_datevalue_1_1_2099_secondary_accounts_2c_g_35" class="java.lang.Double"/>
+  <field name="if_isblank_finance_comm_13_f30_datevalue_1_1_2099_finance_comm_13_f30_min_if_isblank_secondary_accounts_2c_d_38_datevalue_1_1_2099_secondary_accounts_2c_d_38_if_isblank_secondary_accounts_2c_e_38_datevalue_1_1_2099_secondary_accounts_2c_e_38_if_isblank_secondary_accounts_2c_f_38_datevalue_1_1_2099_secondary_accounts_2c_f_38_if_isblank_secondary_accounts_2c_g_38_datevalue_1_1_2099_secondary_accounts_2c_g_38" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2b_d_44_datevalue_1_1_2099_secondary_accounts_2b_d_44_if_isblank_secondary_accounts_2b_e_44_datevalue_1_1_2099_secondary_accounts_2b_e_44_if_isblank_secondary_accounts_2b_f_44_datevalue_1_1_2099_secondary_accounts_2b_f_44_if_isblank_secondary_accounts_2b_g_44_datevalue_1_1_2099_secondary_accounts_2b_g_44_min_if_isblank_secondary_accounts_2c_d_41_datevalue_1_1_2099_secondary_accounts_2c_d_41_if_isblank_secondary_accounts_2c_e_41_datevalue_1_1_2099_secondary_accounts_2c_e_41_if_isblank_secondary_accounts_2c_f_41_datevalue_1_1_2099_secondary_accounts_2c_f_41_if_isblank_secondary_accounts_2c_g_41_datevalue_1_1_2099_secondary_accounts_2c_g_41" class="java.lang.Double"/>
+  <field name="if_c_64_false_min_h85_m85_datevalue_c_64_secondary_acct_3" class="java.lang.Double"/>
+  <field name="if_c_64_false_date_year_min_h_85_m_85_month_min_min_h_85_m_85_day_min_min_h_85_m_85_60_datevalue_c_64_if_c_64_false_min_h86_m86_datevalue_c_64" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2c_d_29_datevalue_1_1_2099_secondary_accounts_2c_d_29_if_isblank_secondary_accounts_2c_e_29_datevalue_1_1_2099_secondary_accounts_2c_e_29_if_isblank_secondary_accounts_2c_f_29_datevalue_1_1_2099_secondary_accounts_2c_f_29_if_isblank_secondary_accounts_2c_g_29_datevalue_1_1_2099_secondary_accounts_2c_g_29_if_c_64_false_date_year_min_h_86_m_86_month_min_min_h_86_m_86_day_min_min_h_86_m_86_60_datevalue_c_64" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2c_d_32_datevalue_1_1_2099_secondary_accounts_2c_d_32_if_isblank_secondary_accounts_2c_e_32_datevalue_1_1_2099_secondary_accounts_2c_e_32_if_isblank_secondary_accounts_2c_f_32_datevalue_1_1_2099_secondary_accounts_2c_f_32_if_isblank_secondary_accounts_2c_g_32_datevalue_1_1_2099_secondary_accounts_2c_g_32_min_if_isblank_secondary_accounts_2d_d_29_datevalue_1_1_2099_secondary_accounts_2d_d_29_if_isblank_secondary_accounts_2c_e_29_datevalue_1_1_2099_secondary_accounts_2c_e_29_if_isblank_secondary_accounts_2c_f_29_datevalue_1_1_2099_secondary_accounts_2c_f_29_if_isblank_secondary_accounts_2c_g_29_datevalue_1_1_2099_secondary_accounts_2c_g_29" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2c_d_35_datevalue_1_1_2099_secondary_accounts_2c_d_35_if_isblank_secondary_accounts_2c_e_35_datevalue_1_1_2099_secondary_accounts_2c_e_35_if_isblank_secondary_accounts_2c_f_35_datevalue_1_1_2099_secondary_accounts_2c_f_35_if_isblank_secondary_accounts_2c_g_35_datevalue_1_1_2099_secondary_accounts_2c_g_35_min_if_isblank_secondary_accounts_2d_d_32_datevalue_1_1_2099_secondary_accounts_2d_d_32_if_isblank_secondary_accounts_2c_e_32_datevalue_1_1_2099_secondary_accounts_2c_e_32_if_isblank_secondary_accounts_2c_f_32_datevalue_1_1_2099_secondary_accounts_2c_f_32_if_isblank_secondary_accounts_2c_g_32_datevalue_1_1_2099_secondary_accounts_2c_g_32" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2c_d_38_datevalue_1_1_2099_secondary_accounts_2c_d_38_if_isblank_secondary_accounts_2c_e_38_datevalue_1_1_2099_secondary_accounts_2c_e_38_if_isblank_secondary_accounts_2c_f_38_datevalue_1_1_2099_secondary_accounts_2c_f_38_if_isblank_secondary_accounts_2c_g_38_datevalue_1_1_2099_secondary_accounts_2c_g_38_min_if_isblank_secondary_accounts_2d_d_35_datevalue_1_1_2099_secondary_accounts_2d_d_35_if_isblank_secondary_accounts_2c_e_35_datevalue_1_1_2099_secondary_accounts_2c_e_35_if_isblank_secondary_accounts_2c_f_35_datevalue_1_1_2099_secondary_accounts_2c_f_35_if_isblank_secondary_accounts_2c_g_35_datevalue_1_1_2099_secondary_accounts_2c_g_35" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2c_d_41_datevalue_1_1_2099_secondary_accounts_2c_d_41_if_isblank_secondary_accounts_2c_e_41_datevalue_1_1_2099_secondary_accounts_2c_e_41_if_isblank_secondary_accounts_2c_f_41_datevalue_1_1_2099_secondary_accounts_2c_f_41_if_isblank_secondary_accounts_2c_g_41_datevalue_1_1_2099_secondary_accounts_2c_g_41_min_if_isblank_secondary_accounts_2d_d_38_datevalue_1_1_2099_secondary_accounts_2d_d_38_if_isblank_secondary_accounts_2c_e_38_datevalue_1_1_2099_secondary_accounts_2c_e_38_if_isblank_secondary_accounts_2c_f_38_datevalue_1_1_2099_secondary_accounts_2c_f_38_if_isblank_secondary_accounts_2c_g_38_datevalue_1_1_2099_secondary_accounts_2c_g_38" class="java.lang.Double"/>
+  <field name="min_if_isblank_secondary_accounts_2c_d_44_datevalue_1_1_2099_secondary_accounts_2c_d_44_if_isblank_secondary_accounts_2c_e_44_datevalue_1_1_2099_secondary_accounts_2c_e_44_if_isblank_secondary_accounts_2c_f_44_datevalue_1_1_2099_secondary_accounts_2c_f_44_if_isblank_secondary_accounts_2c_g_44_datevalue_1_1_2099_secondary_accounts_2c_g_44_min_if_isblank_secondary_accounts_2d_d_41_datevalue_1_1_2099_secondary_accounts_2d_d_41_if_isblank_secondary_accounts_2c_e_41_datevalue_1_1_2099_secondary_accounts_2c_e_41_if_isblank_secondary_accounts_2c_f_41_datevalue_1_1_2099_secondary_accounts_2c_f_41_if_isblank_secondary_accounts_2c_g_41_datevalue_1_1_2099_secondary_accounts_2c_g_41" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1680">
+      <element kind="textField" x="320" y="0" width="80" height="20">
+        <expression><![CDATA[$F{contents_r3c5}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="20" width="80" height="20">
+        <text><![CDATA[FINANCIAL REPORT]]></text>
+      </element>
+      <element kind="textField" x="320" y="60" width="80" height="20">
+        <expression><![CDATA[$F{financial_report_cells_in_blue_are_editable_all_other_cells_are_locked}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="80" width="80" height="20">
+        <text><![CDATA[CONTENTS]]></text>
+      </element>
+      <element kind="staticText" x="400" y="80" width="80" height="20">
+        <text><![CDATA[Table of Contents]]></text>
+      </element>
+      <element kind="staticText" x="480" y="80" width="80" height="20">
+        <text><![CDATA[REQUIRED]]></text>
+      </element>
+      <element kind="textField" x="560" y="80" width="80" height="20">
+        <expression><![CDATA[$F{required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="100" width="80" height="20">
+        <text><![CDATA[Name of Branch]]></text>
+      </element>
+      <element kind="textField" x="160" y="100" width="80" height="20">
+        <expression><![CDATA[$F{name_of_branch}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="100" width="80" height="20">
+        <text><![CDATA[1. CONTACT INFO]]></text>
+      </element>
+      <element kind="textField" x="400" y="100" width="80" height="20">
+        <expression><![CDATA[$F{table_of_contents_1_contact_info}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="100" width="80" height="20">
+        <text><![CDATA[REQUIRED]]></text>
+      </element>
+      <element kind="textField" x="560" y="100" width="80" height="20">
+        <expression><![CDATA[$F{g7_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="120" width="80" height="20">
+        <text><![CDATA[Seneschal Name]]></text>
+      </element>
+      <element kind="textField" x="160" y="120" width="80" height="20">
+        <expression><![CDATA[$F{seneschal_name}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="120" width="80" height="20">
+        <text><![CDATA[2.a PRIMARY ACCOUNT]]></text>
+      </element>
+      <element kind="textField" x="400" y="120" width="80" height="20">
+        <expression><![CDATA[$F{contact_information_if_isblank_datevalue_c_64_if_f_81_expired_signatory_if_g_81_expiring_signatory_2_a_primary_account}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="120" width="80" height="20">
+        <text><![CDATA[REQUIRED]]></text>
+      </element>
+      <element kind="textField" x="560" y="120" width="80" height="20">
+        <expression><![CDATA[$F{g8_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="140" width="80" height="20">
+        <text><![CDATA[Exchequer Name]]></text>
+      </element>
+      <element kind="textField" x="160" y="140" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_name}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="140" width="80" height="20">
+        <text><![CDATA[2.b SECONDARY ACCOUNTS]]></text>
+      </element>
+      <element kind="textField" x="400" y="140" width="80" height="20">
+        <expression><![CDATA[$F{primary_account_reconciliation_if_isblank_datevalue_c_64_if_f_82_expired_signatory_if_g_82_expiring_signatory_2_b_secondary_accounts}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="140" width="80" height="20">
+        <expression><![CDATA[$F{required_secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_83_expired_signatory_if_g_83_expiring_signatory}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="140" width="80" height="20">
+        <expression><![CDATA[$F{g9_if_c_11_0_required_if_data_if_secondary_accounts_2b_d_19_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="160" width="80" height="20">
+        <text><![CDATA[Year (yyyy)]]></text>
+      </element>
+      <element kind="textField" x="160" y="160" width="80" height="20">
+        <expression><![CDATA[$F{year_yyyy}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="160" width="80" height="20">
+        <text><![CDATA[3. BALANCE]]></text>
+      </element>
+      <element kind="textField" x="400" y="160" width="80" height="20">
+        <expression><![CDATA[$F{secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_83_expired_signatory_if_g_83_expiring_signatory_3_balance}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="160" width="80" height="20">
+        <text><![CDATA[REQUIRED]]></text>
+      </element>
+      <element kind="textField" x="560" y="160" width="80" height="20">
+        <expression><![CDATA[$F{g10_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="180" width="80" height="20">
+        <text><![CDATA[Quarter (1,2,3,4)]]></text>
+      </element>
+      <element kind="textField" x="160" y="180" width="80" height="20">
+        <expression><![CDATA[$F{quarter_1_2_3_4}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="180" width="80" height="20">
+        <text><![CDATA[4. INCOME]]></text>
+      </element>
+      <element kind="staticText" x="400" y="180" width="80" height="20">
+        <text><![CDATA[Income Statement]]></text>
+      </element>
+      <element kind="staticText" x="480" y="180" width="80" height="20">
+        <text><![CDATA[REQUIRED]]></text>
+      </element>
+      <element kind="textField" x="560" y="180" width="80" height="20">
+        <expression><![CDATA[$F{g11_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="200" width="80" height="20">
+        <text><![CDATA[Quarter Type (Cumulative)]]></text>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[Cumulative]]></text>
+      </element>
+      <element kind="staticText" x="320" y="200" width="80" height="20">
+        <text><![CDATA[5.a ASSET DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="200" width="80" height="20">
+        <text><![CDATA[Asset Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="200" width="80" height="20">
+        <expression><![CDATA[$F{required_asset_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="200" width="80" height="20">
+        <expression><![CDATA[$F{g12_if_c_11_0_required_if_data_if_asset_dtl_5a_g_19_asset_dtl_5a_f_35_asset_dtl_5a_g_35_asset_dtl_5a_f_46_asset_dtl_5a_g_46_asset_dtl_5a_f_56_asset_dtl_5a_g_56_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="220" width="80" height="20">
+        <text><![CDATA[Currency Type]]></text>
+      </element>
+      <element kind="textField" x="160" y="220" width="80" height="20">
+        <expression><![CDATA[$F{cumulative_currency_type}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="220" width="80" height="20">
+        <text><![CDATA[5.b LIABILITY DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="220" width="80" height="20">
+        <text><![CDATA[Liability Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="220" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_asset_dtl_5a_g_19_asset_dtl_5a_f_35_asset_dtl_5a_g_35_asset_dtl_5a_f_46_asset_dtl_5a_g_46_asset_dtl_5a_f_56_asset_dtl_5a_g_56_0_no_data_required_liability_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="220" width="80" height="20">
+        <expression><![CDATA[$F{g13_if_c_11_0_required_if_data_if_liability_dtl_5b_f_31_liability_dtl_5b_e_31_liability_dtl_5b_f_44_liability_dtl_5b_e_44_liability_dtl_5b_f_56_liability_dtl_5b_e_56_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="240" width="80" height="20">
+        <text><![CDATA[Corporate or Which State Subsidiary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[Corporate]]></text>
+      </element>
+      <element kind="staticText" x="320" y="240" width="80" height="20">
+        <text><![CDATA[6. INVENTORY DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="240" width="80" height="20">
+        <text><![CDATA[Inventory Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_liability_dtl_5b_f_31_liability_dtl_5b_e_31_liability_dtl_5b_f_44_liability_dtl_5b_e_44_liability_dtl_5b_f_56_liability_dtl_5b_e_56_0_no_data_required_inventory_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="240" width="80" height="20">
+        <expression><![CDATA[$F{g14_if_c_11_0_required_if_data_if_inventory_dtl_6_m_17_inventory_dtl_6_m_27_inventory_dtl_6_m_29_inventory_dtl_6_m_30_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="260" width="80" height="20">
+        <text><![CDATA[7. REGALIA SALES DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="260" width="80" height="20">
+        <text><![CDATA[Regalia & Other Sales Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="260" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_inventory_dtl_6_m_17_inventory_dtl_6_m_27_inventory_dtl_6_m_29_inventory_dtl_6_m_30_0_no_data_required_regalia_other_sales_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="260" width="80" height="20">
+        <expression><![CDATA[$F{g15_if_c_11_0_required_if_data_if_regalia_sales_dtl_7_f_32_regalia_sales_dtl_7_h_32_regalia_sales_dtl_7_i_32_regalia_sales_dtl_7_h_52_regalia_sales_dtl_7_i_53_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="280" width="80" height="20">
+        <text><![CDATA[8. DEPRECIATION DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="280" width="80" height="20">
+        <text><![CDATA[Depreciation Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="280" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_regalia_sales_dtl_7_f_32_regalia_sales_dtl_7_h_32_regalia_sales_dtl_7_i_32_regalia_sales_dtl_7_h_52_regalia_sales_dtl_7_i_53_0_no_data_required_depreciation_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="280" width="80" height="20">
+        <expression><![CDATA[$F{g16_if_c_11_0_required_if_data_if_depr_dtl_8_i_47_depr_dtl_8_j_47_depr_dtl_8_k_47_depr_dtl_8_l_47_depr_dtl_8_m_47_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="300" width="80" height="20">
+        <text><![CDATA[9. TRANSFER IN]]></text>
+      </element>
+      <element kind="staticText" x="400" y="300" width="80" height="20">
+        <text><![CDATA[Transfer Income Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="300" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_depr_dtl_8_i_47_depr_dtl_8_j_47_depr_dtl_8_k_47_depr_dtl_8_l_47_depr_dtl_8_m_47_0_no_data_required_transfer_income_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="300" width="80" height="20">
+        <expression><![CDATA[$F{g17_if_c_11_0_required_if_data_if_transfer_in_9_f_38_transfer_in_9_f_58_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="320" width="80" height="20">
+        <text><![CDATA[For Year-end Reports, you must deliver a copy of this report to your superior officer, along with a copy of the ending bank statement and general ledger/check register. The preferred method is electronically via email.]]></text>
+      </element>
+      <element kind="staticText" x="320" y="320" width="80" height="20">
+        <text><![CDATA[10. TRANSFER OUT]]></text>
+      </element>
+      <element kind="staticText" x="400" y="320" width="80" height="20">
+        <text><![CDATA[Transfer Expense Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="320" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_in_9_f_38_transfer_in_9_f_58_0_no_data_required_transfer_expense_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="320" width="80" height="20">
+        <expression><![CDATA[$F{g18_if_c_11_0_required_if_data_if_transfer_out_10_f_25_transfer_out_10_f_52_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="340" width="80" height="20">
+        <text><![CDATA[11.a INCOME DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="340" width="80" height="20">
+        <text><![CDATA[Income Detail Part 1]]></text>
+      </element>
+      <element kind="textField" x="480" y="340" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_out_10_f_25_transfer_out_10_f_52_0_no_data_required_income_detail_part_1}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="340" width="80" height="20">
+        <expression><![CDATA[$F{g19_if_c_11_0_required_if_data_if_income_dtl_11a_e_20_income_dtl_11a_e_30_income_dtl_11a_e_36_income_dtl_11a_e_52_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="360" width="80" height="20">
+        <text><![CDATA[Some Kingdoms may require additional documents.]]></text>
+      </element>
+      <element kind="staticText" x="320" y="360" width="80" height="20">
+        <text><![CDATA[11.b INCOME DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="360" width="80" height="20">
+        <text><![CDATA[Income Detail Part 2]]></text>
+      </element>
+      <element kind="textField" x="480" y="360" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_income_dtl_11a_e_20_income_dtl_11a_e_30_income_dtl_11a_e_36_income_dtl_11a_e_52_0_no_data_required_income_detail_part_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="360" width="80" height="20">
+        <expression><![CDATA[$F{g20_if_c_11_0_required_if_data_if_income_dtl_11b_g_37_income_dtl_11b_g_43_income_dtl_11b_g_56_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="380" width="80" height="20">
+        <text><![CDATA[Whether sent by paper or electronically for the first 3 quarter reports:]]></text>
+      </element>
+      <element kind="staticText" x="320" y="380" width="80" height="20">
+        <text><![CDATA[11.c INCOME DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="380" width="80" height="20">
+        <text><![CDATA[Income Detail Part 3]]></text>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_income_dtl_11b_g_37_income_dtl_11b_g_43_income_dtl_11b_g_56_0_no_data_required_income_detail_part_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="380" width="80" height="20">
+        <expression><![CDATA[$F{g21_if_c_11_0_required_if_data_if_income_dtl_11c_g_24_income_dtl_11c_g_66_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="400" width="80" height="20">
+        <text><![CDATA[Pages 1-4 must be completed, printed, signed, and submitted with a copy of the bank statement(s)]]></text>
+      </element>
+      <element kind="staticText" x="320" y="400" width="80" height="20">
+        <text><![CDATA[12.a EXPENSE DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="400" width="80" height="20">
+        <text><![CDATA[Expense Detail Part 1]]></text>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_income_dtl_11c_g_24_income_dtl_11c_g_66_0_no_data_required_expense_detail_part_1}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{g22_if_c_11_0_required_if_data_if_expense_dtl_12a_f_23_expense_dtl_12a_f_39_expense_dtl_12a_f_55_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="420" width="80" height="20">
+        <text><![CDATA[and workbook pages according to Kingdom Policy.]]></text>
+      </element>
+      <element kind="staticText" x="320" y="420" width="80" height="20">
+        <text><![CDATA[12.b EXPENSE DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="420" width="80" height="20">
+        <text><![CDATA[Expense Detail Part 2]]></text>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_expense_dtl_12a_f_23_expense_dtl_12a_f_39_expense_dtl_12a_f_55_0_no_data_required_expense_detail_part_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{g23_if_c_11_0_required_if_data_if_expense_dtl_12b_i_16_expense_dtl_12b_i_27_expense_dtl_12b_i_56_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="440" width="80" height="20">
+        <text><![CDATA[All financial reports, bank statements and backup documentation must be kept for 7 years by either]]></text>
+      </element>
+      <element kind="staticText" x="320" y="440" width="80" height="20">
+        <text><![CDATA[13. FINANCE COMM]]></text>
+      </element>
+      <element kind="textField" x="400" y="440" width="80" height="20">
+        <expression><![CDATA[$F{expense_detail_part_2_13_finance_comm}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="440" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_expense_dtl_12b_i_16_expense_dtl_12b_i_27_expense_dtl_12b_i_56_0_no_data_required_financial_committee_information_if_isblank_datevalue_c_64_if_f_84_expired_member_if_g_84_expiring_member}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{g24_if_c_11_0_required_if_data_if_and_counta_finance_comm_13_d_21_d_27_0_counta_finance_comm_13_c_11_c_13_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="80" y="460" width="80" height="20">
+        <text><![CDATA[paper copy or stored electronically with a minimum of one backup copy.]]></text>
+      </element>
+      <element kind="staticText" x="320" y="460" width="80" height="20">
+        <text><![CDATA[14. FUNDS]]></text>
+      </element>
+      <element kind="textField" x="400" y="460" width="80" height="20">
+        <expression><![CDATA[$F{financial_committee_information_if_isblank_datevalue_c_64_if_f_84_expired_member_if_g_84_expiring_member_14_funds}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="460" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_and_counta_finance_comm_13_d_21_d_27_0_counta_finance_comm_13_c_11_c_13_0_no_data_required_dedicated_fund_list_if_and_balance_3_g_19_0_balance_3_h_19_0_balance_3_g_20_0_balance_3_h_20_0_funds_14_f_14_0_if_and_or_funds_14_f_11_0_funds_14_f_56_0_funds_14_f_11_funds_14_f_56_balanced_if_and_or_balance_3_g_19_0_balance_3_g_20_0_funds_14_f_14_0_funds_14_f_56_0_balanced_out_of_balance}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="460" width="80" height="20">
+        <expression><![CDATA[$F{g25_if_c_11_0_required_if_data_if_funds_14_f_14_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="480" width="80" height="20">
+        <text><![CDATA[15. NEWSLETTER]]></text>
+      </element>
+      <element kind="staticText" x="400" y="480" width="80" height="20">
+        <text><![CDATA[Newsletter Income Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="480" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_funds_14_f_14_0_no_data_required_newsletter_income_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="480" width="80" height="20">
+        <expression><![CDATA[$F{g26_if_c_11_0_required_if_data_if_sum_newsletter_15_e_27_e_50_0_no_subscription_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="500" width="80" height="20">
+        <text><![CDATA[COMMENTS]]></text>
+      </element>
+      <element kind="staticText" x="400" y="500" width="80" height="20">
+        <text><![CDATA[Comments]]></text>
+      </element>
+      <element kind="textField" x="480" y="500" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_sum_newsletter_15_e_27_e_50_0_no_subscription_data_required_comments}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="500" width="80" height="20">
+        <expression><![CDATA[$F{g27_if_c_11_0_required_if_data_if_counta_comments_c_8_c_20_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="520" width="80" height="20">
+        <text><![CDATA[ADDITIONAL WORKSHEETS]]></text>
+      </element>
+      <element kind="staticText" x="320" y="540" width="80" height="20">
+        <text><![CDATA[2.c SECONDARY ACCOUNTS]]></text>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{comments_2_c_secondary_accounts}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_counta_comments_c_8_c_20_0_no_data_required_secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_85_expired_signatory_if_g_85_expiring_signatory}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="540" width="80" height="20">
+        <expression><![CDATA[$F{noprint_if_c_11_0_required_if_data_if_secondary_accounts_2c_d_19_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="560" width="80" height="20">
+        <text><![CDATA[2.d SECONDARY ACCOUNTS]]></text>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_85_expired_signatory_if_g_85_expiring_signatory_2_d_secondary_accounts}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_secondary_accounts_2c_d_19_0_no_data_required_secondary_account_reconciliation_if_isblank_datevalue_c_64_if_f_86_expired_signatory_if_g_86_expiring_signatory}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="560" width="80" height="20">
+        <expression><![CDATA[$F{g30_if_c_11_0_required_if_data_if_secondary_accounts_2d_d_19_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="580" width="80" height="20">
+        <text><![CDATA[5.c ASSET DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="580" width="80" height="20">
+        <text><![CDATA[Asset Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_secondary_accounts_2d_d_19_0_no_data_required_asset_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{g31_if_c_11_0_required_if_data_if_asset_dtl_5c_f_33_asset_dtl_5c_g_33_asset_dtl_5c_f_44_asset_dtl_5c_g_44_asset_dtl_5c_f_58_asset_dtl_5c_g_58_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="720" width="80" height="20">
+        <text><![CDATA[6.b INVENTORY DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="720" width="80" height="20">
+        <text><![CDATA[Inventory Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="720" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_asset_dtl_5c_f_33_asset_dtl_5c_g_33_asset_dtl_5c_f_44_asset_dtl_5c_g_44_asset_dtl_5c_f_58_asset_dtl_5c_g_58_0_no_data_required_inventory_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="720" width="80" height="20">
+        <expression><![CDATA[$F{g32_if_c_11_0_required_if_data_if_inventory_dtl_6b_j_18_inventory_dtl_6b_j_28_inventory_dtl_6b_j_30_inventory_dtl_6b_j_31_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="740" width="80" height="20">
+        <text><![CDATA[7.b REGALIA SALES DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="740" width="80" height="20">
+        <text><![CDATA[Regalia & Other Sales Detail]]></text>
+      </element>
+      <element kind="textField" x="480" y="740" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_inventory_dtl_6b_j_18_inventory_dtl_6b_j_28_inventory_dtl_6b_j_30_inventory_dtl_6b_j_31_0_no_data_required_regalia_other_sales_detail}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="740" width="80" height="20">
+        <expression><![CDATA[$F{g39_if_c_11_0_required_if_data_if_regalia_sales_dtl_7b_f_32_regalia_sales_dtl_7b_h_32_regalia_sales_dtl_7b_i_32_regalia_sales_dtl_7b_i_53_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="760" width="80" height="20">
+        <text><![CDATA[8.b DEPR DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="760" width="80" height="20">
+        <text><![CDATA[Depreciation Detail - 5 year]]></text>
+      </element>
+      <element kind="textField" x="480" y="760" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_regalia_sales_dtl_7b_f_32_regalia_sales_dtl_7b_h_32_regalia_sales_dtl_7b_i_32_regalia_sales_dtl_7b_i_53_0_no_data_required_depreciation_detail_5_year}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="760" width="80" height="20">
+        <expression><![CDATA[$F{g40_if_c_11_0_required_if_data_if_depr_dtl_8b_i_54_depr_dtl_8b_j_54_depr_dtl_8b_k_54_depr_dtl_8b_l_54_depr_dtl_8b_m_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="780" width="80" height="20">
+        <text><![CDATA[8.c DEPR DTL]]></text>
+      </element>
+      <element kind="staticText" x="400" y="780" width="80" height="20">
+        <text><![CDATA[Depreciation Detail - 7 year]]></text>
+      </element>
+      <element kind="textField" x="480" y="780" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_depr_dtl_8b_i_54_depr_dtl_8b_j_54_depr_dtl_8b_k_54_depr_dtl_8b_l_54_depr_dtl_8b_m_54_0_no_data_required_depreciation_detail_7_year}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="780" width="80" height="20">
+        <expression><![CDATA[$F{g41_if_c_11_0_required_if_data_if_depr_dtl_8c_i_54_depr_dtl_8c_j_54_depr_dtl_8c_k_54_depr_dtl_8c_l_54_depr_dtl_8c_m_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="800" width="80" height="20">
+        <text><![CDATA[9.b TRANSFER IN]]></text>
+      </element>
+      <element kind="staticText" x="400" y="800" width="80" height="20">
+        <text><![CDATA[Transfer Income]]></text>
+      </element>
+      <element kind="textField" x="480" y="800" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_depr_dtl_8c_i_54_depr_dtl_8c_j_54_depr_dtl_8c_k_54_depr_dtl_8c_l_54_depr_dtl_8c_m_54_0_no_data_required_transfer_income}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="800" width="80" height="20">
+        <expression><![CDATA[$F{g42_if_c_11_0_required_if_data_if_transfer_in_9b_f_32_transfer_in_9b_f_47_transfer_in_9b_f_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="820" width="80" height="20">
+        <text><![CDATA[9.c TRANSFER IN]]></text>
+      </element>
+      <element kind="staticText" x="400" y="820" width="80" height="20">
+        <text><![CDATA[Transfer Income]]></text>
+      </element>
+      <element kind="textField" x="480" y="820" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_in_9b_f_32_transfer_in_9b_f_47_transfer_in_9b_f_54_0_no_data_required_transfer_income}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="820" width="80" height="20">
+        <expression><![CDATA[$F{g43_if_c_11_0_required_if_data_if_transfer_in_9c_f_32_transfer_in_9c_f_47_transfer_in_9c_f_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="840" width="80" height="20">
+        <text><![CDATA[9.d TRANSFER IN]]></text>
+      </element>
+      <element kind="staticText" x="400" y="840" width="80" height="20">
+        <text><![CDATA[Transfer Income]]></text>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_in_9c_f_32_transfer_in_9c_f_47_transfer_in_9c_f_54_0_no_data_required_transfer_income}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="840" width="80" height="20">
+        <expression><![CDATA[$F{g44_if_c_11_0_required_if_data_if_transfer_in_9d_f_55_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="860" width="80" height="20">
+        <text><![CDATA[10.b TRANSFER OUT]]></text>
+      </element>
+      <element kind="staticText" x="400" y="860" width="80" height="20">
+        <text><![CDATA[Transfer Expense]]></text>
+      </element>
+      <element kind="textField" x="480" y="860" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_in_9d_f_55_0_no_data_required_transfer_expense}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="860" width="80" height="20">
+        <expression><![CDATA[$F{g45_if_c_11_0_required_if_data_if_transfer_out_10b_f_28_transfer_out_10b_f_42_transfer_out_10b_f_36_transfer_out_10b_f_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="880" width="80" height="20">
+        <text><![CDATA[10.c TRANSFER OUT]]></text>
+      </element>
+      <element kind="staticText" x="400" y="880" width="80" height="20">
+        <text><![CDATA[Transfer Expense]]></text>
+      </element>
+      <element kind="textField" x="480" y="880" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_out_10b_f_28_transfer_out_10b_f_42_transfer_out_10b_f_36_transfer_out_10b_f_54_0_no_data_required_transfer_expense}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="880" width="80" height="20">
+        <expression><![CDATA[$F{g46_if_c_11_0_required_if_data_if_transfer_out_10c_f_28_transfer_out_10c_f_42_transfer_out_10c_f_36_transfer_out_10c_f_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="900" width="80" height="20">
+        <text><![CDATA[10.d TRANSFER OUT]]></text>
+      </element>
+      <element kind="staticText" x="400" y="900" width="80" height="20">
+        <text><![CDATA[Transfer Expense]]></text>
+      </element>
+      <element kind="textField" x="480" y="900" width="80" height="20">
+        <expression><![CDATA[$F{if_c_11_0_required_if_data_if_transfer_out_10c_f_28_transfer_out_10c_f_42_transfer_out_10c_f_36_transfer_out_10c_f_54_0_no_data_required_transfer_expense}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="900" width="80" height="20">
+        <expression><![CDATA[$F{g47_if_c_11_0_required_if_data_if_transfer_out_10d_f_28_transfer_out_10d_f_42_transfer_out_10d_f_38_transfer_out_10d_f_54_0_no_data_required}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="940" width="80" height="20">
+        <text><![CDATA[FREE FORM]]></text>
+      </element>
+      <element kind="staticText" x="400" y="940" width="80" height="20">
+        <text><![CDATA[Unlocked Worksheet for other information (ledgers, etc.)]]></text>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{free_form}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="1020" width="80" height="20">
+        <text><![CDATA[Make sure that all pages marked 'REQUIRED' are submitted and filed.]]></text>
+      </element>
+      <element kind="textField" x="80" y="1100" width="80" height="20">
+        <expression><![CDATA[$F{variables}]]></expression>
+      </element>
+      <element kind="textField" x="80" y="1120" width="80" height="20">
+        <expression><![CDATA[$F{c67_c8_c71_c63_c69_c64_c70}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1160" width="80" height="20">
+        <expression><![CDATA[$F{corporate_start_month}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1180" width="80" height="20">
+        <expression><![CDATA[$F{if_or_c12_c11_if_or_c12_1_c13_d60_c13_d62_1_if_c13_d61_if_c12_2_4_if_c12_3_7_10_end_month}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1200" width="80" height="20">
+        <expression><![CDATA[$F{if_or_c12_c11_c12_4_12_start_month}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1220" width="80" height="20">
+        <expression><![CDATA[$F{if_c61_text_date_c65_c61_1_mm_dd_yyyy_end_month}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1240" width="80" height="20">
+        <expression><![CDATA[$F{if_c62_text_date_c65_c62_c66_mm_dd_yyyy_year}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1260" width="80" height="20">
+        <expression><![CDATA[$F{if_c11_if_c11_2000_2000_c11_c11_end_day}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1360" width="80" height="20">
+        <expression><![CDATA[$F{trimmed_period}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1560" width="80" height="20">
+        <expression><![CDATA[$F{_0_0893_contact_info}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1560" width="80" height="20">
+        <expression><![CDATA[$F{_0_0892_if_c_64_false_min_h_81_j_81_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1560" width="80" height="20">
+        <expression><![CDATA[$F{_0_0893_if_c_64_false_date_year_min_h_81_j_81_month_min_min_h_81_j_81_day_min_min_h_81_j_81_60_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1560" width="80" height="20">
+        <expression><![CDATA[$F{_0_0446_if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="1560" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h_27_datevalue_1_1_2099_contact_info_1_h_27}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_min_h_81_j_81_datevalue_c_64_primary_acct}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_date_year_min_h_81_j_81_month_min_min_h_81_j_81_day_min_min_h_81_j_81_60_datevalue_c_64_if_c_64_false_min_h82_m82_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16_if_c_64_false_date_year_min_h_82_m_82_month_min_min_h_82_m_82_day_min_min_h_82_m_82_60_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h_27_datevalue_1_1_2099_contact_info_1_h_27_if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h_35_datevalue_1_1_2099_contact_info_1_h_35_if_isblank_primary_account_2a_h_45_datevalue_1_1_2099_primary_account_2a_h_45}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_47_datevalue_1_1_2099_primary_account_2a_h_47}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_49_datevalue_1_1_2099_primary_account_2a_h_49}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="1580" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_51_datevalue_1_1_2099_primary_account_2a_h_51}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_min_h82_m82_datevalue_c_64_secondary_acct}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_date_year_min_h_82_m_82_month_min_min_h_82_m_82_day_min_min_h_82_m_82_60_datevalue_c_64_if_c_64_false_min_h83_m83_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16_if_c_64_false_date_year_min_h_83_m_83_month_min_min_h_83_m_83_day_min_min_h_83_m_83_60_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_45_datevalue_1_1_2099_primary_account_2a_h_45_min_if_isblank_secondary_accounts_2b_d_29_datevalue_1_1_2099_secondary_accounts_2b_d_29_if_isblank_secondary_accounts_2b_e_29_datevalue_1_1_2099_secondary_accounts_2b_e_29_if_isblank_secondary_accounts_2b_f_29_datevalue_1_1_2099_secondary_accounts_2b_f_29_if_isblank_secondary_accounts_2b_g_29_datevalue_1_1_2099_secondary_accounts_2b_g_29}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_47_datevalue_1_1_2099_primary_account_2a_h_47_min_if_isblank_secondary_accounts_2b_d_32_datevalue_1_1_2099_secondary_accounts_2b_d_32_if_isblank_secondary_accounts_2b_e_32_datevalue_1_1_2099_secondary_accounts_2b_e_32_if_isblank_secondary_accounts_2b_f_32_datevalue_1_1_2099_secondary_accounts_2b_f_32_if_isblank_secondary_accounts_2b_g_32_datevalue_1_1_2099_secondary_accounts_2b_g_32}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_49_datevalue_1_1_2099_primary_account_2a_h_49_min_if_isblank_secondary_accounts_2b_d_35_datevalue_1_1_2099_secondary_accounts_2b_d_35_if_isblank_secondary_accounts_2b_e_35_datevalue_1_1_2099_secondary_accounts_2b_e_35_if_isblank_secondary_accounts_2b_f_35_datevalue_1_1_2099_secondary_accounts_2b_f_35_if_isblank_secondary_accounts_2b_g_35_datevalue_1_1_2099_secondary_accounts_2b_g_35}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_51_datevalue_1_1_2099_primary_account_2a_h_51_min_if_isblank_secondary_accounts_2b_d_38_datevalue_1_1_2099_secondary_accounts_2b_d_38_if_isblank_secondary_accounts_2b_e_38_datevalue_1_1_2099_secondary_accounts_2b_e_38_if_isblank_secondary_accounts_2b_f_38_datevalue_1_1_2099_secondary_accounts_2b_f_38_if_isblank_secondary_accounts_2b_g_38_datevalue_1_1_2099_secondary_accounts_2b_g_38}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="1600" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_primary_account_2a_h_53_datevalue_1_1_2099_primary_account_2a_h_53_min_if_isblank_secondary_accounts_2b_d_41_datevalue_1_1_2099_secondary_accounts_2b_d_41_if_isblank_secondary_accounts_2b_e_41_datevalue_1_1_2099_secondary_accounts_2b_e_41_if_isblank_secondary_accounts_2b_f_41_datevalue_1_1_2099_secondary_accounts_2b_f_41_if_isblank_secondary_accounts_2b_g_41_datevalue_1_1_2099_secondary_accounts_2b_g_41}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_min_h83_m83_datevalue_c_64_finance_committee}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_date_year_min_h_83_m_83_month_min_min_h_83_m_83_day_min_min_h_83_m_83_60_datevalue_c_64_if_c_64_false_min_h84_l84_h84_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2b_d_29_datevalue_1_1_2099_secondary_accounts_2b_d_29_if_isblank_secondary_accounts_2b_e_29_datevalue_1_1_2099_secondary_accounts_2b_e_29_if_isblank_secondary_accounts_2b_f_29_datevalue_1_1_2099_secondary_accounts_2b_f_29_if_isblank_secondary_accounts_2b_g_29_datevalue_1_1_2099_secondary_accounts_2b_g_29_if_c_64_false_date_year_min_h_84_l_84_month_min_min_h_84_l_84_day_min_min_h_84_l_84_60_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2b_d_32_datevalue_1_1_2099_secondary_accounts_2b_d_32_if_isblank_secondary_accounts_2b_e_32_datevalue_1_1_2099_secondary_accounts_2b_e_32_if_isblank_secondary_accounts_2b_f_32_datevalue_1_1_2099_secondary_accounts_2b_f_32_if_isblank_secondary_accounts_2b_g_32_datevalue_1_1_2099_secondary_accounts_2b_g_32_if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2b_d_35_datevalue_1_1_2099_secondary_accounts_2b_d_35_if_isblank_secondary_accounts_2b_e_35_datevalue_1_1_2099_secondary_accounts_2b_e_35_if_isblank_secondary_accounts_2b_f_35_datevalue_1_1_2099_secondary_accounts_2b_f_35_if_isblank_secondary_accounts_2b_g_35_datevalue_1_1_2099_secondary_accounts_2b_g_35_if_isblank_finance_comm_13_f21_datevalue_1_1_2099_finance_comm_13_f21}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2b_d_38_datevalue_1_1_2099_secondary_accounts_2b_d_38_if_isblank_secondary_accounts_2b_e_38_datevalue_1_1_2099_secondary_accounts_2b_e_38_if_isblank_secondary_accounts_2b_f_38_datevalue_1_1_2099_secondary_accounts_2b_f_38_if_isblank_secondary_accounts_2b_g_38_datevalue_1_1_2099_secondary_accounts_2b_g_38_if_isblank_finance_comm_13_f25_datevalue_1_1_2099_finance_comm_13_f25}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="1620" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2b_d_41_datevalue_1_1_2099_secondary_accounts_2b_d_41_if_isblank_secondary_accounts_2b_e_41_datevalue_1_1_2099_secondary_accounts_2b_e_41_if_isblank_secondary_accounts_2b_f_41_datevalue_1_1_2099_secondary_accounts_2b_f_41_if_isblank_secondary_accounts_2b_g_41_datevalue_1_1_2099_secondary_accounts_2b_g_41_if_isblank_finance_comm_13_f28_datevalue_1_1_2099_finance_comm_13_f28}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_min_h84_l84_h84_datevalue_c_64_secondary_acct_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_date_year_min_h_84_l_84_month_min_min_h_84_l_84_day_min_min_h_84_l_84_60_datevalue_c_64_if_c_64_false_min_h85_m85_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_contact_info_1_h_16_datevalue_1_1_2099_contact_info_1_h_16_if_c_64_false_date_year_min_h_85_m_85_month_min_min_h_85_m_85_day_min_min_h_85_m_85_60_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_finance_comm_13_f21_datevalue_1_1_2099_finance_comm_13_f21_min_if_isblank_secondary_accounts_2c_d_29_datevalue_1_1_2099_secondary_accounts_2c_d_29_if_isblank_secondary_accounts_2c_e_29_datevalue_1_1_2099_secondary_accounts_2c_e_29_if_isblank_secondary_accounts_2c_f_29_datevalue_1_1_2099_secondary_accounts_2c_f_29_if_isblank_secondary_accounts_2c_g_29_datevalue_1_1_2099_secondary_accounts_2c_g_29}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_finance_comm_13_f25_datevalue_1_1_2099_finance_comm_13_f25_min_if_isblank_secondary_accounts_2c_d_32_datevalue_1_1_2099_secondary_accounts_2c_d_32_if_isblank_secondary_accounts_2c_e_32_datevalue_1_1_2099_secondary_accounts_2c_e_32_if_isblank_secondary_accounts_2c_f_32_datevalue_1_1_2099_secondary_accounts_2c_f_32_if_isblank_secondary_accounts_2c_g_32_datevalue_1_1_2099_secondary_accounts_2c_g_32}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_finance_comm_13_f28_datevalue_1_1_2099_finance_comm_13_f28_min_if_isblank_secondary_accounts_2c_d_35_datevalue_1_1_2099_secondary_accounts_2c_d_35_if_isblank_secondary_accounts_2c_e_35_datevalue_1_1_2099_secondary_accounts_2c_e_35_if_isblank_secondary_accounts_2c_f_35_datevalue_1_1_2099_secondary_accounts_2c_f_35_if_isblank_secondary_accounts_2c_g_35_datevalue_1_1_2099_secondary_accounts_2c_g_35}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{if_isblank_finance_comm_13_f30_datevalue_1_1_2099_finance_comm_13_f30_min_if_isblank_secondary_accounts_2c_d_38_datevalue_1_1_2099_secondary_accounts_2c_d_38_if_isblank_secondary_accounts_2c_e_38_datevalue_1_1_2099_secondary_accounts_2c_e_38_if_isblank_secondary_accounts_2c_f_38_datevalue_1_1_2099_secondary_accounts_2c_f_38_if_isblank_secondary_accounts_2c_g_38_datevalue_1_1_2099_secondary_accounts_2c_g_38}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="1640" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2b_d_44_datevalue_1_1_2099_secondary_accounts_2b_d_44_if_isblank_secondary_accounts_2b_e_44_datevalue_1_1_2099_secondary_accounts_2b_e_44_if_isblank_secondary_accounts_2b_f_44_datevalue_1_1_2099_secondary_accounts_2b_f_44_if_isblank_secondary_accounts_2b_g_44_datevalue_1_1_2099_secondary_accounts_2b_g_44_min_if_isblank_secondary_accounts_2c_d_41_datevalue_1_1_2099_secondary_accounts_2c_d_41_if_isblank_secondary_accounts_2c_e_41_datevalue_1_1_2099_secondary_accounts_2c_e_41_if_isblank_secondary_accounts_2c_f_41_datevalue_1_1_2099_secondary_accounts_2c_f_41_if_isblank_secondary_accounts_2c_g_41_datevalue_1_1_2099_secondary_accounts_2c_g_41}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_min_h85_m85_datevalue_c_64_secondary_acct_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{if_c_64_false_date_year_min_h_85_m_85_month_min_min_h_85_m_85_day_min_min_h_85_m_85_60_datevalue_c_64_if_c_64_false_min_h86_m86_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2c_d_29_datevalue_1_1_2099_secondary_accounts_2c_d_29_if_isblank_secondary_accounts_2c_e_29_datevalue_1_1_2099_secondary_accounts_2c_e_29_if_isblank_secondary_accounts_2c_f_29_datevalue_1_1_2099_secondary_accounts_2c_f_29_if_isblank_secondary_accounts_2c_g_29_datevalue_1_1_2099_secondary_accounts_2c_g_29_if_c_64_false_date_year_min_h_86_m_86_month_min_min_h_86_m_86_day_min_min_h_86_m_86_60_datevalue_c_64}]]></expression>
+      </element>
+      <element kind="textField" x="640" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2c_d_32_datevalue_1_1_2099_secondary_accounts_2c_d_32_if_isblank_secondary_accounts_2c_e_32_datevalue_1_1_2099_secondary_accounts_2c_e_32_if_isblank_secondary_accounts_2c_f_32_datevalue_1_1_2099_secondary_accounts_2c_f_32_if_isblank_secondary_accounts_2c_g_32_datevalue_1_1_2099_secondary_accounts_2c_g_32_min_if_isblank_secondary_accounts_2d_d_29_datevalue_1_1_2099_secondary_accounts_2d_d_29_if_isblank_secondary_accounts_2c_e_29_datevalue_1_1_2099_secondary_accounts_2c_e_29_if_isblank_secondary_accounts_2c_f_29_datevalue_1_1_2099_secondary_accounts_2c_f_29_if_isblank_secondary_accounts_2c_g_29_datevalue_1_1_2099_secondary_accounts_2c_g_29}]]></expression>
+      </element>
+      <element kind="textField" x="720" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2c_d_35_datevalue_1_1_2099_secondary_accounts_2c_d_35_if_isblank_secondary_accounts_2c_e_35_datevalue_1_1_2099_secondary_accounts_2c_e_35_if_isblank_secondary_accounts_2c_f_35_datevalue_1_1_2099_secondary_accounts_2c_f_35_if_isblank_secondary_accounts_2c_g_35_datevalue_1_1_2099_secondary_accounts_2c_g_35_min_if_isblank_secondary_accounts_2d_d_32_datevalue_1_1_2099_secondary_accounts_2d_d_32_if_isblank_secondary_accounts_2c_e_32_datevalue_1_1_2099_secondary_accounts_2c_e_32_if_isblank_secondary_accounts_2c_f_32_datevalue_1_1_2099_secondary_accounts_2c_f_32_if_isblank_secondary_accounts_2c_g_32_datevalue_1_1_2099_secondary_accounts_2c_g_32}]]></expression>
+      </element>
+      <element kind="textField" x="800" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2c_d_38_datevalue_1_1_2099_secondary_accounts_2c_d_38_if_isblank_secondary_accounts_2c_e_38_datevalue_1_1_2099_secondary_accounts_2c_e_38_if_isblank_secondary_accounts_2c_f_38_datevalue_1_1_2099_secondary_accounts_2c_f_38_if_isblank_secondary_accounts_2c_g_38_datevalue_1_1_2099_secondary_accounts_2c_g_38_min_if_isblank_secondary_accounts_2d_d_35_datevalue_1_1_2099_secondary_accounts_2d_d_35_if_isblank_secondary_accounts_2c_e_35_datevalue_1_1_2099_secondary_accounts_2c_e_35_if_isblank_secondary_accounts_2c_f_35_datevalue_1_1_2099_secondary_accounts_2c_f_35_if_isblank_secondary_accounts_2c_g_35_datevalue_1_1_2099_secondary_accounts_2c_g_35}]]></expression>
+      </element>
+      <element kind="textField" x="880" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2c_d_41_datevalue_1_1_2099_secondary_accounts_2c_d_41_if_isblank_secondary_accounts_2c_e_41_datevalue_1_1_2099_secondary_accounts_2c_e_41_if_isblank_secondary_accounts_2c_f_41_datevalue_1_1_2099_secondary_accounts_2c_f_41_if_isblank_secondary_accounts_2c_g_41_datevalue_1_1_2099_secondary_accounts_2c_g_41_min_if_isblank_secondary_accounts_2d_d_38_datevalue_1_1_2099_secondary_accounts_2d_d_38_if_isblank_secondary_accounts_2c_e_38_datevalue_1_1_2099_secondary_accounts_2c_e_38_if_isblank_secondary_accounts_2c_f_38_datevalue_1_1_2099_secondary_accounts_2c_f_38_if_isblank_secondary_accounts_2c_g_38_datevalue_1_1_2099_secondary_accounts_2c_g_38}]]></expression>
+      </element>
+      <element kind="textField" x="960" y="1660" width="80" height="20">
+        <expression><![CDATA[$F{min_if_isblank_secondary_accounts_2c_d_44_datevalue_1_1_2099_secondary_accounts_2c_d_44_if_isblank_secondary_accounts_2c_e_44_datevalue_1_1_2099_secondary_accounts_2c_e_44_if_isblank_secondary_accounts_2c_f_44_datevalue_1_1_2099_secondary_accounts_2c_f_44_if_isblank_secondary_accounts_2c_g_44_datevalue_1_1_2099_secondary_accounts_2c_g_44_min_if_isblank_secondary_accounts_2d_d_41_datevalue_1_1_2099_secondary_accounts_2d_d_41_if_isblank_secondary_accounts_2c_e_41_datevalue_1_1_2099_secondary_accounts_2c_e_41_if_isblank_secondary_accounts_2c_f_41_datevalue_1_1_2099_secondary_accounts_2c_f_41_if_isblank_secondary_accounts_2c_g_41_datevalue_1_1_2099_secondary_accounts_2c_g_41}]]></expression>
+      </element>
+    </band>
+  </detail>
+</jasperReport>
