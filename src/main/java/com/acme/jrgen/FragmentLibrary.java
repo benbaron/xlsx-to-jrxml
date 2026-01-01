@@ -64,17 +64,18 @@ public final class FragmentLibrary
                                     double fontSize,
                                     String align)
     {
+        String alignmentAttribute = formatAlignment(align);
         return String.format("""
                 <staticText>
                   <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
-                  <textElement textAlignment=\"%s\">
+                  <textElement%s>
                     <font size=\"%s\"/>
                   </textElement>
                   <text><![CDATA[%s]]></text>
                 </staticText>
             """,
             x, y, w, h,
-            escape(align == null ? "Left" : align),
+            alignmentAttribute,
             formatFont(fontSize),
             cdata(text)
         );
@@ -92,18 +93,19 @@ public final class FragmentLibrary
         String patternFragment = (pattern == null || pattern.isBlank())
             ? ""
             : String.format("      <pattern>%s</pattern>%n", escape(pattern));
+        String alignmentAttribute = formatAlignment(align);
 
         return String.format("""
                 <textField>
                   <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
-                  <textElement textAlignment=\"%s\">
+                  <textElement%s>
                     <font size=\"%s\"/>
                   </textElement>
 %s                  <textFieldExpression><![CDATA[$F{%s}]]></textFieldExpression>
                 </textField>
             """,
             x, y, w, h,
-            escape(align == null ? "Left" : align),
+            alignmentAttribute,
             formatFont(fontSize),
             patternFragment,
             escape(fieldName)
@@ -118,17 +120,18 @@ public final class FragmentLibrary
                                              double fontSize,
                                              String align)
     {
+        String alignmentAttribute = formatAlignment(align);
         return String.format("""
                 <textField>
                   <reportElement x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\"/>
-                  <textElement textAlignment=\"%s\">
+                  <textElement%s>
                     <font size=\"%s\"/>
                   </textElement>
                   <textFieldExpression><![CDATA[%s]]></textFieldExpression>
                 </textField>
             """,
             x, y, w, h,
-            escape(align == null ? "Left" : align),
+            alignmentAttribute,
             formatFont(fontSize),
             expression
         );
@@ -162,5 +165,15 @@ public final class FragmentLibrary
     private static String formatFont(double fontSize)
     {
         return String.format("%s", fontSize);
+    }
+
+    private static String formatAlignment(String align)
+    {
+        if (align == null || align.isBlank())
+        {
+            return "";
+        }
+
+        return String.format(" textAlignment=\\\"%s\\\"", escape(align));
     }
 }
