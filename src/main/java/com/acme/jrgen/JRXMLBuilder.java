@@ -125,11 +125,20 @@ public class JRXMLBuilder
             {
                 sb.append(FragmentLibrary.staticText(x, y, w, h, ci.value(), font, ci.alignment()));
             }
-
-            for (CellItem ci : m.items())
+            else if (ci.isDynamic() && ci.fieldSpec() != null)
             {
-                sb.append(FragmentLibrary.textField(x, y, w, h, ci.fieldName(), font, ci.fieldSpec().alignment(), ci.fieldSpec().pattern()));
+                sb.append(FragmentLibrary.textField(
+                    x,
+                    y,
+                    w,
+                    h,
+                    ci.fieldName(),
+                    font,
+                    ci.fieldSpec().alignment(),
+                    ci.fieldSpec().pattern()));
             }
+
+        }
 
         sb.append("    </band>\n");
         return sb.toString();
