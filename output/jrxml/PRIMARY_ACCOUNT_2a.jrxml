@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="PRIMARY_ACCOUNT_2a" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="primary_account_2a_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="bank_name" class="java.lang.String"/>
+  <field name="bank_name_2" class="java.lang.String"/>
+  <field name="bank_name_3" class="java.lang.String"/>
+  <field name="bank_name_4" class="java.lang.String"/>
+  <field name="bank_account_title" class="java.lang.String"/>
+  <field name="bank_account_title_2" class="java.lang.String"/>
+  <field name="bank_account_title_3" class="java.lang.String"/>
+  <field name="bank_account_title_4" class="java.lang.String"/>
+  <field name="bank_account_type" class="java.lang.String"/>
+  <field name="bank_s_signature_requirement" class="java.lang.String"/>
+  <field name="bank_account_number" class="java.lang.String"/>
+  <field name="no_statement_ending_date" class="java.lang.String"/>
+  <field name="statement_ending_date_bank_branch_phone_number_and_name_of_contact" class="java.lang.String"/>
+  <field name="bank_branch_phone_number_and_name_of_contact" class="java.lang.String"/>
+  <field name="no_bank_branch_phone_number_and_name_of_contact" class="java.lang.String"/>
+  <field name="no" class="java.lang.Double"/>
+  <field name="contents_c14_1_balance_from_bank_statement_at_end_of_period" class="java.lang.String"/>
+  <field name="deposit_date" class="java.lang.String"/>
+  <field name="amount_of_deposit" class="java.lang.String"/>
+  <field name="deposit_date_2" class="java.lang.String"/>
+  <field name="primary_account_2a_r21c7" class="java.lang.String"/>
+  <field name="amount_of_deposit_2" class="java.lang.String"/>
+  <field name="deposit_date_3" class="java.lang.String"/>
+  <field name="primary_account_2a_r22c4" class="java.lang.String"/>
+  <field name="amount_of_deposit_3" class="java.lang.String"/>
+  <field name="deposit_date_4" class="java.lang.String"/>
+  <field name="primary_account_2a_r22c7" class="java.lang.String"/>
+  <field name="amount_of_deposit_4" class="java.lang.String"/>
+  <field name="deposit_date_5" class="java.lang.String"/>
+  <field name="amount_of_deposit_5" class="java.lang.String"/>
+  <field name="deposit_date_6" class="java.lang.String"/>
+  <field name="primary_account_2a_r23c7" class="java.lang.String"/>
+  <field name="amount_of_deposit_6" class="java.lang.String"/>
+  <field name="amount_of_deposit_total" class="java.lang.Double"/>
+  <field name="check_number" class="java.lang.String"/>
+  <field name="date" class="java.lang.String"/>
+  <field name="check_amount" class="java.lang.String"/>
+  <field name="check_number_2" class="java.lang.String"/>
+  <field name="date_2" class="java.lang.String"/>
+  <field name="check_amount_2" class="java.lang.String"/>
+  <field name="check_number_3" class="java.lang.String"/>
+  <field name="date_3" class="java.lang.String"/>
+  <field name="check_amount_3" class="java.lang.String"/>
+  <field name="check_number_4" class="java.lang.String"/>
+  <field name="date_4" class="java.lang.String"/>
+  <field name="check_amount_4" class="java.lang.String"/>
+  <field name="check_number_5" class="java.lang.String"/>
+  <field name="date_5" class="java.lang.String"/>
+  <field name="check_amount_5" class="java.lang.String"/>
+  <field name="check_number_6" class="java.lang.String"/>
+  <field name="date_6" class="java.lang.String"/>
+  <field name="check_amount_6" class="java.lang.String"/>
+  <field name="check_number_7" class="java.lang.String"/>
+  <field name="date_7" class="java.lang.String"/>
+  <field name="check_amount_7" class="java.lang.String"/>
+  <field name="check_number_8" class="java.lang.String"/>
+  <field name="date_8" class="java.lang.String"/>
+  <field name="check_amount_8" class="java.lang.String"/>
+  <field name="check_number_9" class="java.lang.String"/>
+  <field name="date_9" class="java.lang.String"/>
+  <field name="check_amount_9" class="java.lang.String"/>
+  <field name="check_number_10" class="java.lang.String"/>
+  <field name="date_10" class="java.lang.String"/>
+  <field name="check_amount_10" class="java.lang.String"/>
+  <field name="check_number_11" class="java.lang.String"/>
+  <field name="date_11" class="java.lang.String"/>
+  <field name="check_amount_11" class="java.lang.String"/>
+  <field name="check_number_12" class="java.lang.String"/>
+  <field name="date_12" class="java.lang.String"/>
+  <field name="check_amount_12" class="java.lang.String"/>
+  <field name="check_number_13" class="java.lang.String"/>
+  <field name="date_13" class="java.lang.String"/>
+  <field name="check_amount_13" class="java.lang.String"/>
+  <field name="check_number_14" class="java.lang.String"/>
+  <field name="date_14" class="java.lang.String"/>
+  <field name="check_amount_14" class="java.lang.String"/>
+  <field name="check_number_15" class="java.lang.String"/>
+  <field name="date_15" class="java.lang.String"/>
+  <field name="check_amount_15" class="java.lang.String"/>
+  <field name="check_number_16" class="java.lang.String"/>
+  <field name="date_16" class="java.lang.String"/>
+  <field name="check_amount_16" class="java.lang.String"/>
+  <field name="check_amount_total" class="java.lang.Double"/>
+  <field name="date_4_adjusted_account_balance_line_1_line_2_line_3" class="java.lang.Double"/>
+  <field name="round_sum_e27_e34_2_round_sum_h27_h34_2_h_36_h_37" class="java.lang.Double"/>
+  <field name="round_h19_h24_h35_2_5_ending_ledger_or_register_balance" class="java.lang.String"/>
+  <field name="total_6_does_this_account_earn_interest_yes_or_no" class="java.lang.String"/>
+  <field name="round_h19_h24_h35_2_all_persons_below_are_on_the_signature_card_as_of_date" class="java.lang.String"/>
+  <field name="legal_name_print_exchequer" class="java.lang.Double"/>
+  <field name="address_contact_info_1_d11" class="java.lang.Double"/>
+  <field name="member_exp_mm_yyyy_contact_info_1_d12" class="java.lang.Double"/>
+  <field name="contact_info_1_d12" class="java.lang.Double"/>
+  <field name="contact_info_1_h15_if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13" class="java.lang.Double"/>
+  <field name="exchequer" class="java.lang.String"/>
+  <field name="contact_info_1_d11" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end" class="java.lang.String"/>
+  <field name="contact_info_1_h16" class="java.lang.String"/>
+  <field name="exchequer_2" class="java.lang.String"/>
+  <field name="contact_info_1_d11_2" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_2" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_2" class="java.lang.String"/>
+  <field name="contact_info_1_h16_2" class="java.lang.String"/>
+  <field name="exchequer_3" class="java.lang.String"/>
+  <field name="contact_info_1_d11_3" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_3" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_3" class="java.lang.String"/>
+  <field name="contact_info_1_h16_3" class="java.lang.String"/>
+  <field name="exchequer_4" class="java.lang.String"/>
+  <field name="contact_info_1_d11_4" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_4" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_4" class="java.lang.String"/>
+  <field name="contact_info_1_h16_4" class="java.lang.String"/>
+  <field name="exchequer_5" class="java.lang.String"/>
+  <field name="contact_info_1_d11_5" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_5" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_5" class="java.lang.String"/>
+  <field name="contact_info_1_h16_5" class="java.lang.String"/>
+  <field name="exchequer_6" class="java.lang.String"/>
+  <field name="contact_info_1_d11_6" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_6" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_6" class="java.lang.String"/>
+  <field name="contact_info_1_h16_6" class="java.lang.String"/>
+  <field name="exchequer_7" class="java.lang.String"/>
+  <field name="contact_info_1_d11_7" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_7" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_7" class="java.lang.String"/>
+  <field name="contact_info_1_h16_7" class="java.lang.String"/>
+  <field name="exchequer_8" class="java.lang.String"/>
+  <field name="contact_info_1_d11_8" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_8" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_8" class="java.lang.String"/>
+  <field name="contact_info_1_h16_8" class="java.lang.String"/>
+  <field name="exchequer_9" class="java.lang.String"/>
+  <field name="contact_info_1_d11_9" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_9" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_9" class="java.lang.String"/>
+  <field name="contact_info_1_h16_9" class="java.lang.String"/>
+  <field name="exchequer_10" class="java.lang.String"/>
+  <field name="contact_info_1_d11_10" class="java.lang.String"/>
+  <field name="if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_10" class="java.lang.String"/>
+  <field name="yes_add_line_5_to_pg_3_line_i_b_end_10" class="java.lang.String"/>
+  <field name="contact_info_1_h16_10" class="java.lang.String"/>
+  <field name="other" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1280">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{primary_account_2a_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[PRIMARY ACCOUNT RECONCILIATION]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[Complete this form for the primary bank account held and managed by this Society branch or office.  Attach a copy of the bank statement which includes]]></text>
+      </element>
+      <element kind="staticText" x="160" y="180" width="80" height="20">
+        <text><![CDATA[ending date of period. Kingdoms may require more information to be attached. If your branch has funds but does not keep them in a bank account,]]></text>
+      </element>
+      <element kind="staticText" x="160" y="200" width="80" height="20">
+        <text><![CDATA[use the Comment page to explain how the funds are managed.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="220" width="80" height="20">
+        <text><![CDATA[Bank Name:]]></text>
+      </element>
+      <element kind="textField" x="320" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="220" width="80" height="20">
+        <expression><![CDATA[$F{bank_name_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="240" width="80" height="20">
+        <text><![CDATA[Bank Account Title:]]></text>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{bank_account_title}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{bank_account_title_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="240" width="80" height="20">
+        <expression><![CDATA[$F{bank_account_title_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="240" width="80" height="20">
+        <expression><![CDATA[$F{bank_account_title_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="260" width="80" height="20">
+        <text><![CDATA[Bank Account Type :]]></text>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{bank_account_type}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="260" width="80" height="20">
+        <text><![CDATA[Bank's Signature Requirement:]]></text>
+      </element>
+      <element kind="textField" x="560" y="260" width="80" height="20">
+        <expression><![CDATA[$F{bank_s_signature_requirement}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="280" width="80" height="20">
+        <text><![CDATA[Bank Account Number :]]></text>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{bank_account_number}]]></expression>
+      </element>
+      <element kind="staticText" x="400" y="280" width="80" height="20">
+        <text><![CDATA[Statement Ending Date:]]></text>
+      </element>
+      <element kind="textField" x="560" y="280" width="80" height="20">
+        <expression><![CDATA[$F{no_statement_ending_date}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="300" width="80" height="20">
+        <text><![CDATA[Bank Branch Phone Number and Name of Contact:]]></text>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{statement_ending_date_bank_branch_phone_number_and_name_of_contact}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="300" width="80" height="20">
+        <expression><![CDATA[$F{bank_branch_phone_number_and_name_of_contact}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="300" width="80" height="20">
+        <expression><![CDATA[$F{no_bank_branch_phone_number_and_name_of_contact}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="320" width="80" height="20">
+        <expression><![CDATA[$F{no}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="340" width="80" height="20">
+        <text><![CDATA[1. Balance from bank statement at end of period]]></text>
+      </element>
+      <element kind="textField" x="560" y="340" width="80" height="20">
+        <expression><![CDATA[$F{contents_c14_1_balance_from_bank_statement_at_end_of_period}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="360" width="80" height="20">
+        <text><![CDATA[Deposit Date]]></text>
+      </element>
+      <element kind="staticText" x="320" y="360" width="80" height="20">
+        <text><![CDATA[Amount of Deposit]]></text>
+      </element>
+      <element kind="staticText" x="400" y="360" width="80" height="20">
+        <text><![CDATA[Deposit Date]]></text>
+      </element>
+      <element kind="staticText" x="560" y="360" width="80" height="20">
+        <text><![CDATA[Amount of Deposit]]></text>
+      </element>
+      <element kind="textField" x="160" y="380" width="80" height="20">
+        <expression><![CDATA[$F{deposit_date}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{deposit_date_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="380" width="80" height="20">
+        <expression><![CDATA[$F{primary_account_2a_r21c7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="380" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="400" width="80" height="20">
+        <expression><![CDATA[$F{deposit_date_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{primary_account_2a_r22c4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{deposit_date_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="400" width="80" height="20">
+        <expression><![CDATA[$F{primary_account_2a_r22c7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="400" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="420" width="80" height="20">
+        <expression><![CDATA[$F{deposit_date_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="420" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{deposit_date_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="420" width="80" height="20">
+        <expression><![CDATA[$F{primary_account_2a_r23c7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="420" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit_6}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="440" width="80" height="20">
+        <text><![CDATA[2. Deposits not cleared on statement]]></text>
+      </element>
+      <element kind="staticText" x="400" y="440" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="textField" x="560" y="440" width="80" height="20">
+        <expression><![CDATA[$F{amount_of_deposit_total}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="480" width="80" height="20">
+        <text><![CDATA[Check Number]]></text>
+      </element>
+      <element kind="staticText" x="240" y="480" width="80" height="20">
+        <text><![CDATA[Date]]></text>
+      </element>
+      <element kind="staticText" x="320" y="480" width="80" height="20">
+        <text><![CDATA[Check Amount]]></text>
+      </element>
+      <element kind="staticText" x="400" y="480" width="80" height="20">
+        <text><![CDATA[Check Number]]></text>
+      </element>
+      <element kind="staticText" x="480" y="480" width="80" height="20">
+        <text><![CDATA[Date]]></text>
+      </element>
+      <element kind="staticText" x="560" y="480" width="80" height="20">
+        <text><![CDATA[Check Amount]]></text>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{check_number}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{date}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{check_amount}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{check_number_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="500" width="80" height="20">
+        <expression><![CDATA[$F{date_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="500" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{check_number_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{date_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{check_number_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="520" width="80" height="20">
+        <expression><![CDATA[$F{date_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="520" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{check_number_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{date_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{check_number_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="540" width="80" height="20">
+        <expression><![CDATA[$F{date_6}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="540" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_6}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="560" width="80" height="20">
+        <expression><![CDATA[$F{check_number_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{date_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{check_number_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="560" width="80" height="20">
+        <expression><![CDATA[$F{date_8}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="560" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="580" width="80" height="20">
+        <expression><![CDATA[$F{check_number_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{date_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{check_number_10}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="580" width="80" height="20">
+        <expression><![CDATA[$F{date_10}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="580" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_10}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="600" width="80" height="20">
+        <expression><![CDATA[$F{check_number_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{date_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{check_number_12}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="600" width="80" height="20">
+        <expression><![CDATA[$F{date_12}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="600" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_12}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="620" width="80" height="20">
+        <expression><![CDATA[$F{check_number_13}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{date_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_13}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{check_number_14}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="620" width="80" height="20">
+        <expression><![CDATA[$F{date_14}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="620" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_14}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="640" width="80" height="20">
+        <expression><![CDATA[$F{check_number_15}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{date_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_15}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{check_number_16}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="640" width="80" height="20">
+        <expression><![CDATA[$F{date_16}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="640" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_16}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="660" width="80" height="20">
+        <text><![CDATA[3. Checks not cleared on statement]]></text>
+      </element>
+      <element kind="staticText" x="400" y="660" width="80" height="20">
+        <text><![CDATA[TOTAL]]></text>
+      </element>
+      <element kind="textField" x="560" y="660" width="80" height="20">
+        <expression><![CDATA[$F{check_amount_total}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="680" width="80" height="20">
+        <text><![CDATA[4. Adjusted ACCOUNT Balance (Line 1 + Line 2  - Line 3)]]></text>
+      </element>
+      <element kind="textField" x="480" y="680" width="80" height="20">
+        <expression><![CDATA[$F{date_4_adjusted_account_balance_line_1_line_2_line_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="680" width="80" height="20">
+        <expression><![CDATA[$F{round_sum_e27_e34_2_round_sum_h27_h34_2_h_36_h_37}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="700" width="80" height="20">
+        <text><![CDATA[5. Ending LEDGER or REGISTER Balance]]></text>
+      </element>
+      <element kind="textField" x="560" y="700" width="80" height="20">
+        <expression><![CDATA[$F{round_h19_h24_h35_2_5_ending_ledger_or_register_balance}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="720" width="80" height="20">
+        <text><![CDATA[6. Does this account earn interest? (YES or NO)]]></text>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{total_6_does_this_account_earn_interest_yes_or_no}]]></expression>
+      </element>
+      <element kind="staticText" x="480" y="720" width="80" height="20">
+        <text><![CDATA[NO: add line 5 to Pg. 3 Line I.a.(End)]]></text>
+      </element>
+      <element kind="staticText" x="480" y="740" width="80" height="20">
+        <text><![CDATA[YES: add line 5 to Pg. 3 Line I.b.(End)]]></text>
+      </element>
+      <element kind="staticText" x="320" y="760" width="80" height="20">
+        <text><![CDATA[All Persons below are on the signature card as of (date):]]></text>
+      </element>
+      <element kind="textField" x="560" y="760" width="80" height="20">
+        <expression><![CDATA[$F{round_h19_h24_h35_2_all_persons_below_are_on_the_signature_card_as_of_date}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="780" width="80" height="20">
+        <text><![CDATA[Title]]></text>
+      </element>
+      <element kind="staticText" x="320" y="780" width="80" height="20">
+        <text><![CDATA[Legal Name (Print)]]></text>
+      </element>
+      <element kind="staticText" x="400" y="780" width="80" height="20">
+        <text><![CDATA[Address]]></text>
+      </element>
+      <element kind="staticText" x="560" y="780" width="80" height="20">
+        <text><![CDATA[Member # / Exp mm/yyyy]]></text>
+      </element>
+      <element kind="staticText" x="160" y="800" width="80" height="20">
+        <text><![CDATA[Exchequer]]></text>
+      </element>
+      <element kind="textField" x="320" y="800" width="80" height="20">
+        <expression><![CDATA[$F{legal_name_print_exchequer}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="800" width="80" height="20">
+        <expression><![CDATA[$F{address_contact_info_1_d11}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="800" width="80" height="20">
+        <expression><![CDATA[$F{member_exp_mm_yyyy_contact_info_1_d12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d12}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="820" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h15_if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{exchequer}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="840" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="840" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_2}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="860" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_2}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="860" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_2}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_3}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="880" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_3}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="880" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="900" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="900" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_4}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="900" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_4}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="900" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_4}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="920" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="920" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_5}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="920" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_5}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="920" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_5}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_6}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="940" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_6}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="940" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_6}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_7}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="960" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_7}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="960" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_7}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_8}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="980" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_8}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="980" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_8}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_9}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_9}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_9}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{exchequer_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_d11_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{if_contact_info_1_d13_concatenate_contact_info_1_d13_contact_info_1_f13_contact_info_1_h13_10}]]></expression>
+      </element>
+      <element kind="textField" x="480" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{yes_add_line_5_to_pg_3_line_i_b_end_10}]]></expression>
+      </element>
+      <element kind="textField" x="560" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{contact_info_1_h16_10}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1040" width="80" height="20">
+        <text><![CDATA[Branch accounts must include the exchequer and the Kingdom exchequer (or their designate) as signatories.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1060" width="80" height="20">
+        <text><![CDATA[Sign:]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1080" width="80" height="20">
+        <text><![CDATA[Seneschal:]]></text>
+      </element>
+      <element kind="staticText" x="400" y="1080" width="80" height="20">
+        <text><![CDATA[Exchequer:]]></text>
+      </element>
+      <element kind="staticText" x="560" y="1080" width="80" height="20">
+        <text><![CDATA[Date:]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1100" width="80" height="20">
+        <text><![CDATA[-2a-]]></text>
+      </element>
+      <element kind="textField" x="160" y="1260" width="80" height="20">
+        <expression><![CDATA[$F{other}]]></expression>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

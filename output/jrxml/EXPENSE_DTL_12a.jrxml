@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="EXPENSE_DTL_12a" language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555"
+              leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20"
+              uuid="00000000-0000-0000-0000-000000000000">
+  <field name="expense_dtl_12a_r2c3" class="java.lang.Double"/>
+  <field name="contents_b59" class="java.lang.Double"/>
+  <field name="contents_e_3" class="java.lang.Double"/>
+  <field name="contents_e_4" class="java.lang.Double"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r12c5" class="java.lang.String"/>
+  <field name="amount" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_2" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r13c5" class="java.lang.String"/>
+  <field name="amount_2" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_3" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r14c5" class="java.lang.String"/>
+  <field name="amount_3" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_4" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r15c5" class="java.lang.String"/>
+  <field name="amount_4" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_5" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r16c5" class="java.lang.String"/>
+  <field name="amount_5" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_6" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r17c5" class="java.lang.String"/>
+  <field name="amount_6" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_7" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r18c5" class="java.lang.String"/>
+  <field name="amount_7" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_8" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r19c5" class="java.lang.String"/>
+  <field name="amount_8" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_9" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r20c5" class="java.lang.String"/>
+  <field name="amount_9" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_10" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r21c5" class="java.lang.String"/>
+  <field name="amount_10" class="java.lang.String"/>
+  <field name="organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_11" class="java.lang.String"/>
+  <field name="expense_dtl_12a_r22c5" class="java.lang.String"/>
+  <field name="amount_11" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_12" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr" class="java.lang.String"/>
+  <field name="organization_or_person" class="java.lang.String"/>
+  <field name="reason" class="java.lang.String"/>
+  <field name="amount_12" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_2" class="java.lang.String"/>
+  <field name="organization_or_person_2" class="java.lang.String"/>
+  <field name="reason_2" class="java.lang.String"/>
+  <field name="amount_13" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_3" class="java.lang.String"/>
+  <field name="organization_or_person_3" class="java.lang.String"/>
+  <field name="reason_3" class="java.lang.String"/>
+  <field name="amount_14" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_4" class="java.lang.String"/>
+  <field name="organization_or_person_4" class="java.lang.String"/>
+  <field name="reason_4" class="java.lang.String"/>
+  <field name="amount_15" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_5" class="java.lang.String"/>
+  <field name="organization_or_person_5" class="java.lang.String"/>
+  <field name="reason_5" class="java.lang.String"/>
+  <field name="amount_16" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_6" class="java.lang.String"/>
+  <field name="organization_or_person_6" class="java.lang.String"/>
+  <field name="reason_6" class="java.lang.String"/>
+  <field name="amount_17" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_7" class="java.lang.String"/>
+  <field name="organization_or_person_7" class="java.lang.String"/>
+  <field name="reason_7" class="java.lang.String"/>
+  <field name="amount_18" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_8" class="java.lang.String"/>
+  <field name="organization_or_person_8" class="java.lang.String"/>
+  <field name="reason_8" class="java.lang.String"/>
+  <field name="amount_19" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_9" class="java.lang.String"/>
+  <field name="organization_or_person_9" class="java.lang.String"/>
+  <field name="reason_9" class="java.lang.String"/>
+  <field name="amount_20" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_10" class="java.lang.String"/>
+  <field name="organization_or_person_10" class="java.lang.String"/>
+  <field name="reason_10" class="java.lang.String"/>
+  <field name="amount_21" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_11" class="java.lang.String"/>
+  <field name="organization_or_person_11" class="java.lang.String"/>
+  <field name="reason_11" class="java.lang.String"/>
+  <field name="amount_22" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_12" class="java.lang.String"/>
+  <field name="organization_or_person_12" class="java.lang.String"/>
+  <field name="reason_12" class="java.lang.String"/>
+  <field name="amount_23" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_13" class="java.lang.Double"/>
+  <field name="oa_ar_or_fr_13" class="java.lang.String"/>
+  <field name="organization_or_person_13" class="java.lang.String"/>
+  <field name="service_provided" class="java.lang.String"/>
+  <field name="amount_24" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_14" class="java.lang.String"/>
+  <field name="organization_or_person_14" class="java.lang.String"/>
+  <field name="service_provided_2" class="java.lang.String"/>
+  <field name="amount_25" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_15" class="java.lang.String"/>
+  <field name="organization_or_person_15" class="java.lang.String"/>
+  <field name="service_provided_3" class="java.lang.String"/>
+  <field name="amount_26" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_16" class="java.lang.String"/>
+  <field name="organization_or_person_16" class="java.lang.String"/>
+  <field name="service_provided_4" class="java.lang.String"/>
+  <field name="amount_27" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_17" class="java.lang.String"/>
+  <field name="organization_or_person_17" class="java.lang.String"/>
+  <field name="service_provided_5" class="java.lang.String"/>
+  <field name="amount_28" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_18" class="java.lang.String"/>
+  <field name="organization_or_person_18" class="java.lang.String"/>
+  <field name="service_provided_6" class="java.lang.String"/>
+  <field name="amount_29" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_19" class="java.lang.String"/>
+  <field name="organization_or_person_19" class="java.lang.String"/>
+  <field name="service_provided_7" class="java.lang.String"/>
+  <field name="amount_30" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_20" class="java.lang.String"/>
+  <field name="organization_or_person_20" class="java.lang.String"/>
+  <field name="service_provided_8" class="java.lang.String"/>
+  <field name="amount_31" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_21" class="java.lang.String"/>
+  <field name="organization_or_person_21" class="java.lang.String"/>
+  <field name="service_provided_9" class="java.lang.String"/>
+  <field name="amount_32" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_22" class="java.lang.String"/>
+  <field name="organization_or_person_22" class="java.lang.String"/>
+  <field name="service_provided_10" class="java.lang.String"/>
+  <field name="amount_33" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_23" class="java.lang.String"/>
+  <field name="organization_or_person_23" class="java.lang.String"/>
+  <field name="service_provided_11" class="java.lang.String"/>
+  <field name="amount_34" class="java.lang.String"/>
+  <field name="oa_ar_or_fr_24" class="java.lang.String"/>
+  <field name="organization_or_person_24" class="java.lang.String"/>
+  <field name="service_provided_12" class="java.lang.String"/>
+  <field name="amount_35" class="java.lang.String"/>
+  <field name="amount_show_total_on_pg_4_line_17" class="java.lang.Double"/>
+
+  <detail>
+    <band height="1120">
+      <element kind="textField" x="160" y="0" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r2c3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="20" width="80" height="20">
+        <expression><![CDATA[$F{contents_b59}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="40" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_3}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="80" width="80" height="20">
+        <expression><![CDATA[$F{contents_e_4}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="120" width="80" height="20">
+        <text><![CDATA[EXPENSE DETAIL PART 1]]></text>
+      </element>
+      <element kind="staticText" x="160" y="140" width="80" height="20">
+        <text><![CDATA[Remember to select the category in the far left column.]]></text>
+      </element>
+      <element kind="staticText" x="160" y="160" width="80" height="20">
+        <text><![CDATA[OA, AR or FR]]></text>
+      </element>
+      <element kind="staticText" x="240" y="160" width="80" height="20">
+        <text><![CDATA[12. ADVERTISING (NON-SCA)]]></text>
+      </element>
+      <element kind="staticText" x="400" y="160" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="240" y="180" width="80" height="20">
+        <text><![CDATA[Organization or Periodical (Not a kingdom newsletter) and date ad was published]]></text>
+      </element>
+      <element kind="textField" x="240" y="200" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="200" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r12c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="200" width="80" height="20">
+        <expression><![CDATA[$F{amount}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="220" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="220" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r13c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="220" width="80" height="20">
+        <expression><![CDATA[$F{amount_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="240" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="240" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r14c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="240" width="80" height="20">
+        <expression><![CDATA[$F{amount_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="260" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="260" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r15c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="260" width="80" height="20">
+        <expression><![CDATA[$F{amount_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="280" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="280" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r16c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="280" width="80" height="20">
+        <expression><![CDATA[$F{amount_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="300" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="300" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r17c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="300" width="80" height="20">
+        <expression><![CDATA[$F{amount_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="320" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="320" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r18c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="320" width="80" height="20">
+        <expression><![CDATA[$F{amount_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="340" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="340" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r19c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="340" width="80" height="20">
+        <expression><![CDATA[$F{amount_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="360" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="360" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r20c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="360" width="80" height="20">
+        <expression><![CDATA[$F{amount_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="380" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="380" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r21c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="380" width="80" height="20">
+        <expression><![CDATA[$F{amount_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="400" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_periodical_not_a_kingdom_newsletter_and_date_ad_was_published_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="400" width="80" height="20">
+        <expression><![CDATA[$F{expense_dtl_12a_r22c5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="400" width="80" height="20">
+        <expression><![CDATA[$F{amount_11}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="420" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 12]]></text>
+      </element>
+      <element kind="textField" x="400" y="420" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_12}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="460" width="80" height="20">
+        <text><![CDATA[OA, 
+AR or 
+FR]]></text>
+      </element>
+      <element kind="staticText" x="240" y="460" width="80" height="20">
+        <text><![CDATA[13. BAD DEBTS]]></text>
+      </element>
+      <element kind="staticText" x="320" y="460" width="80" height="20">
+        <text><![CDATA[Reason]]></text>
+      </element>
+      <element kind="staticText" x="400" y="460" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="240" y="480" width="80" height="20">
+        <text><![CDATA[Organization or Person]]></text>
+      </element>
+      <element kind="textField" x="160" y="500" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="500" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="500" width="80" height="20">
+        <expression><![CDATA[$F{reason}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="500" width="80" height="20">
+        <expression><![CDATA[$F{amount_12}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="520" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_2}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="520" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_2}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="520" width="80" height="20">
+        <expression><![CDATA[$F{reason_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="520" width="80" height="20">
+        <expression><![CDATA[$F{amount_13}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="540" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_3}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="540" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_3}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="540" width="80" height="20">
+        <expression><![CDATA[$F{reason_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="540" width="80" height="20">
+        <expression><![CDATA[$F{amount_14}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="560" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_4}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="560" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_4}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="560" width="80" height="20">
+        <expression><![CDATA[$F{reason_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="560" width="80" height="20">
+        <expression><![CDATA[$F{amount_15}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="580" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_5}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="580" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_5}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="580" width="80" height="20">
+        <expression><![CDATA[$F{reason_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="580" width="80" height="20">
+        <expression><![CDATA[$F{amount_16}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="600" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_6}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="600" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_6}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="600" width="80" height="20">
+        <expression><![CDATA[$F{reason_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="600" width="80" height="20">
+        <expression><![CDATA[$F{amount_17}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="620" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_7}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="620" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_7}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="620" width="80" height="20">
+        <expression><![CDATA[$F{reason_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="620" width="80" height="20">
+        <expression><![CDATA[$F{amount_18}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="640" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_8}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="640" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_8}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="640" width="80" height="20">
+        <expression><![CDATA[$F{reason_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="640" width="80" height="20">
+        <expression><![CDATA[$F{amount_19}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="660" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_9}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="660" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_9}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="660" width="80" height="20">
+        <expression><![CDATA[$F{reason_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="660" width="80" height="20">
+        <expression><![CDATA[$F{amount_20}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="680" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_10}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="680" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_10}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="680" width="80" height="20">
+        <expression><![CDATA[$F{reason_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="680" width="80" height="20">
+        <expression><![CDATA[$F{amount_21}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="700" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_11}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="700" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_11}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="700" width="80" height="20">
+        <expression><![CDATA[$F{reason_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="700" width="80" height="20">
+        <expression><![CDATA[$F{amount_22}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="720" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_12}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="720" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_12}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="720" width="80" height="20">
+        <expression><![CDATA[$F{reason_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="720" width="80" height="20">
+        <expression><![CDATA[$F{amount_23}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="740" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 13]]></text>
+      </element>
+      <element kind="textField" x="400" y="740" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_13}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="780" width="80" height="20">
+        <text><![CDATA[OA, 
+AR or 
+FR]]></text>
+      </element>
+      <element kind="staticText" x="240" y="780" width="80" height="20">
+        <text><![CDATA[17. FEES & HONORARIA]]></text>
+      </element>
+      <element kind="staticText" x="320" y="780" width="80" height="20">
+        <text><![CDATA[Service Provided]]></text>
+      </element>
+      <element kind="staticText" x="400" y="780" width="80" height="20">
+        <text><![CDATA[Amount]]></text>
+      </element>
+      <element kind="staticText" x="240" y="800" width="80" height="20">
+        <text><![CDATA[Organization or Person]]></text>
+      </element>
+      <element kind="textField" x="160" y="820" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_13}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="820" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_13}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="820" width="80" height="20">
+        <expression><![CDATA[$F{service_provided}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="820" width="80" height="20">
+        <expression><![CDATA[$F{amount_24}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="840" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_14}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="840" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_14}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="840" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_2}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="840" width="80" height="20">
+        <expression><![CDATA[$F{amount_25}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="860" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_15}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="860" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_15}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="860" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_3}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="860" width="80" height="20">
+        <expression><![CDATA[$F{amount_26}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="880" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_16}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="880" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_16}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="880" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_4}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="880" width="80" height="20">
+        <expression><![CDATA[$F{amount_27}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="900" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_17}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="900" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_17}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="900" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_5}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="900" width="80" height="20">
+        <expression><![CDATA[$F{amount_28}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="920" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_18}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="920" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_18}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="920" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_6}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="920" width="80" height="20">
+        <expression><![CDATA[$F{amount_29}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="940" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_19}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="940" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_19}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="940" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_7}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="940" width="80" height="20">
+        <expression><![CDATA[$F{amount_30}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="960" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_20}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="960" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_20}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="960" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_8}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="960" width="80" height="20">
+        <expression><![CDATA[$F{amount_31}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="980" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_21}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="980" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_21}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="980" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_9}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="980" width="80" height="20">
+        <expression><![CDATA[$F{amount_32}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_22}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_22}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_10}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1000" width="80" height="20">
+        <expression><![CDATA[$F{amount_33}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_23}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_23}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_11}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1020" width="80" height="20">
+        <expression><![CDATA[$F{amount_34}]]></expression>
+      </element>
+      <element kind="textField" x="160" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{oa_ar_or_fr_24}]]></expression>
+      </element>
+      <element kind="textField" x="240" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{organization_or_person_24}]]></expression>
+      </element>
+      <element kind="textField" x="320" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{service_provided_12}]]></expression>
+      </element>
+      <element kind="textField" x="400" y="1040" width="80" height="20">
+        <expression><![CDATA[$F{amount_35}]]></expression>
+      </element>
+      <element kind="staticText" x="320" y="1060" width="80" height="20">
+        <text><![CDATA[Show TOTAL on Pg. 4 Line 17]]></text>
+      </element>
+      <element kind="textField" x="400" y="1060" width="80" height="20">
+        <expression><![CDATA[$F{amount_show_total_on_pg_4_line_17}]]></expression>
+      </element>
+      <element kind="staticText" x="160" y="1080" width="80" height="20">
+        <text><![CDATA[Use additional sheets if necessary]]></text>
+      </element>
+      <element kind="staticText" x="160" y="1100" width="80" height="20">
+        <text><![CDATA[-12a-]]></text>
+      </element>
+    </band>
+  </detail>
+</jasperReport>

@@ -2,6 +2,8 @@ package com.acme.jrgen;
 
 import java.util.List;
 
+import com.acme.jrgen.model.CellItem;
+
 /**
  * Represents a detail band derived from a magenta rectangle or the full sheet.
  */
@@ -22,10 +24,10 @@ public record Band(String name,
 {
     public double effectiveHeight(double scaleY)
     {
-        if (explicitHeight != null)
+        if (this.explicitHeight != null)
         {
-            return explicitHeight;
+            return this.explicitHeight;
         }
-        return height * scaleY;
+        return this.height * scaleY;
     }
 }
