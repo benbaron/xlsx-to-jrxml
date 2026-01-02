@@ -262,7 +262,11 @@ public class Main implements Callable<Integer>
 
     public static void main(String[] args)
     {
-        int code = new CommandLine(new Main()).execute(args);
+        CommandLine commandLine = new CommandLine(new Main());
+        commandLine.setColorScheme(
+            CommandLine.Help.defaultColorScheme(CommandLine.Help.Ansi.OFF)
+        );
+        int code = commandLine.execute(args);
         System.exit(code);
     }
 }
