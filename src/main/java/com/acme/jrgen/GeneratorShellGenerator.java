@@ -40,7 +40,11 @@ public final class GeneratorShellGenerator
 
         StringBuilder sb = new StringBuilder();
 
+        sb.append("/*\n");
+        sb.append(" * AUTO-GENERATED FILE. DO NOT EDIT.\n");
+        sb.append(" */\n");
         sb.append("package ").append(genPkg).append(";\n\n");
+        sb.append("import com.acme.jrgen.DataFiller;\n");
         sb.append("import nonprofitbookkeeping.exception.ActionCancelledException;\n");
         sb.append("import nonprofitbookkeeping.exception.NoFileCreatedException;\n");
         sb.append("import nonprofitbookkeeping.reports.jasper.AbstractReportGenerator;\n");
@@ -58,8 +62,21 @@ public final class GeneratorShellGenerator
         sb.append("    @Override\n");
         sb.append("    protected List<").append(beanSimple).append("> getReportData()\n");
         sb.append("    {\n");
-        sb.append("        // TODO supply data beans for the report\n");
-        sb.append("        return Collections.emptyList();\n");
+        sb.append("        Map<String, Object> values = new HashMap<>();\n");
+        sb.append("        // TODO replace with real query results\n");
+        for (var entry : model.fields().entrySet())
+        {
+            String fieldName = entry.getKey();
+            String javaType = entry.getValue().javaType();
+            sb.append("        values.put(\"")
+                .append(fieldName)
+                .append("\", ")
+                .append(dummyValueFor(javaType))
+                .append(");\n");
+        }
+        sb.append("        ").append(beanSimple).append(" bean = ")
+            .append("DataFiller.newAndFill(").append(beanSimple).append(".class, values);\n");
+        sb.append("        return Collections.singletonList(bean);\n");
         sb.append("    }\n\n");
 
         sb.append("    @Override\n");
@@ -88,5 +105,25 @@ public final class GeneratorShellGenerator
         sb.append("}\n");
 
         return sb.toString();
+    }
+
+    private static String dummyValueFor(String javaType)
+    {
+        if (javaType == null || javaType.isBlank())
+        {
+            return "\"\"";
+        }
+
+        return switch (javaType)
+        {
+            case "java.lang.String" -> "\"\"";
+            case "java.lang.Double", "double" -> "0.0d";
+            case "java.lang.Integer", "int" -> "0";
+            case "java.lang.Long", "long" -> "0L";
+            case "java.lang.Boolean", "boolean" -> "Boolean.FALSE";
+            case "java.math.BigDecimal" -> "new java.math.BigDecimal(\"0\")";
+            case "java.util.Date" -> "new java.util.Date(0L)";
+            default -> "new " + javaType + "()";
+        };
     }
 }
