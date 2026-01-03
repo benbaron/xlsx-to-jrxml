@@ -123,7 +123,7 @@ public final class GeneratorShellGenerator
             case "java.lang.Boolean", "boolean" -> "Boolean.FALSE";
             case "java.math.BigDecimal" -> "new java.math.BigDecimal(\"0\")";
             case "java.util.Date" -> "new java.util.Date(0L)";
-            default -> "null";
+            default -> "new " + javaType + "()";
         };
     }
 }
