@@ -15,7 +15,8 @@ public final class GeneratorShellGenerator
                                            String beanPackage,
                                            String beanSuffix,
                                            String generatorPackage,
-                                           String generatorSuffix)
+                                           String generatorSuffix,
+                                           boolean inlineOverrides)
     {
         String beanPkg = (beanPackage == null || beanPackage.isBlank())
             ? "com.acme.jrgen.beans"
@@ -72,17 +73,24 @@ public final class GeneratorShellGenerator
         sb.append("    protected List<").append(beanSimple).append("> getReportData()\n");
         sb.append("    {\n");
         sb.append("        Map<String, String> overrides = new HashMap<>();\n");
-        sb.append("        // TODO replace placeholder expressions with real column expressions\n");
-        for (var entry : model.fields().entrySet())
+        if (inlineOverrides)
         {
-            String fieldName = entry.getKey();
-            String javaType = entry.getValue().javaType();
-            String placeholder = sqlPlaceholderFor(javaType);
-            sb.append("        overrides.put(\"")
-                .append(fieldName)
-                .append("\", \"")
-                .append(placeholder)
-                .append("\");\n");
+            sb.append("        // TODO replace placeholder expressions with real column expressions\n");
+            for (var entry : model.fields().entrySet())
+            {
+                String fieldName = entry.getKey();
+                String javaType = entry.getValue().javaType();
+                String placeholder = sqlPlaceholderFor(javaType);
+                sb.append("        overrides.put(\"")
+                    .append(fieldName)
+                    .append("\", \"")
+                    .append(placeholder)
+                    .append("\");\n");
+            }
+        }
+        else
+        {
+            sb.append("        // TODO populate overrides from your field map or SQL layer\n");
         }
         sb.append("\n");
         sb.append("        String selectList;\n");
@@ -260,14 +268,14 @@ public final class GeneratorShellGenerator
 
         return switch (javaType)
         {
-            case "java.lang.String" -> "CAST(NULL AS VARCHAR(255))";
-            case "java.lang.Double", "double" -> "CAST(NULL AS DOUBLE)";
-            case "java.lang.Integer", "int" -> "CAST(NULL AS INTEGER)";
-            case "java.lang.Long", "long" -> "CAST(NULL AS BIGINT)";
-            case "java.lang.Boolean", "boolean" -> "CAST(NULL AS BOOLEAN)";
-            case "java.math.BigDecimal" -> "CAST(NULL AS DECIMAL(18,2))";
-            case "java.util.Date" -> "CAST(NULL AS DATE)";
-            default -> "NULL";
+            case "java.lang.String" -> "CAST('dummy' AS VARCHAR(255))";
+            case "java.lang.Double", "double" -> "CAST(1.0 AS DOUBLE)";
+            case "java.lang.Integer", "int" -> "CAST(1 AS INTEGER)";
+            case "java.lang.Long", "long" -> "CAST(1 AS BIGINT)";
+            case "java.lang.Boolean", "boolean" -> "CAST(TRUE AS BOOLEAN)";
+            case "java.math.BigDecimal" -> "CAST(1.00 AS DECIMAL(18,2))";
+            case "java.util.Date" -> "CAST('2000-01-01' AS DATE)";
+            default -> "1";
         };
     }
 }
