@@ -75,6 +75,7 @@ public final class GeneratorShellGenerator
         sb.append("        Map<String, String> overrides = new HashMap<>();\n");
         if (inlineOverrides)
         {
+            sb.append("        // TODO replace placeholder expressions with real column expressions\n");
             for (var entry : model.fields().entrySet())
             {
                 String fieldName = entry.getKey();
