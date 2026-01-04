@@ -16,7 +16,7 @@ import com.acme.jrgen.model.CellItem;
  *
  * CSV format (matches the runtime FieldMapLoader):
  *
- *   sheetName,cellRef,fieldName,javaType,excelFormat
+ *   sheetName,cellRef,fieldName,javaType,excelFormat,fromClause
  *
  * Example row:
  *
@@ -25,8 +25,8 @@ import com.acme.jrgen.model.CellItem;
  * Notes:
  *  - There is always a header row (first line).
  *  - excelFormat may be empty ("") if you don't have a specific Excel format.
- *  - dbExpr is intentionally NOT generated here; the 6th column is for
- *    hand-written SQL expressions on the runtime side.
+ *  - fromClause is intentionally generated as a placeholder; it should be
+ *    replaced with the true FROM/JOIN clause for the report.
  */
 public final class FieldMappingGenerator
 {
@@ -42,9 +42,11 @@ public final class FieldMappingGenerator
         List<String> rows = new ArrayList<>();
 
         // Header; the runtime FieldMapLoader reads and discards this line.
-        rows.add("sheetName,cellRef,fieldName,javaType,excelFormat");
+        rows.add("sheetName,cellRef,fieldName,javaType,excelFormat,fromClause");
 
         Map<String, FieldInfo> fields = model.fields();
+
+        String fromClause = "from (select 1) as dummy";
 
         for (CellItem ci : model.items())
         {
@@ -78,7 +80,8 @@ public final class FieldMappingGenerator
                 escape(cellRef),
                 escape(fieldName),
                 escape(javaType),
-                escape(excelFormat)
+                escape(excelFormat),
+                escape(fromClause)
             ));
         }
 
