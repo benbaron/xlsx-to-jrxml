@@ -138,6 +138,13 @@ public class Main implements Callable<Integer>
     )
     String reportTypeSuffix;
 
+    @Option(
+        names = "--inlineOverrides",
+        defaultValue = "true",
+        description = "Generate SQL override placeholders inline in generator skeletons (default: ${DEFAULT-VALUE})"
+    )
+    boolean inlineOverrides;
+
     @Override
     public Integer call() throws Exception
     {
@@ -200,7 +207,8 @@ public class Main implements Callable<Integer>
                 this.beanPackage,
                 resolvedBeanSuffix,
                 this.generatorPackage,
-                resolvedGeneratorSuffix
+                resolvedGeneratorSuffix,
+                this.inlineOverrides
             );
             Path generatorOut =
                 generatorDir.resolve(baseName + resolvedGeneratorSuffix + ".java");
