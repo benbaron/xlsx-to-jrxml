@@ -67,10 +67,15 @@ public final class GeneratorShellGenerator
         sb.append("    protected List<").append(beanSimple).append("> getReportData()\n");
         sb.append("    {\n");
         sb.append("        Map<String, String> overrides = new HashMap<>();\n");
-        sb.append("        overrides.put(\"within_the_kingdom\", \"jt.to_from\");\n");
-        sb.append("        overrides.put(\"check\", \"jt.check_number\");\n");
-        sb.append("        overrides.put(\"check_date\", \"jt.date_text\");\n");
-        sb.append("        overrides.put(\"amount\", \"je.amount\");\n\n");
+        sb.append("        // TODO replace NULL placeholders with real column expressions\n");
+        for (var entry : model.fields().entrySet())
+        {
+            String fieldName = entry.getKey();
+            sb.append("        overrides.put(\"")
+                .append(fieldName)
+                .append("\", \"NULL\");\n");
+        }
+        sb.append("\n");
         sb.append("        String selectList;\n");
         sb.append("        try\n");
         sb.append("        {\n");
