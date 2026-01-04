@@ -67,13 +67,17 @@ public final class GeneratorShellGenerator
         sb.append("    protected List<").append(beanSimple).append("> getReportData()\n");
         sb.append("    {\n");
         sb.append("        Map<String, String> overrides = new HashMap<>();\n");
-        sb.append("        // TODO replace NULL placeholders with real column expressions\n");
+        sb.append("        // TODO replace placeholder expressions with real column expressions\n");
         for (var entry : model.fields().entrySet())
         {
             String fieldName = entry.getKey();
+            String javaType = entry.getValue().javaType();
+            String placeholder = sqlPlaceholderFor(javaType);
             sb.append("        overrides.put(\"")
                 .append(fieldName)
-                .append("\", \"NULL\");\n");
+                .append("\", \"")
+                .append(placeholder)
+                .append("\");\n");
         }
         sb.append("\n");
         sb.append("        String selectList;\n");
@@ -130,4 +134,23 @@ public final class GeneratorShellGenerator
         return sb.toString();
     }
 
+    private static String sqlPlaceholderFor(String javaType)
+    {
+        if (javaType == null || javaType.isBlank())
+        {
+            return "NULL";
+        }
+
+        return switch (javaType)
+        {
+            case "java.lang.String" -> "CAST(NULL AS VARCHAR(255))";
+            case "java.lang.Double", "double" -> "CAST(NULL AS DOUBLE)";
+            case "java.lang.Integer", "int" -> "CAST(NULL AS INTEGER)";
+            case "java.lang.Long", "long" -> "CAST(NULL AS BIGINT)";
+            case "java.lang.Boolean", "boolean" -> "CAST(NULL AS BOOLEAN)";
+            case "java.math.BigDecimal" -> "CAST(NULL AS DECIMAL(18,2))";
+            case "java.util.Date" -> "CAST(NULL AS DATE)";
+            default -> "NULL";
+        };
+    }
 }
