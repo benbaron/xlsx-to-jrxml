@@ -40,11 +40,16 @@ public final class GeneratorShellGenerator
 
         StringBuilder sb = new StringBuilder();
 
+        sb.append("/*\n");
+        sb.append(" * AUTO-GENERATED FILE. DO NOT EDIT.\n");
+        sb.append(" */\n");
         sb.append("package ").append(genPkg).append(";\n\n");
+        sb.append("import java.io.IOException;\n");
         sb.append("import nonprofitbookkeeping.exception.ActionCancelledException;\n");
         sb.append("import nonprofitbookkeeping.exception.NoFileCreatedException;\n");
         sb.append("import nonprofitbookkeeping.reports.jasper.AbstractReportGenerator;\n");
-        sb.append("import java.util.Collections;\n");
+        sb.append("import nonprofitbookkeeping.reports.query.FieldMapSqlBuilder;\n");
+        sb.append("import nonprofitbookkeeping.reports.query.ReportDataFetcher;\n");
         sb.append("import java.util.HashMap;\n");
         sb.append("import java.util.List;\n");
         sb.append("import java.util.Map;\n\n");
@@ -55,11 +60,41 @@ public final class GeneratorShellGenerator
         sb.append("public class ").append(genSimple)
             .append(" extends AbstractReportGenerator\n");
         sb.append("{\n");
+        sb.append("    /**\n");
+        sb.append("     * Override @see nonprofitbookkeeping.reports.jasper.AbstractReportGenerator#getReportData()\n");
+        sb.append("     */\n");
         sb.append("    @Override\n");
         sb.append("    protected List<").append(beanSimple).append("> getReportData()\n");
         sb.append("    {\n");
-        sb.append("        // TODO supply data beans for the report\n");
-        sb.append("        return Collections.emptyList();\n");
+        sb.append("        Map<String, String> overrides = new HashMap<>();\n");
+        sb.append("        overrides.put(\"within_the_kingdom\", \"jt.to_from\");\n");
+        sb.append("        overrides.put(\"check\", \"jt.check_number\");\n");
+        sb.append("        overrides.put(\"check_date\", \"jt.date_text\");\n");
+        sb.append("        overrides.put(\"amount\", \"je.amount\");\n\n");
+        sb.append("        String selectList;\n");
+        sb.append("        try\n");
+        sb.append("        {\n");
+        sb.append("            selectList = FieldMapSqlBuilder.buildSelectList(\n");
+        sb.append("                \"/nonprofitbookkeeping/reports/")
+            .append(baseName)
+            .append("_fieldmap.csv\",\n");
+        sb.append("                overrides\n");
+        sb.append("            );\n");
+        sb.append("        }\n");
+        sb.append("        catch (IOException ex)\n");
+        sb.append("        {\n");
+        sb.append("            throw new IllegalStateException(\n");
+        sb.append("                \"Unable to load ")
+            .append(baseName)
+            .append(" field map\", ex);\n");
+        sb.append("        }\n\n");
+        sb.append("        String sql = \"select\\n\" +\n");
+        sb.append("            selectList + \"\\n\" +\n");
+        sb.append("            \"from journal_transaction jt\\n\" +\n");
+        sb.append("            \"join journal_entry je on je.txn_id = jt.id\";\n\n");
+        sb.append("        return ReportDataFetcher.queryBeans(")
+            .append(beanSimple)
+            .append(".class, sql);\n");
         sb.append("    }\n\n");
 
         sb.append("    @Override\n");
@@ -89,4 +124,5 @@ public final class GeneratorShellGenerator
 
         return sb.toString();
     }
+
 }
